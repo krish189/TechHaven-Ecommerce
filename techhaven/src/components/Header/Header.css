@@ -1,0 +1,55 @@
+.logoimg
+{
+    width: 200px;
+    height: 70px;
+}
+.header
+{
+    background-color: #21232B;
+    padding: 15px;
+    height: 4rem;
+    display: flex;
+}
+nav
+{
+    display: flex;
+    color: #F4F3F0;
+}
+ul
+{
+    display: flex;
+}
+ul li
+{
+    list-style: none;
+    font-size: 1.1rem;
+    font-family: 'Montserrat',sans-serif;
+    margin-right: 1rem;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+}
+ul li:hover
+{
+    color: lightgray;
+    cursor: pointer;
+}
+.searchicon
+{
+    width: 25px;
+    height: 25px;
+    position: relative;
+    left: 5rem;
+    top: 0.8rem;
+}
+.searchicon:hover
+{
+    cursor: pointer;
+}
+.downicon
+{
+    width: 15px;
+    height: 15px;
+    position: relative;
+    left: 0.2rem;
+    top: 0.1rem;
+}
