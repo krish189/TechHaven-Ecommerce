@@ -1,6 +1,6 @@
 import React from 'react'
 import '../Marquee/Marquee.css'
-import dot from '../../assets/dot.png'
+import dot from '../../../assets/dot.png'
 
 function Marquee() {
   return (

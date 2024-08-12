@@ -1,0 +1,30 @@
+.explore
+{
+    background-color: #F1F1F1;
+    font-family: 'Roboto',sans-serif;
+    padding: 50px;
+    height: 30rem;
+}
+.explore h1
+{
+    position: relative;
+    top: 1rem;
+    font-weight: bolder;
+}
+.cardcontainer
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    top: 3rem;
+}
+.card:hover
+{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.card-title
+{
+    text-align: center;
+}
