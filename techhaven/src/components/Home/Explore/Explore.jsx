@@ -1,12 +1,12 @@
-import React from 'react'
-import Card from 'react-bootstrap/Card'
-import '../Explore/Explore.css'
-import laptop from '../../../assets/laptop.jpg'
-import ledtv from '../../../assets/ledtv.jpeg'
-import speaker from '../../../assets/speaker.png'
-import keyboardmouse from '../../../assets/keyboardmouse.jpg'
-import soundbar from '../../../assets/soundbar.jpg'
-import projector from '../../../assets/projectors.jpg'
+import React from 'react';
+import Card from 'react-bootstrap/Card';
+import '../Explore/Explore.css';
+import laptop from '../../../assets/laptop.jpg';
+import ledtv from '../../../assets/ledtv.jpeg';
+import speaker from '../../../assets/speaker.png';
+import keyboardmouse from '../../../assets/keyboardmouse.jpg';
+import soundbar from '../../../assets/soundbar.jpg';
+import projector from '../../../assets/projectors.jpg';
 
 function Explore() {
   return (

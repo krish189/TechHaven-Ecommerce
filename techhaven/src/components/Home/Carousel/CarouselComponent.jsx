@@ -1,11 +1,11 @@
-import React from 'react'
-import { Carousel } from 'react-bootstrap'
+import React from 'react';
+import { Carousel } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
-import '../Carousel/Carousel.css'
-import laptopcarousel from '../../../assets/Laptop_carousel.png'
-import peripheralcarousel from '../../../assets/Peripherals_carousel.jpg'
-import speakercarousel from '../../../assets/Speaker_carousel.jpg'
-import hometheater from '../../../assets/hometheater_carousel.png'
+import '../Carousel/Carousel.css';
+import laptopcarousel from '../../../assets/Laptop_carousel.png';
+import peripheralcarousel from '../../../assets/Peripherals_carousel.jpg';
+import speakercarousel from '../../../assets/Speaker_carousel.jpg';
+import hometheater from '../../../assets/hometheater_carousel.png';
 
 function CarouselComponent() {
   return (

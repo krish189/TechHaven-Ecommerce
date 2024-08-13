@@ -1,8 +1,8 @@
-import React from 'react'
-import logo from '../../../assets/logo.png'
-import down from '../../../assets/downicon.png'
-import searchicon from '../../../assets/searchicon.png'
-import '../Header/Header.css'
+import React from 'react';
+import logo from '../../../assets/logo.png';
+import down from '../../../assets/downicon.png';
+import searchicon from '../../../assets/searchicon.png';
+import '../Header/Header.css';
 
 function Header() {
   return (
