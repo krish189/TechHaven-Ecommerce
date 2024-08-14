@@ -1,0 +1,73 @@
+.footer
+{
+    display: flex;
+    padding: 20px;
+    height: 40rem;
+    overflow: hidden;
+}
+.footer ul
+{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: 2rem;
+  top: 2rem;
+  margin-right: 6rem;
+}
+.footer ul li
+{
+    color: #9E9E9E;
+}
+.footer ul li:hover
+{
+    color: black;
+}
+.footer h5
+{
+    position: relative;
+    left: 5.4rem;
+    top: 2rem;
+}
+.footer input
+{
+    position: relative;
+    top: 2.7rem;
+    left: 5.5rem;
+    height: 3.5rem;
+    width: 25rem;
+    padding: 20px;
+}
+.chevron
+{
+    z-index: 1;
+    height: 25px;
+    width: 25px;
+    position: relative;
+    top: 2.5rem;
+    left: 3rem;
+    cursor: pointer;
+}
+.media
+{
+    display: flex;
+}
+.mediaicons
+{
+    width: 28px;
+    height: 28px;
+    position: relative;
+    bottom: 3rem;
+    left: 6rem;
+    margin-right: 2rem;
+}
+.tailtext
+{
+    font-family: 'Roboto',sans-serif;
+    height: 5rem;
+    color: #9F9F9F;
+    font-size: 13px;
+    font-weight: 400;
+    position: absolute;
+    left: 6.5rem;
+    overflow: hidden;
+}
