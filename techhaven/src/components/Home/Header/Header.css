@@ -53,3 +53,401 @@ ul li:hover
     left: 0.3rem;
     bottom: 0.1rem;
 }
+.search 
+{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    border-radius: 5px;
+    width: 30rem;
+    height: 44rem;
+    padding: 20px;
+    background-color: white;
+    z-index: 1; 
+    display: none;
+}
+.search input
+{
+    width: 500px;
+    height: 50px;
+    border-top: white;
+    border-left: white;
+    border-right: white;
+    border-bottom: 1px solid black;
+    padding: 30px;
+    font-size: large;
+    position: relative;
+    top: 2.5rem;
+}
+.search.active 
+{
+    display: flex;
+}
+.closeicon
+{
+    position: relative;
+    left: 405px;
+    width: 30px;
+    height: 30px;
+}
+.laptopsubmenu
+{
+    position: fixed;
+    top: 7.2rem;
+    left: 17.5rem;
+    padding: 25px;
+    border-radius: 5px;
+    background-color: white;
+    z-index: 1; 
+    display: none;
+}
+.laptopsubmenu p:hover
+{
+    cursor: pointer;
+    text-decoration-line: underline;
+}
+.laptopsubmenu.active
+{
+    display: block;
+}
+.audiovideosubmenu
+{
+    position: fixed;
+    top: 7.2rem;
+    left: 25rem;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+    z-index: 1; 
+    display: none;
+}
+.audiovideosubmenu p:hover
+{
+    cursor: pointer;
+    text-decoration-line: underline;
+}
+.audiovideosubmenu.active
+{
+    display: block;
+}
+.speakercategory
+{
+    position: fixed;
+    top: 9.2rem;
+    left: 39.6rem;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+    z-index: 1; 
+    display: none;
+}
+.speakercategory p:hover
+{
+    cursor: pointer;
+    text-decoration-line: underline;
+}
+.speakercategory.active
+{
+    display: block;
+}
+.headphonecategory
+{
+    position: fixed;
+    top: 11.5rem;
+    left: 39.6rem;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+    z-index: 1; 
+    display: none;
+}
+.headphonecategory p:hover
+{
+    cursor: pointer;
+    text-decoration-line: underline;
+}
+.headphonecategory.active
+{
+    display: block;
+}
+.tvcategory
+{
+    position: fixed;
+    top: 14.2rem;
+    left: 39.6rem;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+    z-index: 1; 
+    display: none;
+}
+.tvcategory p:hover
+{
+    cursor: pointer;
+    text-decoration-line: underline;
+}
+.tvcategory.active
+{
+    display: block;
+}
+.accessoriessubmenu
+{
+    position: fixed;
+    top: 7.2rem;
+    left: 34.5rem;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+    z-index: 1; 
+    display: none;
+}
+.accessoriessubmenu p:hover
+{
+    cursor: pointer;
+    text-decoration-line: underline;
+}
+.accessoriessubmenu.active
+{
+    display: block;
+}
+.computeracccategory
+{
+    position: fixed;
+    top: 9rem;
+    left: 50.8rem;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+    z-index: 1; 
+    display: none;
+}
+.computeracccategory p:hover
+{
+    cursor: pointer;
+    text-decoration-line: underline;
+}
+.computeracccategory.active
+{
+    display: block;
+}
+.laptopacccategory
+{
+    position: fixed;
+    top: 11.5rem;
+    left: 50.8rem;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+    z-index: 1; 
+    display: none;
+}
+.laptopacccategory p:hover
+{
+    cursor: pointer;
+    text-decoration-line: underline;
+}
+.laptopacccategory.active
+{
+    display: block;
+}
+.mobileacccategory
+{
+    position: fixed;
+    top: 14rem;
+    left: 50.8rem;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+    z-index: 1; 
+    display: none;
+}
+.mobileacccategory p:hover
+{
+    cursor: pointer;
+    text-decoration-line: underline;
+}
+.mobileacccategory.active
+{
+    display: block;
+}
+.hdmiacccategory
+{
+    position: fixed;
+    top: 16.5rem;
+    left: 50.8rem;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+    z-index: 1; 
+    display: none;
+}
+.hdmiacccategory p:hover
+{
+    cursor: pointer;
+    text-decoration-line: underline;
+}
+.hdmiacccategory.active
+{
+    display: block;
+}
+.peripheralsubmenu
+{
+    position: fixed;
+    top: 7.2rem;
+    left: 44.2rem;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+    z-index: 1; 
+    display: none;
+}
+.peripheralsubmenu p:hover
+{
+    cursor: pointer;
+    text-decoration-line: underline;
+}
+.peripheralsubmenu.active
+{
+    display: block;
+}
+.keyboardcategory
+{
+    position: fixed;
+    top: 9rem;
+    left: 59rem;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+    z-index: 1; 
+    display: none;
+}
+.keyboardcategory p:hover
+{
+    cursor: pointer;
+    text-decoration-line: underline;
+}
+.keyboardcategory.active
+{
+    display: block;
+}
+.mousecategory
+{
+    position: fixed;
+    top: 11.5rem;
+    left: 59rem;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+    z-index: 1; 
+    display: none;
+}
+.mousecategory p:hover
+{
+    cursor: pointer;
+    text-decoration-line: underline;
+}
+.mousecategory.active
+{
+    display: block;
+}
+.monitorcategory
+{
+    position: fixed;
+    top: 14rem;
+    left: 59rem;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+    z-index: 1; 
+    display: none;
+}
+.monitorcategory p:hover
+{
+    cursor: pointer;
+    text-decoration-line: underline;
+}
+.monitorcategory.active
+{
+    display: block;
+}
+.gamingcategory
+{
+    position: fixed;
+    top: 16.5rem;
+    left: 59rem;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+    z-index: 1; 
+    display: none;
+}
+.gamingcategory p:hover
+{
+    cursor: pointer;
+    text-decoration-line: underline;
+}
+.gamingcategory.active
+{
+    display: block;
+}
+.powercategory
+{
+    position: fixed;
+    top: 19.3rem;
+    left: 59rem;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+    z-index: 1; 
+    display: none;
+}
+.powercategory p:hover
+{
+    cursor: pointer;
+    text-decoration-line: underline;
+}
+.powercategory.active
+{
+    display: block;
+}
+.smarthomesubmenu
+{
+    position: fixed;
+    top: 7.2rem;
+    left: 54rem;
+    padding: 25px;
+    border-radius: 5px;
+    background-color: white;
+    z-index: 1; 
+    display: none;
+}
+.smarthomesubmenu p:hover
+{
+    cursor: pointer;
+    text-decoration-line: underline;
+}
+.smarthomesubmenu.active
+{
+    display: block;
+}
+.supportsubmenu
+{
+    position: fixed;
+    top: 7.2rem;
+    right: 0.5rem;
+    padding: 25px;
+    border-radius: 5px;
+    background-color: white;
+    z-index: 999; 
+    display: none;
+}
+.supportsubmenu p:hover
+{
+    cursor: pointer;
+    text-decoration-line: underline;
+
+}
+.supportsubmenu.active
+{
+    display: block;
+}
