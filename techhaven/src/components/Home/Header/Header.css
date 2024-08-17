@@ -104,7 +104,9 @@ ul li:hover
 .laptopsubmenu p:hover
 {
     cursor: pointer;
-    text-decoration-line: underline;
+    border-bottom: 3px solid;
+    border-bottom-color: black;
+    transition: border 60s linear;
 }
 .laptopsubmenu.active
 {
@@ -124,6 +126,7 @@ ul li:hover
 .audiovideosubmenu p:hover
 {
     cursor: pointer;
+    padding-bottom: 0.1rem;
     text-decoration-line: underline;
 }
 .audiovideosubmenu.active
@@ -144,7 +147,9 @@ ul li:hover
 .speakercategory p:hover
 {
     cursor: pointer;
-    text-decoration-line: underline;
+    border-bottom: 3px solid;
+    border-bottom-color: black;
+    transition: border 60s linear;
 }
 .speakercategory.active
 {
@@ -164,7 +169,9 @@ ul li:hover
 .headphonecategory p:hover
 {
     cursor: pointer;
-    text-decoration-line: underline;
+    border-bottom: 3px solid;
+    border-bottom-color: black;
+    transition: border 60s linear;
 }
 .headphonecategory.active
 {
@@ -184,7 +191,9 @@ ul li:hover
 .tvcategory p:hover
 {
     cursor: pointer;
-    text-decoration-line: underline;
+    border-bottom: 3px solid;
+    border-bottom-color: black;
+    transition: border 60s linear;
 }
 .tvcategory.active
 {
@@ -204,6 +213,7 @@ ul li:hover
 .accessoriessubmenu p:hover
 {
     cursor: pointer;
+    padding-bottom: 0.1rem;
     text-decoration-line: underline;
 }
 .accessoriessubmenu.active
@@ -224,7 +234,9 @@ ul li:hover
 .computeracccategory p:hover
 {
     cursor: pointer;
-    text-decoration-line: underline;
+    border-bottom: 3px solid;
+    border-bottom-color: black;
+    transition: border 60s linear;
 }
 .computeracccategory.active
 {
@@ -244,7 +256,9 @@ ul li:hover
 .laptopacccategory p:hover
 {
     cursor: pointer;
-    text-decoration-line: underline;
+    border-bottom: 3px solid;
+    border-bottom-color: black;
+    transition: border 60s linear;
 }
 .laptopacccategory.active
 {
@@ -264,7 +278,9 @@ ul li:hover
 .mobileacccategory p:hover
 {
     cursor: pointer;
-    text-decoration-line: underline;
+    border-bottom: 3px solid;
+    border-bottom-color: black;
+    transition: border 60s linear;
 }
 .mobileacccategory.active
 {
@@ -284,7 +300,9 @@ ul li:hover
 .hdmiacccategory p:hover
 {
     cursor: pointer;
-    text-decoration-line: underline;
+    border-bottom: 3px solid;
+    border-bottom-color: black;
+    transition: border 60s linear;
 }
 .hdmiacccategory.active
 {
@@ -324,7 +342,9 @@ ul li:hover
 .keyboardcategory p:hover
 {
     cursor: pointer;
-    text-decoration-line: underline;
+    border-bottom: 3px solid;
+    border-bottom-color: black;
+    transition: border 60s linear;
 }
 .keyboardcategory.active
 {
@@ -344,7 +364,9 @@ ul li:hover
 .mousecategory p:hover
 {
     cursor: pointer;
-    text-decoration-line: underline;
+    border-bottom: 3px solid;
+    border-bottom-color: black;
+    transition: border 60s linear;
 }
 .mousecategory.active
 {
@@ -364,7 +386,9 @@ ul li:hover
 .monitorcategory p:hover
 {
     cursor: pointer;
-    text-decoration-line: underline;
+    border-bottom: 3px solid;
+    border-bottom-color: black;
+    transition: border 60s linear;
 }
 .monitorcategory.active
 {
@@ -384,7 +408,9 @@ ul li:hover
 .gamingcategory p:hover
 {
     cursor: pointer;
-    text-decoration-line: underline;
+    border-bottom: 3px solid;
+    border-bottom-color: black;
+    transition: border 60s linear;
 }
 .gamingcategory.active
 {
@@ -404,7 +430,9 @@ ul li:hover
 .powercategory p:hover
 {
     cursor: pointer;
-    text-decoration-line: underline;
+    border-bottom: 3px solid;
+    border-bottom-color: black;
+    transition: border 60s linear;
 }
 .powercategory.active
 {
@@ -424,7 +452,9 @@ ul li:hover
 .smarthomesubmenu p:hover
 {
     cursor: pointer;
-    text-decoration-line: underline;
+    border-bottom: 3px solid;
+    border-bottom-color: black;
+    transition: border 60s linear;
 }
 .smarthomesubmenu.active
 {
@@ -444,7 +474,9 @@ ul li:hover
 .supportsubmenu p:hover
 {
     cursor: pointer;
-    text-decoration-line: underline;
+    border-bottom: 3px solid;
+    border-bottom-color: black;
+    transition: border 60s linear;
 
 }
 .supportsubmenu.active
