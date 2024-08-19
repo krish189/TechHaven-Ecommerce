@@ -26,3 +26,7 @@
     bottom: 11rem;
     font-weight: bolder;
 }
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    display: none;
+}
