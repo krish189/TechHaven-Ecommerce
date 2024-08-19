@@ -1,0 +1,36 @@
+.signuplogo
+{
+    width: 250px;
+    height: 100px;
+    position: relative;
+    left: 11.5rem;
+}
+.signupform
+{
+    background-color: #F4F3F0;
+    height: 100vh;
+}
+.card
+{
+    width: 40rem;
+    height: auto;
+    position: relative;
+    background-color: #FFFFFF;
+    left: 30rem;
+    top: 3rem;
+}
+.card-body
+{
+    position: relative;
+    left: 3rem;
+}
+form input
+{
+    padding: 10px;
+    width: 30rem;
+}
+.continue
+{
+    padding: 10px;
+    width: 30rem;
+}

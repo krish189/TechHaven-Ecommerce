@@ -1,0 +1,47 @@
+.loginlogo
+{
+    width: 250px;
+    height: 100px;
+    position: relative;
+    left: 11.5rem;
+}
+.loginform
+{
+    background-color: #F4F3F0;
+    height: 100vh;
+}
+.card
+{
+    width: 40rem;
+    height: auto;
+    position: relative;
+    background-color: #FFFFFF;
+    left: 30rem;
+    top: 8rem;
+}
+.card-body
+{
+    position: relative;
+    left: 3rem;
+}
+form input
+{
+    padding: 10px;
+    width: 30rem;
+}
+.loginbtn
+{
+    padding: 10px;
+    width: 30rem;
+}
+.signuplink
+{
+    text-decoration: none;
+    color: black;
+    position: relative;
+    left: 0.3rem;
+}
+.signuplink:hover
+{
+    text-decoration: underline;
+}
