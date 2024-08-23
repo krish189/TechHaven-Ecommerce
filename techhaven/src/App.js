@@ -5,11 +5,13 @@ import Home from './components/Home/HomePage/Home';
 import Shop from './components/Shop/ShopPage/Shop';
 import Login from './components/Shop/Login/Login';
 import Signup from './components/Shop/SignUp/Signup';
+import { AuthProvider } from './components/Shop/Context/AuthContext';
 
 function App() {
   return (
     <>
-     <BrowserRouter>
+    <AuthProvider>
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home/>}></Route>
         <Route path='/shop' element={<Shop/>}></Route>
@@ -17,6 +19,7 @@ function App() {
         <Route path='/signup' element={<Signup/>}></Route>
       </Routes>
     </BrowserRouter>
+    </AuthProvider>
     </>
   );
 }

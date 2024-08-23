@@ -10,8 +10,8 @@
     width: 30px;
     height: 30px;
     position: relative;
-    left: 54rem;
-    top: 1rem;
+    left: 47rem;
+    top: 1.3rem;
 }
 .shopheader
 {
@@ -44,8 +44,16 @@
 .shoplogin
 {
     position: relative;
-    left: 50rem;
+    left: 42.8rem;
     top: 1.2rem;
+    font-size: 24px;
+}
+.profileshoplogin
+{
+    position: relative;
+    left: 47rem;
+    top: 1.6rem;
+    font-size: 17px;
 }
 span
 {
@@ -54,12 +62,14 @@ span
     border-radius: 50%;
     width: 25px;
     height: 25px;
+    font-size: 1rem;
+    font-weight: bolder;
     display: flex; 
     align-items: center;
     justify-content: center;
     position: relative;
-    left: 56rem;
-    bottom: 0.8rem;
+    left: 48.8rem;
+    bottom: 0.3rem;
     background-color: #F4F3F0;
     color: black;
 }
@@ -116,4 +126,81 @@ span
     text-decoration: none;
     color: lightgray;
     font-size: 16px;
+}
+.shopdownicon
+{
+    width: 15px;
+    height: 15px;
+    position: relative;
+    left: 47.5rem;
+    top: 1.9rem;
+}
+.profileicon
+{
+    width: 24px;
+    height: 24px;
+    position: relative;
+    left: 46.5rem;
+    top: 1.5rem;
+}
+.userinfosubmenu
+{
+    position: fixed;
+    top: 4rem;
+    right: 9rem;
+    height: auto;
+    padding: 25px;
+    border-radius: 5px;
+    background-color: white;
+    z-index: 999; 
+    display: none;
+}
+.userinfosubmenu.active
+{
+    display: block;
+}
+.profile
+{
+    position: relative;
+    right: 5rem;
+    cursor: pointer;
+    display: flex;
+}
+.logouticon
+{
+    width: 25px;
+    height: 25px;
+    position: relative;
+    top: 0.2rem;
+    left: 0.5rem;
+}
+.logoutoption
+{
+    position: relative;
+    left: 1rem;
+    top: 0.2rem;
+    cursor: pointer;
+}
+.profileicondark
+{
+    width: 60px;
+    height: 35px;
+    position: relative;
+    right: 0.9rem;
+}
+.userinfo
+{
+    display: flex;
+}
+.username
+{
+    position: relative;
+    right: 0.8rem;
+    bottom: 0.3rem;
+}
+.email
+{
+    position: relative;
+    top: 1rem;
+    right: 2.6rem;
 }

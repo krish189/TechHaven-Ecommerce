@@ -25,3 +25,7 @@ class UserSerializer(serializers.ModelSerializer):
             print(f"Error in creating user: {e}")
             raise e
 
+# Login serializer for incoming data validation
+class LoginSerializer(serializers.Serializer):
+    email = serializers.EmailField()
+    password = serializers.CharField()

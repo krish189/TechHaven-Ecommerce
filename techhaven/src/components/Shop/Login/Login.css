@@ -45,3 +45,25 @@ form input
 {
     text-decoration: underline;
 }
+.successalert
+{
+    width: 20rem;
+    height: 4rem;
+    position: relative;
+    left: 39rem;
+    top: 5rem;
+    z-index: 999;
+    font-size: large;
+    text-align: center;
+}
+.erroralert
+{
+    width: 20rem;
+    height: 4rem;
+    position: relative;
+    left: 39rem;
+    top: 5rem;
+    z-index: 999;
+    font-size: large;
+    text-align: center;
+}
