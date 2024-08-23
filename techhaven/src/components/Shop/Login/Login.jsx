@@ -9,13 +9,13 @@ function Login() {
   return (
     <>
     <div className='loginform'>
-        <Card>
+        <Card className='logincard'>
         <Card.Img src={logo} alt='logo' className='loginlogo' variant='top'/>
-        <Card.Body>
+        <Card.Body className='logincardbody'>
         <h5>Login</h5>
         <p>Login and explore your tech world now!</p>
         <form>
-            <input type='email' placeholder='Enter E-mail' required/><br></br><br></br>
+            <input type='email' placeholder='Enter Username' required/><br></br><br></br>
             <input type='password' placeholder='Enter Password' required/><br></br><br></br>
             <Button className='loginbtn'>Login</Button><br></br><br></br>
             <p>New to TechHaven? <Link to='/signup' className='signuplink'>Join now and power up your experience!</Link></p>

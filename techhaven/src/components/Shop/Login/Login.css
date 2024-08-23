@@ -10,16 +10,16 @@
     background-color: #F4F3F0;
     height: 100vh;
 }
-.card
+.logincard
 {
     width: 40rem;
     height: auto;
     position: relative;
     background-color: #FFFFFF;
     left: 30rem;
-    top: 8rem;
+    top: 6rem;
 }
-.card-body
+.logincardbody
 {
     position: relative;
     left: 3rem;

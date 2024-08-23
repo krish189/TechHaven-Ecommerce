@@ -30,7 +30,7 @@ function Header() {
   const [showGamingCategory, setShowGamingCategory] = useState(false);
   const [showPowerCategory, setShowPowerCategory] = useState(false);
  
-  //Creates references to DOM elements using useRef
+  // Creates references to DOM elements using useRef
   const refs = {
     searchRef : useRef(null),
     lapsubmenuRef : useRef(null),
@@ -194,8 +194,8 @@ function Header() {
         }
   };
 
-  //Add mousedown event listener to detect clicks outside specific elements
-  //'handleClickOutside' function is invoked to handle these clicks
+  // Add mousedown event listener to detect clicks outside specific elements
+  // 'handleClickOutside' function is invoked to handle these clicks
   useEffect(() => {
     document.addEventListener('mousedown', handleClickOutside);
     return () => {
