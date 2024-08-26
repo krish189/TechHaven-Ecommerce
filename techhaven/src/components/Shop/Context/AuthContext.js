@@ -1,10 +1,9 @@
 import React, { createContext, useState, useContext } from 'react';
 
-// Create Context
+// Create Context Object
 const AuthContext = createContext();
 
 // Provide the AuthContext to components
-// Takes children as a prop
 export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
 
