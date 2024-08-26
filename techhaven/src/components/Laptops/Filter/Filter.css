@@ -1,0 +1,92 @@
+.filters
+{
+    width: 20rem;
+    padding: 10px;
+}
+.filterstitle
+{
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 19px;
+    position: relative;
+    left: 3rem;
+}
+.filterline
+{
+    width: 16.2rem;
+    position: relative;
+    left: 2.8rem;
+}
+.filterpricetitle
+{
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 27px;
+    position: relative;
+    left: 3rem;
+}
+.filterprice
+{
+    display: flex;
+}
+.dropdownicon
+{
+    width: 15px;
+    height: 15px;
+    position: relative;
+    left: 13rem;
+    top: 0.3rem;
+}
+.range
+{
+    width: 80%; 
+    position: relative;
+    left: 3.5rem;
+    top: 0.5rem;
+}
+.priceinput
+{
+    display: flex;
+    position: relative;
+    top: 1.5rem;
+}
+.min
+{
+    width: 7rem;
+    position: relative;
+    left: 3rem;
+}
+.to
+{
+    position: relative;
+    left: 3.5rem;
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 400;
+    top: 0.5rem;
+}
+.max
+{
+    width: 7rem;
+    position: relative;
+    left: 4rem;
+}
+.filterline2
+{
+    width: 16.2rem;
+    position: relative;
+    left: 2.8rem;
+    top: 2rem;
+}
+.pricealert
+{
+    width: 15rem;
+    position: relative;
+    left: 3rem;
+    height: 4rem;
+    background-color: #EAEAEA;
+}
+.pricealert.active
+{
+    display: block;
+}

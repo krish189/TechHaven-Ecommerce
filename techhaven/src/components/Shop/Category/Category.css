@@ -26,3 +26,14 @@ ul li:hover
     color: lightgray;
     cursor: pointer;
 }
+.supportsubmenu
+{
+    position: fixed;
+    top: 8.5rem;
+    right: 0.5rem;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: white;
+    z-index: 999; 
+    display: none;
+}
