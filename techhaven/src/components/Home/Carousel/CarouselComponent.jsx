@@ -6,8 +6,10 @@ import laptopcarousel from '../../../assets/Laptop_carousel.png';
 import peripheralcarousel from '../../../assets/Peripherals_carousel.jpg';
 import speakercarousel from '../../../assets/Speaker_carousel.jpg';
 import hometheater from '../../../assets/hometheater_carousel.png';
+import { useNavigate } from 'react-router-dom';
 
 function CarouselComponent() {
+  const navigate = useNavigate();
   return (
     <div>
     <Carousel>
@@ -19,7 +21,7 @@ function CarouselComponent() {
         />
         <Carousel.Caption>
           <h1 style={{color:'#FFFFFF'}}>Discover Your Perfect Laptop at Unbeatable Prices</h1>
-          <Button variant="light" size="lg">Explore Now</Button>
+          <Button variant="light" size="lg" onClick={()=>navigate('/shop/laptops')}>Explore Now</Button>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>

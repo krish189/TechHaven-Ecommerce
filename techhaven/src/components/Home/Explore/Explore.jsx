@@ -7,13 +7,15 @@ import speaker from '../../../assets/speaker.png';
 import keyboardmouse from '../../../assets/keyboardmouse.jpg';
 import soundbar from '../../../assets/soundbar.jpg';
 import projector from '../../../assets/projectors.jpg';
+import { useNavigate } from 'react-router-dom';
 
 function Explore() {
+  const navigate = useNavigate();
   return (
     <div className='explore'>
         <h1>Explore Products</h1>
         <div className='cardcontainer'>
-        <Card style={{ width: '14rem',height: '14rem'}}>
+        <Card style={{ width: '14rem',height: '14rem'}} onClick={()=>navigate('/shop/laptops')}>
             <Card.Body>
             <Card.Img variant="top" src={laptop} />
             <Card.Title>Laptops</Card.Title>
