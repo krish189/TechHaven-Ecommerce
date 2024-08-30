@@ -5,10 +5,11 @@ import { useState, useEffect } from 'react';
 import 'rc-slider/assets/index.css';
 import CurrencyInput from 'react-currency-input-field';
 import Alert from 'react-bootstrap/Alert';
+import { useFilter } from '../Context/FilterContext'; 
 
 function Filter() {
   //State Initialization
-  const [value, setValue] = useState([0, 700000]);
+  const { value, setValue } = useFilter();
   const [show, setShow] = useState(true);
 
   //Triggered when slider thumb moves

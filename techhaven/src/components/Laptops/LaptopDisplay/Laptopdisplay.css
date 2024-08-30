@@ -38,3 +38,55 @@
     position: relative;
     left: 3.5rem;
 }
+.container
+{
+    position: relative;
+    left: 11rem;
+    bottom: 30rem;
+    padding: 10px;
+    width: 78%;
+}
+.laptoppage
+{
+    overflow: hidden;
+}
+.laptopname
+{
+    font-size: 1.1rem;
+    font-weight: 400;   
+}
+.laptopname:hover
+{
+    color: orange;
+}
+.mrpprice
+{
+    text-decoration: line-through;
+}
+.actual_price
+{
+    font-size: 28px;
+}
+.rating
+{
+    display: flex;
+}
+.ratingvalue
+{
+    font-size: 15px;
+}
+.star-container
+{
+    position: relative;
+    left: 0.6rem;
+    bottom: 0.4rem;
+}
+.numreviews
+{
+  position: relative;
+  left: 1.2rem;
+}
+.productimg
+{
+    height: 210px;
+}

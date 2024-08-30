@@ -61,7 +61,7 @@ function Header() {
               <h5 className='shoplogin'>Login</h5>
             </Link>
           )}
-        <Link className='link'><img src={cart} alt='cart' className='shopcartimg'/><span>0</span></Link>
+        <Link className='link'><img src={cart} alt='cart' className='shopcartimg'/><span  className='cartcount'>0</span></Link>
        </nav>
     </div>
     <div ref={refs.shopsearchRef} className={showShopSearch ? 'shopsearch active' : 'shopsearch'}>

@@ -1,0 +1,11 @@
+.smallcardimg
+{
+    position: relative;
+    left: 3rem;
+    border: 1px solid black;
+    margin-bottom: 5px;
+}
+.smallcardimg:hover
+{
+    border: 3px solid black;
+}

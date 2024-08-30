@@ -24,7 +24,7 @@ class BaseProduct(models.Model):
 
     def __str__(self):
         return self.name
-        
+
 class Laptop(BaseProduct):
     laptop_type = models.CharField(max_length=255, null=False)
     cpu = models.CharField(max_length=255, null=True, blank=True)
@@ -37,6 +37,7 @@ class Laptop(BaseProduct):
     touchscreen = models.BooleanField(default=False)
 
     def __str__(self):
-        return f"{self.name} - {self.processor}, {self.ram}, {self.storage}, {self.display}"
+        return f"{self.name} - {self.cpu}, {self.ram}, {self.storage}, {self.display}"
     
 admin.site.register(Laptop)
+    
