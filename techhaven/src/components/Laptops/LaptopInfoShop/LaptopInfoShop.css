@@ -1,11 +1,198 @@
 .smallcardimg
 {
     position: relative;
-    left: 3rem;
+    left: 2rem;
     border: 1px solid black;
     margin-bottom: 5px;
 }
 .smallcardimg:hover
 {
     border: 3px solid black;
+}
+.image-wrapper
+{
+    display: flex;
+}
+.pointerzoom
+{
+    position: relative;
+    left: 6rem;
+}
+.info
+{
+    position: relative;
+    left: 13rem;
+    top: 6rem;
+    width: 30rem;
+}
+.name
+{
+    font-size: 24px;
+    font-weight: 500;
+}
+.rating
+{
+    display: flex;
+}
+.ratingvalue
+{
+    font-size: 15px;
+    font-weight: 400;
+}
+.star-container
+{
+    position: relative;
+    left: 0.6rem;
+    bottom: 0.4rem;
+}
+.numreviews
+{
+  position: relative;
+  left: 1.2rem;
+  bottom: 0.1rem;
+  cursor: pointer;
+}
+.numreviews:hover
+{
+    text-decoration: underline;
+}
+.offer
+{
+    font-size: 24px;
+    font-weight: 300;
+    color: rgb(204, 12, 57);
+    line-height: 32px;
+    position: relative;
+    left: 0.3rem;
+}
+.newprice
+{
+  font-size: 28px;
+  font-weight: 400;
+  position: relative;
+  left: 0.5rem;
+}
+.oldprice
+{
+    text-decoration: line-through;
+    font-size: 16px;
+}
+.mrp
+{
+    position: relative;
+    left: 0.3rem;
+    font-size: 16px;
+}
+.saveprice
+{
+    position: relative;
+    left: 0.5rem;
+    font-size: 16px;
+    font-weight: 400;
+}
+.sku
+{
+    font-size: 12px;
+    font-weight: 400;
+    color:  rgba(40, 40, 40, 0.7);
+    line-height: 18px;
+    position: relative;
+    left: 0.5rem;
+}
+.productreturn
+{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    left: 1.5rem;
+    top: 1.5rem;
+}
+.warrantyicon
+{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    left: 6rem;
+    top: 1.5rem;
+}
+.deliverytruckicon
+{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    left: 10.5rem;
+    top: 1.5rem;
+}
+.icondefn
+{
+    display: flex;
+    font-size: 12px;
+    font-weight: 400;
+}
+.spechead
+{
+    position: relative;
+    left: 0.5rem;
+    font-weight: 700;
+}
+.specvalue
+{
+    position: relative;
+    left: 7rem;
+    font-weight: 400;
+    color: rgb(15,17,17);
+}
+.descpara
+{
+    position: relative;
+    left: 0.5rem;
+    font-size: 14px;
+    font-weight: 400;
+    width: 25rem;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(15,17,17);
+}
+.descpoints
+{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    right: 3rem;
+    height: 32rem;
+    bottom: 1.5rem;
+}
+.descpoints li
+{
+    font-size: 14px;
+    font-weight: 400;
+    color:  rgb(15, 17, 17);
+}
+.descpoints li:hover
+{
+    color: rgb(15, 17, 17);
+    cursor: text;
+}
+.addtocartbtn
+{
+    position: relative;
+    left: 0.3rem;
+    font-weight: 700;
+    border-radius: 62.5rem;
+    height: 2.5rem;
+    font-size: 1rem;
+    width: 17rem;
+    background-color: #0071dc;
+}
+.buynow
+{
+    position: relative;
+    left: 0.3rem;
+    font-weight: 700;
+    border-radius: 62.5rem;
+    height: 2.5rem;
+    font-size: 1rem;
+    width: 17rem;
+    background-color: #0071dc;
+    position: relative;
+    top: 0.6rem;
 }

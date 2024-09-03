@@ -1,22 +1,25 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import logo from '../../../assets/logo.png';
 import searchicon from '../../../assets/searchicon.png';
 import cart from '../../../assets/cart.png';
 import close from '../../../assets/close.png';
 import '../Header/Header.css';
-import {Link} from 'react-router-dom';
-import { useState, useRef, useEffect } from 'react';
+import {Link, useNavigate} from 'react-router-dom';
+import { useState, useRef, useEffect} from 'react';
 import { useAuth } from '../Context/AuthContext'; 
 import down from '../../../assets/downicon.png';
 import profile from '../../../assets/profile.png';
 import logouticon from '../../../assets/logout.png';
 import profiledark from '../../../assets/profileicondark.jpg';
+import { CartContext } from '../../AddtoCartPage/Context/AddToCart';
 
 function Header() {
   const [showShopSearch, setShowShopSearch] = useState(false);
   const [showUserInfo, setShowUserInfo] = useState(false);
 
   const { user, logout } = useAuth();
+  
+  const { cartCount } = useContext(CartContext);
 
   const refs = {
     shopsearchRef : useRef(null),
@@ -41,7 +44,7 @@ function Header() {
   useEffect(() => {
     document.addEventListener('mousedown', shopheaderhandleClickOutside);
     return () => {
-      document.removeEventListener('mousedown', shopheaderhandleClickOutside);   
+      document.removeEventListener('mousedown', shopheaderhandleClickOutside);  
     };
   });
   return (
@@ -61,7 +64,7 @@ function Header() {
               <h5 className='shoplogin'>Login</h5>
             </Link>
           )}
-        <Link className='link'><img src={cart} alt='cart' className='shopcartimg'/><span  className='cartcount'>0</span></Link>
+        <Link className='link' to='/cart'><img src={cart} alt='cart' className='shopcartimg'/><span  className='cartcount'>{cartCount}</span></Link>
        </nav>
     </div>
     <div ref={refs.shopsearchRef} className={showShopSearch ? 'shopsearch active' : 'shopsearch'}>

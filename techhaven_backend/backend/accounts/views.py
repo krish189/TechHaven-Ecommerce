@@ -1,3 +1,4 @@
+from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
@@ -23,9 +24,10 @@ def login_view(request):
             password=serializer.validated_data['password']
             try:
                 user = User.objects.get(email=email)
+                refresh = RefreshToken.for_user(user)
                 if check_password(password, user.password):
                     user_serializer = UserSerializer(user) # For Serializing data
-                    return Response({"message": "Login successful", "user": user_serializer.data}, status=status.HTTP_200_OK)
+                    return Response({'refresh': str(refresh),'access': str(refresh.access_token), "user": user_serializer.data}, status=status.HTTP_200_OK)
                 else:
                     return Response({"error": "Invalid password"}, status=status.HTTP_401_UNAUTHORIZED)
             except User.DoesNotExist:

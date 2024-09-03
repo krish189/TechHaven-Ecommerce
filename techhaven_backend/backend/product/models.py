@@ -3,7 +3,8 @@ from django.contrib import admin
 
 class BaseProduct(models.Model):
     name = models.CharField(max_length=255)
-    description = models.TextField()
+    description_para = models.TextField(default= "")
+    description_points = models.TextField(default= "")
     price = models.DecimalField(max_digits=10,decimal_places=2)
     discount_price = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
     sku = models.CharField(max_length=100, unique=True)

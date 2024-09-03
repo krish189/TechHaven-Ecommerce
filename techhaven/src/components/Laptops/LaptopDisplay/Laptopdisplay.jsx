@@ -58,9 +58,9 @@ console.log(laptopData)
     <div className='laptoppagetitle'>
         <h1 className='laptoppagehead'>LAPTOP</h1>
         <p className='laptoppagetitlecontent'>For Work, Play, Versatility and Reliability. Engineered for Performance, Built to Endure.</p>
-        <p className='laptoppagetitlecontent'>1-year Brand Warranty, 100+ Service Centers.</p>
     </div>
     <Filter/>
+    <div className='flexcontainer'>
     <div>
       <h5 className='filtercategorytitle'>Product Category</h5>
       <Form.Check label='Ultrabooks' name='Ultrabooks' className='categorycheckbox' onChange={handleCheckboxChange}/>
@@ -104,6 +104,7 @@ console.log(laptopData)
           ))}
         </Row>
     </Container>
+    </div>
     </div>
     </>
   )

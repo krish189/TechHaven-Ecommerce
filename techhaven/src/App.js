@@ -9,12 +9,15 @@ import { AuthProvider } from './components/Shop/Context/AuthContext';
 import { FilterProvider } from './components/Laptops/Context/FilterContext';
 import Laptoppage from './components/Laptops/LaptopPage/Laptoppage';
 import LaptopInfoShop from './components/Laptops/LaptopInfoShop/LaptopInfoShop';
+import { CartProvider } from './components/AddtoCartPage/Context/AddToCart';
+import AddtoCart from './components/AddtoCartPage/AddtoCart/AddtoCart';
 
 function App() {
   return (
     <>
     <AuthProvider>
     <FilterProvider>
+    <CartProvider>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home/>}></Route>
@@ -22,9 +25,11 @@ function App() {
         <Route path='/shop/laptops' element={<Laptoppage/>}></Route>
         <Route path='/login' element={<Login/>}></Route>
         <Route path='/signup' element={<Signup/>}></Route>
+        <Route path='/cart' element={<AddtoCart/>}></Route>
         <Route path='/shop/laptops/:laptoptype/:laptopname' element={<LaptopInfoShop/>}></Route>
       </Routes>
     </BrowserRouter>
+    </CartProvider>
     </FilterProvider>
     </AuthProvider>
     </>

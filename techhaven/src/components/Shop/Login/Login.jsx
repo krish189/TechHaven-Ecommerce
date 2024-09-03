@@ -34,6 +34,8 @@ function Login() {
       });
       if (response.ok) {
         const data = await response.json();
+        localStorage.setItem('access_token', data.access); 
+        localStorage.setItem('refresh_token', data.refresh);
         login(data.user);
         setShowSuccessMessage(true);
         setErrorMessage(false);
