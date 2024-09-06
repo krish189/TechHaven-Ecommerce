@@ -23,8 +23,17 @@ function Laptopdisplay() {
     setSelectedCategories(prev =>
       checked ? [...prev, name] : prev.filter(category => category !== name)
     );
+    navigate(`/shop/laptops/${encodeURIComponent(name)}`)
   };
   console.log(selectedCategories)
+
+  function formatCurrency(price) {
+    return new Intl.NumberFormat('en-IN', {
+      style: 'currency',
+      currency: 'INR',
+      minimumFractionDigits: 2
+    }).format(price);
+  }
 
 useEffect(() => {
   const fetchLaptops = async () => {
@@ -92,7 +101,7 @@ console.log(laptopData)
                   />
                   <span className='numreviews'>{laptop.num_reviews} reviews</span>
                 </div>
-                <p className='price'><span className='actual_price'>₹{laptop.discount_price}</span> MRP: <span className='mrpprice'>₹{laptop.price}</span></p>
+                <p className='price'><span className='actual_price'>{formatCurrency(laptop.discount_price)}</span> MRP: <span className='mrpprice'>{formatCurrency(laptop.price)}</span></p>
                 <p>({Math.round((laptop.price-laptop.discount_price)/laptop.price*100)}% off)</p>
                 {laptop.stock===1 && <p style={{color:'red'}}>Only 1 Left—Buy Now!</p>}
                 {laptop.stock>1 && laptop.stock<=3 && <p style={{color:'red'}}>Only a Few Left—Get Yours Fast!</p>}

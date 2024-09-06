@@ -23,6 +23,7 @@ function App() {
         <Route path="/" element={<Home/>}></Route>
         <Route path='/shop' element={<Shop/>}></Route>
         <Route path='/shop/laptops' element={<Laptoppage/>}></Route>
+        <Route path='/shop/laptops/:laptoptype' element={<Laptoppage/>}></Route>
         <Route path='/login' element={<Login/>}></Route>
         <Route path='/signup' element={<Signup/>}></Route>
         <Route path='/cart' element={<AddtoCart/>}></Route>
