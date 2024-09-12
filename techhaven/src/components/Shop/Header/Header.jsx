@@ -4,7 +4,7 @@ import searchicon from '../../../assets/searchicon.png';
 import cart from '../../../assets/cart.png';
 import close from '../../../assets/close.png';
 import '../Header/Header.css';
-import {Link, useNavigate} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import { useState, useRef, useEffect} from 'react';
 import { useAuth } from '../Context/AuthContext'; 
 import down from '../../../assets/downicon.png';

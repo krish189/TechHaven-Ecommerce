@@ -39,7 +39,7 @@ function AddtoCart() {
         <p className='carthead_a'>Shopping Cart ({cartCount})</p><br></br><br></br>
         <hr className='cartline'></hr>
         {cart && cart.map((item,index)=>(
-          <div>
+          <div key={index}>
           <div className='cartitems'>
             <div>
             <img src={`http://localhost:8000${item.images[0]}`} alt='productimage' className='productimage'/>
@@ -86,7 +86,7 @@ function AddtoCart() {
               <span className='subtotal-head'>Subtotal ({totalItems} items):</span>
               <span className='subtotal-value'>{formatCurrency(overallSubtotal)}</span>
             </p>
-            <Button className='proceedtobuy-btn'>Proceed to Buy</Button>
+            <Button className='proceedtobuy-btn' onClick={()=>{navigate('/shipping')}}>Proceed to Buy</Button>
           </div>
         </Card>
         </Col>

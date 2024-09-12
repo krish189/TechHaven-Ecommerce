@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../../Shop/Header/Header';
 import Footer from '../../Home/Footer/Footer';
 import Category from '../../Shop/Category/Category';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import {useState, useEffect, useRef, useContext } from 'react';
 import Card from 'react-bootstrap/Card';
 import '../LaptopInfoShop/LaptopInfoShop.css';
@@ -72,20 +72,22 @@ function LaptopInfoShop() {
     addToCart(laptop);
   };
 
-
+  
   return (
     <>
     <Header/>
     <Category/>
     <div className='image-wrapper'>
     <div>
-       {laptopdata.map((laptop)=>(
+       {laptopdata.map((laptop,laptopindex)=>(
+        <div key={laptopindex}>
         <Card style={{ width: '10rem', height: 'auto', marginBottom: '20px'}}>
-         {laptop.images && laptop.images.map((image, index) => (
-              <Card.Img key={index} src={`http://localhost:8000${image}`} alt={`Image ${index + 1}`} className='smallcardimg'
+         {laptop.images && laptop.images.map((image, imageindex) => (
+              <Card.Img key={imageindex} src={`http://localhost:8000${image}`} alt={`Image ${imageindex + 1}`} className='smallcardimg'
                onClick={()=>{setImage(`http://localhost:8000${image}`)}}/>
             ))}
         </Card>
+        </div>
        ))
        }
     </div>
@@ -111,7 +113,6 @@ function LaptopInfoShop() {
               onLoad={handleImageLoad}
             />
           )}
-
      </div>
      <div className='info'>
       {laptopdata && laptopdata.map((laptop,index)=>(
@@ -159,8 +160,8 @@ function LaptopInfoShop() {
         <p className='spechead'>About this item</p>
         <p className='descpara'>{laptop.description_para}</p>
         <ul className='descpoints'>
-              {laptop.description_points.split('\n').map((point, index) => (
-                <li key={index}>&#8226; {point}</li>
+              {laptop.description_points.split('\n').map((point, pointindex) => (
+                <li key={pointindex}>&#8226; {point}</li>
               ))}
         </ul>
         </div>

@@ -11,13 +11,18 @@ import Laptoppage from './components/Laptops/LaptopPage/Laptoppage';
 import LaptopInfoShop from './components/Laptops/LaptopInfoShop/LaptopInfoShop';
 import { CartProvider } from './components/AddtoCartPage/Context/AddToCart';
 import AddtoCart from './components/AddtoCartPage/AddtoCart/AddtoCart';
+import Payment from './components/Payment/Payment';
+import ShippingAddress from './components/ShippingAddress/ShippingAddress';
+import { ShippingProvider } from './components/ShippingAddress/Context/ShippingContext';
 
 function App() {
+  
   return (
     <>
     <AuthProvider>
     <FilterProvider>
     <CartProvider>
+    <ShippingProvider>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home/>}></Route>
@@ -28,8 +33,11 @@ function App() {
         <Route path='/signup' element={<Signup/>}></Route>
         <Route path='/cart' element={<AddtoCart/>}></Route>
         <Route path='/shop/laptops/:laptoptype/:laptopname' element={<LaptopInfoShop/>}></Route>
+        <Route path='/shipping' element={<ShippingAddress/>}></Route>
+        <Route path='/payment' element={<Payment/>}></Route>
       </Routes>
     </BrowserRouter>
+    </ShippingProvider>
     </CartProvider>
     </FilterProvider>
     </AuthProvider>
