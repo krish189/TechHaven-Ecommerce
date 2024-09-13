@@ -14,7 +14,6 @@ class Command(BaseCommand):
             for laptop_data in laptops_data:
                 Laptop.objects.create(
                     name = laptop_data['name'],
-                    description = laptop_data['description'],
                     price = laptop_data['price'],
                     discount_price = laptop_data['discount_price'],
                     sku = laptop_data['sku'],
@@ -35,6 +34,8 @@ class Command(BaseCommand):
                     graphics = laptop_data['graphics'],
                     operating_system = laptop_data['operating_system'],
                     battery_life = laptop_data['battery_life'],
-                    touchscreen = laptop_data['touchscreen']
+                    touchscreen = laptop_data['touchscreen'],
+                    description_para = laptop_data['description_para'],
+                    description_points = laptop_data['description_points']
                 )
                 self.stdout.write(self.style.SUCCESS('Successfully added laptop data'))

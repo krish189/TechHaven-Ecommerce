@@ -138,3 +138,7 @@
     left: 4rem;
     top: 0.5rem;
 }
+input:focus {
+    border: 1px solid #0041C2;
+    outline: none; 
+}

@@ -9,7 +9,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { useFilter } from '../Context/FilterContext'; 
 import StarRatings from 'react-star-ratings';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 
 function Laptopdisplay() {
@@ -17,15 +17,47 @@ function Laptopdisplay() {
   const [laptopData, setLaptopData] = useState([]);
   const { value } = useFilter();
   const navigate = useNavigate();
+  const { laptoptype } = useParams(); 
+
+  useEffect(() => {
+    // Update the selected categories based on the URL
+    if (laptoptype) {
+      setSelectedCategories([laptoptype]);
+    } else {
+      setSelectedCategories([]);
+    }
+  }, [laptoptype]);
 
   const handleCheckboxChange = (e) => {
     const { name, checked } = e.target;
-    setSelectedCategories(prev =>
-      checked ? [...prev, name] : prev.filter(category => category !== name)
-    );
-    navigate(`/shop/laptops/${encodeURIComponent(name)}`)
+    if (name === 'All') {
+      if (checked) {
+        setSelectedCategories([
+          'Ultrabooks',
+          'Gaming Laptops',
+          '2-in-1 Laptops',
+          'Business Laptops',
+          'Workstation Laptops',
+          'Everyday Laptops',
+          'Rugged Laptops',
+          'Chromebooks'
+        ]);
+      } else {
+        setSelectedCategories([]); 
+      }
+    } else {
+      setSelectedCategories(prev =>
+        checked ? [...prev, name] : prev.filter(category => category !== name)
+      );
+    }
+    
+    if (name !== 'All') {
+      navigate(`/shop/laptops/${encodeURIComponent(name)}`);
+    } else {
+      navigate('/shop/laptops');
+    }
   };
-  console.log(selectedCategories)
+
 
   function formatCurrency(price) {
     return new Intl.NumberFormat('en-IN', {
@@ -72,6 +104,7 @@ console.log(laptopData)
     <div className='flexcontainer'>
     <div>
       <h5 className='filtercategorytitle'>Product Category</h5>
+      <Form.Check label='All' name='All' className='categorycheckbox' onChange={handleCheckboxChange}/>
       <Form.Check label='Ultrabooks' name='Ultrabooks' className='categorycheckbox' onChange={handleCheckboxChange}/>
       <Form.Check label='Gaming Laptops' name='Gaming Laptops' className='categorycheckbox' onChange={handleCheckboxChange}/>
       <Form.Check label='2-in-1 Laptops' name='2-in-1 Laptops' className='categorycheckbox' onChange={handleCheckboxChange} />

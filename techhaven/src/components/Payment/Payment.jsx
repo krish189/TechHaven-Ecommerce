@@ -8,14 +8,17 @@ import deleteicon from '../../assets/delete-icon.png';
 import mastercard from '../../assets/mastercard.png';
 import Button from 'react-bootstrap/Button';
 import { useShipping } from '../ShippingAddress/Context/ShippingContext';
+import { useNavigate } from 'react-router-dom';
+import { useOrderDetails } from './Context/OrderDetails';
 
 function Payment() {
   const {cart, removeFromCart, overallSubtotal, totalItems} = useContext(CartContext);
   const {shippingData} = useShipping();
   const [cardHolderName, setCardHolderName] = useState('');
   const [cardNumber, setCardNumber] = useState('');
-  const [expiration, setExpiration] = useState('');
-  const [cvv, setCvv] = useState('');
+  const {updateOrderDetails} = useOrderDetails();
+
+  const navigate = useNavigate();
   
   function formatCurrency(price) {
     return new Intl.NumberFormat('en-IN', {
@@ -40,7 +43,6 @@ function Payment() {
             price_per_item: item.discount_price
         }))
     };
-
     try {
         const response = await fetch('http://localhost:8000/api/order_details/orders/', {
             method: 'POST',
@@ -51,7 +53,8 @@ function Payment() {
         });
         
         const data = await response.json();
-        console.log('Order:', data);
+        updateOrderDetails(data);
+        navigate('/orderconfirmation');
     } catch (error) {
         console.error('Error creating order:', error.message);
     }
@@ -74,8 +77,8 @@ function Payment() {
            <label htmlFor="expiration" className='expiration-label'>Expiration</label><br></br>
            <label htmlFor="cvv" className='cvv-label'>CVV</label><br></br>
            </div>
-           <input type="text" id='expiration' placeholder='MM/YY' onChange={(e) => setExpiration(e.target.value)} className='expiration-input'/>
-           <input type="text" id='cvv' placeholder='CVV' onChange={(e) => setCvv(e.target.value)} className='cvv-input'/><br></br><br></br>
+           <input type="text" id='expiration' placeholder='MM/YY' className='expiration-input'/>
+           <input type="text" id='cvv' placeholder='CVV' className='cvv-input'/><br></br><br></br>
            <Button type='submit'>Confirm Payment {formatCurrency(overallSubtotal)}</Button>
         </form>
       </div>

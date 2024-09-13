@@ -6,7 +6,7 @@ import close from '../../../assets/close.png';
 import chevronsubmenu from '../../../assets/chevron-submenu.png';
 import '../Header/Header.css';
 import {useState,useRef,useEffect} from 'react';
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 
 function Header() {
   // State variables and State Functions
@@ -29,6 +29,9 @@ function Header() {
   const [showMonitorCategory, setShowMonitorCategory] = useState(false);
   const [showGamingCategory, setShowGamingCategory] = useState(false);
   const [showPowerCategory, setShowPowerCategory] = useState(false);
+
+  // Navigate initialization
+  const navigate = useNavigate();
  
   // Creates references to DOM elements using useRef
   const refs = {
@@ -225,14 +228,14 @@ function Header() {
         <input type='text' placeholder='Search for...' />
     </div>
     <div ref={refs.lapsubmenuRef} className={showLaptopsubmenu ? 'laptopsubmenu active' : 'laptopsubmenu'}>
-          <p>Ultrabooks</p>
-          <p>Gaming Laptops</p>
-          <p>2-in-1 Laptops</p>
-          <p>Business Laptops</p>
-          <p>Workstation Laptops</p>
-          <p>Chromebooks</p>
-          <p>Everyday Laptops</p>
-          <p>Rugged Laptops</p>
+          <p onClick={()=>{navigate('/shop/laptops/Ultrabooks')}}>Ultrabooks</p>
+          <p onClick={()=>{navigate(`/shop/laptops/${encodeURIComponent('Gaming Laptops')}`)}}>Gaming Laptops</p>
+          <p onClick={()=>{navigate(`/shop/laptops/${encodeURIComponent('2-in-1 Laptops')}`)}}>2-in-1 Laptops</p>
+          <p onClick={()=>{navigate(`/shop/laptops/${encodeURIComponent('Business Laptops')}`)}}>Business Laptops</p>
+          <p onClick={()=>{navigate(`/shop/laptops/${encodeURIComponent('Workstation Laptops')}`)}}>Workstation Laptops</p>
+          <p onClick={()=>{navigate(`/shop/laptops/${encodeURIComponent('Chromebooks')}`)}}>Chromebooks</p>
+          <p onClick={()=>{navigate(`/shop/laptops/${encodeURIComponent('Everyday Laptops')}`)}}>Everyday Laptops</p>
+          <p onClick={()=>{navigate(`/shop/laptops/${encodeURIComponent('Rugged Laptops')}`)}}>Rugged Laptops</p>
     </div>
     <div ref={refs.audiovideosubmenuRef} className={showAudiovideosubmenu ? 'audiovideosubmenu active' : 'audiovideosubmenu'}>
           <p>Speakers <img src={chevronsubmenu} alt='chevronsubmenu' style={{width: '20px', height: '20px', position: 'relative', left: '6.8rem'}} onClick={displaySpeakerCategory}/></p>
