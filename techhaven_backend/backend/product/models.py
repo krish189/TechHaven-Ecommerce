@@ -40,5 +40,23 @@ class Laptop(BaseProduct):
     def __str__(self):
         return f"{self.name} - {self.cpu}, {self.ram}, {self.storage}, {self.display}"
     
+class Speaker(BaseProduct):
+    speaker_type = models.CharField(max_length=255, null=False)
+    power_output = models.CharField(max_length=100, null=True, blank=True)
+    connectivity = models.CharField(max_length=255, null=True, blank=True)
+    battery_life = models.CharField(max_length=255, null=True, blank=True)
+    frequency_response = models.CharField(max_length=255, null=True, blank=True)
+    waterproof = models.BooleanField(default=False)
+    smart_assistant = models.CharField(max_length=100, null=True, blank=True)
+    microphone = models.BooleanField(default=False)
+    bass_boost = models.BooleanField(default=False)
+    led_lighting = models.BooleanField(default=False)
+    multi_device_pairing = models.BooleanField(default=False)
+    audio_inputs = models.CharField(max_length=255, null=True, blank=True)
+    driver_size = models.CharField(max_length=255, null=True, blank=True)
+    led_lighting_color = models.CharField(max_length=255, null=True, blank=True)
+
+    
 admin.site.register(Laptop)
+admin.site.register(Speaker)
     

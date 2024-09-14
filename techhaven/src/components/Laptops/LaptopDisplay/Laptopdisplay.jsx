@@ -42,18 +42,25 @@ function Laptopdisplay() {
           'Rugged Laptops',
           'Chromebooks'
         ]);
-      } else {
+      } 
+      else 
+      {
         setSelectedCategories([]); 
       }
-    } else {
+    } 
+    else 
+    {
       setSelectedCategories(prev =>
         checked ? [...prev, name] : prev.filter(category => category !== name)
       );
     }
     
-    if (name !== 'All') {
+    if (name !== 'All') 
+    {
       navigate(`/shop/laptops/${encodeURIComponent(name)}`);
-    } else {
+    } 
+    else 
+    {
       navigate('/shop/laptops');
     }
   };
@@ -90,8 +97,6 @@ useEffect(() => {
   fetchLaptops();
 }, [selectedCategories]);
 
-
-console.log(laptopData)
 
   return (
     <>

@@ -16,6 +16,8 @@ import ShippingAddress from './components/ShippingAddress/ShippingAddress';
 import { ShippingProvider } from './components/ShippingAddress/Context/ShippingContext';
 import OrderConfirmation from './components/OrderConfirmation/OrderConfirmation';
 import { OrderDetailsProvider } from './components/Payment/Context/OrderDetails';
+import SpeakerPage from './components/Speakers/SpeakerPage/SpeakerPage';
+import SpeakerInfoShop from './components/Speakers/SpeakerInfoShop/SpeakerInfoShop';
 
 function App() {
   
@@ -39,6 +41,9 @@ function App() {
         <Route path='/shipping' element={<ShippingAddress/>}></Route>
         <Route path='/payment' element={<Payment/>}></Route>
         <Route path='/orderconfirmation' element={<OrderConfirmation/>}></Route>
+        <Route path='/shop/speakers' element={<SpeakerPage/>}></Route>
+        <Route path='/shop/speakers/:speakertype' element={<SpeakerPage/>}></Route>
+        <Route path='/shop/speakers/:speakertype/:speakername' element={<SpeakerInfoShop/>}></Route>
       </Routes>
     </BrowserRouter>
     </OrderDetailsProvider>

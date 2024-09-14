@@ -7,8 +7,11 @@ import insta from '../../../assets/insta.png';
 import youtube from '../../../assets/youtube.png';
 import linkedin from '../../../assets/linkedin.png';
 import whatsapp from '../../../assets/whatsapp.png';
+import { useNavigate } from 'react-router-dom';
 
 function Footer() {
+  const navigate = useNavigate();
+
   return (
     <>
     <div className="footer">
@@ -27,8 +30,8 @@ function Footer() {
     <div>
         <h5>Product</h5>
         <ul>
-            <li>Audio</li>
-            <li>Laptops</li>
+            <li onClick={()=>{navigate('/shop/laptops')}}>Laptops</li>
+            <li onClick={()=>{navigate('/shop/speakers')}}>Speakers</li>
             <li>Peripherals</li>
             <li>Projectors</li>
             <li>LED TV</li>

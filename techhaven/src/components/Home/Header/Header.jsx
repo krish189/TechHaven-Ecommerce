@@ -166,7 +166,6 @@ function Header() {
     if (refs.audiovideosubmenuRef.current && !refs.audiovideosubmenuRef.current.contains(event.target)) 
     {
       setShowAudiovideosubmenu(false);
-      setShowSpeakerCategory(false);
       setShowHeadphoneCategory(false);
       setShowTVCategory(false);
     }
@@ -245,10 +244,9 @@ function Header() {
           <p>Microphones</p>
     </div>
     <div ref={refs.speakercategoryRef} className={showSpeakerCategory ? 'speakercategory active' : 'speakercategory'}>
-        <p>Soundbars</p>
-        <p>Smart Speakers</p>
-        <p>Wireless Speakers</p>
-        <p>Party Speakers</p>
+        <p onClick={() =>{navigate(`/shop/speakers/${encodeURIComponent('Soundbars')}`)}}>Soundbars</p>
+        <p onClick={()=>{navigate(`/shop/speakers/${encodeURIComponent('Wireless Speakers')}`)}}>Wireless Speakers</p>
+        <p onClick={()=>{navigate(`/shop/speakers/${encodeURIComponent('Party Speakers')}`)}}>Party Speakers</p>
     </div>
     <div ref={refs.headphonecategoryRef} className={showHeadphoneCategory ? 'headphonecategory active' : 'headphonecategory'}>
       <p>Wired Headphones</p>

@@ -43,7 +43,7 @@ function CarouselComponent() {
         />
         <Carousel.Caption>
           <h1>Speakers for Every Occasion: From Parties to Relaxation</h1>
-          <Button variant="light" size="lg">Shop Collection</Button>
+          <Button variant="light" size="lg" onClick={()=>navigate('/shop/speakers')}>Shop Collection</Button>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>

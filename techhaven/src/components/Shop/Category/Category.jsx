@@ -31,7 +31,7 @@ function Category() {
         <nav className='categorynav'>
             <ul className='categoryul'>
                 <li onClick={()=>navigate('/shop/laptops')}>Laptops</li>
-                <li>Speakers</li>
+                <li onClick={()=>navigate('/shop/speakers')}>Speakers</li>
                 <li>Headphones & Earbuds</li>
                 <li>LED TV</li>
                 <li>Projectors</li>
