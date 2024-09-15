@@ -18,6 +18,8 @@ import OrderConfirmation from './components/OrderConfirmation/OrderConfirmation'
 import { OrderDetailsProvider } from './components/Payment/Context/OrderDetails';
 import SpeakerPage from './components/Speakers/SpeakerPage/SpeakerPage';
 import SpeakerInfoShop from './components/Speakers/SpeakerInfoShop/SpeakerInfoShop';
+import HeadphoneEarbudPage from './components/HeadphoneEarbuds/HeadphoneEarbudPage/HeadphoneEarbudPage';
+import HeadphoneEarbudInfo from './components/HeadphoneEarbuds/HeadphoneEarbudInfo/HeadphoneEarbudInfo';
 
 function App() {
   
@@ -44,6 +46,9 @@ function App() {
         <Route path='/shop/speakers' element={<SpeakerPage/>}></Route>
         <Route path='/shop/speakers/:speakertype' element={<SpeakerPage/>}></Route>
         <Route path='/shop/speakers/:speakertype/:speakername' element={<SpeakerInfoShop/>}></Route>
+        <Route path='/shop/HpEb' element={<HeadphoneEarbudPage/>}></Route>
+        <Route path='/shop/HpEb/:hp_eb_type' element={<HeadphoneEarbudPage/>}></Route>
+        <Route path='/shop/HpEb/:hp_eb_type/:hp_eb_name' element={<HeadphoneEarbudInfo/>}></Route>
       </Routes>
     </BrowserRouter>
     </OrderDetailsProvider>

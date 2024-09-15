@@ -166,8 +166,18 @@ function Header() {
     if (refs.audiovideosubmenuRef.current && !refs.audiovideosubmenuRef.current.contains(event.target)) 
     {
       setShowAudiovideosubmenu(false);
-      setShowHeadphoneCategory(false);
-      setShowTVCategory(false);
+    }
+    if (refs.speakercategoryRef.current && !refs.speakercategoryRef.current.contains(event.target)) 
+    {
+        setShowSpeakerCategory(false);
+    }
+    if (refs.headphonecategoryRef.current && !refs.headphonecategoryRef.current.contains(event.target)) 
+    {
+          setShowHeadphoneCategory(false);
+    }
+    if (refs.tvcategoryRef.current && !refs.tvcategoryRef.current.contains(event.target)) 
+    {
+          setShowTVCategory(false);
     }
     if (refs.accessoriessubmenuRef.current && !refs.accessoriessubmenuRef.current.contains(event.target))
     {
@@ -249,10 +259,10 @@ function Header() {
         <p onClick={()=>{navigate(`/shop/speakers/${encodeURIComponent('Party Speakers')}`)}}>Party Speakers</p>
     </div>
     <div ref={refs.headphonecategoryRef} className={showHeadphoneCategory ? 'headphonecategory active' : 'headphonecategory'}>
-      <p>Wired Headphones</p>
-      <p>Wireless Headphones</p>
-      <p>Wired Earbuds</p>
-      <p>Wireless Earbuds</p>
+      <p onClick={() =>{navigate(`/shop/HpEb/${encodeURIComponent('Wired Headphones')}`)}}>Wired Headphones</p>
+      <p onClick={() =>{navigate(`/shop/HpEb/${encodeURIComponent('Wireless Headphones')}`)}}>Wireless Headphones</p>
+      <p onClick={() =>{navigate(`/shop/HpEb/${encodeURIComponent('Wired Earbuds')}`)}}>Wired Earbuds</p>
+      <p onClick={() =>{navigate(`/shop/HpEb/${encodeURIComponent('Wireless Earbuds')}`)}}>Wireless Earbuds</p>
     </div>
     <div ref={refs.tvcategoryRef} className={showTVCategory ? 'tvcategory active' : 'tvcategory'}>
       <p>Smart TVs</p>

@@ -32,7 +32,7 @@ function Category() {
             <ul className='categoryul'>
                 <li onClick={()=>navigate('/shop/laptops')}>Laptops</li>
                 <li onClick={()=>navigate('/shop/speakers')}>Speakers</li>
-                <li>Headphones & Earbuds</li>
+                <li onClick={()=>navigate('/shop/HpEb')}>Headphones & Earbuds</li>
                 <li>LED TV</li>
                 <li>Projectors</li>
                 <li>Microphones</li>

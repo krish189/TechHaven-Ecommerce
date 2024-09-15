@@ -130,7 +130,7 @@ function LaptopInfoShop() {
         </div>
         <hr style={{color:'gray'}}></hr>
         <p><span className='offer'>-{Math.round((laptop.price-laptop.discount_price)/laptop.price*100)}% </span><span className='newprice'>{formatCurrency(laptop.discount_price)}</span></p>
-        <p><span className='mrp'>MRP:<span className='oldprice'>{formatCurrency(laptop.price)}</span></span> <Badge className='saveprice' bg="success">SAVE ₹{laptop.price-laptop.discount_price}</Badge></p>
+        <p><span className='mrp'>MRP:<span className='oldprice'>{formatCurrency(laptop.price)}</span></span> <Badge className='saveprice' bg="success">SAVE {formatCurrency(laptop.price-laptop.discount_price)}</Badge></p>
         <p className='sku'>SKU: {laptop.sku}</p>
         <Button className='addtocartbtn' onClick={() => handleAddToCart(laptop)}>Add to Cart</Button><br></br>
         <Button className='buynow'>Buy Now</Button>

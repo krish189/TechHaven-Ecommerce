@@ -129,7 +129,7 @@ function SpeakerInfoShop() {
         </div>
         <hr style={{color:'gray'}}></hr>
         <p><span className='offer'>-{Math.round((speaker.price-speaker.discount_price)/speaker.price*100)}% </span><span className='newprice'>{formatCurrency(speaker.discount_price)}</span></p>
-        <p><span className='mrp'>MRP:<span className='oldprice'>{formatCurrency(speaker.price)}</span></span> <Badge className='saveprice' bg="success">SAVE ₹{speaker.price-speaker.discount_price}</Badge></p>
+        <p><span className='mrp'>MRP:<span className='oldprice'>{formatCurrency(speaker.price)}</span></span> <Badge className='saveprice' bg="success">SAVE {formatCurrency(speaker.price-speaker.discount_price)}</Badge></p>
         <p className='sku'>SKU: {speaker.sku}</p>
         <Button className='addtocartbtn' onClick={() => handleAddToCart(speaker)}>Add to Cart</Button><br></br>
         <Button className='buynow'>Buy Now</Button>

@@ -16,7 +16,7 @@ class BaseProduct(models.Model):
     rating = models.DecimalField(max_digits=3, decimal_places=2, default=0)
     num_reviews = models.IntegerField(default=0)
     dimensions = models.CharField(max_length=255, null=True, blank=True)
-    weight = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
+    weight = models.DecimalField(max_digits=6, decimal_places=3, null=True, blank=True)
     warranty = models.CharField(max_length=255, null=True, blank=True)
     color = models.CharField(max_length=100, null=True, blank=True)
     
@@ -56,7 +56,35 @@ class Speaker(BaseProduct):
     driver_size = models.CharField(max_length=255, null=True, blank=True)
     led_lighting_color = models.CharField(max_length=255, null=True, blank=True)
 
+
+class HpEb(BaseProduct):
+    headphone_earbud_type = models.CharField(max_length=255)
+    design_type = models.CharField(max_length=255, null=True, blank=True)
+    connectivity = models.CharField(max_length=255)
+    noise_cancelling = models.BooleanField(default=False)
+    microphone = models.BooleanField(default=False)
+    bluetooth_version = models.CharField(max_length=10, null=True, blank=True)  
+    battery_life = models.CharField(max_length=100, null=True, blank=True)  
+    sound_isolation = models.CharField(max_length=100, null=True, blank=True)  
+    adjustable_headband = models.BooleanField(default=False)  
+    foldable = models.BooleanField(default=False)  
+    driver_size = models.CharField(max_length=100, null=True, blank=True)
+    impedance = models.CharField(max_length=100, null=True, blank=True)
+    frequency_response = models.CharField(max_length=100, null=True, blank=True)
+    comfort_features = models.TextField(null=True, blank=True)
+    water_resistance = models.BooleanField(default=False)
+    charging_case = models.BooleanField(default=False)  
+    charging_case_dimensions = models.CharField(max_length=255, null=True, blank=True)
+    charging_case_weight = models.DecimalField(max_digits=6, decimal_places=3, null=True, blank=True)
+    touch_controls = models.BooleanField(default=False)  
+    ear_tip_sizes = models.CharField(max_length=255, null=True, blank=True)  
+    microphone_sensitivity = models.CharField(max_length=100, null=True, blank=True)  
+    ambient_sound_mode = models.BooleanField(default=False)  
+    anc_levels = models.CharField(max_length=100, null=True, blank=True)  
+
+    def __str__(self):
+        return f"{self.name} - {self.headphone_earbud_type}, {self.connectivity}"
     
 admin.site.register(Laptop)
 admin.site.register(Speaker)
-    
+admin.site.register(HpEb)

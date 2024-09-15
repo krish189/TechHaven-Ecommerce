@@ -32,6 +32,7 @@ function Footer() {
         <ul>
             <li onClick={()=>{navigate('/shop/laptops')}}>Laptops</li>
             <li onClick={()=>{navigate('/shop/speakers')}}>Speakers</li>
+            <li onClick={()=>{navigate('/shop/HpEb')}}>Headphones & Earbuds</li>
             <li>Peripherals</li>
             <li>Projectors</li>
             <li>LED TV</li>

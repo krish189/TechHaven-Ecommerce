@@ -1,0 +1,40 @@
+.headphone-earbud-page
+{
+    overflow: hidden;
+} 
+.headphone-earbud-page-title
+{
+    width: 100%;
+    height: 23rem;
+    background: url('../../../assets/headphone_earbud_cardimage.jpg') no-repeat;
+    background-size: 100% 20rem;
+}
+.headphone-earbud-page-head
+{
+    color: white;
+    text-align: center;
+    position: relative;
+    top: 5rem;
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 53px;
+}
+.headphone-earbud-page-titlecontent
+{
+    color: white;
+    text-align: center;
+    position: relative;
+    top: 6rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 27px;
+}
+.headphone-earbud-name
+{
+    font-size: 1.1rem;
+    font-weight: 400;   
+}
+.headphone-earbud-name:hover
+{
+    color: orange;
+}
