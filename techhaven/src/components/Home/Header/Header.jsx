@@ -250,7 +250,7 @@ function Header() {
           <p>Speakers <img src={chevronsubmenu} alt='chevronsubmenu' style={{width: '20px', height: '20px', position: 'relative', left: '6.8rem'}} onClick={displaySpeakerCategory}/></p>
           <p>Headphones & Earbuds <img src={chevronsubmenu} alt='chevronsubmenu' style={{width: '20px', height: '20px', position: 'relative', left: '0.3rem'}} onClick={displayHeadphoneCategory}/></p>
           <p>LED TV <img src={chevronsubmenu} alt='chevronsubmenu' style={{width: '20px', height: '20px', position: 'relative', left: '7.6rem'}} onClick={displayTVCategory}/></p>
-          <p>LED Projectors</p>
+          <p onClick={()=>{navigate('/shop/LedProjectors')}}>LED Projectors</p>
           <p>Microphones</p>
     </div>
     <div ref={refs.speakercategoryRef} className={showSpeakerCategory ? 'speakercategory active' : 'speakercategory'}>
@@ -265,9 +265,8 @@ function Header() {
       <p onClick={() =>{navigate(`/shop/HpEb/${encodeURIComponent('Wireless Earbuds')}`)}}>Wireless Earbuds</p>
     </div>
     <div ref={refs.tvcategoryRef} className={showTVCategory ? 'tvcategory active' : 'tvcategory'}>
-      <p>Smart TVs</p>
-      <p>Curved TVs</p>
-      <p>4K TVs</p>
+      <p onClick={() =>{navigate(`/shop/LedTvs/${encodeURIComponent('Smart LED TVs')}`)}}>Smart LED TVs</p>
+      <p onClick={() =>{navigate(`/shop/LedTvs/${encodeURIComponent('Curved LED TVs')}`)}}>Curved LED TVs</p>
     </div>
     <div ref={refs.accessoriessubmenuRef} className={showAccessoriessubmenu ? 'accessoriessubmenu active' : 'accessoriessubmenu'}>
           <p>Computer Accessories<img src={chevronsubmenu} alt='chevronsubmenu' style={{width: '20px', height: '20px', position: 'relative', left: '3.2rem'}} onClick={displayComputeraccCategory}/></p>

@@ -1,11 +1,12 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from .models import Laptop, Speaker, HpEb
-from .serializers import LaptopSerializer, SpeakerSerializer, HpEbSerializer
+from .models import Laptop, Speaker, HpEb, LedTv, LedProjector
+from .serializers import LaptopSerializer, SpeakerSerializer, HpEbSerializer, LedTvSerializer, LedProjectorSerializer
 
 @api_view(['POST'])
 def filter_laptops(request):
     categories = request.data.get('categories', [])
+    print('Categories:', categories) 
     if categories:
         laptops = Laptop.objects.filter(laptop_type__in=categories)
     else:
@@ -70,4 +71,45 @@ def filter_Hp_Eb_by_name(request):
             return Response(serializer.data)
         except HpEb.DoesNotExist:
             return Response({'error': 'Headphone/Earbud not found'}, status=404)
+    return Response({'error': 'Name parameter is missing'}, status=400)
+
+@api_view(['POST'])
+def filter_LedTv(request):
+    categories = request.data.get('categories', [])
+    if categories:
+        led_tv = LedTv.objects.filter(tv_type__in=categories)
+    else:
+        led_tv = LedTv.objects.all()
+    
+    serializer = LedTvSerializer(led_tv, many=True)
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def filter_LedTv_by_name(request):
+    name = request.data.get('name')
+    if name:
+        try:
+            led_tv = LedTv.objects.get(name=name)
+            serializer = LedTvSerializer(led_tv)  
+            return Response(serializer.data)
+        except LedTv.DoesNotExist:
+            return Response({'error': 'LedTv not found'}, status=404)
+    return Response({'error': 'Name parameter is missing'}, status=400)
+
+@api_view(['POST'])
+def filter_LedProjector(request):
+    projectors = LedProjector.objects.all()
+    serializer = LedProjectorSerializer(projectors, many=True)
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def filter_LedProjector_by_name(request):
+    name = request.data.get('name')
+    if name:
+        try:
+            projectors = LedProjector.objects.get(name=name)
+            serializer = LedProjectorSerializer(projectors)  
+            return Response(serializer.data)
+        except LedProjector.DoesNotExist:
+            return Response({'error': 'Led Projector not found'}, status=404)
     return Response({'error': 'Name parameter is missing'}, status=400)

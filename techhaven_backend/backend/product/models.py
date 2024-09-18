@@ -85,6 +85,73 @@ class HpEb(BaseProduct):
     def __str__(self):
         return f"{self.name} - {self.headphone_earbud_type}, {self.connectivity}"
     
+class LedTv(BaseProduct):
+    tv_type = models.CharField(max_length=255)
+    screen_size = models.CharField(max_length=10, null=False)
+    display_technology = models.CharField(max_length=50, null=True, blank=True)
+    resolution = models.CharField(max_length=50, null=False)
+    hdr_support = models.BooleanField(default=False)
+    refresh_rate = models.CharField(max_length=50, null=True, blank=True)
+    operating_system = models.CharField(max_length=50, null=True, blank=True)
+    audio_output = models.CharField(max_length=100, null=True, blank=True)
+    dolby_atmos = models.BooleanField(default=False)
+    hdmi_ports = models.IntegerField(null=True, blank=True)
+    usb_ports = models.IntegerField(null=True, blank=True)
+    bluetooth_version = models.CharField(max_length=10, null=True, blank=True)
+    wifi_support = models.BooleanField(default=False)
+    wifi_version = models.CharField(max_length=10, null=True, blank=True)
+    ethernet_port = models.BooleanField(default=False)
+    vesa_mount = models.CharField(max_length=50, null=True, blank=True)
+    energy_efficiency_rating = models.CharField(max_length=10, null=True, blank=True)
+    panel_type = models.CharField(max_length=50, null=True, blank=True)
+    upscaling_technology = models.CharField(max_length=100, null=True, blank=True)
+    streaming_services = models.TextField(null=True, blank=True)
+    vrr_support = models.BooleanField(default=False)
+    allm_support = models.BooleanField(default=False)
+    bezel_size = models.CharField(max_length=50, null=True, blank=True)
+    power_consumption = models.CharField(max_length=100, null=True, blank=True)
+    standby_power_consumption = models.CharField(max_length=50, null=True, blank=True)
+    backlight_type = models.CharField(max_length=100, null=True, blank=True)
+    voice_assistant = models.CharField(max_length=100, null=True, blank=True)
+    included_accessories = models.TextField(null=True, blank=True)
+    led_type = models.CharField(max_length=50, null=True, blank=True)
+    screen_curvature = models.CharField(max_length=50, null=True, blank=True)
+
+    def __str__(self):
+        return f"{self.name} - {self.tv_type}"
+
+class LedProjector(BaseProduct):
+    projector_type = models.CharField(max_length=100, null=False)
+    native_resolution = models.CharField(max_length=50, null=False)
+    brightness = models.IntegerField(null=False)
+    contrast_ratio = models.CharField(max_length=50, null=True, blank=True)
+    throw_distance = models.CharField(max_length=50, null=True, blank=True)
+    projection_size = models.CharField(max_length=50, null=True, blank=True)
+    lamp_life = models.IntegerField(null=True, blank=True)
+    aspect_ratio = models.CharField(max_length=20, null=True, blank=True)
+    zoom = models.CharField(max_length=50, null=True, blank=True)
+    lens_shift = models.BooleanField(default=False)
+    keystone_correction = models.BooleanField(default=False)
+    input_ports = models.CharField(max_length=255, null=True, blank=True)
+    wireless_connectivity = models.CharField(max_length=255, null=True, blank=True)
+    speaker_output = models.CharField(max_length=50, null=True, blank=True)
+    three_d_support = models.BooleanField(default=False)
+    remote_control = models.BooleanField(default=False)
+    included_accessories = models.TextField(null=True, blank=True)
+    projection_technology = models.CharField(max_length=50, null=True, blank=True)
+    hdr_support = models.BooleanField(default=False)
+    noise_level = models.CharField(max_length=20, null=True, blank=True)
+    power_consumption = models.CharField(max_length=100, null=True, blank=True)
+    projection_ratio = models.CharField(max_length=50, null=True, blank=True)
+    focus_type = models.CharField(max_length=50, null=True, blank=True)
+    bluetooth_audio = models.BooleanField(default=False)
+    smart_features = models.BooleanField(default=False)
+
+    def __str__(self):
+        return f"{self.name} - {self.projector_type}, {self.native_resolution}"
+
 admin.site.register(Laptop)
 admin.site.register(Speaker)
 admin.site.register(HpEb)
+admin.site.register(LedTv)
+admin.site.register(LedProjector)

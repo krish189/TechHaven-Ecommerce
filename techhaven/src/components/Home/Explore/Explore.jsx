@@ -21,10 +21,10 @@ function Explore() {
             <Card.Title>Laptops</Card.Title>
             </Card.Body>
         </Card>
-        <Card style={{ width: '14rem', height: '14rem'}}>
+        <Card style={{ width: '14rem', height: '14rem'}} onClick={()=>navigate('/shop/LedTvs')}>
             <Card.Body>
             <Card.Img variant="top" src={ledtv} />
-            <Card.Title>LED TV</Card.Title>
+            <Card.Title>LED TVs</Card.Title>
             </Card.Body>
         </Card>
         <Card style={{ width: '14rem', height: '14rem'}} onClick={()=>{navigate(`/shop/speakers/${encodeURIComponent('Party Speakers')}`)}}>
@@ -45,7 +45,7 @@ function Explore() {
             <Card.Title>Soundbar</Card.Title>
             </Card.Body>
         </Card>
-        <Card style={{ width: '14rem', height: '14rem'}}>
+        <Card style={{ width: '14rem', height: '14rem'}} onClick={()=>navigate('/shop/LedProjectors')}>
             <Card.Body>
             <Card.Img variant="top" src={projector} />
             <Card.Title>Projectors</Card.Title>

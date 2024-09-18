@@ -20,6 +20,10 @@ import SpeakerPage from './components/Speakers/SpeakerPage/SpeakerPage';
 import SpeakerInfoShop from './components/Speakers/SpeakerInfoShop/SpeakerInfoShop';
 import HeadphoneEarbudPage from './components/HeadphoneEarbuds/HeadphoneEarbudPage/HeadphoneEarbudPage';
 import HeadphoneEarbudInfo from './components/HeadphoneEarbuds/HeadphoneEarbudInfo/HeadphoneEarbudInfo';
+import LedtvPage from './components/LedTvs/LedtvPage/LedtvPage';
+import LedtvInfoShop from './components/LedTvs/LedtvInfoShop/LedtvInfoShop';
+import LedProjectorPage from './components/LedProjectors/LedProjectorPage/LedProjectorPage';
+import LedProjectorInfo from './components/LedProjectors/LedProjectorInfo/LedProjectorInfo';
 
 function App() {
   
@@ -49,6 +53,11 @@ function App() {
         <Route path='/shop/HpEb' element={<HeadphoneEarbudPage/>}></Route>
         <Route path='/shop/HpEb/:hp_eb_type' element={<HeadphoneEarbudPage/>}></Route>
         <Route path='/shop/HpEb/:hp_eb_type/:hp_eb_name' element={<HeadphoneEarbudInfo/>}></Route>
+        <Route path='/shop/LedTvs' element={<LedtvPage/>}></Route>
+        <Route path='/shop/LedTvs/:tv_type' element={<LedtvPage/>}></Route>
+        <Route path='/shop/LedTvs/:tv_type/:tv_name' element={<LedtvInfoShop/>}></Route>
+        <Route path='/shop/LedProjectors' element={<LedProjectorPage/>}></Route>
+        <Route path='/shop/LedProjectors/:projector_name' element={<LedProjectorInfo/>}></Route>
       </Routes>
     </BrowserRouter>
     </OrderDetailsProvider>

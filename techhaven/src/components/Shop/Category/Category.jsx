@@ -33,8 +33,8 @@ function Category() {
                 <li onClick={()=>navigate('/shop/laptops')}>Laptops</li>
                 <li onClick={()=>navigate('/shop/speakers')}>Speakers</li>
                 <li onClick={()=>navigate('/shop/HpEb')}>Headphones & Earbuds</li>
-                <li>LED TV</li>
-                <li>Projectors</li>
+                <li onClick={()=>navigate('/shop/LedTvs')}>LED TV</li>
+                <li onClick={()=>navigate('/shop/LedProjectors')}>Projectors</li>
                 <li>Microphones</li>
                 <li>Accessories</li>
                 <li>Peripherals</li>

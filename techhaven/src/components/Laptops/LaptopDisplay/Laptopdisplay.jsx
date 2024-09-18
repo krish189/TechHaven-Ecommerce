@@ -64,6 +64,7 @@ function Laptopdisplay() {
       navigate('/shop/laptops');
     }
   };
+  console.log(selectedCategories);
 
 
   function formatCurrency(price) {
