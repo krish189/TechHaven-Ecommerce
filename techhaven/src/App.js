@@ -24,6 +24,8 @@ import LedtvPage from './components/LedTvs/LedtvPage/LedtvPage';
 import LedtvInfoShop from './components/LedTvs/LedtvInfoShop/LedtvInfoShop';
 import LedProjectorPage from './components/LedProjectors/LedProjectorPage/LedProjectorPage';
 import LedProjectorInfo from './components/LedProjectors/LedProjectorInfo/LedProjectorInfo';
+import MicrophonePage from './components/Microphones/MicrophonePage/MicrophonePage';
+import MicrophoneInfo from './components/Microphones/MicrophoneInfo/MicrophoneInfo';
 
 function App() {
   
@@ -58,6 +60,8 @@ function App() {
         <Route path='/shop/LedTvs/:tv_type/:tv_name' element={<LedtvInfoShop/>}></Route>
         <Route path='/shop/LedProjectors' element={<LedProjectorPage/>}></Route>
         <Route path='/shop/LedProjectors/:projector_name' element={<LedProjectorInfo/>}></Route>
+        <Route path='/shop/Microphones' element={<MicrophonePage/>}></Route>
+        <Route path='/shop/Microphones/:microphone_name' element={<MicrophoneInfo/>}></Route>
       </Routes>
     </BrowserRouter>
     </OrderDetailsProvider>

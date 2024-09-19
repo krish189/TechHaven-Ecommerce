@@ -162,22 +162,22 @@ function LedtvInfoShop() {
             )}
            {expand && 
             (<>
-            {ledtv.hdr_support && <p><span className='spechead'>HDR Support</span><span className='specvalue' style={{position: 'relative', left: '6.4rem'}}>{ledtv.hdr_support ? 'Yes' : 'No'}</span></p>}
+            {ledtv.hdr_support && <p><span className='spechead'>HDR Support</span><span className='specvalue' style={{position: 'relative', left: '6.4rem'}}>Yes</span></p>}
             <p><span className='spechead'>Refresh Rate</span><span className='specvalue' style={{position: 'relative', left: '6.7rem'}}>{ledtv.refresh_rate}</span></p>
             <p><span className='spechead'>Operating System</span><span className='specvalue' style={{position: 'relative', left: '4.2rem'}}>{ledtv.operating_system}</span></p>
             <p><span className='spechead'>Audio Output</span><span className='specvalue' style={{position: 'relative', left: '6.1rem'}}>{ledtv.audio_output}</span></p>
             <p><span className='spechead'>HDMI Ports</span><span className='specvalue' style={{position: 'relative', left: '7rem'}}>{ledtv.hdmi_ports} ports</span></p>
             <p><span className='spechead'>USB Ports</span><span className='specvalue' style={{position: 'relative', left: '7.8rem'}}>{ledtv.usb_ports} ports</span></p>
             <p><span className='spechead'>Bluetooth Version</span><span className='specvalue' style={{position: 'relative', left: '4rem'}}>{ledtv.bluetooth_version}</span></p>
-            {ledtv.wifi_support &&   <p><span className='spechead'>Wifi Support</span><span className='specvalue' style={{position: 'relative', left: '6.4rem'}}>{ledtv.wifi_support ? 'Yes' : 'No'}</span></p>}
+            {ledtv.wifi_support &&   <p><span className='spechead'>Wifi Support</span><span className='specvalue' style={{position: 'relative', left: '6.4rem'}}>Yes</span></p>}
             {ledtv.wifi_version &&   <p><span className='spechead'>Wifi Version</span><span className='specvalue' style={{position: 'relative', left: '6.7rem'}}>{ledtv.wifi_version}</span></p>}
-            {ledtv.ethernet_port &&   <p><span className='spechead'>Ethernet Port</span><span className='specvalue' style={{position: 'relative', left: '6.1rem'}}>{ledtv.ethernet_port ? 'Yes' : 'No'}</span></p>}
+            {ledtv.ethernet_port &&   <p><span className='spechead'>Ethernet Port</span><span className='specvalue' style={{position: 'relative', left: '6.1rem'}}>Yes</span></p>}
             {ledtv.vesa_mount && <p><span className='spechead'>Vesa Mount Size</span><span className='specvalue' style={{position: 'relative', left: '4.7rem'}}>{ledtv.vesa_mount}</span></p>}
             {ledtv.energy_efficiency_rating &&   <p><span className='spechead'>Energy Rating</span><span className='specvalue' style={{position: 'relative', left: '5.8rem'}}>{ledtv.energy_efficiency_rating}</span></p>}
             {ledtv.panel_type &&   <p><span className='spechead'>Panel Type</span><span className='specvalue' style={{position: 'relative', left: '7.3rem'}}>{ledtv.panel_type}</span></p>}
             {ledtv.upscaling_technology &&   <p><span className='spechead'>Upscaling Technology</span><span className='specvalue' style={{position: 'relative', left: '2.1rem'}}>{ledtv.upscaling_technology}</span></p>}
-            {ledtv.vrr_support &&   <p><span className='spechead'>VRR Support</span><span className='specvalue' style={{position: 'relative', left: '6.4rem'}}>{ledtv.vrr_support ? 'Yes' : 'No'}</span></p>}
-            {ledtv.allm_support &&   <p><span className='spechead'>ALLM Support</span><span className='specvalue' style={{position: 'relative', left: '5.7rem'}}>{ledtv.allm_support ? 'Yes' : 'No'}</span></p>}
+            {ledtv.vrr_support &&   <p><span className='spechead'>VRR Support</span><span className='specvalue' style={{position: 'relative', left: '6.4rem'}}>Yes</span></p>}
+            {ledtv.allm_support &&   <p><span className='spechead'>ALLM Support</span><span className='specvalue' style={{position: 'relative', left: '5.7rem'}}>Yes</span></p>}
             {ledtv.bezel_size &&   <p><span className='spechead'>Bezel Size</span><span className='specvalue' style={{position: 'relative', left: '7.8rem'}}>{ledtv.bezel_size}</span></p>}
             {ledtv.power_consumption &&   <p><span className='spechead'>Power Consumption</span><span className='specvalue' style={{position: 'relative', left: '2.9rem'}}>{ledtv.power_consumption}</span></p>}
             {ledtv.standby_power_consumption &&   <p><span className='spechead'>Standby Power</span><span className='specvalue' style={{position: 'relative', left: '5.4rem'}}>{ledtv.standby_power_consumption}</span></p>}

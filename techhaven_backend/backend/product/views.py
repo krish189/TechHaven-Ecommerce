@@ -1,7 +1,7 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from .models import Laptop, Speaker, HpEb, LedTv, LedProjector
-from .serializers import LaptopSerializer, SpeakerSerializer, HpEbSerializer, LedTvSerializer, LedProjectorSerializer
+from .models import Laptop, Speaker, HpEb, LedTv, LedProjector, Microphone
+from .serializers import LaptopSerializer, SpeakerSerializer, HpEbSerializer, LedTvSerializer, LedProjectorSerializer, MicrophoneSerializer
 
 @api_view(['POST'])
 def filter_laptops(request):
@@ -112,4 +112,22 @@ def filter_LedProjector_by_name(request):
             return Response(serializer.data)
         except LedProjector.DoesNotExist:
             return Response({'error': 'Led Projector not found'}, status=404)
+    return Response({'error': 'Name parameter is missing'}, status=400)
+
+@api_view(['POST'])
+def filter_Microphone(request):
+    microphones = Microphone.objects.all()
+    serializer = MicrophoneSerializer(microphones, many=True)
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def filter_Microphone_by_name(request):
+    name = request.data.get('name')
+    if name:
+        try:
+            microphones = Microphone.objects.get(name=name)
+            serializer = MicrophoneSerializer(microphones)  
+            return Response(serializer.data)
+        except Microphone.DoesNotExist:
+            return Response({'error': 'Microphone not found'}, status=404)
     return Response({'error': 'Name parameter is missing'}, status=400)

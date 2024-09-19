@@ -162,19 +162,19 @@ function SpeakerInfoShop() {
         <p><span className='spechead'>Smart Assistant</span><span className='specvalue' style={{position: 'relative', left: '4.7rem'}}>{speaker.smart_assistant}</span></p>
         }
         {speaker.microphone && 
-        <p><span className='spechead'>Microphone</span><span className='specvalue' style={{position: 'relative', left: '6.5rem'}}>{speaker.microphone ? 'Yes' : 'No'}</span></p>
+        <p><span className='spechead'>Microphone</span><span className='specvalue' style={{position: 'relative', left: '6.5rem'}}>Yes</span></p>
         }
         {speaker.bass_boost && 
-        <p><span className='spechead'>Bass Boost</span><span className='specvalue' style={{position: 'relative', left: '7.1rem'}}>{speaker.bass_boost ? 'Yes' : 'No'}</span></p>
+        <p><span className='spechead'>Bass Boost</span><span className='specvalue' style={{position: 'relative', left: '7.1rem'}}>Yes</span></p>
         }
         {speaker.led_lighting && 
-        <p><span className='spechead'>LED Lighting</span><span className='specvalue' style={{position: 'relative', left: '6.2rem'}}>{speaker.led_lighting ? 'Yes' : 'No'}</span></p>
+        <p><span className='spechead'>LED Lighting</span><span className='specvalue' style={{position: 'relative', left: '6.2rem'}}>Yes</span></p>
         }
         {speaker.led_lighting_color && 
         <p><span className='spechead'>LED Lighting Color</span><span className='specvalue' style={{position: 'relative', left: '3.3rem'}}>{speaker.led_lighting_color}</span></p>
         }
         {speaker.multi_device_pairing && 
-        <p><span className='spechead'>Multi Device Pairing</span><span className='specvalue' style={{position: 'relative', left: '2.7rem'}}>{speaker.multi_device_pairing ? 'Yes' : 'No'}</span></p>
+        <p><span className='spechead'>Multi Device Pairing</span><span className='specvalue' style={{position: 'relative', left: '2.7rem'}}>Yes</span></p>
         }
         <hr style={{color:'gray'}}></hr>
         <p className='spechead'>About this item</p>

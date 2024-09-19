@@ -1,10 +1,9 @@
 import React from 'react';
 import './LedProjectorDisplay.css';
 import Filter from '../../Laptops/Filter/Filter';
-import Form from 'react-bootstrap/Form';
 import { useState, useEffect } from 'react';
 import { useFilter } from '../../Laptops/Context/FilterContext';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -13,7 +12,6 @@ import StarRatings from 'react-star-ratings';
 
 
 function LedProjectorDisplay() {
-  const [selectedCategories, setSelectedCategories] = useState([]);
   const [ledprojectorData, setLedProjectorData] = useState([]);
   const { value } = useFilter();
   const navigate = useNavigate();

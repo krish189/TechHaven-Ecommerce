@@ -35,7 +35,7 @@ function Category() {
                 <li onClick={()=>navigate('/shop/HpEb')}>Headphones & Earbuds</li>
                 <li onClick={()=>navigate('/shop/LedTvs')}>LED TV</li>
                 <li onClick={()=>navigate('/shop/LedProjectors')}>Projectors</li>
-                <li>Microphones</li>
+                <li onClick={()=>navigate('/shop/Microphones')}>Microphones</li>
                 <li>Accessories</li>
                 <li>Peripherals</li>
                 <li>Smart Home & CCTV</li>

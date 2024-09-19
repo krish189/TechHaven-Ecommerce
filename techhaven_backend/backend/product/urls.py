@@ -11,5 +11,7 @@ urlpatterns = [
     path('filter-ledtv/', views.filter_LedTv, name='filter_LedTv'),
     path('filter-ledtv-by-name/', views.filter_LedTv_by_name, name='filter_LedTv_by_name'),
     path('filter-ledprojector/', views.filter_LedProjector, name='filter_LedProjector'),
-    path('filter-ledprojector-by-name/', views.filter_LedProjector_by_name, name='filter_LedProjector_by_name')
+    path('filter-ledprojector-by-name/', views.filter_LedProjector_by_name, name='filter_LedProjector_by_name'),
+    path('filter-microphone/', views.filter_Microphone, name='filter_Microphone'),
+    path('filter-microphone-by-name/', views.filter_Microphone_by_name, name='filter_Microphone_by_name')
 ]

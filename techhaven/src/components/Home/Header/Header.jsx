@@ -247,11 +247,11 @@ function Header() {
           <p onClick={()=>{navigate(`/shop/laptops/${encodeURIComponent('Rugged Laptops')}`)}}>Rugged Laptops</p>
     </div>
     <div ref={refs.audiovideosubmenuRef} className={showAudiovideosubmenu ? 'audiovideosubmenu active' : 'audiovideosubmenu'}>
-          <p>Speakers <img src={chevronsubmenu} alt='chevronsubmenu' style={{width: '20px', height: '20px', position: 'relative', left: '6.8rem'}} onClick={displaySpeakerCategory}/></p>
-          <p>Headphones & Earbuds <img src={chevronsubmenu} alt='chevronsubmenu' style={{width: '20px', height: '20px', position: 'relative', left: '0.3rem'}} onClick={displayHeadphoneCategory}/></p>
-          <p>LED TV <img src={chevronsubmenu} alt='chevronsubmenu' style={{width: '20px', height: '20px', position: 'relative', left: '7.6rem'}} onClick={displayTVCategory}/></p>
+          <p className='no-text-decor-hover' onClick={displaySpeakerCategory}>Speakers <img src={chevronsubmenu} alt='chevronsubmenu' style={{width: '20px', height: '20px', position: 'relative', left: '6.8rem'}} onClick={displaySpeakerCategory}/></p>
+          <p className='no-text-decor-hover' onClick={displayHeadphoneCategory}>Headphones & Earbuds <img src={chevronsubmenu} alt='chevronsubmenu' style={{width: '20px', height: '20px', position: 'relative', left: '0.3rem'}} onClick={displayHeadphoneCategory}/></p>
+          <p className='no-text-decor-hover' onClick={displayTVCategory}>LED TV <img src={chevronsubmenu} alt='chevronsubmenu' style={{width: '20px', height: '20px', position: 'relative', left: '7.6rem'}} onClick={displayTVCategory}/></p>
           <p onClick={()=>{navigate('/shop/LedProjectors')}}>LED Projectors</p>
-          <p>Microphones</p>
+          <p onClick={()=>{navigate('/shop/Microphones')}}>Microphones</p>
     </div>
     <div ref={refs.speakercategoryRef} className={showSpeakerCategory ? 'speakercategory active' : 'speakercategory'}>
         <p onClick={() =>{navigate(`/shop/speakers/${encodeURIComponent('Soundbars')}`)}}>Soundbars</p>
@@ -269,10 +269,10 @@ function Header() {
       <p onClick={() =>{navigate(`/shop/LedTvs/${encodeURIComponent('Curved LED TVs')}`)}}>Curved LED TVs</p>
     </div>
     <div ref={refs.accessoriessubmenuRef} className={showAccessoriessubmenu ? 'accessoriessubmenu active' : 'accessoriessubmenu'}>
-          <p>Computer Accessories<img src={chevronsubmenu} alt='chevronsubmenu' style={{width: '20px', height: '20px', position: 'relative', left: '3.2rem'}} onClick={displayComputeraccCategory}/></p>
-          <p>Laptop Accessories<img src={chevronsubmenu} alt='chevronsubmenu' style={{width: '20px', height: '20px', position: 'relative', left: '4.6rem'}} onClick={displayLaptopaccCategory}/></p>
-          <p>Mobile & Tablet Accessories<img src={chevronsubmenu} alt='chevronsubmenu' style={{width: '20px', height: '20px', position: 'relative', left: '0.6rem'}} onClick={displayMobileaccCategory}/></p>
-          <p>HDMI Accessories<img src={chevronsubmenu} alt='chevronsubmenu' style={{width: '20px', height: '20px', position: 'relative', left: '5.1rem'}} onClick={displayHdmiaccCategory}/></p>
+          <p className='no-text-decor-hover' onClick={displayComputeraccCategory} >Computer Accessories<img src={chevronsubmenu} alt='chevronsubmenu' style={{width: '20px', height: '20px', position: 'relative', left: '3.2rem'}} onClick={displayComputeraccCategory}/></p>
+          <p className='no-text-decor-hover' onClick={displayLaptopaccCategory} >Laptop Accessories<img src={chevronsubmenu} alt='chevronsubmenu' style={{width: '20px', height: '20px', position: 'relative', left: '4.6rem'}} onClick={displayLaptopaccCategory}/></p>
+          <p className='no-text-decor-hover' onClick={displayMobileaccCategory} >Mobile & Tablet Accessories<img src={chevronsubmenu} alt='chevronsubmenu' style={{width: '20px', height: '20px', position: 'relative', left: '0.6rem'}} onClick={displayMobileaccCategory}/></p>
+          <p className='no-text-decor-hover' onClick={displayHdmiaccCategory}>HDMI Accessories<img src={chevronsubmenu} alt='chevronsubmenu' style={{width: '20px', height: '20px', position: 'relative', left: '5.1rem'}} onClick={displayHdmiaccCategory}/></p>
           <p>Power Banks</p>
           <p>Power Strip</p>
           <p>Barcode Scanner</p>
@@ -313,11 +313,11 @@ function Header() {
       <p>HDMI Adapters</p>
     </div>
     <div ref={refs.peripheralsubmenuRef} className={showPeripheralsubmenu ? 'peripheralsubmenu active' : 'peripheralsubmenu'}>
-          <p>Keyboard<img src={chevronsubmenu} alt='chevronsubmenu' style={{width: '20px', height: '20px', position: 'relative', left: '7rem'}} onClick={displayKeyboardCategory}/></p>
-          <p>Mouse<img src={chevronsubmenu} alt='chevronsubmenu' style={{width: '20px', height: '20px', position: 'relative', left: '8.2rem'}} onClick={displayMouseCategory}/></p>
-          <p>Monitor<img src={chevronsubmenu} alt='chevronsubmenu' style={{width: '20px', height: '20px', position: 'relative', left: '7.7rem'}} onClick={displayMonitorCategory}/></p>
-          <p>Gaming<img src={chevronsubmenu} alt='chevronsubmenu' style={{width: '20px', height: '20px', position: 'relative', left: '7.8rem'}} onClick={displayGamingCategory}/></p>
-          <p>Power Solution<img src={chevronsubmenu} alt='chevronsubmenu' style={{width: '20px', height: '20px', position: 'relative', left: '4.6rem'}} onClick={displayPowerCategory}/></p>
+          <p className='no-text-decor-hover' onClick={displayKeyboardCategory}>Keyboard<img src={chevronsubmenu} alt='chevronsubmenu' style={{width: '20px', height: '20px', position: 'relative', left: '7rem'}} onClick={displayKeyboardCategory}/></p>
+          <p className='no-text-decor-hover' onClick={displayMouseCategory}>Mouse<img src={chevronsubmenu} alt='chevronsubmenu' style={{width: '20px', height: '20px', position: 'relative', left: '8.2rem'}} onClick={displayMouseCategory}/></p>
+          <p className='no-text-decor-hover' onClick={displayMonitorCategory}>Monitor<img src={chevronsubmenu} alt='chevronsubmenu' style={{width: '20px', height: '20px', position: 'relative', left: '7.7rem'}} onClick={displayMonitorCategory}/></p>
+          <p className='no-text-decor-hover' onClick={displayGamingCategory}>Gaming<img src={chevronsubmenu} alt='chevronsubmenu' style={{width: '20px', height: '20px', position: 'relative', left: '7.8rem'}} onClick={displayGamingCategory}/></p>
+          <p className='no-text-decor-hover' onClick={displayPowerCategory}>Power Solution<img src={chevronsubmenu} alt='chevronsubmenu' style={{width: '20px', height: '20px', position: 'relative', left: '4.6rem'}} onClick={displayPowerCategory}/></p>
           <p>Keyboard & Mouse Combo</p>
           <p>Webcams</p>
           <p>Printers</p>

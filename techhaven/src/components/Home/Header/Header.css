@@ -491,3 +491,9 @@ ul li:hover
 {
     display: block;
 }
+.no-text-decor-hover:hover
+{
+    cursor: pointer;
+    padding-bottom: 0.1rem;
+    text-decoration: none !important;
+}

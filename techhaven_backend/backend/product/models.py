@@ -149,9 +149,33 @@ class LedProjector(BaseProduct):
 
     def __str__(self):
         return f"{self.name} - {self.projector_type}, {self.native_resolution}"
+    
+class Microphone(BaseProduct):
+    microphone_type = models.CharField(max_length=255, null=False)  
+    connectivity = models.CharField(max_length=255, null=True, blank=True)  
+    frequency_response = models.CharField(max_length=255, null=True, blank=True)  
+    sensitivity = models.CharField(max_length=100, null=True, blank=True)  
+    impedance = models.CharField(max_length=100, null=True, blank=True)  
+    polar_pattern = models.CharField(max_length=100, null=True, blank=True) 
+    diaphragm_size = models.CharField(max_length=100, null=True, blank=True) 
+    signal_to_noise_ratio = models.CharField(max_length=100, null=True, blank=True)  
+    max_spl = models.CharField(max_length=100, null=True, blank=True)  
+    pad_switch = models.BooleanField(default=False)  
+    low_cut_filter = models.BooleanField(default=False)  
+    shock_mount_included = models.BooleanField(default=False)  
+    pop_filter_included = models.BooleanField(default=False)  
+    phantom_power_required = models.BooleanField(default=False)  
+    wireless_connectivity = models.BooleanField(default=False)  
+    audio_sample_rate = models.CharField(max_length=100, null=True, blank=True)  
+    mounting_options = models.CharField(max_length=255, null=True, blank=True)  
+    included_accessories = models.TextField(null=True, blank=True)
+
+    def __str__(self):
+        return f"{self.name} - {self.microphone_type}, {self.polar_pattern}"
 
 admin.site.register(Laptop)
 admin.site.register(Speaker)
 admin.site.register(HpEb)
 admin.site.register(LedTv)
 admin.site.register(LedProjector)
+admin.site.register(Microphone)
