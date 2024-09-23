@@ -94,7 +94,7 @@ function HeadphoneEarbudDisplay() {
             .filter(hp_eb => hp_eb.stock > 0 && hp_eb.is_available > 0 && hp_eb.discount_price>=value[0] && hp_eb.discount_price<=value[1])
             .map((hp_eb, index) => (
             <Col key={index} md={3} style={{ margin: '42px'}}>
-              <Card  onClick={()=>{navigate(`/shop/HpEb/${encodeURIComponent(hp_eb.headphone_earbud_type)}/${encodeURIComponent(hp_eb.name)}`)}}
+              <Card  onClick={()=>{navigate(`/shop/headphones-earbuds/${encodeURIComponent(hp_eb.headphone_earbud_type)}/${encodeURIComponent(hp_eb.name)}`)}}
                  style={{ width: '22rem', height: '32rem' , border: '1px solid lightgray'}}>
                 <Card.Img variant='top' src={`http://localhost:8000${hp_eb.images[0]}`} alt="Headphone/Earbud" className='productimg'/>
                 <p className='headphone-earbud-name'>{hp_eb.name}</p>

@@ -269,8 +269,8 @@ function Header() {
       <p onClick={() =>{navigate(`/shop/headphones-earbuds/${encodeURIComponent('Wireless Earbuds')}`)}}>Wireless Earbuds</p>
     </div>
     <div ref={refs.tvcategoryRef} className={showTVCategory ? 'tvcategory active' : 'tvcategory'}>
-      <p onClick={() =>{navigate(`/shop/LedTvs/${encodeURIComponent('Smart LED TVs')}`)}}>Smart LED TVs</p>
-      <p onClick={() =>{navigate(`/shop/LedTvs/${encodeURIComponent('Curved LED TVs')}`)}}>Curved LED TVs</p>
+      <p onClick={() =>{navigate(`/shop/led-tvs/${encodeURIComponent('Smart LED TVs')}`)}}>Smart LED TVs</p>
+      <p onClick={() =>{navigate(`/shop/led-tvs/${encodeURIComponent('Curved LED TVs')}`)}}>Curved LED TVs</p>
     </div>
     <div ref={refs.accessoriessubmenuRef} className={showAccessoriessubmenu ? 'accessoriessubmenu active' : 'accessoriessubmenu'}>
           <p className='no-text-decor-hover' onClick={displayComputeraccCategory} >Computer Accessories<img src={chevronsubmenu} alt='chevronsubmenu' style={{width: '20px', height: '20px', position: 'relative', left: '3.2rem'}} onClick={displayComputeraccCategory}/></p>

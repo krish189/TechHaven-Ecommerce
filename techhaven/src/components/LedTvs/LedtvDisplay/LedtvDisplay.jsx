@@ -12,51 +12,34 @@ import Col from 'react-bootstrap/Col';
 import StarRatings from 'react-star-ratings';
 
 function LedtvDisplay() {
-  const [selectedCategories, setSelectedCategories] = useState([]);
+  const { tv_type } = useParams(); 
+  const [selectedCategories, setSelectedCategories] = useState([tv_type]);
   const [ledtvData, setLedtvData] = useState([]);
   const { value } = useFilter();
   const navigate = useNavigate();
-  const { tv_type } = useParams(); 
-
-  useEffect(() => {
-    // Update the selected categories based on the URL
-    if (tv_type) {
-      setSelectedCategories([tv_type]);
-    } else {
-      setSelectedCategories([]);
-    }
-  }, [tv_type]);
-
-  const handleCheckboxChange = (e) => {
-    const { name, checked } = e.target;
-    if (name === 'All') {
-      if (checked) {
-        setSelectedCategories([
-          'Smart LED TVs',
-          'Curved LED TVs'
-        ]);
-      } 
-      else 
-      {
-        setSelectedCategories([]); 
-      }
-    } 
-    else 
+  
+  const handleCheckboxChange = (e) =>{
+    if (e.target.checked)
     {
-      setSelectedCategories(prev =>
-        checked ? [...prev, name] : prev.filter(category => category !== name)
-      );
+      setSelectedCategories([...selectedCategories, e.target.value]);
     }
-    
-    if (name !== 'All') 
+    else
     {
-      navigate(`/shop/LedTvs/${encodeURIComponent(name)}`);
-    } 
-    else 
-    {
-      navigate('/shop/LedTvs');
+      setSelectedCategories(selectedCategories.filter((item)=> item !== e.target.value));
     }
-  };
+   };
+   
+   useEffect(()=>{
+    //Navigation
+    if (selectedCategories.length !== 0)
+    {
+      navigate(`/shop/led-tvs/${encodeURIComponent(selectedCategories.join(', '))}`);
+    }
+    else
+    {
+      navigate('/shop/led-tvs');
+    }
+   }, [selectedCategories]);
 
   function formatCurrency(price) {
     return new Intl.NumberFormat('en-IN', {
@@ -100,9 +83,8 @@ function LedtvDisplay() {
       <div className='flexcontainer'>
         <div>
             <h5 className='filtercategorytitle'>Product Category</h5>
-            <Form.Check label='All' name='All' className='categorycheckbox' onChange={handleCheckboxChange}/>
-            <Form.Check label='Smart LED TVs' name='Smart LED TVs' className='categorycheckbox' onChange={handleCheckboxChange}/>
-            <Form.Check label='Curved LED TVs' name='Curved LED TVs' className='categorycheckbox' onChange={handleCheckboxChange}/>
+            <Form.Check label='Smart LED TVs' value='Smart LED TVs' className='categorycheckbox' onChange={handleCheckboxChange}/>
+            <Form.Check label='Curved LED TVs' value='Curved LED TVs' className='categorycheckbox' onChange={handleCheckboxChange}/>
         </div>
         <Container className='container'>
         <Row>
@@ -110,7 +92,7 @@ function LedtvDisplay() {
             .filter(ledtv => ledtv.stock > 0 && ledtv.is_available > 0 && ledtv.discount_price>=value[0] && ledtv.discount_price<=value[1])
             .map((ledtv, index) => (
             <Col key={index} md={3} style={{ margin: '42px'}}>
-              <Card  onClick={()=>{navigate(`/shop/LedTvs/${encodeURIComponent(ledtv.tv_type)}/${encodeURIComponent(ledtv.name)}`)}}
+              <Card  onClick={()=>{navigate(`/shop/led-tvs/${encodeURIComponent(ledtv.tv_type)}/${encodeURIComponent(ledtv.name)}`)}}
                  style={{ width: '22rem', height: '32rem' , border: '1px solid lightgray'}}>
                 <Card.Img variant='top' src={`http://localhost:8000${ledtv.images[0]}`} alt="LedTv" className='ledtvproductimg'/>
                 <p className='ledtvname'>{ledtv.name}</p>

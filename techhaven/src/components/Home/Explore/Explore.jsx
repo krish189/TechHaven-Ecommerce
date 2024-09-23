@@ -21,7 +21,7 @@ function Explore() {
             <Card.Title>Laptops</Card.Title>
             </Card.Body>
         </Card>
-        <Card style={{ width: '14rem', height: '14rem'}} onClick={()=>navigate('/shop/LedTvs')}>
+        <Card style={{ width: '14rem', height: '14rem'}} onClick={()=>navigate('/shop/led-tvs')}>
             <Card.Body>
             <Card.Img variant="top" src={ledtv} />
             <Card.Title>LED TVs</Card.Title>
