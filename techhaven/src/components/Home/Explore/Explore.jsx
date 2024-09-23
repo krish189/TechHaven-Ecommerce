@@ -45,7 +45,7 @@ function Explore() {
             <Card.Title>Soundbar</Card.Title>
             </Card.Body>
         </Card>
-        <Card style={{ width: '14rem', height: '14rem'}} onClick={()=>navigate('/shop/LedProjectors')}>
+        <Card style={{ width: '14rem', height: '14rem'}} onClick={()=>navigate('/shop/led-projectors')}>
             <Card.Body>
             <Card.Img variant="top" src={projector} />
             <Card.Title>Projectors</Card.Title>

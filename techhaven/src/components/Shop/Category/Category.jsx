@@ -46,7 +46,7 @@ function Category() {
                 <li onClick={()=>navigate('/shop/speakers')}>Speakers</li>
                 <li onClick={()=>navigate('/shop/headphones-earbuds')}>Headphones & Earbuds</li>
                 <li onClick={()=>navigate('/shop/led-tvs')}>LED TV</li>
-                <li onClick={()=>navigate('/shop/LedProjectors')}>Projectors</li>
+                <li onClick={()=>navigate('/shop/led-projectors')}>Projectors</li>
                 <li onClick={()=>navigate('/shop/Microphones')}>Microphones</li>
                 <li onClick={displayAccessoriessubmenu}>Accessories<img src={down} alt='down' className='downicon'></img></li>
                 <li>Peripherals</li>

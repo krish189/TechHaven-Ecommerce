@@ -60,7 +60,7 @@ function LedProjectorDisplay() {
             .filter(ledprojector => ledprojector.stock > 0 && ledprojector.is_available > 0 && ledprojector.discount_price>=value[0] && ledprojector.discount_price<=value[1])
             .map((ledprojector, index) => (
             <Col key={index} md={3} style={{ margin: '42px'}}>
-              <Card  onClick={()=>{navigate(`/shop/LedProjectors/${encodeURIComponent(ledprojector.name)}`)}}
+              <Card  onClick={()=>{navigate(`/shop/led-projectors/${encodeURIComponent(ledprojector.name)}`)}}
                  style={{ width: '22rem', height: '32rem' , border: '1px solid lightgray'}}>
                 <Card.Img variant='top' src={`http://localhost:8000${ledprojector.images[0]}`} alt="LedProjector" className='ledprojectorproductimg'/>
                 <p className='ledprojectorname'>{ledprojector.name}</p>
