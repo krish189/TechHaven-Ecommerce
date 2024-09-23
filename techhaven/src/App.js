@@ -64,8 +64,8 @@ function App() {
         <Route path='/shop/led-tvs/:tv_type/:tv_name' element={<LedtvInfoShop/>}></Route>
         <Route path='/shop/led-projectors' element={<LedProjectorPage/>}></Route>
         <Route path='/shop/led-projectors/:projector_name' element={<LedProjectorInfo/>}></Route>
-        <Route path='/shop/Microphones' element={<MicrophonePage/>}></Route>
-        <Route path='/shop/Microphones/:microphone_name' element={<MicrophoneInfo/>}></Route>
+        <Route path='/shop/microphones' element={<MicrophonePage/>}></Route>
+        <Route path='/shop/microphones/:microphone_name' element={<MicrophoneInfo/>}></Route>
         <Route path='/shop/Accessories/ComputerAccessories' element={<ComputerAccessoriesPage/>}></Route>
         <Route path='/shop/Accessories/ComputerAccessories/:accessory_category' element={<ComputerAccessoriesPage/>}></Route>
         <Route path='/shop/Accessories/ComputerAccessories/:accessory_category/:computeraccessoriesname' element={<ComputerAccessoriesInfo/>}></Route>

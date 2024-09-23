@@ -255,7 +255,7 @@ function Header() {
           <p className='no-text-decor-hover' onClick={displayHeadphoneCategory}>Headphones & Earbuds <img src={chevronsubmenu} alt='chevronsubmenu' style={{width: '20px', height: '20px', position: 'relative', left: '0.3rem'}} onClick={displayHeadphoneCategory}/></p>
           <p className='no-text-decor-hover' onClick={displayTVCategory}>LED TV <img src={chevronsubmenu} alt='chevronsubmenu' style={{width: '20px', height: '20px', position: 'relative', left: '7.6rem'}} onClick={displayTVCategory}/></p>
           <p onClick={()=>{navigate('/shop/led-projectors')}}>LED Projectors</p>
-          <p onClick={()=>{navigate('/shop/Microphones')}}>Microphones</p>
+          <p onClick={()=>{navigate('/shop/microphones')}}>Microphones</p>
     </div>
     <div ref={refs.speakercategoryRef} className={showSpeakerCategory ? 'speakercategory active' : 'speakercategory'}>
         <p onClick={() =>{navigate(`/shop/speakers/${encodeURIComponent('Soundbars')}`)}}>Soundbars</p>
