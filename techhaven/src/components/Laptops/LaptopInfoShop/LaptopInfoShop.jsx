@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../../Shop/Header/Header';
 import Footer from '../../Home/Footer/Footer';
 import Category from '../../Shop/Category/Category';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import {useState, useEffect, useRef, useContext } from 'react';
 import Card from 'react-bootstrap/Card';
 import '../LaptopInfoShop/LaptopInfoShop.css';
@@ -21,6 +21,7 @@ function LaptopInfoShop() {
   const [laptopdata, setLaptopdata] = useState([]);
   const [image, setImage] = useState('');
   const [imageDimensions, setImageDimensions] = useState({ width: 660, height: 679 });
+  const navigate = useNavigate();
 
   const imageRef = useRef(null);
   const { addToCart } = useContext(CartContext);
@@ -71,8 +72,8 @@ function LaptopInfoShop() {
   const handleAddToCart = (laptop) => {
     addToCart(laptop);
   };
-
   
+
   return (
     <>
     <Header/>

@@ -66,12 +66,12 @@ function App() {
         <Route path='/shop/led-projectors/:projector_name' element={<LedProjectorInfo/>}></Route>
         <Route path='/shop/microphones' element={<MicrophonePage/>}></Route>
         <Route path='/shop/microphones/:microphone_name' element={<MicrophoneInfo/>}></Route>
-        <Route path='/shop/Accessories/ComputerAccessories' element={<ComputerAccessoriesPage/>}></Route>
-        <Route path='/shop/Accessories/ComputerAccessories/:accessory_category' element={<ComputerAccessoriesPage/>}></Route>
-        <Route path='/shop/Accessories/ComputerAccessories/:accessory_category/:computeraccessoriesname' element={<ComputerAccessoriesInfo/>}></Route>
-        <Route path='/shop/Accessories/LaptopAccessories' element={<LaptopAccessoriesPage/>}></Route>
-        <Route path='/shop/Accessories/LaptopAccessories/:accessory_category' element={<LaptopAccessoriesPage/>}></Route>
-        <Route path='/shop/Accessories/LaptopAccessories/:accessory_category/:laptopaccessoriesname' element={<LaptopAccessoriesInfo/>}></Route>
+        <Route path='/shop/accessories/computer-accessories' element={<ComputerAccessoriesPage/>}></Route>
+        <Route path='/shop/accessories/computer-accessories/:accessory_category' element={<ComputerAccessoriesPage/>}></Route>
+        <Route path='/shop/accessories/computer-accessories/:accessory_category/:computeraccessoriesname' element={<ComputerAccessoriesInfo/>}></Route>
+        <Route path='/shop/accessories/laptop-accessories' element={<LaptopAccessoriesPage/>}></Route>
+        <Route path='/shop/accessories/laptop-accessories/:accessory_category' element={<LaptopAccessoriesPage/>}></Route>
+        <Route path='/shop/accessories/laptop-accessories/:accessory_category/:laptopaccessoriesname' element={<LaptopAccessoriesInfo/>}></Route>
       </Routes>
     </BrowserRouter>
     </OrderDetailsProvider>

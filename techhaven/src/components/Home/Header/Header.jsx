@@ -286,21 +286,21 @@ function Header() {
           <p>Projector Screens</p>
     </div>
     <div ref={refs.computeraccRef} className={showComputeraccCategory ? 'computeracccategory active' : 'computeracccategory'}>
-      <p onClick={()=>navigate(`/shop/Accessories/ComputerAccessories/${encodeURIComponent('Solid State Drives')}`)}>Solid State Drives</p>
-      <p onClick={()=>navigate(`/shop/Accessories/ComputerAccessories/${encodeURIComponent('Hard Disk Drives')}`)}>Hard Disk Drives</p>
-      <p onClick={()=>navigate(`/shop/Accessories/ComputerAccessories/${encodeURIComponent('CPU Fans')}`)}>CPU Fans</p>
-      <p onClick={()=>navigate(`/shop/Accessories/ComputerAccessories/${encodeURIComponent('Graphics Cards')}`)}>Graphics Cards</p>
-      <p onClick={()=>navigate(`/shop/Accessories/ComputerAccessories/${encodeURIComponent('Sound Cards')}`)}>Sound Cards</p>
-      <p onClick={()=>navigate(`/shop/Accessories/ComputerAccessories/${encodeURIComponent('USB Expansion Cards')}`)}>USB Expansion Cards</p>
-      <p onClick={()=>navigate(`/shop/Accessories/ComputerAccessories/${encodeURIComponent('Motherboards')}`)}>Motherboards</p>
+      <p onClick={()=>navigate(`/shop/accessories/computer-accessories/${encodeURIComponent('Solid State Drives')}`)}>Solid State Drives</p>
+      <p onClick={()=>navigate(`/shop/accessories/computer-accessories/${encodeURIComponent('Hard Disk Drives')}`)}>Hard Disk Drives</p>
+      <p onClick={()=>navigate(`/shop/accessories/computer-accessories/${encodeURIComponent('CPU Fans')}`)}>CPU Fans</p>
+      <p onClick={()=>navigate(`/shop/accessories/computer-accessories/${encodeURIComponent('Graphics Cards')}`)}>Graphics Cards</p>
+      <p onClick={()=>navigate(`/shop/accessories/computer-accessories/${encodeURIComponent('Sound Cards')}`)}>Sound Cards</p>
+      <p onClick={()=>navigate(`/shop/accessories/computer-accessories/${encodeURIComponent('USB Expansion Cards')}`)}>USB Expansion Cards</p>
+      <p onClick={()=>navigate(`/shop/accessories/computer-accessories/${encodeURIComponent('Motherboards')}`)}>Motherboards</p>
     </div>
     <div ref={refs.laptopaccRef} className={showLaptopaccCategory ? 'laptopacccategory active' : 'laptopacccategory'}>
-      <p onClick={()=>navigate(`/shop/Accessories/LaptopAccessories/${encodeURIComponent('Laptop Stands')}`)}>Laptop Stands</p>
-      <p onClick={()=>navigate(`/shop/Accessories/LaptopAccessories/${encodeURIComponent('Cooling Pads')}`)}>Cooling Pads</p>
-      <p onClick={()=>navigate(`/shop/Accessories/LaptopAccessories/${encodeURIComponent('Sleeve Cases')}`)}>Sleeve Cases</p>
-      <p onClick={()=>navigate(`/shop/Accessories/LaptopAccessories/${encodeURIComponent('Docking Stations')}`)}>Docking Stations</p>
-      <p onClick={()=>navigate(`/shop/Accessories/LaptopAccessories/${encodeURIComponent('USB Hubs')}`)}>USB Hubs</p>
-      <p onClick={()=>navigate(`/shop/Accessories/LaptopAccessories/${encodeURIComponent('Power Banks')}`)}>Power Banks</p>
+      <p onClick={()=>navigate(`/shop/accessories/laptop-accessories/${encodeURIComponent('Laptop Stands')}`)}>Laptop Stands</p>
+      <p onClick={()=>navigate(`/shop/accessories/laptop-accessories/${encodeURIComponent('Cooling Pads')}`)}>Cooling Pads</p>
+      <p onClick={()=>navigate(`/shop/accessories/laptop-accessories/${encodeURIComponent('Sleeve Cases')}`)}>Sleeve Cases</p>
+      <p onClick={()=>navigate(`/shop/accessories/laptop-accessories/${encodeURIComponent('Docking Stations')}`)}>Docking Stations</p>
+      <p onClick={()=>navigate(`/shop/accessories/laptop-accessories/${encodeURIComponent('USB Hubs')}`)}>USB Hubs</p>
+      <p onClick={()=>navigate(`/shop/accessories/laptop-accessories/${encodeURIComponent('Power Banks')}`)}>Power Banks</p>
     </div>
     <div ref={refs.mobileaccRef} className={showMobileaccCategory ? 'mobileacccategory active' : 'mobileacccategory'}>
       <p>Mobile Cases</p>

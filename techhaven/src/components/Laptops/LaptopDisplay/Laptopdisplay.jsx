@@ -13,7 +13,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 
 function Laptopdisplay() {
   const { laptoptype } = useParams(); 
-  const [selectedCategories, setSelectedCategories] = useState([laptoptype]);
+  const [selectedCategories, setSelectedCategories] = useState(laptoptype ? [laptoptype] : []);
   const [laptopData, setLaptopData] = useState([]);
   const { value } = useFilter();
   const navigate = useNavigate();
@@ -39,7 +39,7 @@ function Laptopdisplay() {
   {
     navigate('/shop/laptops');
   }
- }, [selectedCategories]);
+ }, [selectedCategories, navigate]);
       
   function formatCurrency(price) {
     return new Intl.NumberFormat('en-IN', {
@@ -99,7 +99,7 @@ useEffect(() => {
             .filter(laptop => laptop.stock > 0 && laptop.is_available > 0 && laptop.discount_price>=value[0] && laptop.discount_price<=value[1])
             .map((laptop, index) => (
             <Col key={index} md={3} style={{ margin: '42px'}}>
-              <Card  onClick={()=>{navigate(`/shop/laptops/${encodeURIComponent(laptop.laptop_type)}/${encodeURIComponent(laptop.name)}`)}}
+              <Card  onClick={()=>{navigate(`/shop/laptops/${encodeURIComponent(laptop.laptop_type)}/${encodeURIComponent(laptop.name)}`);}}
                  style={{ width: '22rem', height: '32rem' , border: '1px solid lightgray'}}>
                 <Card.Img variant='top' src={`http://localhost:8000${laptop.images[0]}`} alt="Laptop" className='productimg'/>
                 <p className='laptopname'>{laptop.name}</p>

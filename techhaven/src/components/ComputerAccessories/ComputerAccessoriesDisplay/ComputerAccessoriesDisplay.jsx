@@ -13,56 +13,34 @@ import { useNavigate, useParams } from 'react-router-dom';
 
 
 function ComputerAccessoriesDisplay() {
-  const [selectedCategories, setSelectedCategories] = useState([]);
+  const { accessory_category } = useParams(); 
+  const [selectedCategories, setSelectedCategories] = useState(accessory_category ? [accessory_category] : []);
   const [computerAccessoriesData, setComputerAccessoriesData] = useState([]);
   const { value } = useFilter();
   const navigate = useNavigate();
-  const { accessory_category } = useParams(); 
-
-  useEffect(() => {
-    // Update the selected categories based on the URL
-    if (accessory_category) {
-      setSelectedCategories([accessory_category]);
-    } else {
-      setSelectedCategories([]);
-    }
-  }, [accessory_category]);
-
-  const handleCheckboxChange = (e) => {
-    const { name, checked } = e.target;
-    if (name === 'All') {
-      if (checked) {
-        setSelectedCategories([
-          'Solid State Drives',
-          'Hard Disk Drives',
-          'CPU Fans',
-          'Graphics Cards',
-          'Sound Cards',
-          'USB Expansion Cards',
-          'Motherboards'
-        ]);
-      } 
-      else 
-      {
-        setSelectedCategories([]); 
-      }
-    } 
-    else 
+  
+  const handleCheckboxChange = (e) =>{
+    if (e.target.checked)
     {
-      setSelectedCategories(prev =>
-        checked ? [...prev, name] : prev.filter(category => category !== name)
-      );
+      setSelectedCategories([...selectedCategories, e.target.value]);
     }
-    
-    if (name !== 'All') 
+    else
     {
-      navigate(`/shop/Accessories/ComputerAccessories/${encodeURIComponent(name)}`);
-    } 
-    else 
-    {
-      navigate('/shop/Accessories/ComputerAccessories');
+      setSelectedCategories(selectedCategories.filter((item)=> item !== e.target.value));
     }
-  };
+   };
+   
+   useEffect(()=>{
+    //Navigation
+    if (selectedCategories.length !== 0)
+    {
+      navigate(`/shop/accessories/computer-accessories/${encodeURIComponent(selectedCategories.join(', '))}`);
+    }
+    else
+    {
+      navigate('/shop/accessories/computer-accessories');
+    }
+   }, [selectedCategories, navigate]);
 
   function formatCurrency(price) {
     return new Intl.NumberFormat('en-IN', {
@@ -107,14 +85,13 @@ useEffect(() => {
     <div className='flexcontainer'>
     <div>
       <h5 className='filtercategorytitle'>Product Category</h5>
-      <Form.Check label='All' name='All' className='categorycheckbox' onChange={handleCheckboxChange}/>
-      <Form.Check label='Solid State Drives' name='Solid State Drives' className='categorycheckbox' onChange={handleCheckboxChange}/>
-      <Form.Check label='Hard Disk Drives' name='Hard Disk Drives' className='categorycheckbox' onChange={handleCheckboxChange}/>
-      <Form.Check label='CPU Fans' name='CPU Fans' className='categorycheckbox' onChange={handleCheckboxChange} />
-      <Form.Check label='Graphics Cards' name='Graphics Cards' className='categorycheckbox' onChange={handleCheckboxChange}/>
-      <Form.Check label='Sound Cards' name='Sound Cards' className='categorycheckbox' onChange={handleCheckboxChange} />
-      <Form.Check label='USB Expansion Cards' name='USB Expansion Cards' className='categorycheckbox' onChange={handleCheckboxChange} />
-      <Form.Check label='Motherboards' name='Motherboards' className='categorycheckbox' onChange={handleCheckboxChange}/>
+      <Form.Check label='Solid State Drives' value='Solid State Drives' className='categorycheckbox' onChange={handleCheckboxChange}/>
+      <Form.Check label='Hard Disk Drives' value='Hard Disk Drives' className='categorycheckbox' onChange={handleCheckboxChange}/>
+      <Form.Check label='CPU Fans' value='CPU Fans' className='categorycheckbox' onChange={handleCheckboxChange} />
+      <Form.Check label='Graphics Cards' value='Graphics Cards' className='categorycheckbox' onChange={handleCheckboxChange}/>
+      <Form.Check label='Sound Cards' value='Sound Cards' className='categorycheckbox' onChange={handleCheckboxChange} />
+      <Form.Check label='USB Expansion Cards' value='USB Expansion Cards' className='categorycheckbox' onChange={handleCheckboxChange} />
+      <Form.Check label='Motherboards' value='Motherboards' className='categorycheckbox' onChange={handleCheckboxChange}/>
     </div>
     <Container className='container'>
         <Row>
@@ -122,7 +99,7 @@ useEffect(() => {
             .filter(computeraccessories => computeraccessories.stock > 0 && computeraccessories.is_available > 0 && computeraccessories.discount_price>=value[0] && computeraccessories.discount_price<=value[1])
             .map((computeraccessories, index) => (
             <Col key={index} md={3} style={{ margin: '42px'}}>
-              <Card  onClick={()=>{navigate(`/shop/Accessories/ComputerAccessories/${encodeURIComponent(computeraccessories.accessory_category)}/${encodeURIComponent(computeraccessories.name)}`)}}
+              <Card  onClick={()=>{navigate(`/shop/accessories/computer-accessories/${encodeURIComponent(computeraccessories.accessory_category)}/${encodeURIComponent(computeraccessories.name)}`)}}
                  style={{ width: '22rem', height: '32rem' , border: '1px solid lightgray'}}>
                 <Card.Img variant='top' src={`http://localhost:8000${computeraccessories.images[0]}`} alt="ComputerAccessories" className='computeraccessoriesproductimg'/>
                 <p className='computeraccessoriesname'>{computeraccessories.name}</p>

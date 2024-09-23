@@ -13,55 +13,34 @@ import { useNavigate, useParams } from 'react-router-dom';
 
 
 function LaptopAccessoriesDisplay() {
- const [selectedCategories, setSelectedCategories] = useState([]);
+ const { accessory_category } = useParams(); 
+ const [selectedCategories, setSelectedCategories] = useState(accessory_category ? [accessory_category] : []);
  const [laptopAccessoriesData, setLaptopAccessoriesData] = useState([]);
  const { value } = useFilter();
  const navigate = useNavigate();
- const { accessory_category } = useParams(); 
-
- useEffect(() => {
-    // Update the selected categories based on the URL
-    if (accessory_category) {
-      setSelectedCategories([accessory_category]);
-    } else {
-      setSelectedCategories([]);
-    }
-  }, [accessory_category]);
-
-  const handleCheckboxChange = (e) => {
-    const { name, checked } = e.target;
-    if (name === 'All') {
-      if (checked) {
-        setSelectedCategories([
-          'Laptop Stands',
-          'Cooling Pads',
-          'Sleeve Cases',
-          'Docking Stations',
-          'USB Hubs',
-          'Power Banks'
-        ]);
-      } 
-      else 
-      {
-        setSelectedCategories([]); 
-      }
-    } 
-    else 
-    {
-      setSelectedCategories(prev =>
-        checked ? [...prev, name] : prev.filter(category => category !== name)
-      );
-    }
-    
-    if (name !== 'All') 
-    {
-      navigate(`/shop/Accessories/LaptopAccessories/${encodeURIComponent(name)}`);
-    } 
-    else 
-    {
-      navigate('/shop/Accessories/LaptopAccessories');
-    }
-  };
+ 
+ const handleCheckboxChange = (e) =>{
+  if (e.target.checked)
+  {
+    setSelectedCategories([...selectedCategories, e.target.value]);
+  }
+  else
+  {
+    setSelectedCategories(selectedCategories.filter((item)=> item !== e.target.value));
+  }
+ };
+ 
+ useEffect(()=>{
+  //Navigation
+  if (selectedCategories.length !== 0)
+  {
+    navigate(`/shop/accessories/laptop-accessories/${encodeURIComponent(selectedCategories.join(', '))}`);
+  }
+  else
+  {
+    navigate('/shop/accessories/laptop-accessories');
+  }
+ }, [selectedCategories, navigate]);
 
   function formatCurrency(price) {
     return new Intl.NumberFormat('en-IN', {
@@ -105,13 +84,12 @@ function LaptopAccessoriesDisplay() {
     <div className='flexcontainer'>
     <div>
       <h5 className='filtercategorytitle'>Product Category</h5>
-      <Form.Check label='All' name='All' className='categorycheckbox' onChange={handleCheckboxChange}/>
-      <Form.Check label='Laptop Stands' name='Laptop Stands' className='categorycheckbox' onChange={handleCheckboxChange}/>
-      <Form.Check label='Cooling Pads' name='Cooling Pads' className='categorycheckbox' onChange={handleCheckboxChange}/>
-      <Form.Check label='Sleeve Cases' name='Sleeve Cases' className='categorycheckbox' onChange={handleCheckboxChange} />
-      <Form.Check label='Docking Stations' name='Docking Stations' className='categorycheckbox' onChange={handleCheckboxChange}/>
-      <Form.Check label='USB Hubs' name='USB Hubs' className='categorycheckbox' onChange={handleCheckboxChange} />
-      <Form.Check label='Power Banks' name='Power Banks' className='categorycheckbox' onChange={handleCheckboxChange} />
+      <Form.Check label='Laptop Stands' value='Laptop Stands' className='categorycheckbox' onChange={handleCheckboxChange}/>
+      <Form.Check label='Cooling Pads' value='Cooling Pads' className='categorycheckbox' onChange={handleCheckboxChange}/>
+      <Form.Check label='Sleeve Cases' value='Sleeve Cases' className='categorycheckbox' onChange={handleCheckboxChange} />
+      <Form.Check label='Docking Stations' value='Docking Stations' className='categorycheckbox' onChange={handleCheckboxChange}/>
+      <Form.Check label='USB Hubs' value='USB Hubs' className='categorycheckbox' onChange={handleCheckboxChange} />
+      <Form.Check label='Power Banks' value='Power Banks' className='categorycheckbox' onChange={handleCheckboxChange} />
     </div>
     <Container className='container'>
         <Row>
@@ -119,7 +97,7 @@ function LaptopAccessoriesDisplay() {
             .filter(laptopaccessories => laptopaccessories.stock > 0 && laptopaccessories.is_available > 0 && laptopaccessories.discount_price>=value[0] && laptopaccessories.discount_price<=value[1])
             .map((laptopaccessories, index) => (
             <Col key={index} md={3} style={{ margin: '42px'}}>
-              <Card  onClick={()=>{navigate(`/shop/Accessories/LaptopAccessories/${encodeURIComponent(laptopaccessories.accessory_category)}/${encodeURIComponent(laptopaccessories.name)}`)}}
+              <Card  onClick={()=>{navigate(`/shop/accessories/laptop-accessories/${encodeURIComponent(laptopaccessories.accessory_category)}/${encodeURIComponent(laptopaccessories.name)}`)}}
                  style={{ width: '22rem', height: '32rem' , border: '1px solid lightgray'}}>
                 <Card.Img variant='top' src={`http://localhost:8000${laptopaccessories.images[0]}`} alt="LaptopAccessories" className='laptopaccessoriesproductimg'/>
                 <p className='laptopaccessoriesname'>{laptopaccessories.name}</p>

@@ -13,7 +13,7 @@ import StarRatings from 'react-star-ratings';
 
 function LedtvDisplay() {
   const { tv_type } = useParams(); 
-  const [selectedCategories, setSelectedCategories] = useState([tv_type]);
+  const [selectedCategories, setSelectedCategories] = useState(tv_type ? [tv_type] : []);
   const [ledtvData, setLedtvData] = useState([]);
   const { value } = useFilter();
   const navigate = useNavigate();
@@ -39,7 +39,7 @@ function LedtvDisplay() {
     {
       navigate('/shop/led-tvs');
     }
-   }, [selectedCategories]);
+   }, [selectedCategories, navigate]);
 
   function formatCurrency(price) {
     return new Intl.NumberFormat('en-IN', {
