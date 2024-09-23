@@ -485,7 +485,6 @@ ul li:hover
     border-bottom: 3px solid;
     border-bottom-color: black;
     transition: border 60s linear;
-
 }
 .supportsubmenu.active
 {

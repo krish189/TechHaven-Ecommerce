@@ -64,9 +64,7 @@ function Laptopdisplay() {
       navigate('/shop/laptops');
     }
   };
-  console.log(selectedCategories);
-
-
+  
   function formatCurrency(price) {
     return new Intl.NumberFormat('en-IN', {
       style: 'currency',

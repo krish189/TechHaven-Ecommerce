@@ -33,10 +33,6 @@ function LedProjectorInfo() {
     }).format(price);
   }
 
-  const handleToggleExpand = () => {
-    setExpand(!expand);
-  };
-
   useEffect(() => {
     const fetchLedProjectorDatabyName = async () => {
         try {

@@ -1,12 +1,11 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from .models import Laptop, Speaker, HpEb, LedTv, LedProjector, Microphone
-from .serializers import LaptopSerializer, SpeakerSerializer, HpEbSerializer, LedTvSerializer, LedProjectorSerializer, MicrophoneSerializer
+from .models import Laptop, Speaker, HpEb, LedTv, LedProjector, Microphone, ComputerAccessories, LaptopAccessories
+from .serializers import LaptopSerializer, SpeakerSerializer, HpEbSerializer, LedTvSerializer, LedProjectorSerializer, MicrophoneSerializer, ComputerAccessoriesSerializer, LaptopAccessoriesSerializer
 
 @api_view(['POST'])
 def filter_laptops(request):
     categories = request.data.get('categories', [])
-    print('Categories:', categories) 
     if categories:
         laptops = Laptop.objects.filter(laptop_type__in=categories)
     else:
@@ -130,4 +129,50 @@ def filter_Microphone_by_name(request):
             return Response(serializer.data)
         except Microphone.DoesNotExist:
             return Response({'error': 'Microphone not found'}, status=404)
+    return Response({'error': 'Name parameter is missing'}, status=400)
+
+@api_view(['POST'])
+def filter_computer_accessories(request):
+    categories = request.data.get('categories', [])
+    if categories:
+        computer_accessories = ComputerAccessories.objects.filter(accessory_category__in=categories)
+    else:
+        computer_accessories = ComputerAccessories.objects.all()
+    
+    serializer = ComputerAccessoriesSerializer(computer_accessories, many=True)
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def filter_computer_accessories_by_name(request):
+    name = request.data.get('name')
+    if name:
+        try:
+            computer_accessories = ComputerAccessories.objects.get(name=name)
+            serializer = ComputerAccessoriesSerializer(computer_accessories)  
+            return Response(serializer.data)
+        except ComputerAccessories.DoesNotExist:
+            return Response({'error': 'Computer Accessories not found'}, status=404)
+    return Response({'error': 'Name parameter is missing'}, status=400)
+
+@api_view(['POST'])
+def filter_laptop_accessories(request):
+    categories = request.data.get('categories', [])
+    if categories:
+        laptop_accessories = LaptopAccessories.objects.filter(accessory_category__in=categories)
+    else:
+        laptop_accessories = LaptopAccessories.objects.all()
+    
+    serializer = LaptopAccessoriesSerializer(laptop_accessories, many=True)
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def filter_laptop_accessories_by_name(request):
+    name = request.data.get('name')
+    if name:
+        try:
+            laptop_accessories = LaptopAccessories.objects.get(name=name)
+            serializer = LaptopAccessoriesSerializer(laptop_accessories)  
+            return Response(serializer.data)
+        except LaptopAccessories.DoesNotExist:
+            return Response({'error': 'Laptop Accessories not found'}, status=404)
     return Response({'error': 'Name parameter is missing'}, status=400)

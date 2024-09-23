@@ -7,17 +7,29 @@ import { useNavigate } from 'react-router-dom';
 function Category() {
   const navigate = useNavigate();
   const refs = {
-    supportRef: useRef(null)
+    supportRef: useRef(null),
+    accessoriesRef: useRef(null)
   }
+
   const [showSupportsubmenu, setShowSupportsubmenu] = useState(false);
   const displaySupportsubmenu = () => {
     setShowSupportsubmenu(!showSupportsubmenu);
   };
+
+  const [showAccessoriessubmenu, setShowAccessoriessubmenu] = useState(false);
+  const displayAccessoriessubmenu = () => {
+    setShowAccessoriessubmenu(!showAccessoriessubmenu);
+  };
+  
   const handleClickOutside = (event) => {
     if (refs.supportRef.current && !refs.supportRef.current.contains(event.target))
-      {
-         setShowSupportsubmenu(false);
-      }
+    {
+      setShowSupportsubmenu(false);
+    }
+    if (refs.accessoriesRef.current && !refs.accessoriesRef.current.contains(event.target))
+    {
+      setShowAccessoriessubmenu(false);
+    }
   }
   useEffect(() => {
     document.addEventListener('mousedown', handleClickOutside);
@@ -36,7 +48,7 @@ function Category() {
                 <li onClick={()=>navigate('/shop/LedTvs')}>LED TV</li>
                 <li onClick={()=>navigate('/shop/LedProjectors')}>Projectors</li>
                 <li onClick={()=>navigate('/shop/Microphones')}>Microphones</li>
-                <li>Accessories</li>
+                <li onClick={displayAccessoriessubmenu}>Accessories<img src={down} alt='down' className='downicon'></img></li>
                 <li>Peripherals</li>
                 <li>Smart Home & CCTV</li>
                 <li>Smart Watch</li>
@@ -49,6 +61,10 @@ function Category() {
           <p>Register Onsite Support</p>
           <p>Register Warranty</p>
           <p>Product FAQ</p>
+    </div>
+    <div ref={refs.accessoriesRef} className={showAccessoriessubmenu ? 'categoryaccessoriessubmenu active' : 'categoryaccessoriessubmenu'}>
+          <p onClick={()=>navigate('/shop/Accessories/ComputerAccessories')}>Computer Accessories</p>
+          <p onClick={()=>navigate('/shop/Accessories/LaptopAccessories')}>Laptop Accessories</p>
     </div>
     </>
   )

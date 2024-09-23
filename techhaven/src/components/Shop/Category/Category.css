@@ -37,3 +37,25 @@ ul li:hover
     z-index: 999; 
     display: none;
 }
+.categoryaccessoriessubmenu
+{
+    position: fixed;
+    top: 8.5rem;
+    left: 50rem;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: white;
+    z-index: 999; 
+    display: none;
+}
+.categoryaccessoriessubmenu p:hover
+{
+    cursor: pointer;
+    border-bottom: 3px solid;
+    border-bottom-color: black;
+    transition: border 60s linear;
+}
+.categoryaccessoriessubmenu.active
+{
+    display: block;
+}

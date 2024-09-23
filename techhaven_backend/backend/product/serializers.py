@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Laptop, Speaker, HpEb, LedTv, LedProjector, Microphone
+from .models import Laptop, Speaker, HpEb, LedTv, LedProjector, Microphone, ComputerAccessories, LaptopAccessories
 
 # Create a serializer for the Laptop model
 class LaptopSerializer(serializers.ModelSerializer):
@@ -35,4 +35,16 @@ class LedProjectorSerializer(serializers.ModelSerializer):
 class MicrophoneSerializer(serializers.ModelSerializer):
     class Meta:
         model = Microphone
+        fields = '__all__'
+
+# Create a serializer for the Computer Accessories model
+class ComputerAccessoriesSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ComputerAccessories
+        fields = '__all__'
+
+# Create a serializer for the Laptop Accessories model
+class LaptopAccessoriesSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = LaptopAccessories
         fields = '__all__'

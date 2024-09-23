@@ -26,6 +26,10 @@ import LedProjectorPage from './components/LedProjectors/LedProjectorPage/LedPro
 import LedProjectorInfo from './components/LedProjectors/LedProjectorInfo/LedProjectorInfo';
 import MicrophonePage from './components/Microphones/MicrophonePage/MicrophonePage';
 import MicrophoneInfo from './components/Microphones/MicrophoneInfo/MicrophoneInfo';
+import ComputerAccessoriesPage from './components/ComputerAccessories/ComputerAccessoriesPage/ComputerAccessoriesPage';
+import ComputerAccessoriesInfo from './components/ComputerAccessories/ComputerAccessoriesInfo/ComputerAccessoriesInfo';
+import LaptopAccessoriesPage from './components/LaptopAccessories/LaptopAccessoriesPage/LaptopAccessoriesPage';
+import LaptopAccessoriesInfo from './components/LaptopAccessories/LaptopAccessoriesInfo/LaptopAccessoriesInfo';
 
 function App() {
   
@@ -62,6 +66,12 @@ function App() {
         <Route path='/shop/LedProjectors/:projector_name' element={<LedProjectorInfo/>}></Route>
         <Route path='/shop/Microphones' element={<MicrophonePage/>}></Route>
         <Route path='/shop/Microphones/:microphone_name' element={<MicrophoneInfo/>}></Route>
+        <Route path='/shop/Accessories/ComputerAccessories' element={<ComputerAccessoriesPage/>}></Route>
+        <Route path='/shop/Accessories/ComputerAccessories/:accessory_category' element={<ComputerAccessoriesPage/>}></Route>
+        <Route path='/shop/Accessories/ComputerAccessories/:accessory_category/:computeraccessoriesname' element={<ComputerAccessoriesInfo/>}></Route>
+        <Route path='/shop/Accessories/LaptopAccessories' element={<LaptopAccessoriesPage/>}></Route>
+        <Route path='/shop/Accessories/LaptopAccessories/:accessory_category' element={<LaptopAccessoriesPage/>}></Route>
+        <Route path='/shop/Accessories/LaptopAccessories/:accessory_category/:laptopaccessoriesname' element={<LaptopAccessoriesInfo/>}></Route>
       </Routes>
     </BrowserRouter>
     </OrderDetailsProvider>
