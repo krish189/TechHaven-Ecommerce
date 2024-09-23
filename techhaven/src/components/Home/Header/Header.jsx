@@ -263,10 +263,10 @@ function Header() {
         <p onClick={()=>{navigate(`/shop/speakers/${encodeURIComponent('Party Speakers')}`)}}>Party Speakers</p>
     </div>
     <div ref={refs.headphonecategoryRef} className={showHeadphoneCategory ? 'headphonecategory active' : 'headphonecategory'}>
-      <p onClick={() =>{navigate(`/shop/HpEb/${encodeURIComponent('Wired Headphones')}`)}}>Wired Headphones</p>
-      <p onClick={() =>{navigate(`/shop/HpEb/${encodeURIComponent('Wireless Headphones')}`)}}>Wireless Headphones</p>
-      <p onClick={() =>{navigate(`/shop/HpEb/${encodeURIComponent('Wired Earbuds')}`)}}>Wired Earbuds</p>
-      <p onClick={() =>{navigate(`/shop/HpEb/${encodeURIComponent('Wireless Earbuds')}`)}}>Wireless Earbuds</p>
+      <p onClick={() =>{navigate(`/shop/headphones-earbuds/${encodeURIComponent('Wired Headphones')}`)}}>Wired Headphones</p>
+      <p onClick={() =>{navigate(`/shop/headphones-earbuds/${encodeURIComponent('Wireless Headphones')}`)}}>Wireless Headphones</p>
+      <p onClick={() =>{navigate(`/shop/headphones-earbuds/${encodeURIComponent('Wired Earbuds')}`)}}>Wired Earbuds</p>
+      <p onClick={() =>{navigate(`/shop/headphones-earbuds/${encodeURIComponent('Wireless Earbuds')}`)}}>Wireless Earbuds</p>
     </div>
     <div ref={refs.tvcategoryRef} className={showTVCategory ? 'tvcategory active' : 'tvcategory'}>
       <p onClick={() =>{navigate(`/shop/LedTvs/${encodeURIComponent('Smart LED TVs')}`)}}>Smart LED TVs</p>

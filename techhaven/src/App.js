@@ -56,9 +56,9 @@ function App() {
         <Route path='/shop/speakers' element={<SpeakerPage/>}></Route>
         <Route path='/shop/speakers/:speakertype' element={<SpeakerPage/>}></Route>
         <Route path='/shop/speakers/:speakertype/:speakername' element={<SpeakerInfoShop/>}></Route>
-        <Route path='/shop/HpEb' element={<HeadphoneEarbudPage/>}></Route>
-        <Route path='/shop/HpEb/:hp_eb_type' element={<HeadphoneEarbudPage/>}></Route>
-        <Route path='/shop/HpEb/:hp_eb_type/:hp_eb_name' element={<HeadphoneEarbudInfo/>}></Route>
+        <Route path='/shop/headphones-earbuds' element={<HeadphoneEarbudPage/>}></Route>
+        <Route path='/shop/headphones-earbuds/:hp_eb_type' element={<HeadphoneEarbudPage/>}></Route>
+        <Route path='/shop/headphones-earbuds/:hp_eb_type/:hp_eb_name' element={<HeadphoneEarbudInfo/>}></Route>
         <Route path='/shop/LedTvs' element={<LedtvPage/>}></Route>
         <Route path='/shop/LedTvs/:tv_type' element={<LedtvPage/>}></Route>
         <Route path='/shop/LedTvs/:tv_type/:tv_name' element={<LedtvInfoShop/>}></Route>

@@ -12,53 +12,35 @@ import Col from 'react-bootstrap/Col';
 import StarRatings from 'react-star-ratings';
 
 function HeadphoneEarbudDisplay() {
-  const [selectedCategories, setSelectedCategories] = useState([]);
+  const { hp_eb_type } = useParams(); 
+  const [selectedCategories, setSelectedCategories] = useState([hp_eb_type]);
   const [hpebData, setHpEbData] = useState([]);
   const { value } = useFilter();
   const navigate = useNavigate();
-  const { hp_eb_type } = useParams(); 
-
-  useEffect(() => {
-    if (hp_eb_type) {
-      setSelectedCategories([hp_eb_type]);
-    } else {
-      setSelectedCategories([]);
-    }
-  }, [hp_eb_type]);
-
-  const handleCheckboxChange = (e) => {
-    const { name, checked } = e.target;
-    if (name === 'All') {
-      if (checked) {
-        setSelectedCategories([
-          'Wired Headphones',
-          'Wireless Headphones',
-          'Wired Earbuds',
-          'Wireless Earbuds'
-        ]);
-      } 
-      else 
-      {
-        setSelectedCategories([]); 
-      }
-    } 
-    else 
-    {
-      setSelectedCategories(prev =>
-        checked ? [...prev, name] : prev.filter(category => category !== name)
-      );
-    }
-    
-    if (name !== 'All') 
-    {
-      navigate(`/shop/HpEb/${encodeURIComponent(name)}`);
-    } 
-    else 
-    {
-      navigate('/shop/HpEb');
-    }
-  };
   
+  const handleCheckboxChange = (e) =>{
+    if (e.target.checked)
+    {
+      setSelectedCategories([...selectedCategories, e.target.value]);
+    }
+    else
+    {
+      setSelectedCategories(selectedCategories.filter((item)=> item !== e.target.value));
+    }
+   };
+   
+   useEffect(()=>{
+    //Navigation
+    if (selectedCategories.length !== 0)
+    {
+      navigate(`/shop/headphones-earbuds/${encodeURIComponent(selectedCategories.join(', '))}`);
+    }
+    else
+    {
+      navigate('/shop/headphones-earbuds');
+    }
+   }, [selectedCategories]);
+
   function formatCurrency(price) {
     return new Intl.NumberFormat('en-IN', {
       style: 'currency',
@@ -101,11 +83,10 @@ function HeadphoneEarbudDisplay() {
       <div className='flexcontainer'>
         <div>
             <h5 className='filtercategorytitle'>Product Category</h5>
-            <Form.Check label='All' name='All' className='categorycheckbox' onChange={handleCheckboxChange}/>
-            <Form.Check label='Wired Headphones' name='Wired Headphones' className='categorycheckbox' onChange={handleCheckboxChange}/>
-            <Form.Check label='Wireless Headphones' name='Wireless Headphones' className='categorycheckbox' onChange={handleCheckboxChange}/>
-            <Form.Check label='Wired Earbuds' name='Wired Earbuds' className='categorycheckbox' onChange={handleCheckboxChange}/>
-            <Form.Check label='Wireless Earbuds' name='Wireless Earbuds' className='categorycheckbox' onChange={handleCheckboxChange}/>
+            <Form.Check label='Wired Headphones' value='Wired Headphones' className='categorycheckbox' onChange={handleCheckboxChange}/>
+            <Form.Check label='Wireless Headphones' value='Wireless Headphones' className='categorycheckbox' onChange={handleCheckboxChange}/>
+            <Form.Check label='Wired Earbuds' value='Wired Earbuds' className='categorycheckbox' onChange={handleCheckboxChange}/>
+            <Form.Check label='Wireless Earbuds' value='Wireless Earbuds' className='categorycheckbox' onChange={handleCheckboxChange}/>
         </div>
         <Container className='container'>
         <Row>
