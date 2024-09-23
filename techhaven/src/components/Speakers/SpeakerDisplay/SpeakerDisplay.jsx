@@ -12,53 +12,34 @@ import Col from 'react-bootstrap/Col';
 import StarRatings from 'react-star-ratings';
 
 function SpeakerDisplay() {
-  const [selectedCategories, setSelectedCategories] = useState([]);
+  const { speakertype } = useParams(); 
+  const [selectedCategories, setSelectedCategories] = useState([speakertype]);
   const [speakerData, setSpeakerData] = useState([]);
   const { value } = useFilter();
   const navigate = useNavigate();
-  const { speakertype } = useParams(); 
   
-  useEffect(() => {
-    // Update the selected categories based on the URL
-    if (speakertype) {
-      setSelectedCategories([speakertype]);
-    } else {
-      setSelectedCategories([]);
-    }
-  }, [speakertype]);
-
-  const handleCheckboxChange = (e) => {
-    const { name, checked } = e.target;
-    if (name === 'All') {
-      if (checked) {
-        setSelectedCategories([
-          'Soundbars',
-          'Wireless Speakers',
-          'Party Speakers'
-        ]);
-      } 
-      else 
-      {
-        setSelectedCategories([]); 
-      }
-    } 
-    else 
+  const handleCheckboxChange = (e) =>{
+    if (e.target.checked)
     {
-      setSelectedCategories(prev =>
-        checked ? [...prev, name] : prev.filter(category => category !== name)
-      );
+      setSelectedCategories([...selectedCategories, e.target.value]);
     }
-    
-    if (name !== 'All') 
+    else
     {
-      navigate(`/shop/speakers/${encodeURIComponent(name)}`);
-    } 
-    else 
+      setSelectedCategories(selectedCategories.filter((item)=> item !== e.target.value));
+    }
+   };
+   
+   useEffect(()=>{
+    //Navigation
+    if (selectedCategories.length !== 0)
+    {
+      navigate(`/shop/speakers/${encodeURIComponent(selectedCategories.join(', '))}`);
+    }
+    else
     {
       navigate('/shop/speakers');
     }
-  };
-
+   }, [selectedCategories]);
 
   function formatCurrency(price) {
     return new Intl.NumberFormat('en-IN', {
@@ -102,10 +83,9 @@ function SpeakerDisplay() {
       <div className='flexcontainer'>
         <div>
             <h5 className='filtercategorytitle'>Product Category</h5>
-            <Form.Check label='All' name='All' className='categorycheckbox' onChange={handleCheckboxChange}/>
-            <Form.Check label='Soundbars' name='Soundbars' className='categorycheckbox' onChange={handleCheckboxChange}/>
-            <Form.Check label='Wireless Speakers' name='Wireless Speakers' className='categorycheckbox' onChange={handleCheckboxChange}/>
-            <Form.Check label='Party Speakers' name='Party Speakers' className='categorycheckbox' onChange={handleCheckboxChange}/>
+            <Form.Check label='Soundbars' value='Soundbars' className='categorycheckbox' onChange={handleCheckboxChange}/>
+            <Form.Check label='Wireless Speakers' value='Wireless Speakers' className='categorycheckbox' onChange={handleCheckboxChange}/>
+            <Form.Check label='Party Speakers' value='Party Speakers' className='categorycheckbox' onChange={handleCheckboxChange}/>
         </div>
         <Container className='container'>
         <Row>
