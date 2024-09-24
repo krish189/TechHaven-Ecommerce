@@ -117,22 +117,16 @@ function Header() {
     setShowKeyboardCategory(!showKeyboardCategory);
     setShowMouseCategory(false);
     setShowMonitorCategory(false);
-    setShowGamingCategory(false);
-    setShowPowerCategory(false);
   };
   const displayMouseCategory = () => {
     setShowMouseCategory(!showMouseCategory);
     setShowKeyboardCategory(false);
     setShowMonitorCategory(false);
-    setShowGamingCategory(false);
-    setShowPowerCategory(false);
   };
   const displayMonitorCategory = () => {
     setShowMonitorCategory(!showMonitorCategory);
     setShowKeyboardCategory(false);
     setShowMouseCategory(false);
-    setShowGamingCategory(false);
-    setShowPowerCategory(false);
   };
 
  // Defines a function to handle clicks outside of specific elements
