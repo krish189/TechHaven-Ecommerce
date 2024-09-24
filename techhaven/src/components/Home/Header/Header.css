@@ -102,19 +102,22 @@ ul li:hover
 {
     position: fixed;
     top: 7.2rem;
-    left: 17.5rem;
-    padding: 25px;
-    border-radius: 5px;
+    left: 16.9rem;
+    width: 12rem;
+    border-radius: 2px;
     background-color: white;
     z-index: 1; 
     display: none;
 }
+.laptopsubmenu p
+{
+    padding: 13px;
+    padding-left: 25px;
+}
 .laptopsubmenu p:hover
 {
     cursor: pointer;
-    border-bottom: 3px solid;
-    border-bottom-color: black;
-    transition: border 60s linear;
+    background-color: #E6F1FC;
 }
 .laptopsubmenu.active
 {
@@ -124,18 +127,25 @@ ul li:hover
 {
     position: fixed;
     top: 7.2rem;
-    left: 25rem;
-    padding: 20px;
-    border-radius: 5px;
+    left: 24.6rem;
+    width: 14rem;
     background-color: white;
     z-index: 1; 
     display: none;
 }
+.audiovideosubmenu p
+{
+    padding: 10px;
+    padding-left: 15px;
+}
+.clickedcategory
+{
+    background-color: #E6F1FC;
+}
 .audiovideosubmenu p:hover
 {
     cursor: pointer;
-    padding-bottom: 0.1rem;
-    text-decoration-line: underline;
+    background-color: #E6F1FC;
 }
 .audiovideosubmenu.active
 {
@@ -144,20 +154,22 @@ ul li:hover
 .speakercategory
 {
     position: fixed;
-    top: 9.2rem;
-    left: 39.6rem;
-    padding: 20px;
-    border-radius: 5px;
+    top: 7.2rem;
+    left: 38.6rem;
+    width: 10rem;
     background-color: white;
     z-index: 1; 
     display: none;
 }
+.speakercategory p,h6
+{
+    padding: 11px;
+    padding-left: 15px;
+}
 .speakercategory p:hover
 {
     cursor: pointer;
-    border-bottom: 3px solid;
-    border-bottom-color: black;
-    transition: border 60s linear;
+    background-color: #E6F1FC;
 }
 .speakercategory.active
 {
@@ -166,20 +178,22 @@ ul li:hover
 .headphonecategory
 {
     position: fixed;
-    top: 11.5rem;
-    left: 39.6rem;
-    padding: 20px;
-    border-radius: 5px;
+    top: 11rem;
+    left: 38.6rem;
+    width: 15rem;
     background-color: white;
     z-index: 1; 
     display: none;
 }
+.headphonecategory p,h6
+{
+    padding: 11px;
+    padding-left: 15px;
+}
 .headphonecategory p:hover
 {
     cursor: pointer;
-    border-bottom: 3px solid;
-    border-bottom-color: black;
-    transition: border 60s linear;
+    background-color: #E6F1FC;
 }
 .headphonecategory.active
 {
@@ -188,20 +202,22 @@ ul li:hover
 .tvcategory
 {
     position: fixed;
-    top: 14.2rem;
-    left: 39.6rem;
-    padding: 20px;
-    border-radius: 5px;
+    top: 14.7rem;
+    left: 38.6rem;
+    width: 10rem;
     background-color: white;
     z-index: 1; 
     display: none;
 }
+.tvcategory p,h6
+{
+    padding: 10px;
+    padding-left: 15px;
+}
 .tvcategory p:hover
 {
     cursor: pointer;
-    border-bottom: 3px solid;
-    border-bottom-color: black;
-    transition: border 60s linear;
+    background-color: #E6F1FC;
 }
 .tvcategory.active
 {
@@ -211,18 +227,21 @@ ul li:hover
 {
     position: fixed;
     top: 7.2rem;
-    left: 34.5rem;
-    padding: 20px;
-    border-radius: 5px;
+    left: 33.8rem;
+    width: 14rem;
     background-color: white;
     z-index: 1; 
     display: none;
 }
+.accessoriessubmenu p
+{
+    padding: 10px;
+    padding-left: 15px;
+}
 .accessoriessubmenu p:hover
 {
     cursor: pointer;
-    padding-bottom: 0.1rem;
-    text-decoration-line: underline;
+    background-color: #E6F1FC;
 }
 .accessoriessubmenu.active
 {
@@ -231,20 +250,22 @@ ul li:hover
 .computeracccategory
 {
     position: fixed;
-    top: 9rem;
-    left: 50.8rem;
-    padding: 20px;
-    border-radius: 5px;
+    top: 7.2rem;
+    left: 47.8rem;
+    width: 12rem;
     background-color: white;
     z-index: 1; 
     display: none;
 }
+.computeracccategory p,h6
+{
+    padding: 10px;
+    padding-left: 15px;
+}
 .computeracccategory p:hover
 {
     cursor: pointer;
-    border-bottom: 3px solid;
-    border-bottom-color: black;
-    transition: border 60s linear;
+    background-color: #E6F1FC;
 }
 .computeracccategory.active
 {
@@ -253,20 +274,22 @@ ul li:hover
 .laptopacccategory
 {
     position: fixed;
-    top: 11.5rem;
-    left: 50.8rem;
-    padding: 20px;
-    border-radius: 5px;
+    top: 10.9rem;
+    left: 47.8rem;
+    width: 12rem;
     background-color: white;
     z-index: 1; 
     display: none;
 }
+.laptopacccategory p,h6
+{
+    padding: 10px;
+    padding-left: 15px;
+}
 .laptopacccategory p:hover
 {
     cursor: pointer;
-    border-bottom: 3px solid;
-    border-bottom-color: black;
-    transition: border 60s linear;
+    background-color: #E6F1FC;
 }
 .laptopacccategory.active
 {
@@ -275,20 +298,22 @@ ul li:hover
 .mobileacccategory
 {
     position: fixed;
-    top: 14rem;
-    left: 50.8rem;
-    padding: 20px;
-    border-radius: 5px;
+    top: 14.6rem;
+    left: 47.8rem;
+    width: 12rem;
     background-color: white;
     z-index: 1; 
     display: none;
 }
+.mobileacccategory p,h6
+{
+    padding: 10px;
+    padding-left: 15px;
+}
 .mobileacccategory p:hover
 {
     cursor: pointer;
-    border-bottom: 3px solid;
-    border-bottom-color: black;
-    transition: border 60s linear;
+    background-color: #E6F1FC;
 }
 .mobileacccategory.active
 {
@@ -297,20 +322,22 @@ ul li:hover
 .hdmiacccategory
 {
     position: fixed;
-    top: 16.5rem;
-    left: 50.8rem;
-    padding: 20px;
-    border-radius: 5px;
+    top: 18.5rem;
+    left: 47.8rem;
+    width: 12rem;
     background-color: white;
     z-index: 1; 
     display: none;
 }
+.hdmiacccategory p,h6
+{
+    padding: 10px;
+    padding-left: 15px;
+}
 .hdmiacccategory p:hover
 {
     cursor: pointer;
-    border-bottom: 3px solid;
-    border-bottom-color: black;
-    transition: border 60s linear;
+    background-color: #E6F1FC;
 }
 .hdmiacccategory.active
 {
@@ -320,17 +347,21 @@ ul li:hover
 {
     position: fixed;
     top: 7.2rem;
-    left: 44.2rem;
-    padding: 20px;
-    border-radius: 5px;
+    left: 43.6rem;
+    width: 14rem;
     background-color: white;
     z-index: 1; 
     display: none;
 }
+.peripheralsubmenu p
+{
+    padding: 10px;
+    padding-left: 15px;
+}
 .peripheralsubmenu p:hover
 {
     cursor: pointer;
-    text-decoration-line: underline;
+    background-color: #E6F1FC;
 }
 .peripheralsubmenu.active
 {
@@ -339,20 +370,22 @@ ul li:hover
 .keyboardcategory
 {
     position: fixed;
-    top: 9rem;
-    left: 59rem;
-    padding: 20px;
-    border-radius: 5px;
+    top: 7.2rem;
+    left: 57.6rem;
+    width: 12rem;
     background-color: white;
     z-index: 1; 
     display: none;
 }
+.keyboardcategory p,h6
+{
+    padding: 10px;
+    padding-left: 15px;
+}
 .keyboardcategory p:hover
 {
     cursor: pointer;
-    border-bottom: 3px solid;
-    border-bottom-color: black;
-    transition: border 60s linear;
+    background-color: #E6F1FC;
 }
 .keyboardcategory.active
 {
@@ -361,20 +394,22 @@ ul li:hover
 .mousecategory
 {
     position: fixed;
-    top: 11.5rem;
-    left: 59rem;
-    padding: 20px;
-    border-radius: 5px;
+    top: 11rem;
+    left: 57.6rem;
+    width: 12rem;
     background-color: white;
     z-index: 1; 
     display: none;
 }
+.mousecategory p,h6
+{
+    padding: 10px;
+    padding-left: 15px;
+}
 .mousecategory p:hover
 {
     cursor: pointer;
-    border-bottom: 3px solid;
-    border-bottom-color: black;
-    transition: border 60s linear;
+    background-color: #E6F1FC;
 }
 .mousecategory.active
 {
@@ -383,66 +418,24 @@ ul li:hover
 .monitorcategory
 {
     position: fixed;
-    top: 14rem;
-    left: 59rem;
-    padding: 20px;
-    border-radius: 5px;
+    top: 14.7rem;
+    left: 57.6rem;
+    width: 14rem;
     background-color: white;
     z-index: 1; 
     display: none;
+}
+.monitorcategory p,h6
+{
+    padding: 10px;
+    padding-left: 15px;
 }
 .monitorcategory p:hover
 {
     cursor: pointer;
-    border-bottom: 3px solid;
-    border-bottom-color: black;
-    transition: border 60s linear;
+    background-color: #E6F1FC;
 }
 .monitorcategory.active
-{
-    display: block;
-}
-.gamingcategory
-{
-    position: fixed;
-    top: 16.5rem;
-    left: 59rem;
-    padding: 20px;
-    border-radius: 5px;
-    background-color: white;
-    z-index: 1; 
-    display: none;
-}
-.gamingcategory p:hover
-{
-    cursor: pointer;
-    border-bottom: 3px solid;
-    border-bottom-color: black;
-    transition: border 60s linear;
-}
-.gamingcategory.active
-{
-    display: block;
-}
-.powercategory
-{
-    position: fixed;
-    top: 19.3rem;
-    left: 59rem;
-    padding: 20px;
-    border-radius: 5px;
-    background-color: white;
-    z-index: 1; 
-    display: none;
-}
-.powercategory p:hover
-{
-    cursor: pointer;
-    border-bottom: 3px solid;
-    border-bottom-color: black;
-    transition: border 60s linear;
-}
-.powercategory.active
 {
     display: block;
 }
@@ -450,19 +443,21 @@ ul li:hover
 {
     position: fixed;
     top: 7.2rem;
-    left: 54rem;
-    padding: 25px;
-    border-radius: 5px;
+    left: 53rem;
+    width: 14rem;
     background-color: white;
     z-index: 1; 
     display: none;
 }
+.smarthomesubmenu p
+{
+    padding: 10px;
+    padding-left: 15px;
+}
 .smarthomesubmenu p:hover
 {
     cursor: pointer;
-    border-bottom: 3px solid;
-    border-bottom-color: black;
-    transition: border 60s linear;
+    background-color: #E6F1FC;
 }
 .smarthomesubmenu.active
 {
@@ -471,28 +466,24 @@ ul li:hover
 .supportsubmenu
 {
     position: fixed;
-    top: 7.2rem;
-    right: 0.5rem;
-    padding: 25px;
-    border-radius: 5px;
+    top: 5rem;
+    right: 3rem;
+    width: 14rem;
     background-color: white;
     z-index: 999; 
     display: none;
 }
+.supportsubmenu p
+{
+    padding: 5px;
+    padding-left: 5px;
+}
 .supportsubmenu p:hover
 {
     cursor: pointer;
-    border-bottom: 3px solid;
-    border-bottom-color: black;
-    transition: border 60s linear;
+    background-color: #E6F1FC;
 }
 .supportsubmenu.active
 {
     display: block;
-}
-.no-text-decor-hover:hover
-{
-    cursor: pointer;
-    padding-bottom: 0.1rem;
-    text-decoration: none !important;
 }

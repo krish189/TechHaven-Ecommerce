@@ -3,7 +3,7 @@ import logo from '../../../assets/logo.png';
 import down from '../../../assets/downicon.png';
 import searchicon from '../../../assets/searchicon.png';
 import close from '../../../assets/close.png';
-import chevronsubmenu from '../../../assets/chevron-submenu.png';
+import sidearrow from '../../../assets/side_arrow.png';
 import '../Header/Header.css';
 import {useState,useRef,useEffect} from 'react';
 import {Link, useNavigate} from 'react-router-dom';
@@ -27,8 +27,6 @@ function Header() {
   const [showKeyboardCategory, setShowKeyboardCategory] = useState(false);
   const [showMouseCategory, setShowMouseCategory] = useState(false);
   const [showMonitorCategory, setShowMonitorCategory] = useState(false);
-  const [showGamingCategory, setShowGamingCategory] = useState(false);
-  const [showPowerCategory, setShowPowerCategory] = useState(false);
 
   // Navigate initialization
   const navigate = useNavigate();
@@ -50,8 +48,6 @@ function Header() {
     keyboardRef : useRef(null),
     mouseRef : useRef(null),
     monitorRef : useRef(null),
-    gamingRef : useRef(null),
-    powerRef : useRef(null),
     smartHomeRef : useRef(null),
     supportRef : useRef(null)
   };
@@ -138,20 +134,6 @@ function Header() {
     setShowGamingCategory(false);
     setShowPowerCategory(false);
   };
-  const displayGamingCategory = () => {
-    setShowGamingCategory(!showGamingCategory);
-    setShowKeyboardCategory(false);
-    setShowMouseCategory(false);
-    setShowMonitorCategory(false);
-    setShowPowerCategory(false);
-  };
-  const displayPowerCategory = () => {
-    setShowPowerCategory(!showPowerCategory);
-    setShowKeyboardCategory(false);
-    setShowMouseCategory(false);
-    setShowMonitorCategory(false);
-    setShowGamingCategory(false);
-  };
 
  // Defines a function to handle clicks outside of specific elements
   const handleClickOutside = (event) => {
@@ -191,23 +173,10 @@ function Header() {
     {
       setShowLaptopaccCategory(false);
     }
-    if (refs.peripheralsubmenuRef.current && !refs.peripheralsubmenuRef.current.contains(event.target))
-      {
-        setShowPeripheralsubmenu(false);
-        setShowKeyboardCategory(false);
-        setShowMouseCategory(false);
-        setShowMonitorCategory(false);
-        setShowGamingCategory(false);
-        setShowPowerCategory(false);
-      }
-      if (refs.smartHomeRef.current && !refs.smartHomeRef.current.contains(event.target))
-      {
-         setShowSmarthomesubmenu(false);
-      }
-      if (refs.supportRef.current && !refs.supportRef.current.contains(event.target))
-        {
-           setShowSupportsubmenu(false);
-        }
+    if (refs.mobileaccRef.current && !refs.mobileaccRef.current.contains(event.target))
+    {
+      setShowMobileaccCategory(false)
+    }
   };
 
   // Add mousedown event listener to detect clicks outside specific elements
@@ -251,38 +220,41 @@ function Header() {
           <p onClick={()=>{navigate(`/shop/laptops/${encodeURIComponent('Rugged Laptops')}`)}}>Rugged Laptops</p>
     </div>
     <div ref={refs.audiovideosubmenuRef} className={showAudiovideosubmenu ? 'audiovideosubmenu active' : 'audiovideosubmenu'}>
-          <p className='no-text-decor-hover' onClick={displaySpeakerCategory}>Speakers <img src={chevronsubmenu} alt='chevronsubmenu' style={{width: '20px', height: '20px', position: 'relative', left: '6.8rem'}} onClick={displaySpeakerCategory}/></p>
-          <p className='no-text-decor-hover' onClick={displayHeadphoneCategory}>Headphones & Earbuds <img src={chevronsubmenu} alt='chevronsubmenu' style={{width: '20px', height: '20px', position: 'relative', left: '0.3rem'}} onClick={displayHeadphoneCategory}/></p>
-          <p className='no-text-decor-hover' onClick={displayTVCategory}>LED TV <img src={chevronsubmenu} alt='chevronsubmenu' style={{width: '20px', height: '20px', position: 'relative', left: '7.6rem'}} onClick={displayTVCategory}/></p>
+          <p  onClick={displaySpeakerCategory} className={showSpeakerCategory ? 'clickedcategory' : ''}>Speakers <img src={sidearrow} alt='sidearrow' style={{width: '13px', height: '15px', position: 'relative', left: '7.1rem', bottom: '0.1rem'}} onClick={displaySpeakerCategory}/></p>
+          <p  onClick={displayHeadphoneCategory} className={showHeadphoneCategory ? 'clickedcategory' : ''}>Headphones & Earbuds <img src={sidearrow} alt='sidearrow' style={{width: '13px', height: '15px', position: 'relative', left: '0.6rem', bottom: '0.1rem'}} onClick={displayHeadphoneCategory}/></p>
+          <p  onClick={displayTVCategory} className={showTVCategory ? 'clickedcategory' : ''}>LED TVs <img src={sidearrow} alt='sidearrow' style={{width: '13px', height: '15px', position: 'relative', left: '7.4rem', bottom: '0.1rem'}} onClick={displayTVCategory}/></p>
           <p onClick={()=>{navigate('/shop/led-projectors')}}>LED Projectors</p>
           <p onClick={()=>{navigate('/shop/microphones')}}>Microphones</p>
     </div>
     <div ref={refs.speakercategoryRef} className={showSpeakerCategory ? 'speakercategory active' : 'speakercategory'}>
+        <h6>Speakers</h6>
         <p onClick={() =>{navigate(`/shop/speakers/${encodeURIComponent('Soundbars')}`)}}>Soundbars</p>
         <p onClick={()=>{navigate(`/shop/speakers/${encodeURIComponent('Wireless Speakers')}`)}}>Wireless Speakers</p>
         <p onClick={()=>{navigate(`/shop/speakers/${encodeURIComponent('Party Speakers')}`)}}>Party Speakers</p>
     </div>
     <div ref={refs.headphonecategoryRef} className={showHeadphoneCategory ? 'headphonecategory active' : 'headphonecategory'}>
+      <h6>Headphones and Earbuds</h6>
       <p onClick={() =>{navigate(`/shop/headphones-earbuds/${encodeURIComponent('Wired Headphones')}`)}}>Wired Headphones</p>
       <p onClick={() =>{navigate(`/shop/headphones-earbuds/${encodeURIComponent('Wireless Headphones')}`)}}>Wireless Headphones</p>
       <p onClick={() =>{navigate(`/shop/headphones-earbuds/${encodeURIComponent('Wired Earbuds')}`)}}>Wired Earbuds</p>
       <p onClick={() =>{navigate(`/shop/headphones-earbuds/${encodeURIComponent('Wireless Earbuds')}`)}}>Wireless Earbuds</p>
     </div>
     <div ref={refs.tvcategoryRef} className={showTVCategory ? 'tvcategory active' : 'tvcategory'}>
+      <h6>LED TVs</h6>
       <p onClick={() =>{navigate(`/shop/led-tvs/${encodeURIComponent('Smart LED TVs')}`)}}>Smart LED TVs</p>
       <p onClick={() =>{navigate(`/shop/led-tvs/${encodeURIComponent('Curved LED TVs')}`)}}>Curved LED TVs</p>
     </div>
     <div ref={refs.accessoriessubmenuRef} className={showAccessoriessubmenu ? 'accessoriessubmenu active' : 'accessoriessubmenu'}>
-          <p className='no-text-decor-hover' onClick={displayComputeraccCategory} >Computer Accessories<img src={chevronsubmenu} alt='chevronsubmenu' style={{width: '20px', height: '20px', position: 'relative', left: '3.2rem'}} onClick={displayComputeraccCategory}/></p>
-          <p className='no-text-decor-hover' onClick={displayLaptopaccCategory} >Laptop Accessories<img src={chevronsubmenu} alt='chevronsubmenu' style={{width: '20px', height: '20px', position: 'relative', left: '4.6rem'}} onClick={displayLaptopaccCategory}/></p>
-          <p className='no-text-decor-hover' onClick={displayMobileaccCategory} >Mobile & Tablet Accessories<img src={chevronsubmenu} alt='chevronsubmenu' style={{width: '20px', height: '20px', position: 'relative', left: '0.6rem'}} onClick={displayMobileaccCategory}/></p>
-          <p className='no-text-decor-hover' onClick={displayHdmiaccCategory}>HDMI Accessories<img src={chevronsubmenu} alt='chevronsubmenu' style={{width: '20px', height: '20px', position: 'relative', left: '5.1rem'}} onClick={displayHdmiaccCategory}/></p>
+          <p onClick={displayComputeraccCategory} className={showComputeraccCategory ? 'clickedcategory' : ''} >Computer Accessories<img src={sidearrow} alt='sidearrow' style={{width: '13px', height: '15px', position: 'relative', bottom: '0.1rem', left: '1rem'}} onClick={displayComputeraccCategory}/></p>
+          <p onClick={displayLaptopaccCategory} className={showLaptopaccCategory ? 'clickedcategory' : ''}>Laptop Accessories<img src={sidearrow} alt='sidearrow' style={{width: '13px', height: '15px', position: 'relative', bottom: '0.1rem', left: '2.3rem'}} onClick={displayLaptopaccCategory}/></p>
+          <p onClick={displayMobileaccCategory} className={showMobileaccCategory ? 'clickedcategory' : ''}>Mobile Accessories<img src={sidearrow} alt='sidearrow' style={{width: '13px', height: '15px', position: 'relative', bottom: '0.1rem', left: '2.3rem'}} onClick={displayMobileaccCategory}/></p>
+          <p onClick={displayHdmiaccCategory} className={showHdmiaccCategory ? 'clickedcategory' : ''}>HDMI Accessories<img src={sidearrow} alt='sidearrow' style={{width: '13px', height: '15px', position: 'relative', bottom: '0.1rem', left: '2.6rem'}} onClick={displayHdmiaccCategory}/></p>
           <p onClick={()=> navigate('/shop/barcode-scanners')}>Barcode Scanners</p>
-          <p>LED Light</p>
-          <p>DVI Cables</p>
+          <p>LED Lights</p>
           <p>Projector Screens</p>
     </div>
     <div ref={refs.computeraccRef} className={showComputeraccCategory ? 'computeracccategory active' : 'computeracccategory'}>
+      <h6>Computer Accessories</h6>
       <p onClick={()=>navigate(`/shop/accessories/computer-accessories/${encodeURIComponent('Solid State Drives')}`)}>Solid State Drives</p>
       <p onClick={()=>navigate(`/shop/accessories/computer-accessories/${encodeURIComponent('Hard Disk Drives')}`)}>Hard Disk Drives</p>
       <p onClick={()=>navigate(`/shop/accessories/computer-accessories/${encodeURIComponent('CPU Fans')}`)}>CPU Fans</p>
@@ -292,6 +264,7 @@ function Header() {
       <p onClick={()=>navigate(`/shop/accessories/computer-accessories/${encodeURIComponent('Motherboards')}`)}>Motherboards</p>
     </div>
     <div ref={refs.laptopaccRef} className={showLaptopaccCategory ? 'laptopacccategory active' : 'laptopacccategory'}>
+      <h6>Laptop Accessories</h6>
       <p onClick={()=>navigate(`/shop/accessories/laptop-accessories/${encodeURIComponent('Laptop Stands')}`)}>Laptop Stands</p>
       <p onClick={()=>navigate(`/shop/accessories/laptop-accessories/${encodeURIComponent('Cooling Pads')}`)}>Cooling Pads</p>
       <p onClick={()=>navigate(`/shop/accessories/laptop-accessories/${encodeURIComponent('Sleeve Cases')}`)}>Sleeve Cases</p>
@@ -300,61 +273,47 @@ function Header() {
       <p onClick={()=>navigate(`/shop/accessories/laptop-accessories/${encodeURIComponent('Power Banks')}`)}>Power Banks</p>
     </div>
     <div ref={refs.mobileaccRef} className={showMobileaccCategory ? 'mobileacccategory active' : 'mobileacccategory'}>
+      <h6>Mobile Accessories</h6>
       <p>Mobile Holders</p>
-      <p>Tablet Stands</p>
+      <p>Charging Cables</p>
+      <p>Wallet Cases</p>
+      <p>SD Cards</p>
       <p>Stylus Pens</p>
     </div>
     <div ref={refs.hdmiaccRef} className={showHdmiaccCategory ? 'hdmiacccategory active' : 'hdmiacccategory'}>
-      <p>HDMI Cable</p>
+      <h6>HDMI Accessories</h6>
+      <p>HDMI Cables</p>
       <p>HDMI Adapters</p>
     </div>
     <div ref={refs.peripheralsubmenuRef} className={showPeripheralsubmenu ? 'peripheralsubmenu active' : 'peripheralsubmenu'}>
-          <p className='no-text-decor-hover' onClick={displayKeyboardCategory}>Keyboard<img src={chevronsubmenu} alt='chevronsubmenu' style={{width: '20px', height: '20px', position: 'relative', left: '7rem'}} onClick={displayKeyboardCategory}/></p>
-          <p className='no-text-decor-hover' onClick={displayMouseCategory}>Mouse<img src={chevronsubmenu} alt='chevronsubmenu' style={{width: '20px', height: '20px', position: 'relative', left: '8.2rem'}} onClick={displayMouseCategory}/></p>
-          <p className='no-text-decor-hover' onClick={displayMonitorCategory}>Monitor<img src={chevronsubmenu} alt='chevronsubmenu' style={{width: '20px', height: '20px', position: 'relative', left: '7.7rem'}} onClick={displayMonitorCategory}/></p>
-          <p className='no-text-decor-hover' onClick={displayGamingCategory}>Gaming<img src={chevronsubmenu} alt='chevronsubmenu' style={{width: '20px', height: '20px', position: 'relative', left: '7.8rem'}} onClick={displayGamingCategory}/></p>
-          <p className='no-text-decor-hover' onClick={displayPowerCategory}>Power Solution<img src={chevronsubmenu} alt='chevronsubmenu' style={{width: '20px', height: '20px', position: 'relative', left: '4.6rem'}} onClick={displayPowerCategory}/></p>
-          <p>Keyboard & Mouse Combo</p>
+          <p className={showKeyboardCategory ? 'clickedcategory' : ''}  onClick={displayKeyboardCategory}>Keyboards<img src={sidearrow} alt='sidearrow' style={{width: '13px', height: '15px', position: 'relative', left: '7rem'}} onClick={displayKeyboardCategory}/></p>
+          <p className={showMouseCategory ? 'clickedcategory' : ''}  onClick={displayMouseCategory}>Mouses<img src={sidearrow} alt='sidearrow' style={{width: '13px', height: '15px', position: 'relative', left: '8.2rem'}} onClick={displayMouseCategory}/></p>
+          <p className={showMonitorCategory ? 'clickedcategory' : ''} onClick={displayMonitorCategory}>Monitors<img src={sidearrow} alt='sidearrow' style={{width: '13px', height: '15px', position: 'relative', left: '7.6rem'}} onClick={displayMonitorCategory}/></p>
+          <p>Keyboard Mouse Combo</p>
           <p>Webcams</p>
           <p>Printers</p>
           <p>Modems</p>
-          <p>Network Adapters</p>
-          <p>Routers</p>
     </div>
     <div ref={refs.keyboardRef} className={showKeyboardCategory ? 'keyboardcategory active' : 'keyboardcategory'}>
+      <h6>Keyboards</h6>
       <p>Mechanical Keyboard</p>
       <p>Wireless Keyboard</p>
       <p>Multimedia Keyboard</p>
       <p>Standard Keyboard</p>
     </div>
     <div ref={refs.mouseRef} className={showMouseCategory ? 'mousecategory active' : 'mousecategory'}>
+      <h6>Mouses</h6>
       <p>Wired Mouse</p>
       <p>Wireless Mouse</p>
     </div>
     <div ref={refs.monitorRef} className={showMonitorCategory ? 'monitorcategory active' : 'monitorcategory'}>
+      <h6>Monitors</h6>
       <p>Curved Monitors</p>
       <p>Touchscreen Monitors</p>
       <p>Ultrawide Monitors</p>
       <p>Portable Monitors</p>
       <p>4K/8K Monitors</p>
       <p>HDR Monitors</p>
-    </div>
-    <div ref={refs.gamingRef} className={showGamingCategory ? 'gamingcategory active' : 'gamingcategory'}>
-      <p>Gaming Keyboard</p>
-      <p>Gaming Mouse</p>
-      <p>Gaming Monitors</p>
-      <p>Gaming Controllers</p>
-      <p>Gaming Chairs</p>
-      <p>Gaming Mousepads</p>
-      <p>Gaming Headsets</p>
-      <p>Gaming Mic</p>
-    </div>
-    <div ref={refs.powerRef} className={showPowerCategory ? 'powercategory active' : 'powercategory'}>
-      <p>Battery Backup UPS</p>
-      <p>Line-Interactive UPS</p>
-      <p>Battery</p>
-      <p>Power Adapters & Chargers</p>
-      <p>Portable Generators</p>
     </div>
     <div ref={refs.smartHomeRef} className={showSmarthomesubmenu ? 'smarthomesubmenu active' : 'smarthomesubmenu'}>
           <p>Smart Lighting</p>
