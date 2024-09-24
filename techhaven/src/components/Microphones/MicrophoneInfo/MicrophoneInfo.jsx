@@ -33,10 +33,6 @@ function MicrophoneInfo() {
       }).format(price);
     }
   
-    const handleToggleExpand = () => {
-      setExpand(!expand);
-    };
-  
     useEffect(() => {
       const fetchMicrophoneDatabyName = async () => {
           try {

@@ -243,7 +243,23 @@ class LaptopAccessories(BaseProduct):
 
     def __str__(self):
         return f"{self.name} - {self.accessory_category}"
+    
+class BarcodeScanner(BaseProduct):
+    scanner_type = models.CharField(max_length=255, null=False)  
+    scan_speed = models.CharField(max_length=100, null=True, blank=True)  
+    connectivity = models.CharField(max_length=255, null=True, blank=True)  
+    battery_life = models.CharField(max_length=100, null=True, blank=True)  
+    supported_barcode_types = models.TextField(null=True, blank=True)  
+    sensor_type = models.CharField(max_length=100, null=True, blank=True)  
+    ruggedness = models.CharField(max_length=100, null=True, blank=True)  
+    led_indicator = models.BooleanField(default=False)
+    interface_type = models.CharField(max_length=100, null=True, blank=True)  
+    software_compatibility = models.TextField(null=True, blank=True)  
+    operating_temperature = models.CharField(max_length=100, null=True, blank=True)  
+    storage_temperature = models.CharField(max_length=100, null=True, blank=True) 
 
+    def __str__(self):
+        return f"{self.name} - {self.scanner_type}, {self.connectivity}"
 
 admin.site.register(Laptop)
 admin.site.register(Speaker)
@@ -253,3 +269,4 @@ admin.site.register(LedProjector)
 admin.site.register(Microphone)
 admin.site.register(ComputerAccessories)
 admin.site.register(LaptopAccessories)
+admin.site.register(BarcodeScanner)

@@ -1,7 +1,7 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from .models import Laptop, Speaker, HpEb, LedTv, LedProjector, Microphone, ComputerAccessories, LaptopAccessories
-from .serializers import LaptopSerializer, SpeakerSerializer, HpEbSerializer, LedTvSerializer, LedProjectorSerializer, MicrophoneSerializer, ComputerAccessoriesSerializer, LaptopAccessoriesSerializer
+from .models import Laptop, Speaker, HpEb, LedTv, LedProjector, Microphone, ComputerAccessories, LaptopAccessories, BarcodeScanner
+from .serializers import LaptopSerializer, SpeakerSerializer, HpEbSerializer, LedTvSerializer, LedProjectorSerializer, MicrophoneSerializer, ComputerAccessoriesSerializer, LaptopAccessoriesSerializer, BarcodeScannerSerializer
 
 @api_view(['POST'])
 def filter_laptops(request):
@@ -175,4 +175,22 @@ def filter_laptop_accessories_by_name(request):
             return Response(serializer.data)
         except LaptopAccessories.DoesNotExist:
             return Response({'error': 'Laptop Accessories not found'}, status=404)
+    return Response({'error': 'Name parameter is missing'}, status=400)
+
+@api_view(['POST'])
+def filter_bs(request):
+    bs = BarcodeScanner.objects.all()
+    serializer = BarcodeScannerSerializer(bs, many=True)
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def filter_bs_by_name(request):
+    name = request.data.get('name')
+    if name:
+        try:
+            bs = BarcodeScanner.objects.get(name=name)
+            serializer = BarcodeScannerSerializer(bs)  
+            return Response(serializer.data)
+        except BarcodeScanner.DoesNotExist:
+            return Response({'error': 'Barcode Scanner not found'}, status=404)
     return Response({'error': 'Name parameter is missing'}, status=400)

@@ -277,12 +277,9 @@ function Header() {
           <p className='no-text-decor-hover' onClick={displayLaptopaccCategory} >Laptop Accessories<img src={chevronsubmenu} alt='chevronsubmenu' style={{width: '20px', height: '20px', position: 'relative', left: '4.6rem'}} onClick={displayLaptopaccCategory}/></p>
           <p className='no-text-decor-hover' onClick={displayMobileaccCategory} >Mobile & Tablet Accessories<img src={chevronsubmenu} alt='chevronsubmenu' style={{width: '20px', height: '20px', position: 'relative', left: '0.6rem'}} onClick={displayMobileaccCategory}/></p>
           <p className='no-text-decor-hover' onClick={displayHdmiaccCategory}>HDMI Accessories<img src={chevronsubmenu} alt='chevronsubmenu' style={{width: '20px', height: '20px', position: 'relative', left: '5.1rem'}} onClick={displayHdmiaccCategory}/></p>
-          <p>Power Banks</p>
-          <p>Power Strip</p>
-          <p>Barcode Scanner</p>
+          <p onClick={()=> navigate('/shop/barcode-scanners')}>Barcode Scanners</p>
           <p>LED Light</p>
           <p>DVI Cables</p>
-          <p>Trimmers</p>
           <p>Projector Screens</p>
     </div>
     <div ref={refs.computeraccRef} className={showComputeraccCategory ? 'computeracccategory active' : 'computeracccategory'}>
@@ -303,10 +300,7 @@ function Header() {
       <p onClick={()=>navigate(`/shop/accessories/laptop-accessories/${encodeURIComponent('Power Banks')}`)}>Power Banks</p>
     </div>
     <div ref={refs.mobileaccRef} className={showMobileaccCategory ? 'mobileacccategory active' : 'mobileacccategory'}>
-      <p>Mobile Cases</p>
-      <p>Mobile Chargers</p>
       <p>Mobile Holders</p>
-      <p>Tablet Covers/Cases</p>
       <p>Tablet Stands</p>
       <p>Stylus Pens</p>
     </div>

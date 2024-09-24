@@ -30,6 +30,8 @@ import ComputerAccessoriesPage from './components/ComputerAccessories/ComputerAc
 import ComputerAccessoriesInfo from './components/ComputerAccessories/ComputerAccessoriesInfo/ComputerAccessoriesInfo';
 import LaptopAccessoriesPage from './components/LaptopAccessories/LaptopAccessoriesPage/LaptopAccessoriesPage';
 import LaptopAccessoriesInfo from './components/LaptopAccessories/LaptopAccessoriesInfo/LaptopAccessoriesInfo';
+import BarcodescannerPage from './components/BarcodeScanner/BarcodescannerPage/BarcodescannerPage';
+import BarcodescannerInfo from './components/BarcodeScanner/BarcodescannerInfo/BarcodescannerInfo';
 
 function App() {
   
@@ -72,6 +74,8 @@ function App() {
         <Route path='/shop/accessories/laptop-accessories' element={<LaptopAccessoriesPage/>}></Route>
         <Route path='/shop/accessories/laptop-accessories/:accessory_category' element={<LaptopAccessoriesPage/>}></Route>
         <Route path='/shop/accessories/laptop-accessories/:accessory_category/:laptopaccessoriesname' element={<LaptopAccessoriesInfo/>}></Route>
+        <Route path='/shop/barcode-scanners' element={<BarcodescannerPage/>}></Route>
+        <Route path='/shop/barcode-scanners/:bs_name' element={<BarcodescannerInfo/>}></Route>
       </Routes>
     </BrowserRouter>
     </OrderDetailsProvider>

@@ -59,7 +59,7 @@ function MicrophoneDisplay() {
             .filter(microphone => microphone.stock > 0 && microphone.is_available > 0 && microphone.discount_price>=value[0] && microphone.discount_price<=value[1])
             .map((microphone, index) => (
             <Col key={index} md={3} style={{ margin: '42px'}}>
-              <Card  onClick={()=>{navigate(`/shop/Microphones/${encodeURIComponent(microphone.name)}`)}}
+              <Card  onClick={()=>{navigate(`/shop/microphones/${encodeURIComponent(microphone.name)}`)}}
                  style={{ width: '22rem', height: '32rem' , border: '1px solid lightgray'}}>
                 <Card.Img variant='top' src={`http://localhost:8000${microphone.images[0]}`} alt="Microphone" className='microphoneproductimg'/>
                 <p className='microphonename'>{microphone.name}</p>

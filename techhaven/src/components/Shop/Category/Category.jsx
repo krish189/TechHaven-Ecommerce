@@ -65,6 +65,7 @@ function Category() {
     <div ref={refs.accessoriesRef} className={showAccessoriessubmenu ? 'categoryaccessoriessubmenu active' : 'categoryaccessoriessubmenu'}>
           <p onClick={()=>navigate('/shop/accessories/computer-accessories')}>Computer Accessories</p>
           <p onClick={()=>navigate('/shop/accessories/laptop-accessories')}>Laptop Accessories</p>
+          <p onClick={()=> navigate('/shop/barcode-scanners')}>Barcode Scanners</p>
     </div>
     </>
   )
