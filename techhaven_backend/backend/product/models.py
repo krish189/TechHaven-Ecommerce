@@ -289,6 +289,26 @@ class MobileAccessories(BaseProduct):
     def __str__(self):
         return f"{self.name} - {self.accessory_category}"
 
+class HdmiAccessories(BaseProduct):
+    accessory_category = models.CharField(max_length=255, null=False)
+    cable_length = models.CharField(max_length=100, null=True, blank=True)
+    cable_type = models.CharField(max_length=100, null=True, blank=True) 
+    connector_type = models.CharField(max_length=100, null=True, blank=True)
+    gold_plated_connectors = models.BooleanField(default=False)
+    shielding = models.CharField(max_length=100, null=True, blank=True)
+    resolution_support = models.CharField(max_length=100, null=True, blank=True)
+    ethernet_support = models.BooleanField(default=False)
+    adapter_type = models.CharField(max_length=100, null=True, blank=True)
+    connector_type_input = models.CharField(max_length=100, null=True, blank=True)
+    connector_type_output = models.CharField(max_length=100, null=True, blank=True)
+    resolution_support = models.CharField(max_length=100, null=True, blank=True)
+    audio_support = models.BooleanField(default=False)
+    active_passive = models.CharField(max_length=50, null=True, blank=True)
+    power_required = models.BooleanField(default=False)
+    
+    def __str__(self):
+        return f"{self.name} - {self.accessory_category}"
+
 class BarcodeScanner(BaseProduct):
     scanner_type = models.CharField(max_length=255, null=False)  
     scan_speed = models.CharField(max_length=100, null=True, blank=True)  
@@ -318,4 +338,5 @@ admin.site.register(Microphone)
 admin.site.register(ComputerAccessories)
 admin.site.register(LaptopAccessories)
 admin.site.register(MobileAccessories)
+admin.site.register(HdmiAccessories)
 admin.site.register(BarcodeScanner)

@@ -1,7 +1,7 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from .models import Laptop, Speaker, HpEb, LedTv, LedProjector, Microphone, ComputerAccessories, LaptopAccessories, MobileAccessories, BarcodeScanner
-from .serializers import LaptopSerializer, SpeakerSerializer, HpEbSerializer, LedTvSerializer, LedProjectorSerializer, MicrophoneSerializer, ComputerAccessoriesSerializer, LaptopAccessoriesSerializer, MobileAccessoriesSerializer,BarcodeScannerSerializer
+from .models import Laptop, Speaker, HpEb, LedTv, LedProjector, Microphone, ComputerAccessories, LaptopAccessories, MobileAccessories, HdmiAccessories, BarcodeScanner
+from .serializers import LaptopSerializer, SpeakerSerializer, HpEbSerializer, LedTvSerializer, LedProjectorSerializer, MicrophoneSerializer, ComputerAccessoriesSerializer, LaptopAccessoriesSerializer, MobileAccessoriesSerializer, HdmiAccessoriesSerializer, BarcodeScannerSerializer
 
 @api_view(['POST'])
 def filter_laptops(request):
@@ -198,6 +198,29 @@ def filter_mobile_accessories_by_name(request):
             return Response(serializer.data)
         except MobileAccessories.DoesNotExist:
             return Response({'error': 'Mobile Accessories not found'}, status=404)
+    return Response({'error': 'Name parameter is missing'}, status=400)
+
+@api_view(['POST'])
+def filter_hdmi_accessories(request):
+    categories = request.data.get('categories', [])
+    if categories:
+        hdmi_accessories = HdmiAccessories.objects.filter(accessory_category__in=categories)
+    else:
+        hdmi_accessories = HdmiAccessories.objects.all()
+    
+    serializer = HdmiAccessoriesSerializer(hdmi_accessories, many=True)
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def filter_hdmi_accessories_by_name(request):
+    name = request.data.get('name')
+    if name:
+        try:
+            hdmi_accessories = HdmiAccessories.objects.get(name=name)
+            serializer = HdmiAccessoriesSerializer(hdmi_accessories)  
+            return Response(serializer.data)
+        except HdmiAccessories.DoesNotExist:
+            return Response({'error': 'Hdmi Accessories not found'}, status=404)
     return Response({'error': 'Name parameter is missing'}, status=400)
 
 @api_view(['POST'])

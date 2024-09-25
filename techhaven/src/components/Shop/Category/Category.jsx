@@ -66,6 +66,7 @@ function Category() {
           <p onClick={()=>navigate('/shop/accessories/computer-accessories')}>Computer Accessories</p>
           <p onClick={()=>navigate('/shop/accessories/laptop-accessories')}>Laptop Accessories</p>
           <p onClick={()=>navigate('/shop/accessories/mobile-accessories')}>Mobile Accessories</p>
+          <p onClick={()=>navigate('/shop/accessories/hdmi-accessories')}>HDMI Accessories</p>
           <p onClick={()=> navigate('/shop/barcode-scanners')}>Barcode Scanners</p>
     </div>
     </>

@@ -34,6 +34,8 @@ import MobileAccessoriesPage from  './components/MobileAccessories/MobileAccesso
 import BarcodescannerPage from './components/BarcodeScanner/BarcodescannerPage/BarcodescannerPage';
 import BarcodescannerInfo from './components/BarcodeScanner/BarcodescannerInfo/BarcodescannerInfo';
 import MobileAccessoriesInfo from './components/MobileAccessories/MobileAccessoriesInfo/MobileAccessoriesInfo';
+import HdmiAccessoriesPage from './components/HdmiAccessories/HdmiAccessoriesPage/HdmiAccessoriesPage';
+import HdmiAccessoriesInfo from './components/HdmiAccessories/HdmiAccessoriesInfo/HdmiAccessoriesInfo';
 
 function App() {
   
@@ -79,6 +81,9 @@ function App() {
         <Route path='/shop/accessories/mobile-accessories' element={<MobileAccessoriesPage/>}></Route>
         <Route path='/shop/accessories/mobile-accessories/:accessory_category' element={<MobileAccessoriesPage/>}></Route>
         <Route path='/shop/accessories/mobile-accessories/:accessory_category/:mobileaccessoriesname' element={<MobileAccessoriesInfo/>}></Route>
+        <Route path='/shop/accessories/hdmi-accessories' element={<HdmiAccessoriesPage/>}></Route>
+        <Route path='/shop/accessories/hdmi-accessories/:accessory_category' element={<HdmiAccessoriesPage/>}></Route>
+        <Route path='/shop/accessories/hdmi-accessories/:accessory_category/:hdmiaccessoriesname' element={<HdmiAccessoriesInfo/>}></Route>
         <Route path='/shop/barcode-scanners' element={<BarcodescannerPage/>}></Route>
         <Route path='/shop/barcode-scanners/:bs_name' element={<BarcodescannerInfo/>}></Route>
       </Routes>
