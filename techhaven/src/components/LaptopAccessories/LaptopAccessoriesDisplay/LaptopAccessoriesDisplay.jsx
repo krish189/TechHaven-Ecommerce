@@ -11,7 +11,6 @@ import { useFilter } from '../../Laptops/Context/FilterContext';
 import StarRatings from 'react-star-ratings';
 import { useNavigate, useParams } from 'react-router-dom';
 
-
 function LaptopAccessoriesDisplay() {
  const { accessory_category } = useParams(); 
  const [selectedCategories, setSelectedCategories] = useState(accessory_category ? [accessory_category] : []);

@@ -30,8 +30,10 @@ import ComputerAccessoriesPage from './components/ComputerAccessories/ComputerAc
 import ComputerAccessoriesInfo from './components/ComputerAccessories/ComputerAccessoriesInfo/ComputerAccessoriesInfo';
 import LaptopAccessoriesPage from './components/LaptopAccessories/LaptopAccessoriesPage/LaptopAccessoriesPage';
 import LaptopAccessoriesInfo from './components/LaptopAccessories/LaptopAccessoriesInfo/LaptopAccessoriesInfo';
+import MobileAccessoriesPage from  './components/MobileAccessories/MobileAccessoriesPage/MobileAccessoriesPage';
 import BarcodescannerPage from './components/BarcodeScanner/BarcodescannerPage/BarcodescannerPage';
 import BarcodescannerInfo from './components/BarcodeScanner/BarcodescannerInfo/BarcodescannerInfo';
+import MobileAccessoriesInfo from './components/MobileAccessories/MobileAccessoriesInfo/MobileAccessoriesInfo';
 
 function App() {
   
@@ -74,6 +76,9 @@ function App() {
         <Route path='/shop/accessories/laptop-accessories' element={<LaptopAccessoriesPage/>}></Route>
         <Route path='/shop/accessories/laptop-accessories/:accessory_category' element={<LaptopAccessoriesPage/>}></Route>
         <Route path='/shop/accessories/laptop-accessories/:accessory_category/:laptopaccessoriesname' element={<LaptopAccessoriesInfo/>}></Route>
+        <Route path='/shop/accessories/mobile-accessories' element={<MobileAccessoriesPage/>}></Route>
+        <Route path='/shop/accessories/mobile-accessories/:accessory_category' element={<MobileAccessoriesPage/>}></Route>
+        <Route path='/shop/accessories/mobile-accessories/:accessory_category/:mobileaccessoriesname' element={<MobileAccessoriesInfo/>}></Route>
         <Route path='/shop/barcode-scanners' element={<BarcodescannerPage/>}></Route>
         <Route path='/shop/barcode-scanners/:bs_name' element={<BarcodescannerInfo/>}></Route>
       </Routes>

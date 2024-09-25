@@ -16,7 +16,7 @@ class BaseProduct(models.Model):
     rating = models.DecimalField(max_digits=3, decimal_places=2, default=0)
     num_reviews = models.IntegerField(default=0)
     dimensions = models.CharField(max_length=255, null=True, blank=True)
-    weight = models.DecimalField(max_digits=6, decimal_places=3, null=True, blank=True)
+    weight = models.DecimalField(max_digits=6, decimal_places=4, null=True, blank=True)
     warranty = models.CharField(max_length=255, null=True, blank=True)
     color = models.CharField(max_length=100, null=True, blank=True)
     
@@ -221,7 +221,7 @@ class ComputerAccessories(BaseProduct):
 
 class LaptopAccessories(BaseProduct):
     accessory_category = models.CharField(max_length=255, null=False)
-    material = models.CharField(max_length=100, null=True, blank=True)
+    material = models.CharField(max_length=255, null=True, blank=True)
     adjustable_height = models.BooleanField(default=False)
     max_adjustable_height = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
     cooling_feature = models.BooleanField(default=False)
@@ -243,7 +243,52 @@ class LaptopAccessories(BaseProduct):
 
     def __str__(self):
         return f"{self.name} - {self.accessory_category}"
-    
+
+class MobileAccessories(BaseProduct):
+    accessory_category = models.CharField(max_length=255, null=False)
+    holder_type = models.CharField(max_length=255, null=True, blank=True)
+    mounting_mechanism = models.CharField(max_length=255, null=True, blank=True)
+    rotation = models.CharField(max_length=255, null=True, blank=True)
+    material = models.CharField(max_length=255, null=True, blank=True)
+    adjustable_height = models.BooleanField(default=False)
+    max_adjustable_height = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
+    foldable = models.BooleanField(default=False)
+    clamp_size = models.CharField(max_length=255, null=True, blank=True)
+    compatible_devices = models.CharField(max_length=255, null=True, blank=True)
+    cable_type = models.CharField(max_length=255, null=True, blank=True)
+    length = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
+    max_output = models.CharField(max_length=255, null=True, blank=True)
+    data_transfer_speed = models.CharField(max_length=100, null=True, blank=True)
+    connector_type = models.CharField(max_length=255, null=True, blank=True)
+    fast_charging = models.BooleanField(default=False)
+    durability_rating = models.CharField(max_length=255, null=True, blank=True)
+    usb_version = models.CharField(max_length=100, null=True, blank=True)
+    port_type = models.CharField(max_length=255, null=True, blank=True)
+    card_slots = models.CharField(max_length=255, null=True, blank=True)
+    kickstand_feature = models.BooleanField(default=False)
+    magnetic_closure = models.BooleanField(default=False)
+    rfid_protection = models.BooleanField(default=False)
+    belt_clip = models.BooleanField(default=False)
+    capacity = models.CharField(max_length=255, null=True, blank=True)
+    speed_class = models.CharField(max_length=255, null=True, blank=True)
+    read_speed = models.CharField(max_length=100, null=True, blank=True)
+    write_speed = models.CharField(max_length=100, null=True, blank=True)
+    form_factor = models.CharField(max_length=255, null=True, blank=True)
+    water_proof = models.BooleanField(default=False)
+    shock_proof = models.BooleanField(default=False)
+    xray_proof = models.BooleanField(default=False)
+    tip_type = models.CharField(max_length=255, null=True, blank=True)
+    pressure_sensitivity = models.CharField(max_length=100, null=True, blank=True)
+    palm_rejection_support = models.BooleanField(default=False)
+    battery_life = models.CharField(max_length=100, null=True, blank=True)
+    charging_method = models.CharField(max_length=255, null=True, blank=True)
+    tilt_sensitivity = models.BooleanField(default=False)
+    replaceable_tips = models.BooleanField(default=False)
+    included_items = models.TextField(null=True, blank=True)
+     
+    def __str__(self):
+        return f"{self.name} - {self.accessory_category}"
+
 class BarcodeScanner(BaseProduct):
     scanner_type = models.CharField(max_length=255, null=False)  
     scan_speed = models.CharField(max_length=100, null=True, blank=True)  
@@ -261,6 +306,9 @@ class BarcodeScanner(BaseProduct):
     def __str__(self):
         return f"{self.name} - {self.scanner_type}, {self.connectivity}"
 
+
+
+
 admin.site.register(Laptop)
 admin.site.register(Speaker)
 admin.site.register(HpEb)
@@ -269,4 +317,5 @@ admin.site.register(LedProjector)
 admin.site.register(Microphone)
 admin.site.register(ComputerAccessories)
 admin.site.register(LaptopAccessories)
+admin.site.register(MobileAccessories)
 admin.site.register(BarcodeScanner)

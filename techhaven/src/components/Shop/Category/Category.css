@@ -42,18 +42,20 @@ ul li:hover
     position: fixed;
     top: 8.5rem;
     left: 50rem;
-    padding: 15px;
-    border-radius: 5px;
+    width: 14rem;
     background-color: white;
     z-index: 999; 
     display: none;
 }
+.categoryaccessoriessubmenu p
+{
+    padding: 10px;
+    padding-left: 15px;
+}
 .categoryaccessoriessubmenu p:hover
 {
     cursor: pointer;
-    border-bottom: 3px solid;
-    border-bottom-color: black;
-    transition: border 60s linear;
+    background-color: #E6F1FC;
 }
 .categoryaccessoriessubmenu.active
 {

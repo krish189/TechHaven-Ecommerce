@@ -1,0 +1,44 @@
+.mobileaccessoriespage
+{
+    overflow: hidden;
+} 
+.mobileaccessoriespagetitle
+{
+    width: 100%;
+    height: 23rem;
+    background: url('../../../assets/mobile_accessories_cardimage.jpg') no-repeat;
+    background-size: 100% 20rem;
+}
+.mobileaccessoriespagehead
+{
+    color: white;
+    text-align: center;
+    position: relative;
+    top: 5rem;
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 53px;
+}
+.mobileaccessoriespagetitlecontent
+{
+    color: white;
+    text-align: center;
+    position: relative;
+    top: 6rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 27px;
+}
+.mobileaccessoriesname
+{
+    font-size: 1.1rem;
+    font-weight: 400;   
+}
+.mobileaccessoriesname:hover
+{
+    color: orange;
+}
+.mobileaccessoriesproductimg
+{
+    height: 180px;
+}

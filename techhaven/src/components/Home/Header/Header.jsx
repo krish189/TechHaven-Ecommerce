@@ -169,7 +169,15 @@ function Header() {
     }
     if (refs.mobileaccRef.current && !refs.mobileaccRef.current.contains(event.target))
     {
-      setShowMobileaccCategory(false)
+      setShowMobileaccCategory(false);
+    }
+    if (refs.peripheralsubmenuRef.current && !refs.peripheralsubmenuRef.current.contains(event.target))
+    {
+      setShowPeripheralsubmenu(false);
+    }
+    if (refs.supportRef.current && !refs.supportRef.current.contains(event.target))
+    {
+      setShowSupportsubmenu(false);
     }
   };
 
@@ -268,10 +276,10 @@ function Header() {
     </div>
     <div ref={refs.mobileaccRef} className={showMobileaccCategory ? 'mobileacccategory active' : 'mobileacccategory'}>
       <h6>Mobile Accessories</h6>
-      <p>Mobile Holders</p>
-      <p>Charging Cables</p>
+      <p onClick={()=>navigate(`/shop/accessories/mobile-accessories/${encodeURIComponent('Mobile Holders')}`)}>Mobile Holders</p>
+      <p onClick={()=>navigate(`/shop/accessories/mobile-accessories/${encodeURIComponent('Charging Cables')}`)}>Charging Cables</p>
       <p>Wallet Cases</p>
-      <p>SD Cards</p>
+      <p>Memory Cards</p>
       <p>Stylus Pens</p>
     </div>
     <div ref={refs.hdmiaccRef} className={showHdmiaccCategory ? 'hdmiacccategory active' : 'hdmiacccategory'}>

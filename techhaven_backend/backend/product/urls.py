@@ -18,6 +18,8 @@ urlpatterns = [
     path('filter-computer-accessories-by-name/', views.filter_computer_accessories_by_name, name='filter-computer-accessories-by-name'),
     path('filter-laptop-accessories/', views.filter_laptop_accessories, name='filter-laptop-accessories'),
     path('filter-laptop-accessories-by-name/', views.filter_laptop_accessories_by_name, name='filter-laptop-accessories-by-name'),
+    path('filter-mobile-accessories/', views.filter_mobile_accessories, name='filter-mobile-accessories'),
+    path('filter-mobile-accessories-by-name/', views.filter_mobile_accessories_by_name, name='filter-mobile-accessories-by-name'),
     path('filter-bs/', views.filter_bs, name='filter_bs'),
     path('filter-bs-by-name/', views.filter_bs_by_name, name='filter_bs_by_name')
 ]

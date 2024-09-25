@@ -1,7 +1,7 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from .models import Laptop, Speaker, HpEb, LedTv, LedProjector, Microphone, ComputerAccessories, LaptopAccessories, BarcodeScanner
-from .serializers import LaptopSerializer, SpeakerSerializer, HpEbSerializer, LedTvSerializer, LedProjectorSerializer, MicrophoneSerializer, ComputerAccessoriesSerializer, LaptopAccessoriesSerializer, BarcodeScannerSerializer
+from .models import Laptop, Speaker, HpEb, LedTv, LedProjector, Microphone, ComputerAccessories, LaptopAccessories, MobileAccessories, BarcodeScanner
+from .serializers import LaptopSerializer, SpeakerSerializer, HpEbSerializer, LedTvSerializer, LedProjectorSerializer, MicrophoneSerializer, ComputerAccessoriesSerializer, LaptopAccessoriesSerializer, MobileAccessoriesSerializer,BarcodeScannerSerializer
 
 @api_view(['POST'])
 def filter_laptops(request):
@@ -175,6 +175,29 @@ def filter_laptop_accessories_by_name(request):
             return Response(serializer.data)
         except LaptopAccessories.DoesNotExist:
             return Response({'error': 'Laptop Accessories not found'}, status=404)
+    return Response({'error': 'Name parameter is missing'}, status=400)
+
+@api_view(['POST'])
+def filter_mobile_accessories(request):
+    categories = request.data.get('categories', [])
+    if categories:
+        mobile_accessories = MobileAccessories.objects.filter(accessory_category__in=categories)
+    else:
+        mobile_accessories = MobileAccessories.objects.all()
+    
+    serializer = MobileAccessoriesSerializer(mobile_accessories, many=True)
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def filter_mobile_accessories_by_name(request):
+    name = request.data.get('name')
+    if name:
+        try:
+            mobile_accessories = MobileAccessories.objects.get(name=name)
+            serializer = MobileAccessoriesSerializer(mobile_accessories)  
+            return Response(serializer.data)
+        except MobileAccessories.DoesNotExist:
+            return Response({'error': 'Mobile Accessories not found'}, status=404)
     return Response({'error': 'Name parameter is missing'}, status=400)
 
 @api_view(['POST'])
