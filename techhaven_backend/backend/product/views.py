@@ -1,7 +1,7 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from .models import Laptop, Speaker, HpEb, LedTv, LedProjector, Microphone, ComputerAccessories, LaptopAccessories, MobileAccessories, HdmiAccessories, BarcodeScanner
-from .serializers import LaptopSerializer, SpeakerSerializer, HpEbSerializer, LedTvSerializer, LedProjectorSerializer, MicrophoneSerializer, ComputerAccessoriesSerializer, LaptopAccessoriesSerializer, MobileAccessoriesSerializer, HdmiAccessoriesSerializer, BarcodeScannerSerializer
+from .models import Laptop, Speaker, HpEb, LedTv, LedProjector, Microphone, ComputerAccessories, LaptopAccessories, MobileAccessories, HdmiAccessories, BarcodeScanner, Mouse
+from .serializers import LaptopSerializer, SpeakerSerializer, HpEbSerializer, LedTvSerializer, LedProjectorSerializer, MicrophoneSerializer, ComputerAccessoriesSerializer, LaptopAccessoriesSerializer, MobileAccessoriesSerializer, HdmiAccessoriesSerializer, BarcodeScannerSerializer, MouseSerializer
 
 @api_view(['POST'])
 def filter_laptops(request):
@@ -239,4 +239,27 @@ def filter_bs_by_name(request):
             return Response(serializer.data)
         except BarcodeScanner.DoesNotExist:
             return Response({'error': 'Barcode Scanner not found'}, status=404)
+    return Response({'error': 'Name parameter is missing'}, status=400)
+
+@api_view(['POST'])
+def filter_mouse(request):
+    categories = request.data.get('categories', [])
+    if categories:
+        mouse = Mouse.objects.filter(mouse_type__in=categories)
+    else:
+        mouse = Mouse.objects.all()
+    
+    serializer = MouseSerializer(mouse, many=True)
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def filter_mouse_by_name(request):
+    name = request.data.get('name')
+    if name:
+        try:
+            mouse = Mouse.objects.get(name=name)
+            serializer = MouseSerializer(mouse)  
+            return Response(serializer.data)
+        except Mouse.DoesNotExist:
+            return Response({'error': 'Mouse not found'}, status=404)
     return Response({'error': 'Name parameter is missing'}, status=400)

@@ -325,10 +325,27 @@ class BarcodeScanner(BaseProduct):
 
     def __str__(self):
         return f"{self.name} - {self.scanner_type}, {self.connectivity}"
+    
+class Mouse(BaseProduct):
+    peripherals_category = models.CharField(max_length=255, null=True, blank=True)
+    mouse_type = models.CharField(max_length=255)
+    cable_length = models.CharField(max_length=100, null=True, blank=True)
+    connectivity_type = models.CharField(max_length=255, null=True, blank=True)
+    dpi = models.CharField(max_length=255, null=True, blank=True)
+    ergonomics = models.BooleanField(default=False)
+    no_of_buttons = models.IntegerField()
+    led_lighting = models.BooleanField(default=False)
+    motion_detection = models.CharField(max_length=255, null=True, blank=True)
+    wireless_range = models.CharField(max_length=100, null=True, blank=True)
+    battery_life = models.CharField(max_length=100, null=True, blank=True)
+    battery_type = models.CharField(max_length=255, null=True, blank=True)
+    connectivity = models.CharField(max_length=255, null=True, blank=True)
+    recharge_time = models.CharField(max_length=100, null=True, blank=True)
+    included_items = models.TextField(null=True, blank=True)
 
-
-
-
+    def __str__(self):
+        return f"{self.name} - {self.mouse_type}"
+    
 admin.site.register(Laptop)
 admin.site.register(Speaker)
 admin.site.register(HpEb)
@@ -340,3 +357,4 @@ admin.site.register(LaptopAccessories)
 admin.site.register(MobileAccessories)
 admin.site.register(HdmiAccessories)
 admin.site.register(BarcodeScanner)
+admin.site.register(Mouse)

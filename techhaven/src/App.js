@@ -36,6 +36,8 @@ import BarcodescannerInfo from './components/BarcodeScanner/BarcodescannerInfo/B
 import MobileAccessoriesInfo from './components/MobileAccessories/MobileAccessoriesInfo/MobileAccessoriesInfo';
 import HdmiAccessoriesPage from './components/HdmiAccessories/HdmiAccessoriesPage/HdmiAccessoriesPage';
 import HdmiAccessoriesInfo from './components/HdmiAccessories/HdmiAccessoriesInfo/HdmiAccessoriesInfo';
+import MousePage from './components/Mouse/MousePage/MousePage';
+import MouseInfo from './components/Mouse/MouseInfo/MouseInfo';
 
 function App() {
   
@@ -86,6 +88,9 @@ function App() {
         <Route path='/shop/accessories/hdmi-accessories/:accessory_category/:hdmiaccessoriesname' element={<HdmiAccessoriesInfo/>}></Route>
         <Route path='/shop/barcode-scanners' element={<BarcodescannerPage/>}></Route>
         <Route path='/shop/barcode-scanners/:bs_name' element={<BarcodescannerInfo/>}></Route>
+        <Route path='/shop/peripherals/mouse' element={<MousePage/>}></Route>
+        <Route path='/shop/peripherals/mouse/:mouse_type' element={<MousePage/>}></Route>
+        <Route path='/shop/peripherals/mouse/:mouse_type/:mousename' element={<MouseInfo/>}></Route>
       </Routes>
     </BrowserRouter>
     </OrderDetailsProvider>

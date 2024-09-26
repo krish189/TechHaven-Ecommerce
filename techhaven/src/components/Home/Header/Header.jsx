@@ -171,6 +171,10 @@ function Header() {
     {
       setShowMobileaccCategory(false);
     }
+    if (refs.hdmiaccRef.current && !refs.hdmiaccRef.current.contains(event.target))
+      {
+        setShowHdmiaccCategory(false);
+      }
     if (refs.peripheralsubmenuRef.current && !refs.peripheralsubmenuRef.current.contains(event.target))
     {
       setShowPeripheralsubmenu(false);
@@ -252,8 +256,6 @@ function Header() {
           <p onClick={displayMobileaccCategory} className={showMobileaccCategory ? 'clickedcategory' : ''}>Mobile Accessories<img src={sidearrow} alt='sidearrow' style={{width: '13px', height: '15px', position: 'relative', bottom: '0.1rem', left: '2.3rem'}} onClick={displayMobileaccCategory}/></p>
           <p onClick={displayHdmiaccCategory} className={showHdmiaccCategory ? 'clickedcategory' : ''}>HDMI Accessories<img src={sidearrow} alt='sidearrow' style={{width: '13px', height: '15px', position: 'relative', bottom: '0.1rem', left: '2.6rem'}} onClick={displayHdmiaccCategory}/></p>
           <p onClick={()=> navigate('/shop/barcode-scanners')}>Barcode Scanners</p>
-          <p>LED Lights</p>
-          <p>Projector Screens</p>
     </div>
     <div ref={refs.computeraccRef} className={showComputeraccCategory ? 'computeracccategory active' : 'computeracccategory'}>
       <h6>Computer Accessories</h6>
@@ -278,14 +280,14 @@ function Header() {
       <h6>Mobile Accessories</h6>
       <p onClick={()=>navigate(`/shop/accessories/mobile-accessories/${encodeURIComponent('Mobile Holders')}`)}>Mobile Holders</p>
       <p onClick={()=>navigate(`/shop/accessories/mobile-accessories/${encodeURIComponent('Charging Cables')}`)}>Charging Cables</p>
-      <p>Wallet Cases</p>
-      <p>Memory Cards</p>
-      <p>Stylus Pens</p>
+      <p onClick={()=>navigate(`/shop/accessories/mobile-accessories/${encodeURIComponent('Wallet Cases')}`)}>Wallet Cases</p>
+      <p onClick={()=>navigate(`/shop/accessories/mobile-accessories/${encodeURIComponent('Memory Cards')}`)}>Memory Cards</p>
+      <p onClick={()=>navigate(`/shop/accessories/mobile-accessories/${encodeURIComponent('Stylus Pens')}`)}>Stylus Pens</p>
     </div>
     <div ref={refs.hdmiaccRef} className={showHdmiaccCategory ? 'hdmiacccategory active' : 'hdmiacccategory'}>
       <h6>HDMI Accessories</h6>
-      <p>HDMI Cables</p>
-      <p>HDMI Adapters</p>
+      <p onClick={()=>navigate(`/shop/accessories/hdmi-accessories/${encodeURIComponent('HDMI Cables')}`)}>HDMI Cables</p>
+      <p onClick={()=>navigate(`/shop/accessories/hdmi-accessories/${encodeURIComponent('HDMI Adapters')}`)}>HDMI Adapters</p>
     </div>
     <div ref={refs.peripheralsubmenuRef} className={showPeripheralsubmenu ? 'peripheralsubmenu active' : 'peripheralsubmenu'}>
           <p className={showKeyboardCategory ? 'clickedcategory' : ''}  onClick={displayKeyboardCategory}>Keyboards<img src={sidearrow} alt='sidearrow' style={{width: '13px', height: '15px', position: 'relative', left: '7rem'}} onClick={displayKeyboardCategory}/></p>
@@ -298,15 +300,13 @@ function Header() {
     </div>
     <div ref={refs.keyboardRef} className={showKeyboardCategory ? 'keyboardcategory active' : 'keyboardcategory'}>
       <h6>Keyboards</h6>
-      <p>Mechanical Keyboard</p>
-      <p>Wireless Keyboard</p>
-      <p>Multimedia Keyboard</p>
-      <p>Standard Keyboard</p>
+      <p>Wired Keyboards</p>
+      <p>Wireless Keyboards</p>
     </div>
     <div ref={refs.mouseRef} className={showMouseCategory ? 'mousecategory active' : 'mousecategory'}>
       <h6>Mouses</h6>
-      <p>Wired Mouse</p>
-      <p>Wireless Mouse</p>
+      <p onClick={()=>navigate(`/shop/peripherals/mouse/${encodeURIComponent('Wired Mouse')}`)}>Wired Mouse</p>
+      <p onClick={()=>navigate(`/shop/peripherals/mouse/${encodeURIComponent('Wireless Mouse')}`)}>Wireless Mouse</p>
     </div>
     <div ref={refs.monitorRef} className={showMonitorCategory ? 'monitorcategory active' : 'monitorcategory'}>
       <h6>Monitors</h6>

@@ -61,3 +61,27 @@ ul li:hover
 {
     display: block;
 }
+.categoryperipheralssubmenu
+{
+    position: fixed;
+    top: 8.5rem;
+    left: 58.8rem;
+    width: 14rem;
+    background-color: white;
+    z-index: 999; 
+    display: none;
+}
+.categoryperipheralssubmenu p
+{
+    padding: 10px;
+    padding-left: 15px;
+}
+.categoryperipheralssubmenu p:hover
+{
+    cursor: pointer;
+    background-color: #E6F1FC;
+}
+.categoryperipheralssubmenu.active
+{
+    display: block;
+}
