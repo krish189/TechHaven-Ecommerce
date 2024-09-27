@@ -300,8 +300,8 @@ function Header() {
     </div>
     <div ref={refs.keyboardRef} className={showKeyboardCategory ? 'keyboardcategory active' : 'keyboardcategory'}>
       <h6>Keyboards</h6>
-      <p>Wired Keyboards</p>
-      <p>Wireless Keyboards</p>
+      <p onClick={()=>navigate(`/shop/peripherals/keyboard/${encodeURIComponent('Wired Keyboard')}`)}>Wired Keyboard</p>
+      <p onClick={()=>navigate(`/shop/peripherals/keyboard/${encodeURIComponent('Wireless Keyboard')}`)}>Wireless Keyboard</p>
     </div>
     <div ref={refs.mouseRef} className={showMouseCategory ? 'mousecategory active' : 'mousecategory'}>
       <h6>Mouses</h6>
@@ -312,10 +312,7 @@ function Header() {
       <h6>Monitors</h6>
       <p>Curved Monitors</p>
       <p>Touchscreen Monitors</p>
-      <p>Ultrawide Monitors</p>
       <p>Portable Monitors</p>
-      <p>4K/8K Monitors</p>
-      <p>HDR Monitors</p>
     </div>
     <div ref={refs.smartHomeRef} className={showSmarthomesubmenu ? 'smarthomesubmenu active' : 'smarthomesubmenu'}>
           <p>Smart Lighting</p>

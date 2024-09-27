@@ -24,6 +24,8 @@ urlpatterns = [
     path('filter-hdmi-accessories-by-name/', views.filter_hdmi_accessories_by_name, name='filter-hdmi-accessories-by-name'),
     path('filter-bs/', views.filter_bs, name='filter_bs'),
     path('filter-bs-by-name/', views.filter_bs_by_name, name='filter_bs_by_name'),
+    path('filter-keyboard/', views.filter_keyboard, name='filter-keyboard'),
+    path('filter-keyboard-by-name/', views.filter_keyboard_by_name, name='filter-keyboard-by-name'),
     path('filter-mouse/', views.filter_mouse, name='filter-mouse'),
     path('filter-mouse-by-name/', views.filter_mouse_by_name, name='filter-mouse-by-name')
 ]

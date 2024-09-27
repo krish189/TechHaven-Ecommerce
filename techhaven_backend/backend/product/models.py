@@ -325,7 +325,34 @@ class BarcodeScanner(BaseProduct):
 
     def __str__(self):
         return f"{self.name} - {self.scanner_type}, {self.connectivity}"
-    
+
+class Keyboard(BaseProduct):
+    peripherals_category = models.CharField(max_length=255)
+    keyboard_category = models.CharField(max_length=255, null=True, blank=True)
+    keyboard_type = models.CharField(max_length=255)
+    no_of_keys = models.CharField(max_length=255, null=True, blank=True)
+    layout = models.CharField(max_length=100, null=True, blank=True)
+    key_switch_type = models.CharField(max_length=100, null=True, blank=True)
+    backlighting = models.BooleanField(default=False)
+    programmable_keys = models.BooleanField(default=False)
+    anti_ghosting = models.BooleanField(default=False)
+    media_controls = models.BooleanField(default=False)
+    ergonomics = models.BooleanField(default=False)
+    phone_holder = models.BooleanField(default=False)
+    cable_length = models.CharField(max_length=100, null=True, blank=True)
+    connection_type = models.CharField(max_length=50, null=True, blank=True)
+    noise_level = models.CharField(max_length=255, null=True, blank=True)
+    noise_reduction_percent = models.CharField(max_length=255, null=True, blank=True)
+    wireless_connectivity = models.CharField(max_length=100, null=True, blank=True)
+    wireless_range = models.CharField(max_length=100, null=True, blank=True)
+    battery_life = models.CharField(max_length=100, null=True, blank=True)
+    recharge_time = models.CharField(max_length=100, null=True, blank=True)
+    battery_type = models.CharField(max_length=50, null=True, blank=True)
+    included_items = models.TextField(null=True, blank=True)
+
+    def __str__(self):
+        return f"{self.name} - {self.keyboard_type}"    
+      
 class Mouse(BaseProduct):
     peripherals_category = models.CharField(max_length=255, null=True, blank=True)
     mouse_type = models.CharField(max_length=255)
@@ -357,4 +384,5 @@ admin.site.register(LaptopAccessories)
 admin.site.register(MobileAccessories)
 admin.site.register(HdmiAccessories)
 admin.site.register(BarcodeScanner)
+admin.site.register(Keyboard)
 admin.site.register(Mouse)
