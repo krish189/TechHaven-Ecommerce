@@ -40,6 +40,9 @@ import KeyboardPage from './components/Keyboard/KeyboardPage/KeyboardPage';
 import MousePage from './components/Mouse/MousePage/MousePage';
 import MouseInfo from './components/Mouse/MouseInfo/MouseInfo';
 import KeyboardInfo from './components/Keyboard/KeyboardInfo/KeyboardInfo';
+import MonitorPage from './components/Monitor/MonitorPage/MonitorPage';
+import MonitorInfo from './components/Monitor/MonitorInfo/MonitorInfo';
+
 
 function App() {
   
@@ -96,6 +99,9 @@ function App() {
         <Route path='/shop/peripherals/mouse' element={<MousePage/>}></Route>
         <Route path='/shop/peripherals/mouse/:mouse_type' element={<MousePage/>}></Route>
         <Route path='/shop/peripherals/mouse/:mouse_type/:mousename' element={<MouseInfo/>}></Route>
+        <Route path='/shop/peripherals/monitor' element={<MonitorPage/>}></Route>
+        <Route path='/shop/peripherals/monitor/:monitor_type' element={<MonitorPage/>}></Route>
+        <Route path='/shop/peripherals/monitor/:monitor_type/:monitorname' element={<MonitorInfo/>}></Route>
       </Routes>
     </BrowserRouter>
     </OrderDetailsProvider>

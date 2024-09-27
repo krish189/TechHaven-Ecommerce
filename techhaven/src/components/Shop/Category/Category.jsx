@@ -78,6 +78,7 @@ function Category() {
     <div ref={refs.peripheralsRef} className={showPeripheralssubmenu ? 'categoryperipheralssubmenu active' : 'categoryperipheralssubmenu'}>
         <p onClick={()=>navigate('/shop/peripherals/keyboard')}>Keyboards</p>
         <p onClick={()=>navigate('/shop/peripherals/mouse')}>Mouses</p>
+        <p onClick={()=>navigate('/shop/peripherals/monitor')}>Monitors</p>
     </div>
     <div ref={refs.supportRef} className={showSupportsubmenu ? 'supportsubmenu active' : 'supportsubmenu'}>
           <p>Contact Us</p>

@@ -27,5 +27,7 @@ urlpatterns = [
     path('filter-keyboard/', views.filter_keyboard, name='filter-keyboard'),
     path('filter-keyboard-by-name/', views.filter_keyboard_by_name, name='filter-keyboard-by-name'),
     path('filter-mouse/', views.filter_mouse, name='filter-mouse'),
-    path('filter-mouse-by-name/', views.filter_mouse_by_name, name='filter-mouse-by-name')
+    path('filter-mouse-by-name/', views.filter_mouse_by_name, name='filter-mouse-by-name'),
+    path('filter-monitor/', views.filter_monitor, name='filter-monitor'),
+    path('filter-monitor-by-name/', views.filter_monitor_by_name, name='filter-monitor-by-name')
 ]

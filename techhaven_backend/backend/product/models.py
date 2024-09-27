@@ -372,7 +372,29 @@ class Mouse(BaseProduct):
 
     def __str__(self):
         return f"{self.name} - {self.mouse_type}"
+
+class Monitor(BaseProduct):
+    peripherals_category = models.CharField(max_length=255)
+    monitor_type = models.CharField(max_length=255)
+    screen_size = models.CharField(max_length=100)
+    resolution = models.CharField(max_length=100)
+    refresh_rate = models.CharField(max_length=100, null=True, blank=True)
+    panel_type = models.CharField(max_length=255, null=True, blank=True)
+    brightness = models.CharField(max_length=100, null=True, blank=True)
+    contrast_ratio = models.CharField(max_length=100, null=True, blank=True)
+    response_time = models.CharField(max_length=100, null=True, blank=True)
+    connectivity_options = models.CharField(max_length=255, null=True, blank=True)
+    aspect_ratio = models.CharField(max_length=100, null=True, blank=True)
+    color_gamut = models.CharField(max_length=255, null=True, blank=True)
+    touch_support = models.BooleanField(default=False)
+    portability_features = models.TextField(null=True, blank=True)
+    curved_radius = models.CharField(max_length=255, null=True, blank=True)
+    vesa_mount_compatible = models.BooleanField(default=False)
+    included_items = models.TextField(null=True, blank=True)
     
+    def __str__(self):
+        return f"{self.name} - {self.monitor_type}"
+  
 admin.site.register(Laptop)
 admin.site.register(Speaker)
 admin.site.register(HpEb)
@@ -386,3 +408,4 @@ admin.site.register(HdmiAccessories)
 admin.site.register(BarcodeScanner)
 admin.site.register(Keyboard)
 admin.site.register(Mouse)
+admin.site.register(Monitor)

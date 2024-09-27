@@ -310,9 +310,9 @@ function Header() {
     </div>
     <div ref={refs.monitorRef} className={showMonitorCategory ? 'monitorcategory active' : 'monitorcategory'}>
       <h6>Monitors</h6>
-      <p>Curved Monitors</p>
-      <p>Touchscreen Monitors</p>
-      <p>Portable Monitors</p>
+      <p>Curved Monitor</p>
+      <p>Touchscreen Monitor</p>
+      <p>Portable Monitor</p>
     </div>
     <div ref={refs.smartHomeRef} className={showSmarthomesubmenu ? 'smarthomesubmenu active' : 'smarthomesubmenu'}>
           <p>Smart Lighting</p>

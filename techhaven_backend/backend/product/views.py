@@ -1,7 +1,7 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from .models import Laptop, Speaker, HpEb, LedTv, LedProjector, Microphone, ComputerAccessories, LaptopAccessories, MobileAccessories, HdmiAccessories, BarcodeScanner, Keyboard, Mouse
-from .serializers import LaptopSerializer, SpeakerSerializer, HpEbSerializer, LedTvSerializer, LedProjectorSerializer, MicrophoneSerializer, ComputerAccessoriesSerializer, LaptopAccessoriesSerializer, MobileAccessoriesSerializer, HdmiAccessoriesSerializer, BarcodeScannerSerializer, KeyboardSerializer, MouseSerializer
+from .models import Laptop, Speaker, HpEb, LedTv, LedProjector, Microphone, ComputerAccessories, LaptopAccessories, MobileAccessories, HdmiAccessories, BarcodeScanner, Keyboard, Mouse, Monitor
+from .serializers import LaptopSerializer, SpeakerSerializer, HpEbSerializer, LedTvSerializer, LedProjectorSerializer, MicrophoneSerializer, ComputerAccessoriesSerializer, LaptopAccessoriesSerializer, MobileAccessoriesSerializer, HdmiAccessoriesSerializer, BarcodeScannerSerializer, KeyboardSerializer, MouseSerializer, MonitorSerializer
 
 @api_view(['POST'])
 def filter_laptops(request):
@@ -285,4 +285,27 @@ def filter_mouse_by_name(request):
             return Response(serializer.data)
         except Mouse.DoesNotExist:
             return Response({'error': 'Mouse not found'}, status=404)
+    return Response({'error': 'Name parameter is missing'}, status=400)
+
+@api_view(['POST'])
+def filter_monitor(request):
+    categories = request.data.get('categories', [])
+    if categories:
+        monitor = Monitor.objects.filter(monitor_type__in=categories)
+    else:
+        monitor = Monitor.objects.all()
+    
+    serializer = MonitorSerializer(monitor, many=True)
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def filter_monitor_by_name(request):
+    name = request.data.get('name')
+    if name:
+        try:
+            monitor = Monitor.objects.get(name=name)
+            serializer = MonitorSerializer(monitor)  
+            return Response(serializer.data)
+        except Monitor.DoesNotExist:
+            return Response({'error': 'Monitor not found'}, status=404)
     return Response({'error': 'Name parameter is missing'}, status=400)
