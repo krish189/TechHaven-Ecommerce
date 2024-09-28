@@ -1,7 +1,7 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from .models import Laptop, Speaker, HpEb, LedTv, LedProjector, Microphone, ComputerAccessories, LaptopAccessories, MobileAccessories, HdmiAccessories, BarcodeScanner, Keyboard, Mouse, Monitor
-from .serializers import LaptopSerializer, SpeakerSerializer, HpEbSerializer, LedTvSerializer, LedProjectorSerializer, MicrophoneSerializer, ComputerAccessoriesSerializer, LaptopAccessoriesSerializer, MobileAccessoriesSerializer, HdmiAccessoriesSerializer, BarcodeScannerSerializer, KeyboardSerializer, MouseSerializer, MonitorSerializer
+from .models import Laptop, Speaker, HpEb, LedTv, LedProjector, Microphone, ComputerAccessories, LaptopAccessories, MobileAccessories, HdmiAccessories, BarcodeScanner, Keyboard, Mouse, Monitor, KeyboardMouseCombo, HomeTheater
+from .serializers import LaptopSerializer, SpeakerSerializer, HpEbSerializer, LedTvSerializer, LedProjectorSerializer, MicrophoneSerializer, ComputerAccessoriesSerializer, LaptopAccessoriesSerializer, MobileAccessoriesSerializer, HdmiAccessoriesSerializer, BarcodeScannerSerializer, KeyboardSerializer, MouseSerializer, MonitorSerializer, KeyboardMouseSerializer, HomeTheaterSerializer
 
 @api_view(['POST'])
 def filter_laptops(request):
@@ -308,4 +308,40 @@ def filter_monitor_by_name(request):
             return Response(serializer.data)
         except Monitor.DoesNotExist:
             return Response({'error': 'Monitor not found'}, status=404)
+    return Response({'error': 'Name parameter is missing'}, status=400)
+
+@api_view(['POST'])
+def filter_combos(request):
+    combos = KeyboardMouseCombo.objects.all()
+    serializer = KeyboardMouseSerializer(combos, many=True)
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def filter_combos_by_name(request):
+    name = request.data.get('name')
+    if name:
+        try:
+            combos = KeyboardMouseCombo.objects.get(name=name)
+            serializer = KeyboardMouseSerializer(combos)  
+            return Response(serializer.data)
+        except KeyboardMouseCombo.DoesNotExist:
+            return Response({'error': 'Keyboard Mouse Combo not found'}, status=404)
+    return Response({'error': 'Name parameter is missing'}, status=400)
+
+@api_view(['POST'])
+def filter_home_theater(request):
+    home_theater = HomeTheater.objects.all()
+    serializer = HomeTheaterSerializer(home_theater, many=True)
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def filter_home_theater_by_name(request):
+    name = request.data.get('name')
+    if name:
+        try:
+            home_theater = HomeTheater.objects.get(name=name)
+            serializer = HomeTheaterSerializer(home_theater)  
+            return Response(serializer.data)
+        except HomeTheater.DoesNotExist:
+            return Response({'error': 'Home Theater not found'}, status=404)
     return Response({'error': 'Name parameter is missing'}, status=400)

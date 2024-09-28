@@ -79,6 +79,7 @@ function Category() {
         <p onClick={()=>navigate('/shop/peripherals/keyboard')}>Keyboards</p>
         <p onClick={()=>navigate('/shop/peripherals/mouse')}>Mouses</p>
         <p onClick={()=>navigate('/shop/peripherals/monitor')}>Monitors</p>
+        <p onClick={()=>navigate('/shop/peripherals/combos')}>Keyboard Mouse Combo</p>
     </div>
     <div ref={refs.supportRef} className={showSupportsubmenu ? 'supportsubmenu active' : 'supportsubmenu'}>
           <p>Contact Us</p>

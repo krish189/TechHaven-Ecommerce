@@ -293,7 +293,7 @@ function Header() {
           <p className={showKeyboardCategory ? 'clickedcategory' : ''}  onClick={displayKeyboardCategory}>Keyboards<img src={sidearrow} alt='sidearrow' style={{width: '13px', height: '15px', position: 'relative', left: '7rem'}} onClick={displayKeyboardCategory}/></p>
           <p className={showMouseCategory ? 'clickedcategory' : ''}  onClick={displayMouseCategory}>Mouses<img src={sidearrow} alt='sidearrow' style={{width: '13px', height: '15px', position: 'relative', left: '8.2rem'}} onClick={displayMouseCategory}/></p>
           <p className={showMonitorCategory ? 'clickedcategory' : ''} onClick={displayMonitorCategory}>Monitors<img src={sidearrow} alt='sidearrow' style={{width: '13px', height: '15px', position: 'relative', left: '7.6rem'}} onClick={displayMonitorCategory}/></p>
-          <p>Keyboard Mouse Combo</p>
+          <p onClick={()=>navigate('/shop/peripherals/combos')}>Keyboard Mouse Combo</p>
           <p>Webcams</p>
           <p>Printers</p>
           <p>Modems</p>
@@ -310,17 +310,14 @@ function Header() {
     </div>
     <div ref={refs.monitorRef} className={showMonitorCategory ? 'monitorcategory active' : 'monitorcategory'}>
       <h6>Monitors</h6>
-      <p>Curved Monitor</p>
-      <p>Touchscreen Monitor</p>
-      <p>Portable Monitor</p>
+      <p onClick={()=>navigate(`/shop/peripherals/monitor/${encodeURIComponent('Curved Monitor')}`)}>Curved Monitor</p>
+      <p onClick={()=>navigate(`/shop/peripherals/monitor/${encodeURIComponent('Touchscreen Monitor')}`)}>Touchscreen Monitor</p>
+      <p onClick={()=>navigate(`/shop/peripherals/monitor/${encodeURIComponent('Portable Monitor')}`)}>Portable Monitor</p>
     </div>
     <div ref={refs.smartHomeRef} className={showSmarthomesubmenu ? 'smarthomesubmenu active' : 'smarthomesubmenu'}>
-          <p>Smart Lighting</p>
-          <p>Smart Speakers</p>
-          <p>Smart Plugs</p>
-          <p>CCTV Cameras</p>
-          <p>CCTV Accessories</p>
           <p>Home Theater</p>
+          <p>Smart Lighting</p>
+          <p>CCTV Cameras</p>
     </div>
     <div ref={refs.supportRef} className={showSupportsubmenu ? 'supportsubmenu active' : 'supportsubmenu'}>
           <p>Contact Us</p>

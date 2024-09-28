@@ -42,7 +42,8 @@ import MouseInfo from './components/Mouse/MouseInfo/MouseInfo';
 import KeyboardInfo from './components/Keyboard/KeyboardInfo/KeyboardInfo';
 import MonitorPage from './components/Monitor/MonitorPage/MonitorPage';
 import MonitorInfo from './components/Monitor/MonitorInfo/MonitorInfo';
-
+import KeyboardMousePage from './components/KeyboardMouseCombo/KeyboardMousePage/KeyboardMousePage';
+import KeyboardMouseInfo from './components/KeyboardMouseCombo/KeyboardMouseInfo/KeyboardMouseInfo';
 
 function App() {
   
@@ -102,6 +103,8 @@ function App() {
         <Route path='/shop/peripherals/monitor' element={<MonitorPage/>}></Route>
         <Route path='/shop/peripherals/monitor/:monitor_type' element={<MonitorPage/>}></Route>
         <Route path='/shop/peripherals/monitor/:monitor_type/:monitorname' element={<MonitorInfo/>}></Route>
+        <Route path='/shop/peripherals/combos' element={<KeyboardMousePage/>}></Route>
+        <Route path='/shop/peripherals/combos/:combos_name' element={<KeyboardMouseInfo/>}></Route>
       </Routes>
     </BrowserRouter>
     </OrderDetailsProvider>
