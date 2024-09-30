@@ -46,6 +46,8 @@ import KeyboardMousePage from './components/KeyboardMouseCombo/KeyboardMousePage
 import KeyboardMouseInfo from './components/KeyboardMouseCombo/KeyboardMouseInfo/KeyboardMouseInfo';
 import HomeTheaterPage from './components/HomeTheater/HomeTheaterPage/HomeTheaterPage';
 import HomeTheaterInfo from './components/HomeTheater/HomeTheaterInfo/HomeTheaterInfo';
+import SmartLightingPage from './components/SmartLighting/SmartLightingPage/SmartLightingPage';
+import SmartLightingInfo from './components/SmartLighting/SmartLightingInfo/SmartLightingInfo';
 
 function App() {
   
@@ -109,6 +111,8 @@ function App() {
         <Route path='/shop/peripherals/combos/:combos_name' element={<KeyboardMouseInfo/>}></Route>
         <Route path='/shop/home-theaters' element={<HomeTheaterPage/>}></Route>
         <Route path='/shop/home-theaters/:ht_name' element={<HomeTheaterInfo/>}></Route>
+        <Route path='/shop/smart-lighting' element={<SmartLightingPage/>}></Route>
+        <Route path='/shop/smart-lighting/:sl_name' element={<SmartLightingInfo/>}></Route>
       </Routes>
     </BrowserRouter>
     </OrderDetailsProvider>

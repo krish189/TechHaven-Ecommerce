@@ -34,6 +34,6 @@ urlpatterns = [
     path('filter-combos-by-name/', views.filter_combos_by_name, name='filter-keyboard-mouse-combo-by-name'),
     path('filter-home-theater/', views.filter_home_theater, name='filter-home-theater'),
     path('filter-home-theater-by-name/', views.filter_home_theater_by_name, name='filter-home-theater-by-name'),
-    path('filter-smart-light/', views.filter_smart_light, name='filter-smart-light'),
-    path('filter-smart-light-by-name/', views.filter_smart_light_by_name, name='filter-smart-light-by-name')
+    path('filter-smart-lighting/', views.filter_smart_light, name='filter-smart-light'),
+    path('filter-smart-lighting-by-name/', views.filter_smart_light_by_name, name='filter-smart-light-by-name')
 ]

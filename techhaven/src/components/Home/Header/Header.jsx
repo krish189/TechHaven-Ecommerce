@@ -191,6 +191,10 @@ function Header() {
     {
       setShowMonitorCategory(false);
     }
+    if (refs.smartHomeRef.current && !refs.smartHomeRef.current.contains(event.target))
+    {
+      setShowSmarthomesubmenu(false);
+    }
     if (refs.supportRef.current && !refs.supportRef.current.contains(event.target))
     {
       setShowSupportsubmenu(false);
@@ -328,7 +332,7 @@ function Header() {
     </div>
     <div ref={refs.smartHomeRef} className={showSmarthomesubmenu ? 'smarthomesubmenu active' : 'smarthomesubmenu'}>
           <p onClick={()=>navigate('/shop/home-theaters')}>Home Theater</p>
-          <p>Smart Lighting</p>
+          <p onClick={()=>navigate('/shop/smart-lighting')}>Smart Lighting</p>
           <p>CCTV Cameras</p>
     </div>
     <div ref={refs.supportRef} className={showSupportsubmenu ? 'supportsubmenu active' : 'supportsubmenu'}>
