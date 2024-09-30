@@ -50,6 +50,8 @@ import SmartLightingPage from './components/SmartLighting/SmartLightingPage/Smar
 import SmartLightingInfo from './components/SmartLighting/SmartLightingInfo/SmartLightingInfo';
 import CCTVPage from './components/CCTV/CCTVPage/CCTVPage';
 import CCTVInfo from './components/CCTV/CCTVInfo/CCTVInfo';
+import SmartWatchPage from './components/SmartWatch/SmartWatchPage/SmartWatchPage';
+import SmartWatchInfo from './components/SmartWatch/SmartWatchInfo/SmartWatchInfo';
 
 function App() {
   
@@ -117,6 +119,8 @@ function App() {
         <Route path='/shop/smart-lighting/:sl_name' element={<SmartLightingInfo/>}></Route>
         <Route path='/shop/cctv' element={<CCTVPage/>}></Route>
         <Route path='/shop/cctv/:cctv_name' element={<CCTVInfo/>}></Route>
+        <Route path='/shop/smart-watch' element={<SmartWatchPage/>}></Route>
+        <Route path='/shop/smart-watch/:sw_name' element={<SmartWatchInfo/>}></Route>
       </Routes>
     </BrowserRouter>
     </OrderDetailsProvider>

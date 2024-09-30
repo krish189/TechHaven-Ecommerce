@@ -73,7 +73,7 @@ function Category() {
                 <li onClick={displayAccessoriessubmenu}>Accessories<img src={down} alt='down' className='downicon'></img></li>
                 <li onClick={displayPeripheralssubmenu}>Peripherals<img src={down} alt='down' className='downicon'></img></li>
                 <li onClick={displaySmartHomesubmenu}>Smart Home & CCTV <img src={down} alt='down' className='downicon'></img></li>
-                <li>Smart Watch</li>
+                <li onClick={()=>navigate('/shop/smart-watch')}>Smart Watch</li>
                 <li onClick={displaySupportsubmenu}>Support <img src={down} alt='down' className='downicon'></img></li>
             </ul>
         </nav>

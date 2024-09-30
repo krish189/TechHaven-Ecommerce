@@ -1,7 +1,7 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from .models import Laptop, Speaker, HpEb, LedTv, LedProjector, Microphone, ComputerAccessories, LaptopAccessories, MobileAccessories, HdmiAccessories, BarcodeScanner, Keyboard, Mouse, Monitor, KeyboardMouseCombo, HomeTheater, SmartLighting, CCTVCamera
-from .serializers import LaptopSerializer, SpeakerSerializer, HpEbSerializer, LedTvSerializer, LedProjectorSerializer, MicrophoneSerializer, ComputerAccessoriesSerializer, LaptopAccessoriesSerializer, MobileAccessoriesSerializer, HdmiAccessoriesSerializer, BarcodeScannerSerializer, KeyboardSerializer, MouseSerializer, MonitorSerializer, KeyboardMouseSerializer, HomeTheaterSerializer, SmartLightingSerializer, CCTVSerializer
+from .models import Laptop, Speaker, HpEb, LedTv, LedProjector, Microphone, ComputerAccessories, LaptopAccessories, MobileAccessories, HdmiAccessories, BarcodeScanner, Keyboard, Mouse, Monitor, KeyboardMouseCombo, HomeTheater, SmartLighting, CCTVCamera, SmartWatch
+from .serializers import LaptopSerializer, SpeakerSerializer, HpEbSerializer, LedTvSerializer, LedProjectorSerializer, MicrophoneSerializer, ComputerAccessoriesSerializer, LaptopAccessoriesSerializer, MobileAccessoriesSerializer, HdmiAccessoriesSerializer, BarcodeScannerSerializer, KeyboardSerializer, MouseSerializer, MonitorSerializer, KeyboardMouseSerializer, HomeTheaterSerializer, SmartLightingSerializer, CCTVSerializer, SmartWatchSerializer
 
 @api_view(['POST'])
 def filter_laptops(request):
@@ -380,4 +380,22 @@ def filter_cctv_by_name(request):
             return Response(serializer.data)
         except CCTVCamera.DoesNotExist:
             return Response({'error': 'CCTV Camera not found'}, status=404)
+    return Response({'error': 'Name parameter is missing'}, status=400)
+
+@api_view(['POST'])
+def filter_smart_watch(request):
+    smart_watch = SmartWatch.objects.all()
+    serializer = SmartWatchSerializer(smart_watch, many=True)
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def filter_smart_watch_by_name(request):
+    name = request.data.get('name')
+    if name:
+        try:
+            smart_watch = SmartWatch.objects.get(name=name)
+            serializer = SmartWatchSerializer(smart_watch)  
+            return Response(serializer.data)
+        except SmartWatch.DoesNotExist:
+            return Response({'error': 'Smart Watch not found'}, status=404)
     return Response({'error': 'Name parameter is missing'}, status=400)

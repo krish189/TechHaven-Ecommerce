@@ -54,7 +54,7 @@ function CarouselComponent() {
         />
         <Carousel.Caption>
           <h1 className='headcolor'>A Dream Theater for your Home</h1>
-          <Button variant="light" size="lg">Explore Now</Button>
+          <Button variant="light" size="lg" onClick={()=>navigate('/shop/home-theaters')}>Explore Now</Button>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

@@ -33,7 +33,7 @@ function Explore() {
             <Card.Title>Party Speakers</Card.Title>
             </Card.Body>
         </Card>
-        <Card style={{ width: '14rem', height: '14rem'}}>
+        <Card style={{ width: '14rem', height: '14rem'}} onClick={()=>navigate('/shop/peripherals/combos')}>
             <Card.Body>
             <Card.Img variant="top" src={keyboardmouse} />
             <Card.Title>Combos</Card.Title>

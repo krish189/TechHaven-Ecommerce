@@ -498,7 +498,31 @@ class CCTVCamera(BaseProduct):
     
     def __str__(self):
         return f"{self.name} ({self.resolution})"
+
+class SmartWatch(BaseProduct):
+    display_type = models.CharField(max_length=255, null=True, blank=True)
+    screen_size = models.CharField(max_length=255, null=True, blank=True)
+    battery_life = models.CharField(max_length=255, null=True, blank=True)
+    charging_time = models.CharField(max_length=255, null=True, blank=True)
+    water_resistance = models.CharField(max_length=255, null=True, blank=True)
+    connectivity = models.CharField(max_length=255, null=True, blank=True)
+    sensors = models.CharField(max_length=255, null=True, blank=True)
+    compatibility = models.CharField(max_length=255, null=True, blank=True)
+    strap_material = models.CharField(max_length=255, null=True, blank=True)
+    features = models.TextField(null=True, blank=True)
+    storage_capacity = models.CharField(max_length=255, null=True, blank=True)
+    processor = models.CharField(max_length=255, null=True, blank=True)
+    ram = models.CharField(max_length=255, null=True, blank=True)
+    gps = models.BooleanField(default=False)
+    heart_rate_monitor = models.BooleanField(default=False)
+    nfc = models.BooleanField(default=False)
+    camera = models.BooleanField(default=False)
+    voice_assistant = models.CharField(max_length=255, null=True, blank=True)
     
+    def __str__(self):
+        return f"{self.name}"
+
+
 admin.site.register(Laptop)
 admin.site.register(Speaker)
 admin.site.register(HpEb)
@@ -517,3 +541,4 @@ admin.site.register(KeyboardMouseCombo)
 admin.site.register(HomeTheater)
 admin.site.register(SmartLighting)
 admin.site.register(CCTVCamera)
+admin.site.register(SmartWatch)

@@ -220,7 +220,7 @@ function Header() {
                 <li onClick={displayAccessoriessubmenu}>Accessories <img src={down} alt='down' className='downicon'></img></li>
                 <li onClick={displayPeripheralsubmenu}>Peripherals <img src={down} alt='down' className='downicon'></img></li>
                 <li onClick={displaySmarthomesubmenu}>Smart Home & CCTV<img src={down} alt='down' className='downicon'></img></li>
-                <li>Smart Watch</li>
+                <li onClick={()=>navigate('/shop/smart-watch')}>Smart Watch</li>
                 <li>< Link to='/shop' className='link'>Shop</Link></li>
                 <li onClick={displaySupportsubmenu}>Support <img src={down} alt='down' className='downicon'></img></li>
                 <img src={searchicon} alt='search' className='searchicon' onClick={displaySearch} />

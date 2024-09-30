@@ -37,5 +37,7 @@ urlpatterns = [
     path('filter-smart-lighting/', views.filter_smart_light, name='filter-smart-light'),
     path('filter-smart-lighting-by-name/', views.filter_smart_light_by_name, name='filter-smart-light-by-name'),
     path('filter-cctv/', views.filter_cctv, name='filter-cctv'),
-    path('filter-cctv-by-name/', views.filter_cctv_by_name, name='filter-cctv-by-name')
+    path('filter-cctv-by-name/', views.filter_cctv_by_name, name='filter-cctv-by-name'),
+    path('filter-smart-watch/', views.filter_smart_watch, name='filter-smart-watch'),
+    path('filter-smart-watch-by-name/', views.filter_smart_watch_by_name, name='filter-smart-watch-by-name')
 ]

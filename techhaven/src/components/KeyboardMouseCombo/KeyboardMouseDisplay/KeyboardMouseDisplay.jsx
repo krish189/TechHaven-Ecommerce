@@ -49,7 +49,7 @@ function KeyboardMouseDisplay() {
     <>
     <div className='combospage'>
       <div className='combospagetitle'>
-        <h1 className='combospagehead'>Keyboard Mouse Combos</h1>
+        <h1 className='combospagehead'>Keyboard Mouse Combo</h1>
         <p className='combospagetitlecontent'>Effortless Precision, Built for Endurance. The Perfect Pair for Every Task.</p>
       </div>
       <Filter/>
