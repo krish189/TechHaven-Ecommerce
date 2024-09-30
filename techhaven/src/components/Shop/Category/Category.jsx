@@ -94,7 +94,7 @@ function Category() {
     <div ref={refs.smartHomeRef} className={showSmartHomesubmenu ? 'categorysmarthomesubmenu active' : 'categorysmarthomesubmenu'}>
         <p onClick={()=>navigate('/shop/home-theaters')}>Home Theater</p>
         <p onClick={()=>navigate('/shop/smart-lighting')}>Smart Lighting</p>
-        <p onClick={()=>navigate('')}>CCTV Cameras</p>
+        <p onClick={()=>navigate('/shop/cctv')}>CCTV Cameras</p>
     </div>
     <div ref={refs.supportRef} className={showSupportsubmenu ? 'supportsubmenu active' : 'supportsubmenu'}>
           <p>Contact Us</p>

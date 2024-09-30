@@ -48,6 +48,8 @@ import HomeTheaterPage from './components/HomeTheater/HomeTheaterPage/HomeTheate
 import HomeTheaterInfo from './components/HomeTheater/HomeTheaterInfo/HomeTheaterInfo';
 import SmartLightingPage from './components/SmartLighting/SmartLightingPage/SmartLightingPage';
 import SmartLightingInfo from './components/SmartLighting/SmartLightingInfo/SmartLightingInfo';
+import CCTVPage from './components/CCTV/CCTVPage/CCTVPage';
+import CCTVInfo from './components/CCTV/CCTVInfo/CCTVInfo';
 
 function App() {
   
@@ -113,6 +115,8 @@ function App() {
         <Route path='/shop/home-theaters/:ht_name' element={<HomeTheaterInfo/>}></Route>
         <Route path='/shop/smart-lighting' element={<SmartLightingPage/>}></Route>
         <Route path='/shop/smart-lighting/:sl_name' element={<SmartLightingInfo/>}></Route>
+        <Route path='/shop/cctv' element={<CCTVPage/>}></Route>
+        <Route path='/shop/cctv/:cctv_name' element={<CCTVInfo/>}></Route>
       </Routes>
     </BrowserRouter>
     </OrderDetailsProvider>

@@ -16,7 +16,7 @@ class BaseProduct(models.Model):
     rating = models.DecimalField(max_digits=3, decimal_places=2, default=0)
     num_reviews = models.IntegerField(default=0)
     dimensions = models.CharField(max_length=255, null=True, blank=True)
-    weight = models.DecimalField(max_digits=6, decimal_places=4, null=True, blank=True)
+    weight = models.CharField(max_length=255, null=True, blank=True)
     warranty = models.CharField(max_length=255, null=True, blank=True)
     color = models.CharField(max_length=100, null=True, blank=True)
     
@@ -479,6 +479,25 @@ class SmartLighting(BaseProduct):
 
     def __str__(self):
         return f"{self.name} ({self.power_consumption}, {self.bulb_type})"
+
+class CCTVCamera(BaseProduct):
+    resolution = models.CharField(max_length=100, null=True, blank=True)  
+    field_of_view = models.CharField(max_length=100, null=True, blank=True) 
+    night_vision = models.BooleanField(default=False)  
+    connectivity = models.CharField(max_length=255, null=True, blank=True)
+    storage_type = models.CharField(max_length=255, null=True, blank=True) 
+    power_supply = models.CharField(max_length=255, null=True, blank=True) 
+    motion_detection = models.BooleanField(default=False)  
+    two_way_audio = models.BooleanField(default=False) 
+    loop_recording = models.BooleanField(default=False) 
+    sensor = models.CharField(max_length=255, null=True, blank=True)
+    material = models.CharField(max_length=255, null=True, blank=True)
+    weatherproof_rating = models.CharField(max_length=100, null=True, blank=True) 
+    installation_type = models.CharField(max_length=255, null=True, blank=True)  
+    included_items = models.TextField(null=True, blank=True)
+    
+    def __str__(self):
+        return f"{self.name} ({self.resolution})"
     
 admin.site.register(Laptop)
 admin.site.register(Speaker)
@@ -497,3 +516,4 @@ admin.site.register(Monitor)
 admin.site.register(KeyboardMouseCombo)
 admin.site.register(HomeTheater)
 admin.site.register(SmartLighting)
+admin.site.register(CCTVCamera)

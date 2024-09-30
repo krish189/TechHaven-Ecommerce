@@ -333,7 +333,7 @@ function Header() {
     <div ref={refs.smartHomeRef} className={showSmarthomesubmenu ? 'smarthomesubmenu active' : 'smarthomesubmenu'}>
           <p onClick={()=>navigate('/shop/home-theaters')}>Home Theater</p>
           <p onClick={()=>navigate('/shop/smart-lighting')}>Smart Lighting</p>
-          <p>CCTV Cameras</p>
+          <p onClick={()=>navigate('/shop/cctv')}>CCTV Cameras</p>
     </div>
     <div ref={refs.supportRef} className={showSupportsubmenu ? 'supportsubmenu active' : 'supportsubmenu'}>
           <p>Contact Us</p>
