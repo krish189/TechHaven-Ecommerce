@@ -9,11 +9,13 @@ function Category() {
   const [showSupportsubmenu, setShowSupportsubmenu] = useState(false);
   const [showAccessoriessubmenu, setShowAccessoriessubmenu] = useState(false);
   const [showPeripheralssubmenu, setShowPeripheralssubmenu] = useState(false);
+  const [showSmartHomesubmenu, setSmartHomesubmenu] = useState(false);
 
   const refs = {
     supportRef: useRef(null),
     accessoriesRef: useRef(null),
-    peripheralsRef: useRef(null)
+    peripheralsRef: useRef(null),
+    smartHomeRef: useRef(null)
   }
 
   
@@ -28,6 +30,10 @@ function Category() {
   const displayPeripheralssubmenu = () => {
     setShowPeripheralssubmenu(!showPeripheralssubmenu);
   };
+  
+  const displaySmartHomesubmenu = () => {
+    setSmartHomesubmenu(!showSmartHomesubmenu);
+  };
 
   const handleClickOutside = (event) => {
     if (refs.supportRef.current && !refs.supportRef.current.contains(event.target))
@@ -41,6 +47,10 @@ function Category() {
     if (refs.peripheralsRef.current && !refs.peripheralsRef.current.contains(event.target))
     {
       setShowPeripheralssubmenu(false);
+    }
+    if (refs.smartHomeRef.current && !refs.smartHomeRef.current.contains(event.target))
+    {
+      setSmartHomesubmenu(false);
     }
   }
   useEffect(() => {
@@ -62,7 +72,7 @@ function Category() {
                 <li onClick={()=>navigate('/shop/microphones')}>Microphones</li>
                 <li onClick={displayAccessoriessubmenu}>Accessories<img src={down} alt='down' className='downicon'></img></li>
                 <li onClick={displayPeripheralssubmenu}>Peripherals<img src={down} alt='down' className='downicon'></img></li>
-                <li>Smart Home & CCTV</li>
+                <li onClick={displaySmartHomesubmenu}>Smart Home & CCTV <img src={down} alt='down' className='downicon'></img></li>
                 <li>Smart Watch</li>
                 <li onClick={displaySupportsubmenu}>Support <img src={down} alt='down' className='downicon'></img></li>
             </ul>
@@ -80,6 +90,11 @@ function Category() {
         <p onClick={()=>navigate('/shop/peripherals/mouse')}>Mouses</p>
         <p onClick={()=>navigate('/shop/peripherals/monitor')}>Monitors</p>
         <p onClick={()=>navigate('/shop/peripherals/combos')}>Keyboard Mouse Combo</p>
+    </div>
+    <div ref={refs.smartHomeRef} className={showSmartHomesubmenu ? 'categorysmarthomesubmenu active' : 'categorysmarthomesubmenu'}>
+        <p onClick={()=>navigate('/shop/home-theaters')}>Home Theater</p>
+        <p onClick={()=>navigate('')}>Smart Lighting</p>
+        <p onClick={()=>navigate('')}>CCTV Cameras</p>
     </div>
     <div ref={refs.supportRef} className={showSupportsubmenu ? 'supportsubmenu active' : 'supportsubmenu'}>
           <p>Contact Us</p>

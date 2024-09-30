@@ -457,10 +457,29 @@ class HomeTheater(BaseProduct):
     voice_assistant_integration = models.BooleanField(default=False)
     mounting_options = models.CharField(max_length=255, null=True, blank=True)
     battery_backup = models.CharField(max_length=50, null=True, blank=True)
+    included_items = models.TextField(null=True, blank=True)
 
     def __str__(self):
         return f"{self.name}"
 
+class SmartLighting(BaseProduct):
+    power_consumption = models.CharField(max_length=100)  
+    luminous_flux = models.CharField(max_length=255, null=True, blank=True)
+    color_temperature = models.CharField(max_length=255, null=True, blank=True)
+    bulb_type = models.CharField(max_length=255, null=True, blank=True)
+    connectivity = models.CharField(max_length=255, null=True, blank=True)  
+    compatibility = models.CharField(max_length=255, null=True, blank=True)
+    smart_features = models.TextField(null=True, blank=True) 
+    dimmable = models.BooleanField(default=False)
+    color_changing = models.BooleanField(default=False)
+    total_colors = models.CharField(max_length=255, null=True, blank=True)
+    voltage = models.CharField(max_length=100, null=True, blank=True) 
+    lifespan = models.CharField(max_length=100, null=True, blank=True)  
+    base_type = models.CharField(max_length=255, null=True, blank=True)  
+
+    def __str__(self):
+        return f"{self.name} ({self.power_consumption}, {self.bulb_type})"
+    
 admin.site.register(Laptop)
 admin.site.register(Speaker)
 admin.site.register(HpEb)

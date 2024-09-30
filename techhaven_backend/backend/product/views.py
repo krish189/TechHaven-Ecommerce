@@ -1,7 +1,7 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from .models import Laptop, Speaker, HpEb, LedTv, LedProjector, Microphone, ComputerAccessories, LaptopAccessories, MobileAccessories, HdmiAccessories, BarcodeScanner, Keyboard, Mouse, Monitor, KeyboardMouseCombo, HomeTheater
-from .serializers import LaptopSerializer, SpeakerSerializer, HpEbSerializer, LedTvSerializer, LedProjectorSerializer, MicrophoneSerializer, ComputerAccessoriesSerializer, LaptopAccessoriesSerializer, MobileAccessoriesSerializer, HdmiAccessoriesSerializer, BarcodeScannerSerializer, KeyboardSerializer, MouseSerializer, MonitorSerializer, KeyboardMouseSerializer, HomeTheaterSerializer
+from .models import Laptop, Speaker, HpEb, LedTv, LedProjector, Microphone, ComputerAccessories, LaptopAccessories, MobileAccessories, HdmiAccessories, BarcodeScanner, Keyboard, Mouse, Monitor, KeyboardMouseCombo, HomeTheater, SmartLighting
+from .serializers import LaptopSerializer, SpeakerSerializer, HpEbSerializer, LedTvSerializer, LedProjectorSerializer, MicrophoneSerializer, ComputerAccessoriesSerializer, LaptopAccessoriesSerializer, MobileAccessoriesSerializer, HdmiAccessoriesSerializer, BarcodeScannerSerializer, KeyboardSerializer, MouseSerializer, MonitorSerializer, KeyboardMouseSerializer, HomeTheaterSerializer, SmartLightingSerializer
 
 @api_view(['POST'])
 def filter_laptops(request):
@@ -344,4 +344,22 @@ def filter_home_theater_by_name(request):
             return Response(serializer.data)
         except HomeTheater.DoesNotExist:
             return Response({'error': 'Home Theater not found'}, status=404)
+    return Response({'error': 'Name parameter is missing'}, status=400)
+
+@api_view(['POST'])
+def filter_smart_light(request):
+    smart_light = SmartLighting.objects.all()
+    serializer = SmartLightingSerializer(smart_light, many=True)
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def filter_smart_light_by_name(request):
+    name = request.data.get('name')
+    if name:
+        try:
+            smart_light = SmartLighting.objects.get(name=name)
+            serializer = SmartLightingSerializer(smart_light)  
+            return Response(serializer.data)
+        except SmartLighting.DoesNotExist:
+            return Response({'error': 'Smart Light not found'}, status=404)
     return Response({'error': 'Name parameter is missing'}, status=400)

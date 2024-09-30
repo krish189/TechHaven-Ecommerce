@@ -44,6 +44,8 @@ import MonitorPage from './components/Monitor/MonitorPage/MonitorPage';
 import MonitorInfo from './components/Monitor/MonitorInfo/MonitorInfo';
 import KeyboardMousePage from './components/KeyboardMouseCombo/KeyboardMousePage/KeyboardMousePage';
 import KeyboardMouseInfo from './components/KeyboardMouseCombo/KeyboardMouseInfo/KeyboardMouseInfo';
+import HomeTheaterPage from './components/HomeTheater/HomeTheaterPage/HomeTheaterPage';
+import HomeTheaterInfo from './components/HomeTheater/HomeTheaterInfo/HomeTheaterInfo';
 
 function App() {
   
@@ -105,6 +107,8 @@ function App() {
         <Route path='/shop/peripherals/monitor/:monitor_type/:monitorname' element={<MonitorInfo/>}></Route>
         <Route path='/shop/peripherals/combos' element={<KeyboardMousePage/>}></Route>
         <Route path='/shop/peripherals/combos/:combos_name' element={<KeyboardMouseInfo/>}></Route>
+        <Route path='/shop/home-theaters' element={<HomeTheaterPage/>}></Route>
+        <Route path='/shop/home-theaters/:ht_name' element={<HomeTheaterInfo/>}></Route>
       </Routes>
     </BrowserRouter>
     </OrderDetailsProvider>

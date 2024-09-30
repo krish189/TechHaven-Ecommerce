@@ -85,3 +85,27 @@ ul li:hover
 {
     display: block;
 }
+.categorysmarthomesubmenu
+{
+    position: fixed;
+    top: 8.5rem;
+    left: 67.4rem;
+    width: 14rem;
+    background-color: white;
+    z-index: 999; 
+    display: none;
+}
+.categorysmarthomesubmenu p
+{
+    padding: 10px;
+    padding-left: 15px;
+}
+.categorysmarthomesubmenu p:hover
+{
+    cursor: pointer;
+    background-color: #E6F1FC;
+}
+.categorysmarthomesubmenu.active
+{
+    display: block;
+}

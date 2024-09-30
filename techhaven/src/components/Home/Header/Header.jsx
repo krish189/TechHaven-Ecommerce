@@ -179,6 +179,18 @@ function Header() {
     {
       setShowPeripheralsubmenu(false);
     }
+    if (refs.keyboardRef.current && !refs.keyboardRef.current.contains(event.target))
+    {
+      setShowKeyboardCategory(false);
+    }
+    if (refs.mouseRef.current && !refs.mouseRef.current.contains(event.target))
+    {
+      setShowMouseCategory(false);
+    }
+    if (refs.monitorRef.current && !refs.monitorRef.current.contains(event.target))
+    {
+      setShowMonitorCategory(false);
+    }
     if (refs.supportRef.current && !refs.supportRef.current.contains(event.target))
     {
       setShowSupportsubmenu(false);
@@ -315,7 +327,7 @@ function Header() {
       <p onClick={()=>navigate(`/shop/peripherals/monitor/${encodeURIComponent('Portable Monitor')}`)}>Portable Monitor</p>
     </div>
     <div ref={refs.smartHomeRef} className={showSmarthomesubmenu ? 'smarthomesubmenu active' : 'smarthomesubmenu'}>
-          <p>Home Theater</p>
+          <p onClick={()=>navigate('/shop/home-theaters')}>Home Theater</p>
           <p>Smart Lighting</p>
           <p>CCTV Cameras</p>
     </div>
