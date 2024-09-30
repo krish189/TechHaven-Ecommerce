@@ -148,7 +148,7 @@ function HomeTheaterInfo() {
           <p><span className='spechead'>Model Name</span><span className='specvalue' style={{position: 'relative', left: '6.8rem'}}>{ht.name.replace(/\s*\(.*?\)/, '')}</span></p>
           <p><span className='spechead'>Colour</span><span className='specvalue' style={{position: 'relative', left: '9.7rem'}}>{ht.color}</span></p>
           <p><span className='spechead'>Dimensions</span><span className='specvalue' style={{position: 'relative', left: '7.3rem'}}>{ht.dimensions}</span></p>
-          <p><span className='spechead'>Weight</span><span className='specvalue' style={{position: 'relative', left: '9.3rem'}}>{ht.weight}kg</span></p>
+          <p><span className='spechead'>Weight</span><span className='specvalue' style={{position: 'relative', left: '9.3rem'}}>{ht.weight} kg</span></p>
           {ht.audio_output_power && <p><span className='spechead'>Audio Output Power</span><span className='specvalue' style={{position: 'relative', left: '3rem'}}>{ht.audio_output_power}</span></p>}
           {ht.number_of_hdmi_ports && <p><span className='spechead'>Total HDMI Ports</span><span className='specvalue' style={{position: 'relative', left: '4.7rem'}}>{ht.number_of_hdmi_ports === 1 ? '1 port' : `${ht.number_of_hdmi_ports} ports`}</span></p>}
           {ht.surround_sound && <p><span className='spechead'>Surround Sound</span><span className='specvalue' style={{position: 'relative', left: '5.4rem'}}>Yes</span></p>}

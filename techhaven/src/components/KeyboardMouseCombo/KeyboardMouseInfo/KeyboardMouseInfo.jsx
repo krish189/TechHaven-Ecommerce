@@ -147,7 +147,7 @@ function KeyboardMouseInfo() {
           <p><span className='spechead'>Model Name</span><span className='specvalue' style={{position: 'relative', left: '6.8rem'}}>{combos.name.replace(/\s*\(.*?\)/, '')}</span></p>
           <p><span className='spechead'>Colour</span><span className='specvalue' style={{position: 'relative', left: '9.7rem'}}>{combos.color}</span></p>
           <p><span className='spechead'>Package Dimensions</span><span className='specvalue' style={{position: 'relative', left: '3.2rem'}}>{combos.dimensions}</span></p>
-          <p><span className='spechead'>Package Weight</span><span className='specvalue' style={{position: 'relative', left: '5.3rem'}}>{combos.weight}kg</span></p>
+          <p><span className='spechead'>Package Weight</span><span className='specvalue' style={{position: 'relative', left: '5.3rem'}}>{combos.weight} kg</span></p>
           <p><span className='spechead'>Keyboard :</span></p>
           {combos.keyboard_type && <p><span className='spechead'>Keyboard Type</span><span className='specvalue' style={{position: 'relative', left: '5.8rem'}}>{combos.keyboard_type}</span></p>}
           <p><span className='spechead'>Dimensions</span><span className='specvalue' style={{position: 'relative', left: '7.4rem'}}>{combos.keyboard_dimension}</span></p>

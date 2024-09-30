@@ -148,7 +148,7 @@ function SpeakerInfoShop() {
         <p><span className='spechead'>Model Name</span><span className='specvalue' style={{position: 'relative', left: '6.8rem'}}>{speaker.name.replace(/\s*\(.*?\)/, '')}</span></p>
         <p><span className='spechead'>Colour</span><span className='specvalue' style={{position: 'relative', left: '9.7rem'}}>{speaker.color}</span></p>
         <p><span className='spechead'>Dimensions</span><span className='specvalue' style={{position: 'relative', left: '7.3rem'}}>{speaker.dimensions}</span></p>
-        <p><span className='spechead'>Weight</span><span className='specvalue' style={{position: 'relative', left: '9.3rem'}}>{speaker.weight}kg</span></p>
+        <p><span className='spechead'>Weight</span><span className='specvalue' style={{position: 'relative', left: '9.3rem'}}>{speaker.weight} kg</span></p>
         {speaker.power_output && <p><span className='spechead'>Power Output</span><span className='specvalue' style={{position: 'relative', left: '6rem'}}>{speaker.power_output}</span></p>}
         <p><span className='spechead'>Connectivity</span><span className='specvalue' style={{position: 'relative', left: '6.5rem'}}>{speaker.connectivity}</span></p>
         {speaker.audio_inputs && <p><span className='spechead'>Audio Inputs</span><span className='specvalue' style={{position: 'relative', left: '6.2rem'}}>{speaker.audio_inputs}</span></p>}

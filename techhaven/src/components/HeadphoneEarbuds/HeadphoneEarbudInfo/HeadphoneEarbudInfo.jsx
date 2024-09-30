@@ -147,7 +147,7 @@ function HeadphoneEarbudInfo() {
           <p><span className='spechead'>Model Name</span><span className='specvalue' style={{position: 'relative', left: '6.8rem'}}>{hp_eb.name.replace(/\s*\(.*?\)/, '')}</span></p>
           <p><span className='spechead'>Colour</span><span className='specvalue' style={{position: 'relative', left: '9.7rem'}}>{hp_eb.color}</span></p>
           <p><span className='spechead'>Dimensions</span><span className='specvalue' style={{position: 'relative', left: '7.3rem'}}>{hp_eb.dimensions}</span></p>
-          <p><span className='spechead'>Weight</span><span className='specvalue' style={{position: 'relative', left: '9.3rem'}}>{hp_eb.weight}kg</span></p>
+          <p><span className='spechead'>Weight</span><span className='specvalue' style={{position: 'relative', left: '9.3rem'}}>{hp_eb.weight} kg</span></p>
           <p><span className='spechead'>Type</span><span className='specvalue' style={{position: 'relative', left: '10.4rem'}}>{hp_eb.design_type}</span></p>
           <p><span className='spechead'>Connectivity</span><span className='specvalue' style={{position: 'relative', left: '6.7rem'}}>{hp_eb.connectivity}</span></p>
           <p><span className='spechead'>Microphone</span><span className='specvalue' style={{position: 'relative', left: '7rem'}}>{hp_eb.microphone ? 'Yes' : 'No' }</span></p>
@@ -169,7 +169,7 @@ function HeadphoneEarbudInfo() {
           {hp_eb.microphone_sensitivity && <p><span className='spechead'>Microphone Sensitivity</span><span className='specvalue' style={{position: 'relative', left: '1.5rem'}}>{hp_eb.microphone_sensitivity}</span></p>}
           {hp_eb.ambient_sound_mode && <p><span className='spechead'>Ambient Sound Mode</span><span className='specvalue' style={{position: 'relative', left: '2.1rem'}}>{hp_eb.ambient_sound_mode ? 'Yes' : 'No'}</span></p>}
           {hp_eb.anc_levels && <p><span className='spechead'>ANC Levels</span><span className='specvalue' style={{position: 'relative', left: '7.1rem'}}>{hp_eb.anc_levels}</span></p>}
-          {hp_eb.comfort_features && <p><span className='spechead'>Features</span><span className='specvalue' style={{position: 'relative', left: '5rem'}}>{hp_eb.comfort_features}</span></p>}
+          {hp_eb.comfort_features && <p><span className='spechead'>Features</span><span className='specvalue' style={{position: 'relative', left: '0.5rem', display: 'flex'}}>{hp_eb.comfort_features}</span></p>}
           <hr style={{color:'gray'}}></hr>
           <p className='spechead'>About this item</p>
           <p className='descpara'>{hp_eb.description_para}</p>

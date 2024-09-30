@@ -147,7 +147,7 @@ function BarcodescannerInfo() {
           <p><span className='spechead'>Model Name</span><span className='specvalue' style={{position: 'relative', left: '6.8rem'}}>{bs.name.replace(/\s*\(.*?\)/, '')}</span></p>
           <p><span className='spechead'>Colour</span><span className='specvalue' style={{position: 'relative', left: '9.7rem'}}>{bs.color}</span></p>
           <p><span className='spechead'>Dimensions</span><span className='specvalue' style={{position: 'relative', left: '7.3rem'}}>{bs.dimensions}</span></p>
-          <p><span className='spechead'>Weight</span><span className='specvalue' style={{position: 'relative', left: '9.3rem'}}>{bs.weight}kg</span></p>
+          <p><span className='spechead'>Weight</span><span className='specvalue' style={{position: 'relative', left: '9.3rem'}}>{bs.weight} kg</span></p>
           {bs.scanner_type && <p><span className='spechead'>Scanner Type</span><span className='specvalue' style={{position: 'relative', left: '6.5rem'}}>{bs.scanner_type}</span></p>}
           {bs.scan_speed && <p><span className='spechead'>Scan Speed</span><span className='specvalue' style={{position: 'relative', left: '7.4rem'}}>{bs.scan_speed}</span></p>}
           {bs.battery_life && <p><span className='spechead'>Battery Life</span><span className='specvalue' style={{position: 'relative', left: '7.3rem'}}>{bs.battery_life}</span></p>}

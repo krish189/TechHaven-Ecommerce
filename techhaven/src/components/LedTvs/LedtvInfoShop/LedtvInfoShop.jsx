@@ -154,7 +154,7 @@ function LedtvInfoShop() {
             <p><span className='spechead'>Model Name</span><span className='specvalue' style={{position: 'relative', left: '6.8rem'}}>{ledtv.name.replace(/\s*\(.*?\)/, '')}</span></p>
             <p><span className='spechead'>Colour</span><span className='specvalue' style={{position: 'relative', left: '9.7rem'}}>{ledtv.color}</span></p>
             <p><span className='spechead'>Dimensions</span><span className='specvalue' style={{position: 'relative', left: '7.3rem'}}>{ledtv.dimensions}</span></p>
-            <p><span className='spechead'>Weight</span><span className='specvalue' style={{position: 'relative', left: '9.3rem'}}>{ledtv.weight}kg</span></p>
+            <p><span className='spechead'>Weight</span><span className='specvalue' style={{position: 'relative', left: '9.3rem'}}>{ledtv.weight} kg</span></p>
             <p><span className='spechead'>Screen Size</span><span className='specvalue' style={{position: 'relative', left: '7.4rem'}}>{ledtv.screen_size}</span></p>
             <p><span className='spechead'>Resolution</span><span className='specvalue' style={{position: 'relative', left: '7.6rem'}}>{ledtv.resolution}</span></p>
             {!expand && (

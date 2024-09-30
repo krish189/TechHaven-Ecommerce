@@ -147,7 +147,7 @@ function MobileAccessoriesInfo() {
         <p><span className='spechead'>Model Name</span><span className='specvalue'>{mobileaccessories.name.replace(/\s*\(.*?\)/, '')}</span></p>
         <p><span className='spechead'>Colour</span><span className='specvalue' style={{position: 'relative', left: '9.8rem'}}>{mobileaccessories.color}</span></p>
         <p><span className='spechead'>Dimensions</span><span className='specvalue' style={{position: 'relative', left: '7.4rem'}}>{mobileaccessories.dimensions}</span></p>
-        <p><span className='spechead'>Weight</span><span className='specvalue' style={{position: 'relative', left: '9.4rem'}}>{mobileaccessories.weight}kg</span></p>
+        <p><span className='spechead'>Weight</span><span className='specvalue' style={{position: 'relative', left: '9.4rem'}}>{mobileaccessories.weight} kg</span></p>
         <p><span className='spechead'>Category</span><span className='specvalue' style={{position: 'relative', left: '8.4rem'}}>{mobileaccessories.accessory_category}</span></p>
         {mobileaccessories.holder_type && <p><span className='spechead'>Holder Type</span><span className='specvalue' style={{position: 'relative', left: '6.9rem'}}>{mobileaccessories.holder_type}</span></p>}
         {mobileaccessories.mounting_mechanism && <p><span className='spechead'>Mounting Mechanism</span><span className='specvalue' style={{position: 'relative', left: '2.4rem'}}>{mobileaccessories.mounting_mechanism}</span></p>}

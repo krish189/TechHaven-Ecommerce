@@ -148,7 +148,7 @@ function LedProjectorInfo() {
           <p><span className='spechead'>Model Name</span><span className='specvalue' style={{position: 'relative', left: '6.8rem'}}>{ledprojector.name.replace(/\s*\(.*?\)/, '')}</span></p>
           <p><span className='spechead'>Colour</span><span className='specvalue' style={{position: 'relative', left: '9.7rem'}}>{ledprojector.color}</span></p>
           <p><span className='spechead'>Dimensions</span><span className='specvalue' style={{position: 'relative', left: '7.3rem'}}>{ledprojector.dimensions}</span></p>
-          <p><span className='spechead'>Weight</span><span className='specvalue' style={{position: 'relative', left: '9.3rem'}}>{ledprojector.weight}kg</span></p>
+          <p><span className='spechead'>Weight</span><span className='specvalue' style={{position: 'relative', left: '9.3rem'}}>{ledprojector.weight} kg</span></p>
           {ledprojector.projector_type && <p><span className='spechead'>Projector Type</span><span className='specvalue' style={{position: 'relative', left: '5.8rem'}}>{ledprojector.projector_type}</span></p>}
           {ledprojector.native_resolution && <p><span className='spechead'>Native Resolution</span><span className='specvalue' style={{position: 'relative', left: '4.2rem'}}>{ledprojector.native_resolution}</span></p>}
           {ledprojector.brightness && <p><span className='spechead'>Brightness</span><span className='specvalue' style={{position: 'relative', left: '7.5rem'}}>{ledprojector.brightness} lumens</span></p>}

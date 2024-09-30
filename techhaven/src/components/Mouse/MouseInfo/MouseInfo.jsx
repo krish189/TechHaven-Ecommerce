@@ -147,7 +147,7 @@ function MouseInfo() {
         <p><span className='spechead'>Model Name</span><span className='specvalue'>{mouse.name.replace(/\s*\(.*?\)/, '')}</span></p>
         <p><span className='spechead'>Colour</span><span className='specvalue' style={{position: 'relative', left: '9.8rem'}}>{mouse.color}</span></p>
         <p><span className='spechead'>Dimensions</span><span className='specvalue' style={{position: 'relative', left: '7.4rem'}}>{mouse.dimensions}</span></p>
-        <p><span className='spechead'>Weight</span><span className='specvalue' style={{position: 'relative', left: '9.4rem'}}>{mouse.weight}kg</span></p>
+        <p><span className='spechead'>Weight</span><span className='specvalue' style={{position: 'relative', left: '9.4rem'}}>{mouse.weight} kg</span></p>
         <p><span className='spechead'>Category</span><span className='specvalue' style={{position: 'relative', left: '8.5rem'}}>{mouse.peripherals_category}</span></p>
         <p><span className='spechead'>Mouse Type</span><span className='specvalue' style={{position: 'relative', left: '7.1rem'}}>{mouse.mouse_type}</span></p>
         {mouse.cable_length && <p><span className='spechead'>Cable Length</span><span className='specvalue' style={{position: 'relative', left: '6.7rem'}}>{mouse.cable_length}</span></p>}

@@ -147,7 +147,7 @@ function SmartLightingInfo() {
           <p><span className='spechead'>Model Name</span><span className='specvalue' style={{position: 'relative', left: '6.8rem'}}>{sl.name.replace(/\s*\(.*?\)/, '')}</span></p>
           <p><span className='spechead'>Colour</span><span className='specvalue' style={{position: 'relative', left: '9.7rem'}}>{sl.color}</span></p>
           <p><span className='spechead'>Dimensions</span><span className='specvalue' style={{position: 'relative', left: '7.3rem'}}>{sl.dimensions}</span></p>
-          <p><span className='spechead'>Weight</span><span className='specvalue' style={{position: 'relative', left: '9.3rem'}}>{sl.weight}kg</span></p>
+          <p><span className='spechead'>Weight</span><span className='specvalue' style={{position: 'relative', left: '9.3rem'}}>{sl.weight} kg</span></p>
           {sl.power_consumption && <p><span className='spechead'>Power Consumption</span><span className='specvalue' style={{position: 'relative', left: '3.2rem'}}>{sl.power_consumption}</span></p>}
           {sl.luminous_flux && <p><span className='spechead'>Luminous Flux</span><span className='specvalue' style={{position: 'relative', left: '5.9rem'}}>{sl.luminous_flux}</span></p>}
           {sl.bulb_type && <p><span className='spechead'>Bulb Type</span><span className='specvalue' style={{position: 'relative', left: '8.1rem'}}>{sl.bulb_type}</span></p>}

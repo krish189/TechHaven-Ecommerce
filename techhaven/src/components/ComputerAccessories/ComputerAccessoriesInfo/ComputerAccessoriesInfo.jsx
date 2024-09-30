@@ -147,7 +147,7 @@ function ComputerAccessoriesInfo() {
         <p><span className='spechead'>Model Name</span><span className='specvalue'>{computeraccessories.name.replace(/\s*\(.*?\)/, '')}</span></p>
         <p><span className='spechead'>Colour</span><span className='specvalue' style={{position: 'relative', left: '9.8rem'}}>{computeraccessories.color}</span></p>
         <p><span className='spechead'>Dimensions</span><span className='specvalue' style={{position: 'relative', left: '7.3rem'}}>{computeraccessories.dimensions}</span></p>
-        <p><span className='spechead'>Weight</span><span className='specvalue' style={{position: 'relative', left: '9.3rem'}}>{computeraccessories.weight}kg</span></p>
+        <p><span className='spechead'>Weight</span><span className='specvalue' style={{position: 'relative', left: '9.3rem'}}>{computeraccessories.weight} kg</span></p>
         <p><span className='spechead'>Category</span><span className='specvalue' style={{position: 'relative', left: '8.3rem'}}>{computeraccessories.accessory_category}</span></p>
         {computeraccessories.storage_capacity &&  <p><span className='spechead'>Storage Capacity</span><span className='specvalue' style={{position: 'relative', left: '4.8rem'}}>{computeraccessories.storage_capacity}</span></p>}
         {computeraccessories.interface_type &&  <p><span className='spechead'>Interface Type</span><span className='specvalue' style={{position: 'relative', left: '5.9rem'}}>{computeraccessories.interface_type}</span></p>}

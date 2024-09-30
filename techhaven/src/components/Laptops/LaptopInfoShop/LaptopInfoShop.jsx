@@ -156,7 +156,7 @@ function LaptopInfoShop() {
         <p><span className='spechead'>Graphics</span><span className='specvalue' style={{position: 'relative', left: '8.8rem'}}>{laptop.graphics}</span></p>
         <p><span className='spechead'>Operating System</span><span className='specvalue' style={{position: 'relative', left: '4.4rem'}}>{laptop.operating_system}</span></p>
         <p><span className='spechead'>Dimensions</span><span className='specvalue' style={{position: 'relative', left: '7.3rem'}}>{laptop.dimensions}</span></p>
-        <p><span className='spechead'>Weight</span><span className='specvalue' style={{position: 'relative', left: '9.3rem'}}>{laptop.weight}kg</span></p>
+        <p><span className='spechead'>Weight</span><span className='specvalue' style={{position: 'relative', left: '9.3rem'}}>{laptop.weight} kg</span></p>
         <hr style={{color:'gray'}}></hr>
         <p className='spechead'>About this item</p>
         <p className='descpara'>{laptop.description_para}</p>

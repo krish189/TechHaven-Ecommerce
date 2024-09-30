@@ -148,7 +148,7 @@ function MicrophoneInfo() {
           <p><span className='spechead'>Model Name</span><span className='specvalue' style={{position: 'relative', left: '6.8rem'}}>{microphone.name.replace(/\s*\(.*?\)/, '')}</span></p>
           <p><span className='spechead'>Colour</span><span className='specvalue' style={{position: 'relative', left: '9.7rem'}}>{microphone.color}</span></p>
           <p><span className='spechead'>Dimensions</span><span className='specvalue' style={{position: 'relative', left: '7.3rem'}}>{microphone.dimensions}</span></p>
-          <p><span className='spechead'>Weight</span><span className='specvalue' style={{position: 'relative', left: '9.3rem'}}>{microphone.weight}kg</span></p>
+          <p><span className='spechead'>Weight</span><span className='specvalue' style={{position: 'relative', left: '9.3rem'}}>{microphone.weight} kg</span></p>
           {microphone.microphone_type && <p><span className='spechead'>Type</span><span className='specvalue' style={{position: 'relative', left: '10.4rem'}}>{microphone.microphone_type}</span></p>}
           {microphone.connectivity && <p><span className='spechead'>Connectivity</span><span className='specvalue' style={{position: 'relative', left: '6.8rem'}}>{microphone.connectivity}</span></p>}
           {microphone.polar_pattern && <p><span className='spechead'>Polar Pattern</span><span className='specvalue' style={{position: 'relative', left: '6.5rem'}}>{microphone.polar_pattern}</span></p>}

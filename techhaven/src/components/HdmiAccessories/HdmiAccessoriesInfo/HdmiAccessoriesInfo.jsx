@@ -147,7 +147,7 @@ function HdmiAccessoriesInfo() {
         <p><span className='spechead'>Model Name</span><span className='specvalue'>{hdmiaccessories.name.replace(/\s*\(.*?\)/, '')}</span></p>
         <p><span className='spechead'>Colour</span><span className='specvalue' style={{position: 'relative', left: '9.8rem'}}>{hdmiaccessories.color}</span></p>
         <p><span className='spechead'>Dimensions</span><span className='specvalue' style={{position: 'relative', left: '7.4rem'}}>{hdmiaccessories.dimensions}</span></p>
-        <p><span className='spechead'>Weight</span><span className='specvalue' style={{position: 'relative', left: '9.4rem'}}>{hdmiaccessories.weight}kg</span></p>
+        <p><span className='spechead'>Weight</span><span className='specvalue' style={{position: 'relative', left: '9.4rem'}}>{hdmiaccessories.weight} kg</span></p>
         <p><span className='spechead'>Category</span><span className='specvalue' style={{position: 'relative', left: '8.4rem'}}>{hdmiaccessories.accessory_category}</span></p>
         {hdmiaccessories.cable_length && <p><span className='spechead'>Cable Length</span><span className='specvalue' style={{position: 'relative', left: '6.5rem'}}>{hdmiaccessories.cable_length}</span></p>}
         {hdmiaccessories.cable_type && <p><span className='spechead'>Cable Type</span><span className='specvalue' style={{position: 'relative', left: '7.5rem'}}>{hdmiaccessories.cable_type}</span></p>}

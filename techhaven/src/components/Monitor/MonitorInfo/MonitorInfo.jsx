@@ -147,7 +147,7 @@ function MonitorInfo() {
         <p><span className='spechead'>Model Name</span><span className='specvalue'>{monitor.name.replace(/\s*\(.*?\)/, '')}</span></p>
         <p><span className='spechead'>Colour</span><span className='specvalue' style={{position: 'relative', left: '9.8rem'}}>{monitor.color}</span></p>
         <p><span className='spechead'>Dimensions</span><span className='specvalue' style={{position: 'relative', left: '7.4rem'}}>{monitor.dimensions}</span></p>
-        <p><span className='spechead'>Weight</span><span className='specvalue' style={{position: 'relative', left: '9.4rem'}}>{monitor.weight}kg</span></p>
+        <p><span className='spechead'>Weight</span><span className='specvalue' style={{position: 'relative', left: '9.4rem'}}>{monitor.weight} kg</span></p>
         <p><span className='spechead'>Category</span><span className='specvalue' style={{position: 'relative', left: '8.5rem'}}>{monitor.peripherals_category}</span></p>
         <p><span className='spechead'>Monitor Type</span><span className='specvalue' style={{position: 'relative', left: '6.4rem'}}>{monitor.monitor_type}</span></p>
         <p><span className='spechead'>Screen Size</span><span className='specvalue' style={{position: 'relative', left: '7.5rem'}}>{monitor.screen_size}</span></p>

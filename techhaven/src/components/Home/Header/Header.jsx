@@ -310,9 +310,6 @@ function Header() {
           <p className={showMouseCategory ? 'clickedcategory' : ''}  onClick={displayMouseCategory}>Mouses<img src={sidearrow} alt='sidearrow' style={{width: '13px', height: '15px', position: 'relative', left: '8.2rem'}} onClick={displayMouseCategory}/></p>
           <p className={showMonitorCategory ? 'clickedcategory' : ''} onClick={displayMonitorCategory}>Monitors<img src={sidearrow} alt='sidearrow' style={{width: '13px', height: '15px', position: 'relative', left: '7.6rem'}} onClick={displayMonitorCategory}/></p>
           <p onClick={()=>navigate('/shop/peripherals/combos')}>Keyboard Mouse Combo</p>
-          <p>Webcams</p>
-          <p>Printers</p>
-          <p>Modems</p>
     </div>
     <div ref={refs.keyboardRef} className={showKeyboardCategory ? 'keyboardcategory active' : 'keyboardcategory'}>
       <h6>Keyboards</h6>
@@ -333,7 +330,7 @@ function Header() {
     <div ref={refs.smartHomeRef} className={showSmarthomesubmenu ? 'smarthomesubmenu active' : 'smarthomesubmenu'}>
           <p onClick={()=>navigate('/shop/home-theaters')}>Home Theater</p>
           <p onClick={()=>navigate('/shop/smart-lighting')}>Smart Lighting</p>
-          <p onClick={()=>navigate('/shop/cctv')}>CCTV Cameras</p>
+          <p onClick={()=>navigate('/shop/cctv')}>CCTV Camera</p>
     </div>
     <div ref={refs.supportRef} className={showSupportsubmenu ? 'supportsubmenu active' : 'supportsubmenu'}>
           <p>Contact Us</p>
