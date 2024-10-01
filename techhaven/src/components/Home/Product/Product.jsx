@@ -4,6 +4,7 @@ import '../Product/Product.css';
 import Accordion from 'react-bootstrap/Accordion';
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
+import {Link} from 'react-router-dom';
 
 
 function Product() {
@@ -30,7 +31,7 @@ function Product() {
           <Accordion.Item eventKey="0">
           <Accordion.Header><h5>How to contact TechHaven</h5></Accordion.Header>
           <Accordion.Body>
-          Get in touch with us for queries like How to purchase, Get dealership, Contact for sponsorship, Raise a service request - Contact Us.
+          Get in touch with us for queries like How to purchase, Get dealership, Contact for sponsorship, Raise a service request - <Link to='/support/contact-us' style={{color: 'black'}}>Contact Us</Link>.
           </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="1">

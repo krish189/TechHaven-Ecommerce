@@ -97,7 +97,7 @@ function Category() {
         <p onClick={()=>navigate('/shop/cctv')}>CCTV Cameras</p>
     </div>
     <div ref={refs.supportRef} className={showSupportsubmenu ? 'supportsubmenu active' : 'supportsubmenu'}>
-          <p>Contact Us</p>
+          <p onClick={()=>navigate('/support/contact-us')}>Contact Us</p>
           <p>Register Onsite Support</p>
           <p>Register Warranty</p>
           <p>Product FAQ</p>
