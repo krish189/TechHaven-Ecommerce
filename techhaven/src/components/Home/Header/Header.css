@@ -73,10 +73,12 @@ ul li:hover
     background-color: white;
     z-index: 1; 
     display: none;
-}
+    overflow-x: hidden;
+    overflow-y: auto;
+} 
 .search input
 {
-    width: 500px;
+    width: 448px;
     height: 50px;
     border-top: white;
     border-left: white;
@@ -89,7 +91,7 @@ ul li:hover
 }
 .search.active 
 {
-    display: flex;
+    display: block;
 }
 .closeicon
 {
@@ -486,4 +488,30 @@ ul li:hover
 .supportsubmenu.active
 {
     display: block;
+}
+.search-results
+{
+    position: relative;
+    top: 4rem;
+}
+.product-item
+{
+    display: flex;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+.searchproductimg
+{
+    width: 98px;
+    height: 98px;
+}
+.details
+{
+    position: relative;
+    left: 1rem;
+}
+.productimg
+{
+    position: relative;
+    top: 0.5rem;
 }

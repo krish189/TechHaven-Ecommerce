@@ -437,6 +437,7 @@ class KeyboardMouseCombo(BaseProduct):
         return f"{self.name} - {self.keyboard_type} - {self.mouse_type}"
 
 class HomeTheater(BaseProduct):
+    product_category = models.CharField(max_length=255, null=True, blank=True)
     audio_output_power = models.CharField(max_length=100, null=True, blank=True)
     speaker_configuration = models.CharField(max_length=255, null=True, blank=True)
     supported_audio_formats = models.CharField(max_length=255, null=True, blank=True)
@@ -463,6 +464,7 @@ class HomeTheater(BaseProduct):
         return f"{self.name}"
 
 class SmartLighting(BaseProduct):
+    product_category = models.CharField(max_length=255, null=True, blank=True)
     power_consumption = models.CharField(max_length=100)  
     luminous_flux = models.CharField(max_length=255, null=True, blank=True)
     color_temperature = models.CharField(max_length=255, null=True, blank=True)
@@ -481,6 +483,7 @@ class SmartLighting(BaseProduct):
         return f"{self.name} ({self.power_consumption}, {self.bulb_type})"
 
 class CCTVCamera(BaseProduct):
+    product_category = models.CharField(max_length=255, null=True, blank=True)
     resolution = models.CharField(max_length=100, null=True, blank=True)  
     field_of_view = models.CharField(max_length=100, null=True, blank=True) 
     night_vision = models.BooleanField(default=False)  
@@ -500,6 +503,7 @@ class CCTVCamera(BaseProduct):
         return f"{self.name} ({self.resolution})"
 
 class SmartWatch(BaseProduct):
+    product_category = models.CharField(max_length=255, null=True, blank=True)
     display_type = models.CharField(max_length=255, null=True, blank=True)
     screen_size = models.CharField(max_length=255, null=True, blank=True)
     battery_life = models.CharField(max_length=255, null=True, blank=True)

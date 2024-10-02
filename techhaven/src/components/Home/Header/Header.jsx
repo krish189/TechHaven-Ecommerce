@@ -27,6 +27,8 @@ function Header() {
   const [showKeyboardCategory, setShowKeyboardCategory] = useState(false);
   const [showMouseCategory, setShowMouseCategory] = useState(false);
   const [showMonitorCategory, setShowMonitorCategory] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [productData, setProductData] = useState([]);
 
   // Navigate initialization
   const navigate = useNavigate();
@@ -145,15 +147,15 @@ function Header() {
     }
     if (refs.speakercategoryRef.current && !refs.speakercategoryRef.current.contains(event.target)) 
     {
-        setShowSpeakerCategory(false);
+      setShowSpeakerCategory(false);
     }
     if (refs.headphonecategoryRef.current && !refs.headphonecategoryRef.current.contains(event.target)) 
     {
-          setShowHeadphoneCategory(false);
+      setShowHeadphoneCategory(false);
     }
     if (refs.tvcategoryRef.current && !refs.tvcategoryRef.current.contains(event.target)) 
     {
-          setShowTVCategory(false);
+      setShowTVCategory(false);
     }
     if (refs.accessoriessubmenuRef.current && !refs.accessoriessubmenuRef.current.contains(event.target))
     {
@@ -172,9 +174,9 @@ function Header() {
       setShowMobileaccCategory(false);
     }
     if (refs.hdmiaccRef.current && !refs.hdmiaccRef.current.contains(event.target))
-      {
-        setShowHdmiaccCategory(false);
-      }
+    {
+      setShowHdmiaccCategory(false);
+    }
     if (refs.peripheralsubmenuRef.current && !refs.peripheralsubmenuRef.current.contains(event.target))
     {
       setShowPeripheralsubmenu(false);
@@ -209,6 +211,119 @@ function Header() {
       document.removeEventListener('mousedown', handleClickOutside); 
     };
   });
+
+  const handleSearchQuery = (e) => {
+    setSearchQuery(e.target.value);
+  };
+
+  const handleProductClick = (product) =>{
+    if (product.laptop_type)
+    {
+      navigate(`/shop/laptops/${product.laptop_type}/${encodeURIComponent(product.name)}`);
+    }
+    else if (product.speaker_type)
+    {
+      navigate(`/shop/speakers/${product.speaker_type}/${encodeURIComponent(product.name)}`);
+    }
+    else if (product.headphone_earbud_type)
+    {
+      navigate(`/shop/headphones-earbuds/${product.headphone_earbud_type}/${encodeURIComponent(product.name)}`);
+    }
+    else if (product.tv_type)
+    {
+      navigate(`/shop/led-tvs/${product.tv_type}/${encodeURIComponent(product.name)}`);
+    }
+    else if (product.projector_type)
+    {
+      navigate(`/shop/led-projectors/${encodeURIComponent(product.name)}`);
+    }
+    else if (product.microphone_type)
+    {
+      navigate(`/shop/microphones/${encodeURIComponent(product.name)}`);
+    }
+    else if (product.accessory_category==='Solid State Drives' || product.accessory_category==='Hard Disk Drives' || product.accessory_category==='CPU Fans'
+      || product.accessory_category==='Graphics Cards' || product.accessory_category==='Sound Cards' || product.accessory_category==='USB Expansion Cards' 
+      || product.accessory_category==='Motherboards')
+    {
+      navigate(`/shop/accessories/computer-accessories/${encodeURIComponent(product.accessory_category)}/${encodeURIComponent(product.name)}`);
+    }
+    else if (product.accessory_category==='Power Banks' || product.accessory_category==='USB Hubs' || product.accessory_category==='Docking Stations'
+      || product.accessory_category==='Sleeve Cases' || product.accessory_category==='Cooling Pads' || product.accessory_category==='Laptop Stands')
+    {
+      navigate(`/shop/accessories/laptop-accessories/${encodeURIComponent(product.accessory_category)}/${encodeURIComponent(product.name)}`);
+    }
+    else if(product.accessory_category==='Stylus Pens' || product.accessory_category==='Memory Cards' || product.accessory_category==='Wallet Cases'
+      || product.accessory_category==='Charging Cables' || product.accessory_category==='Mobile Holders')
+    {
+      navigate(`/shop/accessories/mobile-accessories/${encodeURIComponent(product.accessory_category)}/${encodeURIComponent(product.name)}`);
+    }
+    else if (product.accessory_category==='HDMI Adapters' || product.accessory_category==='HDMI Cables')
+    {
+      navigate(`/shop/accessories/hdmi-accessories/${encodeURIComponent(product.accessory_category)}/${encodeURIComponent(product.name)}`);
+    }
+    else if (product.scanner_type)
+    {
+      navigate(`/shop/barcode-scanners/${encodeURIComponent(product.name)}`);
+    }
+    else if (product.keyboard_type && product.mouse_type)
+    {
+      navigate(`/shop/peripherals/combos/${encodeURIComponent(product.name)}`);
+    }
+    else if (product.keyboard_type)
+    {
+      navigate(`/shop/peripherals/keyboard/${encodeURIComponent(product.keyboard_type)}/${encodeURIComponent(product.name)}`);
+    }
+    else if (product.mouse_type)
+    {
+      navigate(`/shop/peripherals/mouse/${encodeURIComponent(product.mouse_type)}/${encodeURIComponent(product.name)}`);
+    }
+    else if (product.monitor_type)
+    {
+      navigate(`/shop/peripherals/monitor/${encodeURIComponent(product.monitor_type)}/${encodeURIComponent(product.name)}`);
+    }
+    else if (product.product_category==='Home Theater')
+    {
+      navigate(`/shop/home-theaters/${encodeURIComponent(product.name)}`);
+    }
+    else if (product.product_category==='Smart Lighting')
+    {
+      navigate(`/shop/smart-lighting/${encodeURIComponent(product.name)}`);
+    }
+    else if (product.product_category==='CCTV Camera')
+    {
+      navigate(`/shop/cctv/${encodeURIComponent(product.name)}`);
+    }
+    else if (product.product_category==='Smart Watch')
+    {
+      navigate(`/shop/smart-watch/${encodeURIComponent(product.name)}`);
+    }
+  }
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      if (searchQuery.trim().length > 0) {
+        try {
+          const response = await fetch('http://localhost:8000/api/product/search/', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ query: searchQuery }),
+          });
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          const data = await response.json();
+          setProductData(data.products);
+        } catch (error) {
+          console.error('There was an error fetching the data!', error);
+        }
+      }
+    };
+
+      fetchProducts();
+  }, [searchQuery]);
+
   return (
     <>
     <div className='header'>
@@ -229,7 +344,23 @@ function Header() {
     </div>
     <div ref={refs.searchRef} className={showSearch ? 'search active' : 'search'}>
         <img src={close} alt='close' className='closeicon' onClick={()=>{setShowSearch(false)}}/>
-        <input type='text' placeholder='Search for...' />
+        <input type='text' placeholder='Search for...' value={searchQuery} onChange={handleSearchQuery}/>
+        {productData.length > 0 && (
+        <div className="search-results">
+          {productData.map((product, index) => (
+            <div key={index} className="product-item" onClick={() => handleProductClick(product)}>
+              <div className='productimg'>
+              <img src={`http://localhost:8000${product.images[0]}`} alt='product' className='searchproductimg'/>
+              </div>
+              <div className='details'>
+              <p>{product.name}</p>
+              <p>{product.brand}</p>
+              <p>Price: ₹{product.price}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
     <div ref={refs.lapsubmenuRef} className={showLaptopsubmenu ? 'laptopsubmenu active' : 'laptopsubmenu'}>
           <p onClick={()=>{navigate('/shop/laptops/Ultrabooks')}}>Ultrabooks</p>

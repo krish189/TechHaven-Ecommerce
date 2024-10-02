@@ -84,6 +84,8 @@
     background-color: white;
     z-index: 999; 
     display: none;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 .shopsearch input
 {
