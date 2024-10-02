@@ -25,5 +25,6 @@ urlpatterns = [
     path('api/product/', include('product.urls')),
     path('api/shipping/', include('shipping.urls')),
     path('api/order_details/', include('order_details.urls')),
-    path('api/contactus/', include('contactus.urls'))
+    path('api/contactus/', include('contactus.urls')),
+    path('api/warranty-registration/', include('warranty_registration.urls'))
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

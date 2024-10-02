@@ -53,6 +53,7 @@ import CCTVInfo from './components/CCTV/CCTVInfo/CCTVInfo';
 import SmartWatchPage from './components/SmartWatch/SmartWatchPage/SmartWatchPage';
 import SmartWatchInfo from './components/SmartWatch/SmartWatchInfo/SmartWatchInfo';
 import ContactUs from './components/ContactUsPage/ContactUs';
+import WarrantyRegistration from './components/WarrantyRegistration/WarrantyRegistration';
 
 function App() {
   
@@ -123,6 +124,7 @@ function App() {
         <Route path='/shop/smart-watch' element={<SmartWatchPage/>}></Route>
         <Route path='/shop/smart-watch/:sw_name' element={<SmartWatchInfo/>}></Route>
         <Route path='/support/contact-us' element={<ContactUs/>}></Route>
+        <Route path='/support/warranty-registration' element={<WarrantyRegistration/>}></Route>
       </Routes>
     </BrowserRouter>
     </OrderDetailsProvider>

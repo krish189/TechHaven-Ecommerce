@@ -36,15 +36,26 @@ function Footer() {
             <li onClick={()=>{navigate('/shop/led-tvs')}}>LED TVs</li>
             <li onClick={()=>{navigate('/shop/led-projectors')}}>Projectors</li>
             <li onClick={()=>{navigate('/shop/microphones')}}>Microphones</li>
-            <li>Peripherals</li>
+            <li onClick={()=>{navigate('/shop/accessories/computer-accessories')}}>Computer Accessories</li>
+            <li onClick={()=>{navigate('/shop/accessories/laptop-accessories')}}>Laptop Accessories</li>
+            <li onClick={()=>{navigate('/shop/accessories/mobile-accessories')}}>Mobile Accessories</li>
+            <li onClick={()=>{navigate('/shop/accessories/hdmi-accessories')}}>HDMI Accessories</li>
+            <li onClick={()=>{navigate('/shop/barcode-scanners')}}>Barcode Scanners</li>
+            <li onClick={()=>{navigate('/shop/peripherals/keyboard')}}>Keyboards</li>
+            <li onClick={()=>{navigate('/shop/peripherals/mouse')}}>Mouses</li>
+            <li onClick={()=>{navigate('/shop/peripherals/monitor')}}>Monitors</li>
+            <li onClick={()=>{navigate('/shop/peripherals/combos')}}>Keyboard Mouse Combo</li>
+            <li onClick={()=>{navigate('/shop/home-theaters')}}>Home Theater</li>
+            <li onClick={()=>{navigate('/shop/smart-lighting')}}>Smart Lighting</li>
+            <li onClick={()=>{navigate('/shop/cctv')}}>CCTV Camera</li>
+            <li onClick={()=>{navigate('/shop/smart-watch')}}>SmartWatch</li>
         </ul>
        </div>
        <div>
        <h5>Support</h5>
        <ul>
-            <li>Contact Us</li>
-            <li>Register Onsite Support</li>
-            <li>Register Warranty</li>
+            <li onClick={()=>navigate('/support/contact-us')}>Contact Us</li>
+            <li onClick={()=>navigate('/support/warranty-registration')}>Register Warranty</li>
             <li>Terms and Conditions</li>
             <li>Warranty Policy</li>
             <li>E-Waste Management</li>
@@ -67,7 +78,7 @@ function Footer() {
          <img src={youtube} alt='youtube' className='mediaicons'/>
          <img src={linkedin} alt='linkedin' className='mediaicons'/>
          <img src={whatsapp} alt='whatsapp' className='mediaicons'/>
-    </div>
+    </div><br></br><br></br>
     <div className='tailtext'>
      &copy;TechHaven India Pvt. Ltd. &reg; All Rights Reserved
     </div>

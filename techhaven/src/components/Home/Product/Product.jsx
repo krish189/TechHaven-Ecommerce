@@ -37,7 +37,7 @@ function Product() {
           <Accordion.Item eventKey="1">
           <Accordion.Header><h5>Register Product for Warranty</h5></Accordion.Header>
           <Accordion.Body>
-          You can register your newest Zebronics product or buy an extended warranty by simply following this page - Warranty.
+          You can register your newest Zebronics product or buy an extended warranty by simply following this page - <Link to='/support/warranty-registration' style={{color: 'black'}}>Warranty</Link>.
           </Accordion.Body>
           </Accordion.Item>
         </Accordion>

@@ -98,8 +98,7 @@ function Category() {
     </div>
     <div ref={refs.supportRef} className={showSupportsubmenu ? 'supportsubmenu active' : 'supportsubmenu'}>
           <p onClick={()=>navigate('/support/contact-us')}>Contact Us</p>
-          <p>Register Onsite Support</p>
-          <p>Register Warranty</p>
+          <p onClick={()=>navigate('/support/warranty-registration')}>Register Warranty</p>
           <p>Product FAQ</p>
     </div>
     </>

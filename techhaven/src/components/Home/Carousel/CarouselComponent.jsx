@@ -3,8 +3,8 @@ import { Carousel } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import '../Carousel/Carousel.css';
 import laptopcarousel from '../../../assets/Laptop_carousel.png';
-import peripheralcarousel from '../../../assets/Peripherals_carousel.jpg';
-import speakercarousel from '../../../assets/Speaker_carousel.jpg';
+import combocarousel from '../../../assets/combo_carousel.jpg';
+import speakercarousel from '../../../assets/speakerpagecard.png';
 import hometheater from '../../../assets/hometheater_carousel.png';
 import { useNavigate } from 'react-router-dom';
 
@@ -27,12 +27,12 @@ function CarouselComponent() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src={peripheralcarousel}
+          src={combocarousel}
           alt="Peripherals"
         />
         <Carousel.Caption>
-          <h1 style={{color:'white'}}>Ultimate Peripherals for Gaming and Streaming Bliss</h1>
-          <Button variant="light" size="lg">View More</Button>
+          <h1 style={{color:'white'}}>Ultimate Keyboard and Mouse Combo for Gaming and Streaming Bliss</h1>
+          <Button variant="light" size="lg" onClick={()=>navigate('/shop/peripherals/combos')}>View More</Button>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>

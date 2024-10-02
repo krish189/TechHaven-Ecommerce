@@ -50,6 +50,8 @@
 .media
 {
     display: flex;
+    position: relative;
+    top: 5rem;
 }
 .mediaicons
 {

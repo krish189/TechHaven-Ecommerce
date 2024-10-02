@@ -42,7 +42,6 @@ function ContactUs() {
       message: message,
       language: language
     };
-    console.log(contactusData);
     try {
       const response = await fetch('http://localhost:8000/api/contactus/submit-contact-us/', {
         method: 'POST',

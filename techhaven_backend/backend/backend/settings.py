@@ -46,7 +46,8 @@ INSTALLED_APPS = [
     'product',
     'shipping',
     'order_details',
-    'contactus'
+    'contactus',
+    'warranty_registration'
 ]
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (

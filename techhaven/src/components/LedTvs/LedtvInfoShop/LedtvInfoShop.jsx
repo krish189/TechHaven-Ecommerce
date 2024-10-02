@@ -33,11 +33,6 @@ function LedtvInfoShop() {
     }).format(price);
   }
 
-  const handleToggleExpand = () => {
-    setExpand(!expand);
-  };
-
-
   useEffect(() => {
     const fetchLedTvDatabyName = async () => {
         try {

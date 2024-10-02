@@ -245,7 +245,7 @@ function Header() {
           <p  onClick={displaySpeakerCategory} className={showSpeakerCategory ? 'clickedcategory' : ''}>Speakers <img src={sidearrow} alt='sidearrow' style={{width: '13px', height: '15px', position: 'relative', left: '7.1rem', bottom: '0.1rem'}} onClick={displaySpeakerCategory}/></p>
           <p  onClick={displayHeadphoneCategory} className={showHeadphoneCategory ? 'clickedcategory' : ''}>Headphones & Earbuds <img src={sidearrow} alt='sidearrow' style={{width: '13px', height: '15px', position: 'relative', left: '0.6rem', bottom: '0.1rem'}} onClick={displayHeadphoneCategory}/></p>
           <p  onClick={displayTVCategory} className={showTVCategory ? 'clickedcategory' : ''}>LED TVs <img src={sidearrow} alt='sidearrow' style={{width: '13px', height: '15px', position: 'relative', left: '7.4rem', bottom: '0.1rem'}} onClick={displayTVCategory}/></p>
-          <p onClick={()=>{navigate('/shop/led-projectors')}}>LED Projectors</p>
+          <p onClick={()=>{navigate('/shop/led-projectors')}}>Projectors</p>
           <p onClick={()=>{navigate('/shop/microphones')}}>Microphones</p>
     </div>
     <div ref={refs.speakercategoryRef} className={showSpeakerCategory ? 'speakercategory active' : 'speakercategory'}>
@@ -334,8 +334,7 @@ function Header() {
     </div>
     <div ref={refs.supportRef} className={showSupportsubmenu ? 'supportsubmenu active' : 'supportsubmenu'}>
           <p onClick={()=>navigate('/support/contact-us')}>Contact Us</p>
-          <p>Register Onsite Support</p>
-          <p>Register Warranty</p>
+          <p onClick={()=>navigate('/support/warranty-registration')}>Register Warranty</p>
           <p>Product FAQ</p>
     </div>
     </>
