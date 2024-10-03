@@ -40,7 +40,8 @@ function Payment() {
         items: cart.map(item => ({
             item_name: item.name.replace(/\s*\(.*?\)/, ''),
             quantity: item.quantity,
-            price_per_item: item.discount_price
+            price_per_item: item.discount_price,
+            product_category: item.product_category
         }))
     };
     try {

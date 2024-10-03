@@ -445,3 +445,166 @@ def search(request):
         products = laptops_serialized.data + speakers_serialized.data + hpeb_serialized.data + ledtv_serialized.data + projector_serialized.data + microphone_serialized.data + computer_accessories_serialized.data + laptop_accessories_serialized.data + mobile_accessories_serialized.data + hdmi_accessories_serialized.data + barcode_scanner_serialized.data + keyboard_serialized.data + mouse_serialized.data + monitor_serialized.data + combo_serialized.data + home_theater_serialized.data + smart_lighting_serialized.data + cctv_camera_serialized.data + smart_watch_serialized.data
         return Response({'products': products})
     return Response({'error': 'Query is missing or empty'}, status=400)
+
+@api_view(['POST'])
+def update_stock(request):
+    items = request.data.get('items',[])
+    for item in items:
+        item_name = item.get('item_name', None)
+        quantity = item.get('quantity')
+        product_category = item.get('product_category')
+        if product_category == 'Laptop':
+            laptop = Laptop.objects.get(name__icontains=item_name)
+            if laptop.stock >= quantity:
+                laptop.stock -= quantity
+                laptop.save()
+                print(f"Updated stock for {laptop.name}. Remaining stock: {laptop.stock}")
+            else:
+                print(f"Not enough stock")
+        elif product_category == 'Speaker':
+            speaker = Speaker.objects.get(name__icontains=item_name)
+            if speaker.stock >= quantity:
+                speaker.stock -= quantity
+                speaker.save()
+                print(f"Updated stock for {speaker.name}. Remaining stock: {speaker.stock}")
+            else:
+                print(f"Not enough stock")
+        elif product_category == 'HP EB':
+            hp_eb = HpEb.objects.get(name__icontains=item_name)
+            if hp_eb.stock >= quantity:
+                hp_eb.stock -= quantity
+                hp_eb.save()
+                print(f"Updated stock for {hp_eb.name}. Remaining stock: {hp_eb.stock}")
+            else:
+                print(f"Not enough stock")
+        elif product_category == 'LED TV':
+            ledtv = LedTv.objects.get(name__icontains=item_name)
+            if ledtv.stock >= quantity:
+                ledtv.stock -= quantity
+                ledtv.save()
+                print(f"Updated stock for {ledtv.name}. Remaining stock: {ledtv.stock}")
+            else:
+                print(f"Not enough stock")
+        elif product_category == 'Projector':
+            projector = LedProjector.objects.get(name__icontains=item_name)
+            if projector.stock >= quantity:
+                projector.stock -= quantity
+                projector.save()
+                print(f"Updated stock for {projector.name}. Remaining stock: {projector.stock}")
+            else:
+                print(f"Not enough stock")
+        elif product_category == 'Microphone':
+            microphone = Microphone.objects.get(name__icontains=item_name)
+            if microphone.stock >= quantity:
+                microphone.stock -= quantity
+                microphone.save()
+                print(f"Updated stock for {microphone.name}. Remaining stock: {microphone.stock}")
+            else:
+                print(f"Not enough stock")
+        elif product_category == 'Computer Accessories':
+            computer_accessories = ComputerAccessories.objects.get(name__icontains=item_name)
+            if computer_accessories.stock >= quantity:
+                computer_accessories.stock -= quantity
+                computer_accessories.save()
+                print(f"Updated stock for {computer_accessories.name}. Remaining stock: {computer_accessories.stock}")
+            else:
+                print(f"Not enough stock")
+        elif product_category == 'Laptop Accessories':
+            laptop_accessories = LaptopAccessories.objects.get(name__icontains=item_name)
+            if laptop_accessories.stock >= quantity:
+                laptop_accessories.stock -= quantity
+                laptop_accessories.save()
+                print(f"Updated stock for {laptop_accessories.name}. Remaining stock: {laptop_accessories.stock}")
+            else:
+                print(f"Not enough stock")
+        elif product_category == 'Mobile Accessories':
+            mobile_accessories = MobileAccessories.objects.get(name__icontains=item_name)
+            if mobile_accessories.stock >= quantity:
+                mobile_accessories.stock -= quantity
+                mobile_accessories.save()
+                print(f"Updated stock for {mobile_accessories.name}. Remaining stock: {mobile_accessories.stock}")
+            else:
+                print(f"Not enough stock")
+        elif product_category == 'HDMI Accessories':
+            hdmi_accessories = HdmiAccessories.objects.get(name__icontains=item_name)
+            if hdmi_accessories.stock >= quantity:
+                hdmi_accessories.stock -= quantity
+                hdmi_accessories.save()
+                print(f"Updated stock for {hdmi_accessories.name}. Remaining stock: {hdmi_accessories.stock}")
+            else:
+                print(f"Not enough stock")
+        elif product_category == 'Barcode Scanner':
+            barcode_scanner = BarcodeScanner.objects.get(name__icontains=item_name)
+            if barcode_scanner.stock >= quantity:
+                barcode_scanner.stock -= quantity
+                barcode_scanner.save()
+                print(f"Updated stock for {barcode_scanner.name}. Remaining stock: {barcode_scanner.stock}")
+            else:
+                print(f"Not enough stock")
+        elif product_category == 'Keyboard':
+            keyboard = Keyboard.objects.get(name__icontains=item_name)
+            if keyboard.stock >= quantity:
+                keyboard.stock -= quantity
+                keyboard.save()
+                print(f"Updated stock for {keyboard.name}. Remaining stock: {keyboard.stock}")
+            else:
+                print(f"Not enough stock")
+        elif product_category == 'Mouse':
+            mouse = Mouse.objects.get(name__icontains=item_name)
+            if mouse.stock >= quantity:
+                mouse.stock -= quantity
+                mouse.save()
+                print(f"Updated stock for {mouse.name}. Remaining stock: {mouse.stock}")
+            else:
+                print(f"Not enough stock")
+        elif product_category == 'Monitor':
+            monitor = Monitor.objects.get(name__icontains=item_name)
+            if monitor.stock >= quantity:
+                monitor.stock -= quantity
+                monitor.save()
+                print(f"Updated stock for {monitor.name}. Remaining stock: {monitor.stock}")
+            else:
+                print(f"Not enough stock")
+        elif product_category == 'Combo':
+            combo = KeyboardMouseCombo.objects.get(name__icontains=item_name)
+            if combo.stock >= quantity:
+                combo.stock -= quantity
+                combo.save()
+                print(f"Updated stock for {combo.name}. Remaining stock: {combo.stock}")
+            else:
+                print(f"Not enough stock")
+        elif product_category == 'Home Theater':
+            home_theater = HomeTheater.objects.get(name__icontains=item_name)
+            if home_theater.stock >= quantity:
+                home_theater.stock -= quantity
+                home_theater.save()
+                print(f"Updated stock for {home_theater.name}. Remaining stock: {home_theater.stock}")
+            else:
+                print(f"Not enough stock")
+        elif product_category == 'Smart Lighting':
+            sl = SmartLighting.objects.get(name__icontains=item_name)
+            if sl.stock >= quantity:
+                sl.stock -= quantity
+                sl.save()
+                print(f"Updated stock for {sl.name}. Remaining stock: {sl.stock}")
+            else:
+                print(f"Not enough stock")
+        elif product_category == 'CCTV Camera':
+            cctv = CCTVCamera.objects.get(name__icontains=item_name)
+            if cctv.stock >= quantity:
+                cctv.stock -= quantity
+                cctv.save()
+                print(f"Updated stock for {cctv.name}. Remaining stock: {cctv.stock}")
+            else:
+                print(f"Not enough stock")
+        elif product_category == 'Smart Watch':
+            sw = SmartWatch.objects.get(name__icontains=item_name)
+            if sw.stock >= quantity:
+                sw.stock -= quantity
+                sw.save()
+                print(f"Updated stock for {sw.name}. Remaining stock: {sw.stock}")
+            else:
+                print(f"Not enough stock")
+        else:
+            print("Product category not found in item:", item)
+    return Response({"message": "Stock updated successfully"}, status=200)

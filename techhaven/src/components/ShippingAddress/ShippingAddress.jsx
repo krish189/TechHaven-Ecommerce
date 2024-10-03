@@ -57,7 +57,6 @@ function ShippingAddress() {
 
     const data = await response.json();
     if (response.ok) {
-        console.log("Shipping info saved successfully", data);
         navigate('/payment');
     } else {
         console.error("Failed to save shipping info", data);

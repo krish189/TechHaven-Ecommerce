@@ -27,6 +27,7 @@ class BaseProduct(models.Model):
         return self.name
 
 class Laptop(BaseProduct):
+    product_category = models.CharField(max_length=255, null=True, blank=True)
     laptop_type = models.CharField(max_length=255, null=False)
     cpu = models.CharField(max_length=255, null=True, blank=True)
     ram = models.CharField(max_length=255, null=True, blank=True)
@@ -41,6 +42,7 @@ class Laptop(BaseProduct):
         return f"{self.name} - {self.cpu}, {self.ram}, {self.storage}, {self.display}"
     
 class Speaker(BaseProduct):
+    product_category = models.CharField(max_length=255, null=True, blank=True)
     speaker_type = models.CharField(max_length=255, null=False)
     power_output = models.CharField(max_length=100, null=True, blank=True)
     connectivity = models.CharField(max_length=255, null=True, blank=True)
@@ -58,6 +60,7 @@ class Speaker(BaseProduct):
 
 
 class HpEb(BaseProduct):
+    product_category = models.CharField(max_length=255, null=True, blank=True)
     headphone_earbud_type = models.CharField(max_length=255)
     design_type = models.CharField(max_length=255, null=True, blank=True)
     connectivity = models.CharField(max_length=255)
@@ -86,6 +89,7 @@ class HpEb(BaseProduct):
         return f"{self.name} - {self.headphone_earbud_type}, {self.connectivity}"
     
 class LedTv(BaseProduct):
+    product_category = models.CharField(max_length=255, null=True, blank=True)
     tv_type = models.CharField(max_length=255)
     screen_size = models.CharField(max_length=10, null=False)
     display_technology = models.CharField(max_length=50, null=True, blank=True)
@@ -121,6 +125,7 @@ class LedTv(BaseProduct):
         return f"{self.name} - {self.tv_type}"
 
 class LedProjector(BaseProduct):
+    product_category = models.CharField(max_length=255, null=True, blank=True)
     projector_type = models.CharField(max_length=100, null=False)
     native_resolution = models.CharField(max_length=50, null=False)
     brightness = models.IntegerField(null=False)
@@ -151,6 +156,7 @@ class LedProjector(BaseProduct):
         return f"{self.name} - {self.projector_type}, {self.native_resolution}"
     
 class Microphone(BaseProduct):
+    product_category = models.CharField(max_length=255, null=True, blank=True)
     microphone_type = models.CharField(max_length=255, null=False)  
     connectivity = models.CharField(max_length=255, null=True, blank=True)  
     frequency_response = models.CharField(max_length=255, null=True, blank=True)  
@@ -174,6 +180,7 @@ class Microphone(BaseProduct):
         return f"{self.name} - {self.microphone_type}, {self.polar_pattern}"
     
 class ComputerAccessories(BaseProduct):
+    product_category = models.CharField(max_length=255, null=True, blank=True)
     accessory_category = models.CharField(max_length=255, null=False)
     storage_capacity = models.CharField(max_length=255, null=True, blank=True)
     interface_type = models.CharField(max_length=255, null=True, blank=True)
@@ -220,6 +227,7 @@ class ComputerAccessories(BaseProduct):
         return f"{self.name} - {self.accessory_category}"
 
 class LaptopAccessories(BaseProduct):
+    product_category = models.CharField(max_length=255, null=True, blank=True)
     accessory_category = models.CharField(max_length=255, null=False)
     material = models.CharField(max_length=255, null=True, blank=True)
     adjustable_height = models.BooleanField(default=False)
@@ -245,6 +253,7 @@ class LaptopAccessories(BaseProduct):
         return f"{self.name} - {self.accessory_category}"
 
 class MobileAccessories(BaseProduct):
+    product_category = models.CharField(max_length=255, null=True, blank=True)
     accessory_category = models.CharField(max_length=255, null=False)
     holder_type = models.CharField(max_length=255, null=True, blank=True)
     mounting_mechanism = models.CharField(max_length=255, null=True, blank=True)
@@ -290,6 +299,7 @@ class MobileAccessories(BaseProduct):
         return f"{self.name} - {self.accessory_category}"
 
 class HdmiAccessories(BaseProduct):
+    product_category = models.CharField(max_length=255, null=True, blank=True)
     accessory_category = models.CharField(max_length=255, null=False)
     cable_length = models.CharField(max_length=100, null=True, blank=True)
     cable_type = models.CharField(max_length=100, null=True, blank=True) 
@@ -310,6 +320,7 @@ class HdmiAccessories(BaseProduct):
         return f"{self.name} - {self.accessory_category}"
 
 class BarcodeScanner(BaseProduct):
+    product_category = models.CharField(max_length=255, null=True, blank=True)
     scanner_type = models.CharField(max_length=255, null=False)  
     scan_speed = models.CharField(max_length=100, null=True, blank=True)  
     connectivity = models.CharField(max_length=255, null=True, blank=True)  
@@ -327,6 +338,7 @@ class BarcodeScanner(BaseProduct):
         return f"{self.name} - {self.scanner_type}, {self.connectivity}"
 
 class Keyboard(BaseProduct):
+    product_category = models.CharField(max_length=255, null=True, blank=True)
     peripherals_category = models.CharField(max_length=255)
     keyboard_category = models.CharField(max_length=255, null=True, blank=True)
     keyboard_type = models.CharField(max_length=255)
@@ -354,6 +366,7 @@ class Keyboard(BaseProduct):
         return f"{self.name} - {self.keyboard_type}"    
       
 class Mouse(BaseProduct):
+    product_category = models.CharField(max_length=255, null=True, blank=True)
     peripherals_category = models.CharField(max_length=255, null=True, blank=True)
     mouse_type = models.CharField(max_length=255)
     cable_length = models.CharField(max_length=100, null=True, blank=True)
@@ -374,6 +387,7 @@ class Mouse(BaseProduct):
         return f"{self.name} - {self.mouse_type}"
 
 class Monitor(BaseProduct):
+    product_category = models.CharField(max_length=255, null=True, blank=True)
     peripherals_category = models.CharField(max_length=255)
     monitor_type = models.CharField(max_length=255)
     screen_size = models.CharField(max_length=100)
@@ -396,6 +410,7 @@ class Monitor(BaseProduct):
         return f"{self.name} - {self.monitor_type}"
 
 class KeyboardMouseCombo(BaseProduct):
+    product_category = models.CharField(max_length=255, null=True, blank=True)
     keyboard_type = models.CharField(max_length=255)
     no_of_keys = models.CharField(max_length=255, null=True, blank=True)
     layout = models.CharField(max_length=100, null=True, blank=True)

@@ -49,10 +49,11 @@ function AddtoCart() {
             <p className='productprice'>{formatCurrency(item.discount_price)}</p>
             <p className='producteligible'>Eligible for Free Delivery</p>
             <p className='gifteligible'><img src={gift} alt='gift' style={{width: '14px', height: '14px'}}/>&nbsp;Gift Eligible</p>
-            <p className='productinfo'><span className='valuehead'>Color:</span> {item.color}</p>
-            <p className='productinfo' style={{position: 'relative', bottom: '2rem'}}><span className='valuehead'>Size:</span> {item.ram}+{item.storage}</p>
-            <p className='productinfo' style={{position: 'relative', bottom: '3rem'}}><span className='valuehead'>CPU:</span> {item.cpu}</p>
-            <p className='productinfo' style={{position: 'relative', bottom: '4rem'}}><span className='valuehead'>Display:</span> {item.display}</p>
+            {item.laptop_type ? <><p className='productinfo'><span className='valuehead'>Color:</span> {item.color}</p></>
+            : <><p className='productinfo'><span className='valuehead'>Color:</span> {item.color}</p><br></br></>}
+            {item.laptop_type && item.ram && item.storage && <p className='productinfo' style={{position: 'relative', bottom: '2rem'}}><span className='valuehead'>Size:</span> {item.ram}+{item.storage}</p>}
+            {item.laptop_type && item.cpu && <p className='productinfo' style={{position: 'relative', bottom: '3rem'}}><span className='valuehead'>CPU:</span> {item.cpu}</p>}
+            {item.laptop_type && item.display && <p className='productinfo' style={{position: 'relative', bottom: '4rem'}}><span className='valuehead'>Display:</span> {item.display}</p>}
             <div className='modifydata'>
             <div className='quantity'>
               <Button variant='light' onClick={()=>updateQuantity(item.id, -1)} disabled={item.quantity <= 1}>-</Button>

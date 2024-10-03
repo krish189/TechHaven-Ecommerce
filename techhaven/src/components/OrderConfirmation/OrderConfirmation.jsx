@@ -3,6 +3,7 @@ import cloud_tick from '../../assets/cloud-tick.jpg';
 import './OrderConfirmation.css';
 import { useWindowSize } from 'react-use';
 import Confetti from 'react-confetti';
+import { useEffect } from 'react';
 import { useOrderDetails } from '../Payment/Context/OrderDetails';
 import { useShipping } from '../ShippingAddress/Context/ShippingContext';
 
@@ -26,7 +27,29 @@ function OrderConfirmation() {
   const formattedEstimatedDeliveryDate = estimatedDeliveryDate.toLocaleDateString('en-IN', { year: 'numeric', month: 'long', day: 'numeric' });
 
   const shipping_address = `${shippingData.street_address},${shippingData.city},${shippingData.state},${shippingData.country}`;
+  console.log(orderDetails.items)
+  useEffect(() => {
+    const updateStock = async () => {
+        try {
+          const response = await fetch('http://localhost:8000/api/product/update-stock/', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ items: orderDetails.items }),
+          });
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          const data = await response.json();
+          console.log(data);
+        } catch (error) {
+          console.error('There was an error fetching the data!', error);
+        }
+      }
 
+      updateStock();
+  },[orderDetails]);
 
   return (
     <>
