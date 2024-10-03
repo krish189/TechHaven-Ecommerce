@@ -54,6 +54,26 @@ import SmartWatchPage from './components/SmartWatch/SmartWatchPage/SmartWatchPag
 import SmartWatchInfo from './components/SmartWatch/SmartWatchInfo/SmartWatchInfo';
 import ContactUs from './components/ContactUsPage/ContactUs';
 import WarrantyRegistration from './components/WarrantyRegistration/WarrantyRegistration';
+import ProductFAQ from './components/ProductFAQ/ProductFAQ';
+import LaptopFAQ from './components/FAQ/LaptopFAQ/LaptopFAQ';
+import SpeakerFAQ from './components/FAQ/SpeakerFAQ/SpeakerFAQ';
+import HeadphoneEarbudFAQ from './components/FAQ/HeadphoneEarbudFAQ/HeadphoneEarbudFAQ';
+import LedtvFAQ from './components/FAQ/LedtvFAQ/LedtvFAQ';
+import ProjectorFAQ from './components/FAQ/ProjectorFAQ/ProjectorFAQ';
+import MicrophoneFAQ from './components/FAQ/MicrophoneFAQ/MicrophoneFAQ';
+import ComputerAccessoriesFAQ from './components/FAQ/ComputerAccessoriesFAQ/ComputerAccessoriesFAQ';
+import LaptopAccessoriesFAQ from './components/FAQ/LaptopAccessoriesFAQ/LaptopAccessoriesFAQ';
+import MobileAccessoriesFAQ from './components/FAQ/MobileAccessoriesFAQ/MobileAccessoriesFAQ';
+import HdmiAccessoriesFAQ from './components/FAQ/HdmiAccessoriesFAQ/HdmiAccessoriesFAQ';
+import BarcodeScannerFAQ from './components/FAQ/BarcodeScannerFAQ/BarcodeScannerFAQ';
+import KeyboardFAQ from './components/FAQ/KeyboardFAQ/KeyboardFAQ';
+import MouseFAQ from './components/FAQ/MouseFAQ/MouseFAQ';
+import MonitorFAQ from './components/FAQ/MonitorFAQ/MonitorFAQ';
+import ComboFAQ from './components/FAQ/ComboFAQ/ComboFAQ';
+import HometheaterFAQ from './components/FAQ/HometheaterFAQ/HometheaterFAQ';
+import SmartLightFAQ from './components/FAQ/SmartlightFAQ/SmartLightFAQ';
+import CCTVFAQ from './components/FAQ/CCTVcameraFAQ/CCTVFAQ';
+import SmartwatchFAQ from './components/FAQ/SmartwatchFAQ/SmartwatchFAQ';
 
 function App() {
   
@@ -125,6 +145,26 @@ function App() {
         <Route path='/shop/smart-watch/:sw_name' element={<SmartWatchInfo/>}></Route>
         <Route path='/support/contact-us' element={<ContactUs/>}></Route>
         <Route path='/support/warranty-registration' element={<WarrantyRegistration/>}></Route>
+        <Route path='/support/product-faq' element={<ProductFAQ/>}></Route>
+        <Route path='/support/product-faq/laptop-faq' element={<LaptopFAQ/>}></Route>
+        <Route path='/support/product-faq/speaker-faq' element={<SpeakerFAQ/>}></Route>
+        <Route path='/support/product-faq/headphone-earbud-faq' element={<HeadphoneEarbudFAQ/>}></Route>
+        <Route path='/support/product-faq/ledtv-faq' element={<LedtvFAQ/>}></Route>
+        <Route path='/support/product-faq/projector-faq' element={<ProjectorFAQ/>}></Route>
+        <Route path='/support/product-faq/microphone-faq' element={<MicrophoneFAQ/>}></Route>
+        <Route path='/support/product-faq/computer-accessories-faq' element={<ComputerAccessoriesFAQ/>}></Route>
+        <Route path='/support/product-faq/laptop-accessories-faq' element={<LaptopAccessoriesFAQ/>}></Route>
+        <Route path='/support/product-faq/mobile-accessories-faq' element={<MobileAccessoriesFAQ/>}></Route>
+        <Route path='/support/product-faq/hdmi-accessories-faq' element={<HdmiAccessoriesFAQ/>}></Route>
+        <Route path='/support/product-faq/barcode-scanner-faq' element={<BarcodeScannerFAQ/>}></Route>
+        <Route path='/support/product-faq/keyboard-faq' element={<KeyboardFAQ/>}></Route>
+        <Route path='/support/product-faq/mouse-faq' element={<MouseFAQ/>}></Route>
+        <Route path='/support/product-faq/monitor-faq' element={<MonitorFAQ/>}></Route>
+        <Route path='/support/product-faq/combo-faq' element={<ComboFAQ/>}></Route>
+        <Route path='/support/product-faq/home-theater-faq' element={<HometheaterFAQ/>}></Route>
+        <Route path='/support/product-faq/smart-light-faq' element={<SmartLightFAQ/>}></Route>
+        <Route path='/support/product-faq/cctv-camera-faq' element={<CCTVFAQ/>}></Route>
+        <Route path='/support/product-faq/smart-watch-faq' element={<SmartwatchFAQ/>}></Route>
       </Routes>
     </BrowserRouter>
     </OrderDetailsProvider>
