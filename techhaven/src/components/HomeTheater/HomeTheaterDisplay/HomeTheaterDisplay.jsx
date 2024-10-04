@@ -61,7 +61,7 @@ function HomeTheaterDisplay() {
             <Col key={index} md={3} style={{ margin: '42px'}}>
               <Card  onClick={()=>{navigate(`/shop/home-theaters/${encodeURIComponent(ht.name)}`)}}
                  style={{ width: '22rem', height: '32rem' , border: '1px solid lightgray'}}>
-                <Card.Img variant='top' src={`http://localhost:8000${ht.images[0]}`} alt="Home Theater" className='productimg'/>
+                <Card.Img variant='top' src={`http://localhost:8000${ht.images[0]}`} alt="Home Theater" className='productimg'/><br></br>
                 <p className='htname'>{ht.name}</p>
                 <div className='rating'><span className='ratingvalue'>{Math.abs(ht.rating)}</span> 
                  <StarRatings
