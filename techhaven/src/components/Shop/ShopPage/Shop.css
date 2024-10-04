@@ -1,0 +1,237 @@
+.product-explore
+{
+    padding: 50px;
+}
+.product-explore-txt
+{
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15px;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.saleimg
+{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    left: 43%;
+}
+.card:hover
+{
+    cursor: pointer;
+}
+.shop-flex-a
+{
+    display: flex;
+    position: relative;
+    left: 3rem;
+}
+.shop-flex-b
+{
+    display: flex;
+    position: relative;
+    left: 3rem;
+}
+.shop-flex-c
+{
+    display: flex;
+    position: relative;
+    left: 3rem;
+}
+.shop-flex
+{
+    width: 100%;
+    background-color: yellow;
+    padding: 60px;
+    overflow: hidden;
+}
+.shop-flex-d
+{
+    width: 100%;
+    display: flex;
+    position: relative;
+    left: 10rem;
+    gap: 20rem;
+    background-color: yellow;
+}
+.warranty-icon
+{
+    width: 50px;
+    height: 50px;
+}
+.shipping-icon
+{
+    width: 50px;
+    height: 50px;
+}
+.support-icon
+{
+    width: 50px;
+    height: 50px;
+}
+.lock-icon
+{
+    width: 50px;
+    height: 50px;
+}
+.shop-flex-e
+{
+    width: 100%;
+    display: flex;
+    position: relative;
+    left: 8rem;
+    gap: 10rem;
+    background-color: yellow;
+    overflow: hidden;
+}
+.pw
+{
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15px;
+    color: rgb(40, 40, 40);
+    font-family: 'Inter', sans-serif;
+}
+.fs
+{
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15px;
+    color: rgb(40, 40, 40);
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    left: 5.7rem;
+}
+.ps
+{
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15px;
+    color: rgb(40, 40, 40);
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    left: 12.9rem;
+}
+.sp
+{
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15px;
+    color: rgb(40, 40, 40);
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    left: 18.3rem;
+}
+.shop-flex-f
+{
+    width: 100%;
+    display: flex;
+    gap: 10rem;
+    background-color: yellow;
+}
+.pw-value
+{
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    color: rgb(40, 40, 40);
+    position: relative;
+    left: 4.8rem;
+}
+.fs-value
+{
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    color: rgb(40, 40, 40);
+    position: relative;
+    left: 4.1rem;
+}
+.ps-value
+{
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    color: rgb(40, 40, 40);
+    position: relative;
+    left: 4.9rem;
+}
+.sp-value
+{
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    color: rgb(40, 40, 40);
+    position: relative;
+    left: 5.1rem;
+}
+.get-latest-updates
+{
+    background: url('../../../assets/sale-tag.jpg') no-repeat;
+    background-size: 100% 30rem;
+    padding: 50px;
+    height: 30rem;
+}
+.get-latest-updates-box
+{
+  background-color: #2E9E7B;
+  width: 30rem;
+  height: 18rem;
+  padding: 50px;
+  position: relative;
+  top: 2rem;
+  left: 55rem;
+  border-radius: 5px;
+}
+.get-latest-updates-head
+{
+    font-family: 'Inter',sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15px;
+    color: rgb(255,255,255);
+}
+.get-latest-updates-txt
+{
+    font-family: 'Inter',sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    color: rgb(255,255,255);
+}
+.get-latest-updates input
+{
+    background-color: #2E9E7B;
+    border: 1px solid rgb(255,255,255);
+    color: white;
+    height: 2.5rem;
+    padding: 10px;
+}
+.get-latest-updates ::-webkit-input-placeholder
+{
+    color: white;
+}
+.get-latest-updates input:focus
+{
+    border: 1px solid rgb(255,255,255);
+}
+.subscribe-btn
+{
+    background-color: #1C1B22;
+    border: 1px solid #1C1B22;
+    height: 2.5rem;
+    position: relative;
+    left: 1rem;
+    bottom: 0.2rem;
+}
+.subscribe-btn:hover
+{
+    background-color: #1C1B22;
+    border: 1px solid #1C1B22;
+}

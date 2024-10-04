@@ -466,6 +466,7 @@ function Header() {
     <div ref={refs.supportRef} className={showSupportsubmenu ? 'supportsubmenu active' : 'supportsubmenu'}>
           <p onClick={()=>navigate('/support/contact-us')}>Contact Us</p>
           <p onClick={()=>navigate('/support/warranty-registration')}>Register Warranty</p>
+          <p onClick={()=>navigate('/support/warranty-policy')}>Warranty Policy</p>
           <p onClick={()=>navigate('/support/product-faq')}>Product FAQ</p>
     </div>
     </>

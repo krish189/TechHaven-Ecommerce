@@ -56,10 +56,9 @@ function Footer() {
        <ul>
             <li onClick={()=>navigate('/support/contact-us')}>Contact Us</li>
             <li onClick={()=>navigate('/support/warranty-registration')}>Register Warranty</li>
-            <li>Terms and Conditions</li>
-            <li>Warranty Policy</li>
-            <li>E-Waste Management</li>
-            <li>Product FAQ</li>
+            <li onClick={()=>navigate('/support/terms-and-conditions')}>Terms and Conditions</li>
+            <li onClick={()=>navigate('/support/warranty-policy')}>Warranty Policy</li>
+            <li onClick={()=>navigate('/support/product-faq')}>Product FAQ</li>
         </ul>
        </div>
        <div>

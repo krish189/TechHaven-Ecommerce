@@ -96,10 +96,11 @@ function Category() {
         <p onClick={()=>navigate('/shop/smart-lighting')}>Smart Lighting</p>
         <p onClick={()=>navigate('/shop/cctv')}>CCTV Cameras</p>
     </div>
-    <div ref={refs.supportRef} className={showSupportsubmenu ? 'supportsubmenu active' : 'supportsubmenu'}>
+    <div ref={refs.supportRef} className={showSupportsubmenu ? 'shopsupportsubmenu active' : 'shopsupportsubmenu'}>
           <p onClick={()=>navigate('/support/contact-us')}>Contact Us</p>
           <p onClick={()=>navigate('/support/warranty-registration')}>Register Warranty</p>
-          <p>Product FAQ</p>
+          <p onClick={()=>navigate('/support/warranty-policy')}>Warranty Policy</p>
+          <p onClick={()=>navigate('/support/product-faq')}>Product FAQ</p>
     </div>
     </>
   )

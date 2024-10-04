@@ -468,8 +468,8 @@ ul li:hover
 .supportsubmenu
 {
     position: fixed;
-    top: 5rem;
-    right: 3rem;
+    top: 7.2rem;
+    right: 1rem;
     width: 14rem;
     background-color: white;
     z-index: 999; 

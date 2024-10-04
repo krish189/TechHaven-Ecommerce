@@ -74,6 +74,8 @@ import HometheaterFAQ from './components/FAQ/HometheaterFAQ/HometheaterFAQ';
 import SmartLightFAQ from './components/FAQ/SmartlightFAQ/SmartLightFAQ';
 import CCTVFAQ from './components/FAQ/CCTVcameraFAQ/CCTVFAQ';
 import SmartwatchFAQ from './components/FAQ/SmartwatchFAQ/SmartwatchFAQ';
+import TermsAndConditions from './components/TermsAndConditions/TermsAndConditions';
+import WarrantyPolicy from './components/WarrantyPolicy/WarrantyPolicy';
 
 function App() {
   
@@ -165,6 +167,8 @@ function App() {
         <Route path='/support/product-faq/smart-light-faq' element={<SmartLightFAQ/>}></Route>
         <Route path='/support/product-faq/cctv-camera-faq' element={<CCTVFAQ/>}></Route>
         <Route path='/support/product-faq/smart-watch-faq' element={<SmartwatchFAQ/>}></Route>
+        <Route path='/support/terms-and-conditions' element={<TermsAndConditions/>}></Route>
+        <Route path='/support/warranty-policy' element={<WarrantyPolicy/>}></Route>
       </Routes>
     </BrowserRouter>
     </OrderDetailsProvider>
