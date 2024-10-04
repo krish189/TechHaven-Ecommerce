@@ -106,7 +106,7 @@ ul li:hover
     top: 7.2rem;
     left: 16.9rem;
     width: 12rem;
-    border-radius: 2px;
+    border-radius: 5px;
     background-color: white;
     z-index: 1; 
     display: none;
@@ -119,11 +119,13 @@ ul li:hover
 .laptopsubmenu p:hover
 {
     cursor: pointer;
+    border-radius: 5px;
     background-color: #E6F1FC;
 }
 .laptopsubmenu.active
 {
     display: block;
+    border: 3px solid #448EE4;
 }
 .audiovideosubmenu
 {
@@ -131,6 +133,7 @@ ul li:hover
     top: 7.2rem;
     left: 24.6rem;
     width: 14rem;
+    border-radius: 5px;
     background-color: white;
     z-index: 1; 
     display: none;
@@ -143,46 +146,70 @@ ul li:hover
 .clickedcategory
 {
     background-color: #E6F1FC;
+    border-radius: 5px;
 }
 .audiovideosubmenu p:hover
 {
     cursor: pointer;
+    border-radius: 5px;
     background-color: #E6F1FC;
 }
 .audiovideosubmenu.active
 {
     display: block;
+    border: 3px solid #448EE4;
+}
+.heading-separator
+{
+    width: 12rem;
+    position: relative;
+    left: 0.8rem;
 }
 .speakercategory
 {
     position: fixed;
     top: 7.2rem;
     left: 38.6rem;
-    width: 10rem;
+    width: 14rem;
+    border-radius: 5px;
     background-color: white;
     z-index: 1; 
     display: none;
 }
 .speakercategory p,h6
 {
-    padding: 11px;
+    padding: 6px;
     padding-left: 15px;
+}
+.speakercategory h6
+{
+    position: relative;
+    top: 0.7rem;
 }
 .speakercategory p:hover
 {
     cursor: pointer;
+    border-radius: 5px;
     background-color: #E6F1FC;
 }
 .speakercategory.active
 {
     display: block;
+    border: 3px solid #448EE4;
+}
+.heading-separator-hpeb
+{
+    width: 12rem;
+    position: relative;
+    left: 0.8rem;
 }
 .headphonecategory
 {
     position: fixed;
     top: 11rem;
     left: 38.6rem;
-    width: 15rem;
+    width: 14rem;
+    border-radius: 5px;
     background-color: white;
     z-index: 1; 
     display: none;
@@ -192,21 +219,29 @@ ul li:hover
     padding: 11px;
     padding-left: 15px;
 }
+.headphonecategory h6
+{
+    position: relative;
+    top: 0.8rem;
+}
 .headphonecategory p:hover
 {
     cursor: pointer;
+    border-radius: 5px;
     background-color: #E6F1FC;
 }
 .headphonecategory.active
 {
     display: block;
+    border: 3px solid #448EE4;
 }
 .tvcategory
 {
     position: fixed;
     top: 14.7rem;
     left: 38.6rem;
-    width: 10rem;
+    width: 14rem;
+    border-radius: 5px;
     background-color: white;
     z-index: 1; 
     display: none;
@@ -216,14 +251,21 @@ ul li:hover
     padding: 10px;
     padding-left: 15px;
 }
+.tvcategory h6
+{
+    position: relative;
+    top: 0.8rem;
+}
 .tvcategory p:hover
 {
     cursor: pointer;
+    border-radius: 5px;
     background-color: #E6F1FC;
 }
 .tvcategory.active
 {
     display: block;
+    border: 3px solid #448EE4;
 }
 .accessoriessubmenu
 {
@@ -231,6 +273,7 @@ ul li:hover
     top: 7.2rem;
     left: 33.8rem;
     width: 14rem;
+    border-radius: 5px;
     background-color: white;
     z-index: 1; 
     display: none;
@@ -243,18 +286,27 @@ ul li:hover
 .accessoriessubmenu p:hover
 {
     cursor: pointer;
+    border-radius: 5px;
     background-color: #E6F1FC;
 }
 .accessoriessubmenu.active
 {
     display: block;
+    border: 3px solid #448EE4;
+}
+.heading-separator-comp-acc
+{
+    width: 12rem;
+    position: relative;
+    left: 0.8rem;
 }
 .computeracccategory
 {
     position: fixed;
     top: 7.2rem;
     left: 47.8rem;
-    width: 12rem;
+    width: 14rem;
+    border-radius: 5px;
     background-color: white;
     z-index: 1; 
     display: none;
@@ -264,21 +316,35 @@ ul li:hover
     padding: 10px;
     padding-left: 15px;
 }
+.computeracccategory h6
+{
+    position: relative;
+    top: 0.8rem;
+}
 .computeracccategory p:hover
 {
     cursor: pointer;
+    border-radius: 5px;
     background-color: #E6F1FC;
 }
 .computeracccategory.active
 {
     display: block;
+    border: 3px solid #448EE4;
+}
+.heading-separator-laptop-acc
+{
+    width: 12rem;
+    position: relative;
+    left: 0.8rem;
 }
 .laptopacccategory
 {
     position: fixed;
     top: 10.9rem;
     left: 47.8rem;
-    width: 12rem;
+    width: 14rem;
+    border-radius: 5px;
     background-color: white;
     z-index: 1; 
     display: none;
@@ -288,21 +354,35 @@ ul li:hover
     padding: 10px;
     padding-left: 15px;
 }
+.laptopacccategory h6
+{
+    position: relative;
+    top: 0.8rem;
+}
 .laptopacccategory p:hover
 {
     cursor: pointer;
+    border-radius: 5px;
     background-color: #E6F1FC;
 }
 .laptopacccategory.active
 {
     display: block;
+    border: 3px solid #448EE4;
+}
+.heading-separator-mobile-acc
+{
+    width: 12rem;
+    position: relative;
+    left: 0.8rem;
 }
 .mobileacccategory
 {
     position: fixed;
     top: 14.6rem;
     left: 47.8rem;
-    width: 12rem;
+    width: 14rem;
+    border-radius: 5px;
     background-color: white;
     z-index: 1; 
     display: none;
@@ -312,21 +392,35 @@ ul li:hover
     padding: 10px;
     padding-left: 15px;
 }
+.mobileacccategory h6
+{
+    position: relative;
+    top: 0.8rem;
+}
 .mobileacccategory p:hover
 {
     cursor: pointer;
+    border-radius: 5px;
     background-color: #E6F1FC;
 }
 .mobileacccategory.active
 {
     display: block;
+    border: 3px solid #448EE4;
+}
+.heading-separator-hdmi-acc
+{
+    width: 12rem;
+    position: relative;
+    left: 0.8rem;
 }
 .hdmiacccategory
 {
     position: fixed;
     top: 18.5rem;
     left: 47.8rem;
-    width: 12rem;
+    width: 14rem;
+    border-radius: 5px;
     background-color: white;
     z-index: 1; 
     display: none;
@@ -336,14 +430,21 @@ ul li:hover
     padding: 10px;
     padding-left: 15px;
 }
+.hdmiacccategory h6
+{
+    position: relative;
+    top: 0.8rem;
+}
 .hdmiacccategory p:hover
 {
     cursor: pointer;
+    border-radius: 5px;
     background-color: #E6F1FC;
 }
 .hdmiacccategory.active
 {
     display: block;
+    border: 3px solid #448EE4;
 }
 .peripheralsubmenu
 {
@@ -351,6 +452,7 @@ ul li:hover
     top: 7.2rem;
     left: 43.6rem;
     width: 14rem;
+    border-radius: 5px;
     background-color: white;
     z-index: 1; 
     display: none;
@@ -363,18 +465,27 @@ ul li:hover
 .peripheralsubmenu p:hover
 {
     cursor: pointer;
+    border-radius: 5px;
     background-color: #E6F1FC;
 }
 .peripheralsubmenu.active
 {
     display: block;
+    border: 3px solid #448EE4;
+}
+.heading-separator-keyboard
+{
+    width: 12rem;
+    position: relative;
+    left: 0.8rem;
 }
 .keyboardcategory
 {
     position: fixed;
     top: 7.2rem;
     left: 57.6rem;
-    width: 12rem;
+    width: 14rem;
+    border-radius: 5px;
     background-color: white;
     z-index: 1; 
     display: none;
@@ -384,21 +495,35 @@ ul li:hover
     padding: 10px;
     padding-left: 15px;
 }
+.keyboardcategory h6
+{
+    position: relative;
+    top: 0.7rem;
+}
 .keyboardcategory p:hover
 {
     cursor: pointer;
+    border-radius: 5px;
     background-color: #E6F1FC;
 }
 .keyboardcategory.active
 {
     display: block;
+    border: 3px solid #448EE4;
+}
+.heading-separator-mouse
+{
+    width: 12rem;
+    position: relative;
+    left: 0.8rem;
 }
 .mousecategory
 {
     position: fixed;
     top: 11rem;
     left: 57.6rem;
-    width: 12rem;
+    width: 14rem;
+    border-radius: 5px;
     background-color: white;
     z-index: 1; 
     display: none;
@@ -408,14 +533,27 @@ ul li:hover
     padding: 10px;
     padding-left: 15px;
 }
+.mousecategory h6
+{
+    position: relative;
+    top: 0.8rem;
+}
 .mousecategory p:hover
 {
     cursor: pointer;
+    border-radius: 5px;
     background-color: #E6F1FC;
 }
 .mousecategory.active
 {
     display: block;
+    border: 3px solid #448EE4;
+}
+.heading-separator-monitor
+{
+    width: 12rem;
+    position: relative;
+    left: 0.8rem;
 }
 .monitorcategory
 {
@@ -423,6 +561,7 @@ ul li:hover
     top: 14.7rem;
     left: 57.6rem;
     width: 14rem;
+    border-radius: 5px;
     background-color: white;
     z-index: 1; 
     display: none;
@@ -432,14 +571,21 @@ ul li:hover
     padding: 10px;
     padding-left: 15px;
 }
+.monitorcategory h6
+{
+    position: relative;
+    top: 0.8rem;
+}
 .monitorcategory p:hover
 {
     cursor: pointer;
+    border-radius: 5px;
     background-color: #E6F1FC;
 }
 .monitorcategory.active
 {
     display: block;
+    border: 3px solid #448EE4;
 }
 .smarthomesubmenu
 {
@@ -447,6 +593,7 @@ ul li:hover
     top: 7.2rem;
     left: 53rem;
     width: 14rem;
+    border-radius: 5px;
     background-color: white;
     z-index: 1; 
     display: none;
@@ -459,11 +606,13 @@ ul li:hover
 .smarthomesubmenu p:hover
 {
     cursor: pointer;
+    border-radius: 5px;
     background-color: #E6F1FC;
 }
 .smarthomesubmenu.active
 {
     display: block;
+    border: 3px solid #448EE4;
 }
 .supportsubmenu
 {
@@ -471,23 +620,26 @@ ul li:hover
     top: 7.2rem;
     right: 1rem;
     width: 14rem;
+    border-radius: 5px;
     background-color: white;
     z-index: 999; 
     display: none;
 }
 .supportsubmenu p
 {
-    padding: 5px;
-    padding-left: 5px;
+    padding: 10px;
+    padding-left: 15px;
 }
 .supportsubmenu p:hover
 {
     cursor: pointer;
+    border-radius: 5px;
     background-color: #E6F1FC;
 }
 .supportsubmenu.active
 {
     display: block;
+    border: 3px solid #448EE4;
 }
 .search-results
 {

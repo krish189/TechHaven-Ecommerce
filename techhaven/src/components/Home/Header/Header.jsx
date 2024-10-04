@@ -381,12 +381,14 @@ function Header() {
     </div>
     <div ref={refs.speakercategoryRef} className={showSpeakerCategory ? 'speakercategory active' : 'speakercategory'}>
         <h6>Speakers</h6>
+        <hr className='heading-separator'/>
         <p onClick={() =>{navigate(`/shop/speakers/${encodeURIComponent('Soundbars')}`)}}>Soundbars</p>
         <p onClick={()=>{navigate(`/shop/speakers/${encodeURIComponent('Wireless Speakers')}`)}}>Wireless Speakers</p>
         <p onClick={()=>{navigate(`/shop/speakers/${encodeURIComponent('Party Speakers')}`)}}>Party Speakers</p>
     </div>
     <div ref={refs.headphonecategoryRef} className={showHeadphoneCategory ? 'headphonecategory active' : 'headphonecategory'}>
       <h6>Headphones and Earbuds</h6>
+      <hr className="heading-separator-hpeb" />
       <p onClick={() =>{navigate(`/shop/headphones-earbuds/${encodeURIComponent('Wired Headphones')}`)}}>Wired Headphones</p>
       <p onClick={() =>{navigate(`/shop/headphones-earbuds/${encodeURIComponent('Wireless Headphones')}`)}}>Wireless Headphones</p>
       <p onClick={() =>{navigate(`/shop/headphones-earbuds/${encodeURIComponent('Wired Earbuds')}`)}}>Wired Earbuds</p>
@@ -394,6 +396,7 @@ function Header() {
     </div>
     <div ref={refs.tvcategoryRef} className={showTVCategory ? 'tvcategory active' : 'tvcategory'}>
       <h6>LED TVs</h6>
+      <hr className="heading-separator" />
       <p onClick={() =>{navigate(`/shop/led-tvs/${encodeURIComponent('Smart LED TVs')}`)}}>Smart LED TVs</p>
       <p onClick={() =>{navigate(`/shop/led-tvs/${encodeURIComponent('Curved LED TVs')}`)}}>Curved LED TVs</p>
     </div>
@@ -406,6 +409,7 @@ function Header() {
     </div>
     <div ref={refs.computeraccRef} className={showComputeraccCategory ? 'computeracccategory active' : 'computeracccategory'}>
       <h6>Computer Accessories</h6>
+      <hr className="heading-separator-comp-acc" />
       <p onClick={()=>navigate(`/shop/accessories/computer-accessories/${encodeURIComponent('Solid State Drives')}`)}>Solid State Drives</p>
       <p onClick={()=>navigate(`/shop/accessories/computer-accessories/${encodeURIComponent('Hard Disk Drives')}`)}>Hard Disk Drives</p>
       <p onClick={()=>navigate(`/shop/accessories/computer-accessories/${encodeURIComponent('CPU Fans')}`)}>CPU Fans</p>
@@ -416,6 +420,7 @@ function Header() {
     </div>
     <div ref={refs.laptopaccRef} className={showLaptopaccCategory ? 'laptopacccategory active' : 'laptopacccategory'}>
       <h6>Laptop Accessories</h6>
+      <hr className="heading-separator-laptop-acc" />
       <p onClick={()=>navigate(`/shop/accessories/laptop-accessories/${encodeURIComponent('Laptop Stands')}`)}>Laptop Stands</p>
       <p onClick={()=>navigate(`/shop/accessories/laptop-accessories/${encodeURIComponent('Cooling Pads')}`)}>Cooling Pads</p>
       <p onClick={()=>navigate(`/shop/accessories/laptop-accessories/${encodeURIComponent('Sleeve Cases')}`)}>Sleeve Cases</p>
@@ -425,6 +430,7 @@ function Header() {
     </div>
     <div ref={refs.mobileaccRef} className={showMobileaccCategory ? 'mobileacccategory active' : 'mobileacccategory'}>
       <h6>Mobile Accessories</h6>
+      <hr className="heading-separator-mobile-acc" />
       <p onClick={()=>navigate(`/shop/accessories/mobile-accessories/${encodeURIComponent('Mobile Holders')}`)}>Mobile Holders</p>
       <p onClick={()=>navigate(`/shop/accessories/mobile-accessories/${encodeURIComponent('Charging Cables')}`)}>Charging Cables</p>
       <p onClick={()=>navigate(`/shop/accessories/mobile-accessories/${encodeURIComponent('Wallet Cases')}`)}>Wallet Cases</p>
@@ -433,6 +439,7 @@ function Header() {
     </div>
     <div ref={refs.hdmiaccRef} className={showHdmiaccCategory ? 'hdmiacccategory active' : 'hdmiacccategory'}>
       <h6>HDMI Accessories</h6>
+      <hr className="heading-separator-hdmi-acc" />
       <p onClick={()=>navigate(`/shop/accessories/hdmi-accessories/${encodeURIComponent('HDMI Cables')}`)}>HDMI Cables</p>
       <p onClick={()=>navigate(`/shop/accessories/hdmi-accessories/${encodeURIComponent('HDMI Adapters')}`)}>HDMI Adapters</p>
     </div>
@@ -444,16 +451,19 @@ function Header() {
     </div>
     <div ref={refs.keyboardRef} className={showKeyboardCategory ? 'keyboardcategory active' : 'keyboardcategory'}>
       <h6>Keyboards</h6>
+      <hr className="heading-separator-keyboard" />
       <p onClick={()=>navigate(`/shop/peripherals/keyboard/${encodeURIComponent('Wired Keyboard')}`)}>Wired Keyboard</p>
       <p onClick={()=>navigate(`/shop/peripherals/keyboard/${encodeURIComponent('Wireless Keyboard')}`)}>Wireless Keyboard</p>
     </div>
     <div ref={refs.mouseRef} className={showMouseCategory ? 'mousecategory active' : 'mousecategory'}>
       <h6>Mouses</h6>
+      <hr className="heading-separator-mouse" />
       <p onClick={()=>navigate(`/shop/peripherals/mouse/${encodeURIComponent('Wired Mouse')}`)}>Wired Mouse</p>
       <p onClick={()=>navigate(`/shop/peripherals/mouse/${encodeURIComponent('Wireless Mouse')}`)}>Wireless Mouse</p>
     </div>
     <div ref={refs.monitorRef} className={showMonitorCategory ? 'monitorcategory active' : 'monitorcategory'}>
       <h6>Monitors</h6>
+      <hr className="heading-separator-monitor" />
       <p onClick={()=>navigate(`/shop/peripherals/monitor/${encodeURIComponent('Curved Monitor')}`)}>Curved Monitor</p>
       <p onClick={()=>navigate(`/shop/peripherals/monitor/${encodeURIComponent('Touchscreen Monitor')}`)}>Touchscreen Monitor</p>
       <p onClick={()=>navigate(`/shop/peripherals/monitor/${encodeURIComponent('Portable Monitor')}`)}>Portable Monitor</p>
