@@ -36,7 +36,7 @@ function Shop() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   
-  const handleSubscribe = async (event) => {
+  const handleSubscribe = async () => {
     try {
       const response = await fetch('http://localhost:8000/api/subscribe/subscriber/', {
         method: 'POST',
@@ -46,7 +46,6 @@ function Shop() {
         body: JSON.stringify({ email }),
       });
       if (response.ok) {
-      console.log('Subscribed successfully');
       setEmail('');
       }
     
