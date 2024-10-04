@@ -13,7 +13,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 
 function Laptopdisplay() {
   const { laptoptype } = useParams(); 
-  const [selectedCategories, setSelectedCategories] = useState(laptoptype ? [laptoptype] : []);
+  const [selectedCategories, setSelectedCategories] = useState(laptoptype ? laptoptype.split(', ') : []);
   const [laptopData, setLaptopData] = useState([]);
   const { value } = useFilter();
   const navigate = useNavigate();
@@ -101,7 +101,7 @@ useEffect(() => {
             <Col key={index} md={3} style={{ margin: '42px'}}>
               <Card  onClick={()=>{navigate(`/shop/laptops/${encodeURIComponent(laptop.laptop_type)}/${encodeURIComponent(laptop.name)}`);}}
                  style={{ width: '22rem', height: '32rem' , border: '1px solid lightgray'}}>
-                <Card.Img variant='top' src={`http://localhost:8000${laptop.images[0]}`} alt="Laptop" className='productimg'/>
+                <Card.Img variant='top' src={`http://localhost:8000${laptop.images[0]}`} alt="Laptop" className='productimg'/><br></br>
                 <p className='laptopname'>{laptop.name}</p>
                 <div className='rating'><span className='ratingvalue'>{Math.abs(laptop.rating)}</span> 
                  <StarRatings
