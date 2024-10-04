@@ -13,7 +13,7 @@ import StarRatings from 'react-star-ratings';
 
 function SpeakerDisplay() {
   const { speakertype } = useParams(); 
-  const [selectedCategories, setSelectedCategories] = useState(speakertype ? [speakertype] : []);
+  const [selectedCategories, setSelectedCategories] = useState(speakertype ? speakertype.split(', ') : []);
   const [speakerData, setSpeakerData] = useState([]);
   const { value } = useFilter();
   const navigate = useNavigate();
