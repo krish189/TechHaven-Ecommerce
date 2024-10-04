@@ -13,7 +13,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 
 function HdmiAccessoriesDisplay() {
   const { accessory_category } = useParams(); 
-  const [selectedCategories, setSelectedCategories] = useState(accessory_category ? [accessory_category] : []);
+  const [selectedCategories, setSelectedCategories] = useState(accessory_category ? accessory_category.split(', ') : []);
   const [hdmiAccessoriesData, setHdmiAccessoriesData] = useState([]);
   const { value } = useFilter();
   const navigate = useNavigate();

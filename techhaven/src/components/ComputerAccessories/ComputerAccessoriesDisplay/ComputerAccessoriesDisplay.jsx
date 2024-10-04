@@ -14,7 +14,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 
 function ComputerAccessoriesDisplay() {
   const { accessory_category } = useParams(); 
-  const [selectedCategories, setSelectedCategories] = useState(accessory_category ? [accessory_category] : []);
+  const [selectedCategories, setSelectedCategories] = useState(accessory_category ? accessory_category.split(', ') : []);
   const [computerAccessoriesData, setComputerAccessoriesData] = useState([]);
   const { value } = useFilter();
   const navigate = useNavigate();

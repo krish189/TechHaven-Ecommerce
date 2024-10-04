@@ -13,7 +13,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 
 function MobileAccessoriesDisplay() {
   const { accessory_category } = useParams(); 
-  const [selectedCategories, setSelectedCategories] = useState(accessory_category ? [accessory_category] : []);
+  const [selectedCategories, setSelectedCategories] = useState(accessory_category ? accessory_category.split(', ') : []);
   const [mobileAccessoriesData, setMobileAccessoriesData] = useState([]);
   const { value } = useFilter();
   const navigate = useNavigate();
