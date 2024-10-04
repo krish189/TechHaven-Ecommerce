@@ -13,7 +13,7 @@ import StarRatings from 'react-star-ratings';
 
 function HeadphoneEarbudDisplay() {
   const { hp_eb_type } = useParams(); 
-  const [selectedCategories, setSelectedCategories] = useState(hp_eb_type ? [hp_eb_type] : []);
+  const [selectedCategories, setSelectedCategories] = useState(hp_eb_type ? hp_eb_type.split(', ') : []);
   const [hpebData, setHpEbData] = useState([]);
   const { value } = useFilter();
   const navigate = useNavigate();
