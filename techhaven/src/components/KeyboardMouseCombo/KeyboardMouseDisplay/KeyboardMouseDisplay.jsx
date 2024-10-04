@@ -61,7 +61,7 @@ function KeyboardMouseDisplay() {
             <Col key={index} md={3} style={{ margin: '42px'}}>
               <Card  onClick={()=>{navigate(`/shop/peripherals/combos/${encodeURIComponent(combos.name)}`)}}
                  style={{ width: '22rem', height: '32rem' , border: '1px solid lightgray'}}>
-                <Card.Img variant='top' src={`http://localhost:8000${combos.images[0]}`} alt="Keyboard Mouse Combo" className='productimg'/>
+                <Card.Img variant='top' src={`http://localhost:8000${combos.images[0]}`} alt="Keyboard Mouse Combo" className='productimg'/><br></br>
                 <p className='combosname'>{combos.name}</p>
                 <div className='rating'><span className='ratingvalue'>{Math.abs(combos.rating)}</span> 
                  <StarRatings

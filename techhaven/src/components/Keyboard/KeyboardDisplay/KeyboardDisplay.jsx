@@ -13,7 +13,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 
 function KeyboardDisplay() {
   const { keyboard_type } = useParams(); 
-  const [selectedCategories, setSelectedCategories] = useState(keyboard_type ? [keyboard_type] : []);
+  const [selectedCategories, setSelectedCategories] = useState(keyboard_type ? keyboard_type.split(', ') : []);
   const [keyboardData, setKeyboardData] = useState([]);
   const { value } = useFilter();
   const navigate = useNavigate();

@@ -13,7 +13,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 
 function MouseDisplay() {
    const { mouse_type } = useParams(); 
-   const [selectedCategories, setSelectedCategories] = useState(mouse_type ? [mouse_type] : []);
+   const [selectedCategories, setSelectedCategories] = useState(mouse_type ? mouse_type.split(', ') : []);
    const [mouseData, setMouseData] = useState([]);
    const { value } = useFilter();
    const navigate = useNavigate();

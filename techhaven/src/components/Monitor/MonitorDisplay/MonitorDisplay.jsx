@@ -13,7 +13,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 
 function MonitorDisplay() {
   const { monitor_type } = useParams(); 
-  const [selectedCategories, setSelectedCategories] = useState(monitor_type ? [monitor_type] : []);
+  const [selectedCategories, setSelectedCategories] = useState(monitor_type ? monitor_type.split(', ') : []);
   const [monitorData, setMonitorData] = useState([]);
   const { value } = useFilter();
   const navigate = useNavigate();
