@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import Header from '../Header/Header';
 import Footer from '../../Home/Footer/Footer';
 import Category from '../Category/Category';
@@ -33,6 +34,27 @@ import './Shop.css';
 
 function Shop() {
   const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  
+  const handleSubscribe = async (event) => {
+    try {
+      const response = await fetch('http://localhost:8000/api/subscribe/subscriber/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+      if (response.ok) {
+      console.log('Subscribed successfully');
+      setEmail('');
+      }
+    
+    } catch (error) {
+      console.error("Error subscribing:", error);
+    }
+  };
+
   return (
     <>
      <Header/>
@@ -180,8 +202,8 @@ function Shop() {
        <div className='get-latest-updates-box'>
          <p className='get-latest-updates-head'>GET LATEST UPDATES ON OFFERS</p>
          <p className='get-latest-updates-txt'>Promotions, new products and sales. Directly to your inbox.</p><br></br>
-         <input type="email" placeholder='Your e-mail' />
-         <Button className='subscribe-btn'>SUBSCRIBE</Button>
+         <input type="email" placeholder='Your e-mail' value={email} onChange={(e)=>setEmail(e.target.value)}/>
+         <Button className='subscribe-btn' onClick={handleSubscribe}>SUBSCRIBE</Button>
        </div>
      </div>
      <Footer />

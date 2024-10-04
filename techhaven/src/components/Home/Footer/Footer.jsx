@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import '../Footer/Footer.css';
 import chevron from '../../../assets/chevron.png';
 import fb from '../../../assets/fb.png';
@@ -11,6 +12,26 @@ import { useNavigate } from 'react-router-dom';
 
 function Footer() {
   const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  
+  const handleSubscribe = async (event) => {
+    try {
+      const response = await fetch('http://localhost:8000/api/subscribe/subscriber/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+      if (response.ok) {
+      console.log('Subscribed successfully');
+      setEmail('');
+      }
+    
+    } catch (error) {
+      console.error("Error subscribing:", error);
+    }
+  };
 
   return (
     <>
@@ -66,8 +87,8 @@ function Footer() {
           <ul>
              <li>Subscribe to get latest product launches, offers, exclusive news.</li>
           </ul>
-          <input type='email' placeholder='E-mail'></input>
-          <img src={chevron} alt='chevron' className='chevron'/>
+          <input type='email' placeholder='E-mail' value={email} onChange={(e)=>setEmail(e.target.value)}></input>
+          <img src={chevron} alt='chevron' className='chevron' onClick={handleSubscribe}/>
        </div>
     </div>
     <div className='media'>
