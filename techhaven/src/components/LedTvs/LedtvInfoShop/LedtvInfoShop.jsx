@@ -133,7 +133,6 @@ function LedtvInfoShop() {
             <p><span className='mrp'>MRP:<span className='oldprice'>{formatCurrency(ledtv.price)}</span></span> <Badge className='saveprice' bg="success">SAVE {formatCurrency(ledtv.price-ledtv.discount_price)}</Badge></p>
             <p className='sku'>SKU: {ledtv.sku}</p>
             <Button className='addtocartbtn' onClick={() => handleAddToCart(ledtv)}>Add to Cart</Button><br></br>
-            <Button className='buynow'>Buy Now</Button>
             <div>
             <img src={productreturn} alt='productreturn' className='productreturn'/>
             <img src={warranty} alt='warranty' className='warrantyicon'/>

@@ -20,6 +20,7 @@ function HeadphoneEarbudInfo() {
   const [hpebdata, setHpEbdata] = useState([]);
   const [image, setImage] = useState('');
   const [imageDimensions, setImageDimensions] = useState({ width: 660, height: 679 });
+  const [expand, setExpand] = useState('');
 
   const imageRef = useRef(null);
   const { addToCart } = useContext(CartContext);
@@ -131,7 +132,6 @@ function HeadphoneEarbudInfo() {
           <p><span className='mrp'>MRP:<span className='oldprice'>{formatCurrency(hp_eb.price)}</span></span> <Badge className='saveprice' bg="success">SAVE {formatCurrency(hp_eb.price-hp_eb.discount_price)}</Badge></p>
           <p className='sku'>SKU: {hp_eb.sku}</p>
           <Button className='addtocartbtn' onClick={() => handleAddToCart(hp_eb)}>Add to Cart</Button><br></br>
-          <Button className='buynow'>Buy Now</Button>
           <div>
           <img src={productreturn} alt='productreturn' className='productreturn'/>
           <img src={warranty} alt='warranty' className='warrantyicon'/>
@@ -146,30 +146,37 @@ function HeadphoneEarbudInfo() {
           <p><span className='spechead'>Brand</span><span className='specvalue' style={{position: 'relative', left: '10.2rem'}}>{hp_eb.brand}</span></p>
           <p><span className='spechead'>Model Name</span><span className='specvalue' style={{position: 'relative', left: '6.8rem'}}>{hp_eb.name.replace(/\s*\(.*?\)/, '')}</span></p>
           <p><span className='spechead'>Colour</span><span className='specvalue' style={{position: 'relative', left: '9.7rem'}}>{hp_eb.color}</span></p>
-          <p><span className='spechead'>Dimensions</span><span className='specvalue' style={{position: 'relative', left: '7.3rem'}}>{hp_eb.dimensions}</span></p>
-          <p><span className='spechead'>Weight</span><span className='specvalue' style={{position: 'relative', left: '9.3rem'}}>{hp_eb.weight} kg</span></p>
-          <p><span className='spechead'>Type</span><span className='specvalue' style={{position: 'relative', left: '10.4rem'}}>{hp_eb.design_type}</span></p>
-          <p><span className='spechead'>Connectivity</span><span className='specvalue' style={{position: 'relative', left: '6.7rem'}}>{hp_eb.connectivity}</span></p>
-          <p><span className='spechead'>Microphone</span><span className='specvalue' style={{position: 'relative', left: '7rem'}}>{hp_eb.microphone ? 'Yes' : 'No' }</span></p>
+          <p><span className='spechead'>Dimensions</span><span className='specvalue' style={{position: 'relative', left: '7.4rem'}}>{hp_eb.dimensions}</span></p>
+          <p><span className='spechead'>Weight</span><span className='specvalue' style={{position: 'relative', left: '9.4rem'}}>{hp_eb.weight} kg</span></p>
+          <p><span className='spechead'>Type</span><span className='specvalue' style={{position: 'relative', left: '10.5rem'}}>{hp_eb.design_type}</span></p>
+          <p><span className='spechead'>Connectivity</span><span className='specvalue' style={{position: 'relative', left: '6.8rem'}}>{hp_eb.connectivity}</span></p>
+          <p><span className='spechead'>Microphone</span><span className='specvalue' style={{position: 'relative', left: '7.2rem'}}>{hp_eb.microphone ? 'Yes' : 'No' }</span></p>
+          {!expand && (
+              <button onClick={() => setExpand(!expand)} style={{position: 'relative', left: '0.5rem', color: 'rgb(0, 113, 133)', fontSize: '16px', backgroundColor: 'white', fontWeight: '600'}}>See More</button>
+            )}
+          {expand && 
+          (<>
           {hp_eb.noise_cancelling && <p><span className='spechead'>Noise Cancelling</span><span className='specvalue' style={{position: 'relative', left: '4.8rem'}}>{hp_eb.noise_cancelling ? 'Yes' : 'No'}</span></p>}
-          {hp_eb.bluetooth_version && <p><span className='spechead'>Bluetooth Version</span><span className='specvalue' style={{position: 'relative', left: '4.2rem'}}>{hp_eb.bluetooth_version}</span></p>}
+          {hp_eb.bluetooth_version && <p><span className='spechead'>Bluetooth Version</span><span className='specvalue' style={{position: 'relative', left: '4.4rem'}}>{hp_eb.bluetooth_version}</span></p>}
           {hp_eb.battery_life && <p><span className='spechead'>Battery Life</span><span className='specvalue' style={{position: 'relative', left: '7.1rem'}}>{hp_eb.battery_life}</span></p>}
-          {hp_eb.sound_isolation && <p><span className='spechead'>Sound Isolation</span><span className='specvalue' style={{position: 'relative', left: '5.1rem'}}>{hp_eb.sound_isolation}</span></p>}
-          {hp_eb.adjustable_headband && <p><span className='spechead'>Adjustable Headband</span><span className='specvalue' style={{position: 'relative', left: '2.5rem'}}>{hp_eb.adjustable_headband ? 'Yes' : 'No'}</span></p>}
-          {hp_eb.foldable && <p><span className='spechead'>Foldable</span><span className='specvalue' style={{position: 'relative', left: '8.7rem'}}>{hp_eb.foldable ? 'Yes' : 'No'}</span></p>}
+          {hp_eb.sound_isolation && <p><span className='spechead'>Sound Isolation</span><span className='specvalue' style={{position: 'relative', left: '5.2rem'}}>{hp_eb.sound_isolation}</span></p>}
+          {hp_eb.adjustable_headband && <p><span className='spechead'>Adjustable Headband</span><span className='specvalue' style={{position: 'relative', left: '2.7rem'}}>{hp_eb.adjustable_headband ? 'Yes' : 'No'}</span></p>}
+          {hp_eb.foldable && <p><span className='spechead'>Foldable</span><span className='specvalue' style={{position: 'relative', left: '8.8rem'}}>{hp_eb.foldable ? 'Yes' : 'No'}</span></p>}
           {hp_eb.driver_size && <p><span className='spechead'>Driver Size</span><span className='specvalue' style={{position: 'relative', left: '7.5rem'}}>{hp_eb.driver_size}</span></p>}
-          {hp_eb.impedance && <p><span className='spechead'>Impedance</span><span className='specvalue' style={{position: 'relative', left: '7.3rem'}}>{hp_eb.impedance}</span></p>}
-          {hp_eb.frequency_response && <p><span className='spechead'>Frequency Response</span><span className='specvalue' style={{position: 'relative', left: '2.9rem'}}>{hp_eb.frequency_response}</span></p>}
-          {hp_eb.water_resistance && <p><span className='spechead'>Water Resistance</span><span className='specvalue' style={{position: 'relative', left: '4.5rem'}}>{hp_eb.water_resistance ? 'Yes' : 'No'}</span></p>}
-          {hp_eb.charging_case && <p><span className='spechead'>Charging Case</span><span className='specvalue' style={{position: 'relative', left: '5.8rem'}}>{hp_eb.charging_case ? 'Yes' : 'No'}</span></p>}
+          {hp_eb.impedance && <p><span className='spechead'>Impedance</span><span className='specvalue' style={{position: 'relative', left: '7.4rem'}}>{hp_eb.impedance}</span></p>}
+          {hp_eb.frequency_response && <p><span className='spechead'>Frequency Response</span><span className='specvalue' style={{position: 'relative', left: '3rem'}}>{hp_eb.frequency_response}</span></p>}
+          {hp_eb.water_resistance && <p><span className='spechead'>Water Resistance</span><span className='specvalue' style={{position: 'relative', left: '4.7rem'}}>{hp_eb.water_resistance ? 'Yes' : 'No'}</span></p>}
+          {hp_eb.charging_case && <p><span className='spechead'>Charging Case</span><span className='specvalue' style={{position: 'relative', left: '6rem'}}>{hp_eb.charging_case ? 'Yes' : 'No'}</span></p>}
           {hp_eb.charging_case_dimensions && <p><span className='spechead'>Case Dimensions</span><span className='specvalue' style={{position: 'relative', left: '4.5rem'}}>{hp_eb.charging_case_dimensions}</span></p>}
           {hp_eb.charging_case_weight && <p><span className='spechead'>Case Weight</span><span className='specvalue' style={{position: 'relative', left: '6.6rem'}}>{hp_eb.charging_case_weight}kg</span></p>}
-          {hp_eb.touch_controls && <p><span className='spechead'>Touch Controls</span><span className='specvalue' style={{position: 'relative', left: '5.4rem'}}>{hp_eb.touch_controls ? 'Yes' : 'No'}</span></p>}
-          {hp_eb.ear_tip_sizes && <p><span className='spechead'>Ear Tip Size</span><span className='specvalue' style={{position: 'relative', left: '7rem'}}>{hp_eb.ear_tip_sizes}</span></p>}
-          {hp_eb.microphone_sensitivity && <p><span className='spechead'>Microphone Sensitivity</span><span className='specvalue' style={{position: 'relative', left: '1.5rem'}}>{hp_eb.microphone_sensitivity}</span></p>}
+          {hp_eb.touch_controls && <p><span className='spechead'>Touch Controls</span><span className='specvalue' style={{position: 'relative', left: '5.7rem'}}>{hp_eb.touch_controls ? 'Yes' : 'No'}</span></p>}
+          {hp_eb.ear_tip_sizes && <p><span className='spechead'>Ear Tip Size</span><span className='specvalue' style={{position: 'relative', left: '7.1rem'}}>{hp_eb.ear_tip_sizes}</span></p>}
+          {hp_eb.microphone_sensitivity && <p><span className='spechead'>Microphone Sensitivity</span><span className='specvalue' style={{position: 'relative', left: '1.8rem'}}>{hp_eb.microphone_sensitivity}</span></p>}
           {hp_eb.ambient_sound_mode && <p><span className='spechead'>Ambient Sound Mode</span><span className='specvalue' style={{position: 'relative', left: '2.1rem'}}>{hp_eb.ambient_sound_mode ? 'Yes' : 'No'}</span></p>}
           {hp_eb.anc_levels && <p><span className='spechead'>ANC Levels</span><span className='specvalue' style={{position: 'relative', left: '7.1rem'}}>{hp_eb.anc_levels}</span></p>}
           {hp_eb.comfort_features && <p><span className='spechead'>Features</span><span className='specvalue' style={{position: 'relative', left: '0.5rem', display: 'flex'}}>{hp_eb.comfort_features}</span></p>}
+          <button onClick={() => setExpand(!expand)} style={{position: 'relative', left: '0.5rem', color: 'rgb(0, 113, 133)', backgroundColor: 'white', fontSize: '16px', fontWeight: '600'}}>See Less</button>
+            </>)}
           <hr style={{color:'gray'}}></hr>
           <p className='spechead'>About this item</p>
           <p className='descpara'>{hp_eb.description_para}</p>

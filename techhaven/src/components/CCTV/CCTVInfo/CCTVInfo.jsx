@@ -19,6 +19,7 @@ function CCTVInfo() {
   const { cctv_name } = useParams();
   const [cctvdata, setCCTVdata] = useState([]);
   const [image, setImage] = useState('');
+  const [expand, setExpand] = useState('');
   const [imageDimensions, setImageDimensions] = useState({ width: 660, height: 679 });
   
   const imageRef = useRef(null);
@@ -131,7 +132,6 @@ function CCTVInfo() {
           <p><span className='mrp'>MRP:<span className='oldprice'>{formatCurrency(cctv.price)}</span></span> <Badge className='saveprice' bg="success">SAVE {formatCurrency(cctv.price-cctv.discount_price)}</Badge></p>
           <p className='sku'>SKU: {cctv.sku}</p>
           <Button className='addtocartbtn' onClick={() => handleAddToCart(cctv)}>Add to Cart</Button><br></br>
-          <Button className='buynow'>Buy Now</Button>
           <div>
           <img src={productreturn} alt='productreturn' className='productreturn'/>
           <img src={warranty} alt='warranty' className='warrantyicon'/>
@@ -148,6 +148,11 @@ function CCTVInfo() {
           <p><span className='spechead'>Colour</span><span className='specvalue' style={{position: 'relative', left: '9.7rem'}}>{cctv.color}</span></p>
           <p><span className='spechead'>Dimensions</span><span className='specvalue' style={{position: 'relative', left: '7.3rem'}}>{cctv.dimensions}</span></p>
           <p><span className='spechead'>Weight</span><span className='specvalue' style={{position: 'relative', left: '9.3rem'}}>{cctv.weight}</span></p>
+          {!expand && (
+              <button onClick={() => setExpand(!expand)} style={{position: 'relative', left: '0.5rem', color: 'rgb(0, 113, 133)', fontSize: '16px', backgroundColor: 'white', fontWeight: '600'}}>See More</button>
+            )}
+          {expand && 
+          (<>
           {cctv.resolution &&  <p><span className='spechead'>Resolution</span><span className='specvalue' style={{position: 'relative', left: '7.6rem'}}>{cctv.resolution}</span></p>}
           {cctv.field_of_view &&  <p><span className='spechead'>Field of View</span><span className='specvalue' style={{position: 'relative', left: '6.6rem'}}>{cctv.field_of_view}</span></p>}
           {cctv.connectivity &&  <p><span className='spechead'>Connectivity</span><span className='specvalue' style={{position: 'relative', left: '6.8rem'}}>{cctv.connectivity}</span></p>}
@@ -156,12 +161,14 @@ function CCTVInfo() {
           {cctv.power_supply &&  <p><span className='spechead'>Power Supply</span><span className='specvalue' style={{position: 'relative', left: '6.4rem'}}>{cctv.power_supply}</span></p>}
           {cctv.motion_detection &&  <p><span className='spechead'>Motion Detection</span><span className='specvalue' style={{position: 'relative', left: '4.7rem'}}>Yes</span></p>}
           {cctv.two_way_audio &&  <p><span className='spechead'>Two Way Audio</span><span className='specvalue' style={{position: 'relative', left: '5.7rem'}}>Yes</span></p>}
-          {cctv.loop_recording &&  <p><span className='spechead'>Loop Recording</span><span className='specvalue' style={{position: 'relative', left: '5.8rem'}}>Yes</span></p>}
-          {cctv.material &&  <p><span className='spechead'>Material</span><span className='specvalue' style={{position: 'relative', left: '9.3rem'}}>{cctv.material}</span></p>}
-          {cctv.sensor &&  <p><span className='spechead'>Sensor</span><span className='specvalue' style={{position: 'relative', left: '9.9rem'}}>{cctv.sensor}</span></p>}
-          {cctv.weatherproof_rating &&  <p><span className='spechead'>Weatherproof Rating</span><span className='specvalue' style={{position: 'relative', left: '3.3rem'}}>{cctv.weatherproof_rating}</span></p>}
-          {cctv.installation_type &&  <p><span className='spechead'>Installation Type</span><span className='specvalue' style={{position: 'relative', left: '5.5rem'}}>{cctv.installation_type}</span></p>}
+          {cctv.loop_recording &&  <p><span className='spechead'>Loop Recording</span><span className='specvalue' style={{position: 'relative', left: '5.7rem'}}>Yes</span></p>}
+          {cctv.material &&  <p><span className='spechead'>Material</span><span className='specvalue' style={{position: 'relative', left: '9.2rem'}}>{cctv.material}</span></p>}
+          {cctv.sensor &&  <p><span className='spechead'>Sensor</span><span className='specvalue' style={{position: 'relative', left: '9.8rem'}}>{cctv.sensor}</span></p>}
+          {cctv.weatherproof_rating &&  <p><span className='spechead'>Weatherproof Rating</span><span className='specvalue' style={{position: 'relative', left: '3.1rem'}}>{cctv.weatherproof_rating}</span></p>}
+          {cctv.installation_type &&  <p><span className='spechead'>Installation Type</span><span className='specvalue' style={{position: 'relative', left: '5.1rem'}}>{cctv.installation_type}</span></p>}
           {cctv.included_items &&  <p><span className='spechead'>Included Items</span><span className='specvalue' style={{position: 'relative', left: '0.5rem', display: 'flex'}}>{cctv.included_items}</span></p>}
+          <button onClick={() => setExpand(!expand)} style={{position: 'relative', left: '0.5rem', color: 'rgb(0, 113, 133)', backgroundColor: 'white', fontSize: '16px', fontWeight: '600'}}>See Less</button>
+          </>)}
           <hr style={{color:'gray'}}></hr>
           <p className='spechead'>About this item</p>
           <p className='descpara'>{cctv.description_para}</p>

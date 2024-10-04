@@ -132,7 +132,6 @@ function SpeakerInfoShop() {
         <p><span className='mrp'>MRP:<span className='oldprice'>{formatCurrency(speaker.price)}</span></span> <Badge className='saveprice' bg="success">SAVE {formatCurrency(speaker.price-speaker.discount_price)}</Badge></p>
         <p className='sku'>SKU: {speaker.sku}</p>
         <Button className='addtocartbtn' onClick={() => handleAddToCart(speaker)}>Add to Cart</Button><br></br>
-        <Button className='buynow'>Buy Now</Button>
         <div>
         <img src={productreturn} alt='productreturn' className='productreturn'/>
         <img src={warranty} alt='warranty' className='warrantyicon'/>
@@ -150,13 +149,13 @@ function SpeakerInfoShop() {
         <p><span className='spechead'>Dimensions</span><span className='specvalue' style={{position: 'relative', left: '7.3rem'}}>{speaker.dimensions}</span></p>
         <p><span className='spechead'>Weight</span><span className='specvalue' style={{position: 'relative', left: '9.3rem'}}>{speaker.weight} kg</span></p>
         {speaker.power_output && <p><span className='spechead'>Power Output</span><span className='specvalue' style={{position: 'relative', left: '6rem'}}>{speaker.power_output}</span></p>}
-        <p><span className='spechead'>Connectivity</span><span className='specvalue' style={{position: 'relative', left: '6.5rem'}}>{speaker.connectivity}</span></p>
-        {speaker.audio_inputs && <p><span className='spechead'>Audio Inputs</span><span className='specvalue' style={{position: 'relative', left: '6.2rem'}}>{speaker.audio_inputs}</span></p>}
-        <p><span className='spechead'>Waterproof</span><span className='specvalue' style={{position: 'relative', left: '6.9rem'}}>{speaker.waterproof ? 'Yes' : 'No'}</span></p>
-        {speaker.driver_size && <p><span className='spechead'>Driver Size</span><span className='specvalue' style={{position: 'relative', left: '7.2rem'}}>{speaker.driver_size}</span></p>}
-        <p><span className='spechead'>Frequency Response</span><span className='specvalue' style={{position: 'relative', left: '2.6rem'}}>{speaker.frequency_response}</span></p>
+        <p><span className='spechead'>Connectivity</span><span className='specvalue' style={{position: 'relative', left: '6.7rem'}}>{speaker.connectivity}</span></p>
+        {speaker.audio_inputs && <p><span className='spechead'>Audio Inputs</span><span className='specvalue' style={{position: 'relative', left: '6.5rem'}}>{speaker.audio_inputs}</span></p>}
+        <p><span className='spechead'>Waterproof</span><span className='specvalue' style={{position: 'relative', left: '7.2rem'}}>{speaker.waterproof ? 'Yes' : 'No'}</span></p>
+        {speaker.driver_size && <p><span className='spechead'>Driver Size</span><span className='specvalue' style={{position: 'relative', left: '7.5rem'}}>{speaker.driver_size}</span></p>}
+        <p><span className='spechead'>Frequency Response</span><span className='specvalue' style={{position: 'relative', left: '3rem'}}>{speaker.frequency_response}</span></p>
         {speaker.battery_life && 
-        <p><span className='spechead'>Battery Life</span><span className='specvalue' style={{position: 'relative', left: '6.7rem'}}>{speaker.battery_life}</span></p>
+        <p><span className='spechead'>Battery Life</span><span className='specvalue' style={{position: 'relative', left: '7.1rem'}}>{speaker.battery_life}</span></p>
         }
         {speaker.smart_assistant && 
         <p><span className='spechead'>Smart Assistant</span><span className='specvalue' style={{position: 'relative', left: '4.7rem'}}>{speaker.smart_assistant}</span></p>
@@ -168,10 +167,10 @@ function SpeakerInfoShop() {
         <p><span className='spechead'>Bass Boost</span><span className='specvalue' style={{position: 'relative', left: '7.1rem'}}>Yes</span></p>
         }
         {speaker.led_lighting && 
-        <p><span className='spechead'>LED Lighting</span><span className='specvalue' style={{position: 'relative', left: '6.2rem'}}>Yes</span></p>
+        <p><span className='spechead'>LED Lighting</span><span className='specvalue' style={{position: 'relative', left: '6.6rem'}}>Yes</span></p>
         }
         {speaker.led_lighting_color && 
-        <p><span className='spechead'>LED Lighting Color</span><span className='specvalue' style={{position: 'relative', left: '3.3rem'}}>{speaker.led_lighting_color}</span></p>
+        <p><span className='spechead'>LED Lighting Color</span><span className='specvalue' style={{position: 'relative', left: '3.7rem'}}>{speaker.led_lighting_color}</span></p>
         }
         {speaker.multi_device_pairing && 
         <p><span className='spechead'>Multi Device Pairing</span><span className='specvalue' style={{position: 'relative', left: '2.7rem'}}>Yes</span></p>

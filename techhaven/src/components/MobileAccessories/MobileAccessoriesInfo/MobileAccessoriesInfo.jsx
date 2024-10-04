@@ -19,6 +19,7 @@ function MobileAccessoriesInfo() {
   const { mobileaccessoriesname } = useParams();
   const [mobileaccessoriesdata, setMobileAccessoriesdata] = useState([]);
   const [image, setImage] = useState('');
+  const [expand, setExpand] = useState('');
   const [imageDimensions, setImageDimensions] = useState({ width: 660, height: 679 });
 
   const imageRef = useRef(null);
@@ -131,7 +132,6 @@ function MobileAccessoriesInfo() {
         <p><span className='mrp'>MRP:<span className='oldprice'>{formatCurrency(mobileaccessories.price)}</span></span> <Badge className='saveprice' bg="success">SAVE {formatCurrency(mobileaccessories.price-mobileaccessories.discount_price)}</Badge></p>
         <p className='sku'>SKU: {mobileaccessories.sku}</p>
         <Button className='addtocartbtn' onClick={() => handleAddToCart(mobileaccessories)}>Add to Cart</Button><br></br>
-        <Button className='buynow'>Buy Now</Button>
         <div>
         <img src={productreturn} alt='productreturn' className='productreturn'/>
         <img src={warranty} alt='warranty' className='warrantyicon'/>
@@ -149,6 +149,11 @@ function MobileAccessoriesInfo() {
         <p><span className='spechead'>Dimensions</span><span className='specvalue' style={{position: 'relative', left: '7.4rem'}}>{mobileaccessories.dimensions}</span></p>
         <p><span className='spechead'>Weight</span><span className='specvalue' style={{position: 'relative', left: '9.4rem'}}>{mobileaccessories.weight} kg</span></p>
         <p><span className='spechead'>Category</span><span className='specvalue' style={{position: 'relative', left: '8.4rem'}}>{mobileaccessories.accessory_category}</span></p>
+        {!expand && (
+              <button onClick={() => setExpand(!expand)} style={{position: 'relative', left: '0.5rem', color: 'rgb(0, 113, 133)', fontSize: '16px', backgroundColor: 'white', fontWeight: '600'}}>See More</button>
+            )}
+        {expand && 
+        (<>
         {mobileaccessories.holder_type && <p><span className='spechead'>Holder Type</span><span className='specvalue' style={{position: 'relative', left: '6.9rem'}}>{mobileaccessories.holder_type}</span></p>}
         {mobileaccessories.mounting_mechanism && <p><span className='spechead'>Mounting Mechanism</span><span className='specvalue' style={{position: 'relative', left: '2.4rem'}}>{mobileaccessories.mounting_mechanism}</span></p>}
         {mobileaccessories.rotation && <p><span className='spechead'>Rotation</span><span className='specvalue' style={{position: 'relative', left: '8.6rem'}}>{mobileaccessories.rotation}</span></p>}
@@ -157,12 +162,12 @@ function MobileAccessoriesInfo() {
         {mobileaccessories.length && <p><span className='spechead'>Length</span><span className='specvalue' style={{position: 'relative', left: '9.3rem'}}>{mobileaccessories.length===1 ? '1 meter' : `${mobileaccessories.length} meters`}</span></p>}
         {mobileaccessories.max_output && <p><span className='spechead'>Max Output</span><span className='specvalue' style={{position: 'relative', left: '7rem'}}>{mobileaccessories.max_output}</span></p>}
         {mobileaccessories.data_transfer_speed && <p><span className='spechead'>Data Transfer Speed</span><span className='specvalue' style={{position: 'relative', left: '3.2rem'}}>{mobileaccessories.data_transfer_speed}</span></p>}
-        {mobileaccessories.connector_type && <p><span className='spechead'>Connector Type</span><span className='specvalue' style={{position: 'relative', left: '5rem'}}>{mobileaccessories.connector_type}</span></p>}
+        {mobileaccessories.connector_type && <p><span className='spechead'>Connector Type</span><span className='specvalue' style={{position: 'relative', left: '5.1rem'}}>{mobileaccessories.connector_type}</span></p>}
         {mobileaccessories.fast_charging && <p><span className='spechead'>Fast Charging</span><span className='specvalue' style={{position: 'relative', left: '6.2rem'}}>Yes</span></p>}
         {mobileaccessories.durability_rating && <p><span className='spechead'>Durability Rating</span><span className='specvalue' style={{position: 'relative', left: '4.4rem'}}>{mobileaccessories.durability_rating}</span></p>}
         {mobileaccessories.usb_version && <p><span className='spechead'>USB Version</span><span className='specvalue' style={{position: 'relative', left: '6.7rem'}}>{mobileaccessories.usb_version}</span></p>}
         {mobileaccessories.port_type && <p><span className='spechead'>Port Type</span><span className='specvalue' style={{position: 'relative', left: '7.8rem'}}>{mobileaccessories.port_type}</span></p>}
-        {mobileaccessories.form_factor && <p><span className='spechead'>Form Factor</span><span className='specvalue' style={{position: 'relative', left: '6.9rem'}}>{mobileaccessories.form_factor}</span></p>}
+        {mobileaccessories.form_factor && <p><span className='spechead'>Form Factor</span><span className='specvalue' style={{position: 'relative', left: '6.8rem'}}>{mobileaccessories.form_factor}</span></p>}
         {mobileaccessories.clamp_size && <p><span className='spechead'>Clamp Size</span><span className='specvalue' style={{position: 'relative', left: '7.5rem'}}>{mobileaccessories.clamp_size} inches</span></p>}
         {mobileaccessories.foldable && <p><span className='spechead'>Foldable</span><span className='specvalue' style={{position: 'relative', left: '8.8rem'}}>Yes</span></p>}
         {mobileaccessories.card_slots && <p><span className='spechead'>Card Slots</span><span className='specvalue' style={{position: 'relative', left: '7.9rem'}}>{mobileaccessories.card_slots}</span></p>}
@@ -185,6 +190,8 @@ function MobileAccessoriesInfo() {
         {mobileaccessories.compatible_devices && <p><span className='spechead'>Compatible Devices</span><span className='specvalue' style={{position: 'relative', left: '0.5rem', display: 'flex'}}>{mobileaccessories.compatible_devices}</span></p>}
         {mobileaccessories.charging_method && <p><span className='spechead'>Charging Methods</span><span className='specvalue' style={{position: 'relative', left: '0.5rem', display: 'flex'}}>{mobileaccessories.charging_method}</span></p>}
         {mobileaccessories.included_items && <p><span className='spechead'>Included Items</span><span className='specvalue' style={{position: 'relative', left: '0.5rem', display: 'flex'}}>{mobileaccessories.included_items}</span></p>}
+        <button onClick={() => setExpand(!expand)} style={{position: 'relative', left: '0.5rem', color: 'rgb(0, 113, 133)', backgroundColor: 'white', fontSize: '16px', fontWeight: '600'}}>See Less</button>
+        </>)}
         <hr style={{color:'gray'}}></hr>
         <p className='spechead'>About this item</p>
         <p className='descpara'>{mobileaccessories.description_para}</p>

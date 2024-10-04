@@ -132,7 +132,6 @@ function MicrophoneInfo() {
           <p><span className='mrp'>MRP:<span className='oldprice'>{formatCurrency(microphone.price)}</span></span> <Badge className='saveprice' bg="success">SAVE {formatCurrency(microphone.price-microphone.discount_price)}</Badge></p>
           <p className='sku'>SKU: {microphone.sku}</p>
           <Button className='addtocartbtn' onClick={() => handleAddToCart(microphone)}>Add to Cart</Button><br></br>
-          <Button className='buynow'>Buy Now</Button>
           <div>
           <img src={productreturn} alt='productreturn' className='productreturn'/>
           <img src={warranty} alt='warranty' className='warrantyicon'/>
@@ -169,7 +168,7 @@ function MicrophoneInfo() {
             {microphone.pop_filter_included && <p><span className='spechead'>Pop Filter</span><span className='specvalue' style={{position: 'relative', left: '8.4rem'}}>Yes</span></p>}
             {microphone.phantom_power_required && <p><span className='spechead'>Phantom Power</span><span className='specvalue' style={{position: 'relative', left: '5.3rem'}}>Required</span></p>}
             {microphone.wireless_connectivity && <p><span className='spechead'>Wireless Connectivity</span><span className='specvalue' style={{position: 'relative', left: '2.9rem'}}>Yes</span></p>}
-            {microphone.audio_sample_rate && <p><span className='spechead'>Audio Sample Rate</span><span className='specvalue' style={{position: 'relative', left: '3.9rem'}}>{microphone.audio_sample_rate}</span></p>}
+            {microphone.audio_sample_rate && <p><span className='spechead'>Audio Sample Rate</span><span className='specvalue' style={{position: 'relative', left: '3.8rem'}}>{microphone.audio_sample_rate}</span></p>}
             {microphone.mounting_options && <p><span className='spechead'>Mounting Options</span><span className='specvalue' style={{position: 'relative', left: '0.5rem', display: 'flex'}}>{microphone.mounting_options}</span></p>}
             {microphone.included_accessories && <p><span className='spechead'>Included Accessories</span><span className='specvalue' style={{position: 'relative', left: '0.5rem', display: 'flex'}}>{microphone.included_accessories}</span></p>}
             <button onClick={() => setExpand(!expand)} style={{position: 'relative', left: '0.5rem', color: 'rgb(0, 113, 133)', backgroundColor: 'white', fontSize: '16px', fontWeight: '600'}}>See Less</button>

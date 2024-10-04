@@ -19,6 +19,7 @@ function KeyboardInfo() {
    const { keyboardname } = useParams();
    const [keyboarddata, setKeyboarddata] = useState([]);
    const [image, setImage] = useState('');
+   const [expand, setExpand] = useState('');
    const [imageDimensions, setImageDimensions] = useState({ width: 660, height: 679 });
     
    const imageRef = useRef(null);
@@ -131,7 +132,6 @@ function KeyboardInfo() {
         <p><span className='mrp'>MRP:<span className='oldprice'>{formatCurrency(keyboard.price)}</span></span> <Badge className='saveprice' bg="success">SAVE {formatCurrency(keyboard.price-keyboard.discount_price)}</Badge></p>
         <p className='sku'>SKU: {keyboard.sku}</p>
         <Button className='addtocartbtn' onClick={() => handleAddToCart(keyboard)}>Add to Cart</Button><br></br>
-        <Button className='buynow'>Buy Now</Button>
         <div>
         <img src={productreturn} alt='productreturn' className='productreturn'/>
         <img src={warranty} alt='warranty' className='warrantyicon'/>
@@ -151,7 +151,12 @@ function KeyboardInfo() {
         <p><span className='spechead'>Category</span><span className='specvalue' style={{position: 'relative', left: '8.5rem'}}>{keyboard.peripherals_category}</span></p>
         {keyboard.keyboard_category && <p><span className='spechead'>Connectivity</span><span className='specvalue' style={{position: 'relative', left: '6.8rem'}}>{keyboard.keyboard_category}</span></p>}
         {keyboard.keyboard_type && <p><span className='spechead'>Type</span><span className='specvalue' style={{position: 'relative', left: '10.4rem'}}>{keyboard.keyboard_type}</span></p>}
-        {keyboard.no_of_keys && <p><span className='spechead'>Total Keys</span><span className='specvalue' style={{position: 'relative', left: '7.9rem'}}>{keyboard.no_of_keys}</span></p>}
+        {keyboard.no_of_keys && <p><span className='spechead'>Total Keys</span><span className='specvalue' style={{position: 'relative', left: '7.8rem'}}>{keyboard.no_of_keys}</span></p>}
+        {!expand && (
+              <button onClick={() => setExpand(!expand)} style={{position: 'relative', left: '0.5rem', color: 'rgb(0, 113, 133)', fontSize: '16px', backgroundColor: 'white', fontWeight: '600'}}>See More</button>
+            )}
+        {expand && 
+        (<>
         {keyboard.layout && <p><span className='spechead'>Layout</span><span className='specvalue' style={{position: 'relative', left: '9.4rem'}}>{keyboard.layout}</span></p>}
         {keyboard.key_switch_type && <p><span className='spechead'>Key Switch Type</span><span className='specvalue' style={{position: 'relative', left: '5rem'}}>{keyboard.key_switch_type}</span></p>}
         {keyboard.cable_length && <p><span className='spechead'>Cable Length</span><span className='specvalue' style={{position: 'relative', left: '6.6rem'}}>{keyboard.cable_length}</span></p>}
@@ -162,12 +167,14 @@ function KeyboardInfo() {
         {keyboard.noise_level && <p><span className='spechead'>Noise Level Category</span><span className='specvalue' style={{position: 'relative', left: '2.7rem'}}>{keyboard.noise_level}</span></p>}
         {keyboard.noise_reduction_percent && <p><span className='spechead'>Noise Reduction</span><span className='specvalue' style={{position: 'relative', left: '5.1rem'}}>{keyboard.noise_reduction_percent}</span></p>}
         {keyboard.media_controls && <p><span className='spechead'>Media Controls</span><span className='specvalue' style={{position: 'relative', left: '5.6rem'}}>Yes</span></p>}
-        {keyboard.ergonomics && <p><span className='spechead'>Ergonomic Design</span><span className='specvalue' style={{position: 'relative', left: '4.3rem'}}>Yes</span></p>}
-        {keyboard.phone_holder && <p><span className='spechead'>Phone Holder</span><span className='specvalue' style={{position: 'relative', left: '6.5rem'}}>Yes</span></p>}
+        {keyboard.ergonomics && <p><span className='spechead'>Ergonomic Design</span><span className='specvalue' style={{position: 'relative', left: '4.2rem'}}>Yes</span></p>}
+        {keyboard.phone_holder && <p><span className='spechead'>Phone Holder</span><span className='specvalue' style={{position: 'relative', left: '6.3rem'}}>Yes</span></p>}
         {keyboard.battery_type && <p><span className='spechead'>Battery Type</span><span className='specvalue' style={{position: 'relative', left: '6.3rem'}}>{keyboard.battery_type}</span></p>}
-        {keyboard.recharge_time && <p><span className='spechead'>Recharge Time</span><span className='specvalue' style={{position: 'relative', left: '5.5rem'}}>{keyboard.recharge_time}</span></p>}
+        {keyboard.recharge_time && <p><span className='spechead'>Recharge Time</span><span className='specvalue' style={{position: 'relative', left: '5.4rem'}}>{keyboard.recharge_time}</span></p>}
         {keyboard.battery_life && <p><span className='spechead'>Battery Life</span><span className='specvalue' style={{position: 'relative', left: '0.5rem', display: 'flex'}}>{keyboard.battery_life}</span></p>}
         {keyboard.included_items && <p><span className='spechead'>Included Items</span><span className='specvalue' style={{position: 'relative', left: '0.5rem', display: 'flex'}}>{keyboard.included_items}</span></p>}
+        <button onClick={() => setExpand(!expand)} style={{position: 'relative', left: '0.5rem', color: 'rgb(0, 113, 133)', backgroundColor: 'white', fontSize: '16px', fontWeight: '600'}}>See Less</button>
+        </>)}
         <hr style={{color:'gray'}}></hr>
         <p className='spechead'>About this item</p>
         <p className='descpara'>{keyboard.description_para}</p>

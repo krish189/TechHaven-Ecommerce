@@ -19,6 +19,7 @@ function MonitorInfo() {
     const { monitorname } = useParams();
     const [monitordata, setMonitordata] = useState([]);
     const [image, setImage] = useState('');
+    const [expand, setExpand] = useState('');
     const [imageDimensions, setImageDimensions] = useState({ width: 660, height: 679 });
     
     const imageRef = useRef(null);
@@ -131,7 +132,6 @@ function MonitorInfo() {
         <p><span className='mrp'>MRP:<span className='oldprice'>{formatCurrency(monitor.price)}</span></span> <Badge className='saveprice' bg="success">SAVE {formatCurrency(monitor.price-monitor.discount_price)}</Badge></p>
         <p className='sku'>SKU: {monitor.sku}</p>
         <Button className='addtocartbtn' onClick={() => handleAddToCart(monitor)}>Add to Cart</Button><br></br>
-        <Button className='buynow'>Buy Now</Button>
         <div>
         <img src={productreturn} alt='productreturn' className='productreturn'/>
         <img src={warranty} alt='warranty' className='warrantyicon'/>
@@ -151,6 +151,11 @@ function MonitorInfo() {
         <p><span className='spechead'>Category</span><span className='specvalue' style={{position: 'relative', left: '8.5rem'}}>{monitor.peripherals_category}</span></p>
         <p><span className='spechead'>Monitor Type</span><span className='specvalue' style={{position: 'relative', left: '6.4rem'}}>{monitor.monitor_type}</span></p>
         <p><span className='spechead'>Screen Size</span><span className='specvalue' style={{position: 'relative', left: '7.5rem'}}>{monitor.screen_size}</span></p>
+        {!expand && (
+              <button onClick={() => setExpand(!expand)} style={{position: 'relative', left: '0.5rem', color: 'rgb(0, 113, 133)', fontSize: '16px', backgroundColor: 'white', fontWeight: '600'}}>See More</button>
+            )}
+        {expand && 
+        (<>
         {monitor.resolution && <p><span className='spechead'>Resolution</span><span className='specvalue' style={{position: 'relative', left: '7.7rem'}}>{monitor.resolution}</span></p>}
         {monitor.refresh_rate && <p><span className='spechead'>Refresh Rate</span><span className='specvalue' style={{position: 'relative', left: '6.8rem'}}>{monitor.refresh_rate}</span></p>}
         {monitor.panel_type && <p><span className='spechead'>Panel Type</span><span className='specvalue' style={{position: 'relative', left: '7.6rem'}}>{monitor.panel_type}</span></p>}
@@ -165,6 +170,9 @@ function MonitorInfo() {
         {monitor.portability_features && <p><span className='spechead'>Portability Features</span><span className='specvalue' style={{position: 'relative', left: '0.5rem', display: 'flex'}}>{monitor.portability_features}</span></p>}
         {monitor.connectivity_options && <p><span className='spechead'>Connectivity Options</span><span className='specvalue' style={{position: 'relative', left: '0.5rem', display: 'flex'}}>{monitor.connectivity_options}</span></p>}
         {monitor.included_items && <p><span className='spechead'>Included Items</span><span className='specvalue' style={{position: 'relative', left: '0.5rem', display: 'flex'}}>{monitor.included_items}</span></p>}
+        <button onClick={() => setExpand(!expand)} style={{position: 'relative', left: '0.5rem', color: 'rgb(0, 113, 133)', backgroundColor: 'white', fontSize: '16px', fontWeight: '600'}}>See Less</button>
+        </>)}
+        <hr style={{color:'gray'}}></hr>
         <p className='spechead'>About this item</p>
         <p className='descpara'>{monitor.description_para}</p>
         <ul className='descpoints'>

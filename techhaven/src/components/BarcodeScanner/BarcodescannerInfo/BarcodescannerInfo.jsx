@@ -131,7 +131,6 @@ function BarcodescannerInfo() {
           <p><span className='mrp'>MRP:<span className='oldprice'>{formatCurrency(bs.price)}</span></span> <Badge className='saveprice' bg="success">SAVE {formatCurrency(bs.price-bs.discount_price)}</Badge></p>
           <p className='sku'>SKU: {bs.sku}</p>
           <Button className='addtocartbtn' onClick={() => handleAddToCart(bs)}>Add to Cart</Button><br></br>
-          <Button className='buynow'>Buy Now</Button>
           <div>
           <img src={productreturn} alt='productreturn' className='productreturn'/>
           <img src={warranty} alt='warranty' className='warrantyicon'/>

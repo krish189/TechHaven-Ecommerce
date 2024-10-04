@@ -15,7 +15,6 @@ import delivery from '../../../assets/delivery.png';
 import Button from 'react-bootstrap/Button';
 import { CartContext } from '../../AddtoCartPage/Context/AddToCart';
 
-
 function LaptopInfoShop() {
   const { laptopname } = useParams();
   const [laptopdata, setLaptopdata] = useState([]);
@@ -133,7 +132,6 @@ function LaptopInfoShop() {
         <p><span className='mrp'>MRP:<span className='oldprice'>{formatCurrency(laptop.price)}</span></span> <Badge className='saveprice' bg="success">SAVE {formatCurrency(laptop.price-laptop.discount_price)}</Badge></p>
         <p className='sku'>SKU: {laptop.sku}</p>
         <Button className='addtocartbtn' onClick={() => handleAddToCart(laptop)}>Add to Cart</Button><br></br>
-        <Button className='buynow'>Buy Now</Button>
         <div>
         <img src={productreturn} alt='productreturn' className='productreturn'/>
         <img src={warranty} alt='warranty' className='warrantyicon'/>

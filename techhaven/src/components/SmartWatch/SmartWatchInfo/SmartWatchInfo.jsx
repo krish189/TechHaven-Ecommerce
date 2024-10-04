@@ -19,6 +19,7 @@ function SmartWatchInfo() {
   const { sw_name } = useParams();
   const [swdata, setSwdata] = useState([]);
   const [image, setImage] = useState('');
+  const [expand, setExpand] = useState('');
   const [imageDimensions, setImageDimensions] = useState({ width: 660, height: 679 });
   
   const imageRef = useRef(null);
@@ -131,7 +132,6 @@ function SmartWatchInfo() {
           <p><span className='mrp'>MRP:<span className='oldprice'>{formatCurrency(sw.price)}</span></span> <Badge className='saveprice' bg="success">SAVE {formatCurrency(sw.price-sw.discount_price)}</Badge></p>
           <p className='sku'>SKU: {sw.sku}</p>
           <Button className='addtocartbtn' onClick={() => handleAddToCart(sw)}>Add to Cart</Button><br></br>
-          <Button className='buynow'>Buy Now</Button>
           <div>
           <img src={productreturn} alt='productreturn' className='productreturn'/>
           <img src={warranty} alt='warranty' className='warrantyicon'/>
@@ -148,6 +148,11 @@ function SmartWatchInfo() {
           <p><span className='spechead'>Colour</span><span className='specvalue' style={{position: 'relative', left: '9.7rem'}}>{sw.color}</span></p>
           <p><span className='spechead'>Dimensions</span><span className='specvalue' style={{position: 'relative', left: '7.3rem'}}>{sw.dimensions}</span></p>
           <p><span className='spechead'>Weight</span><span className='specvalue' style={{position: 'relative', left: '9.3rem'}}>{sw.weight}</span></p>
+          {!expand && (
+              <button onClick={() => setExpand(!expand)} style={{position: 'relative', left: '0.5rem', color: 'rgb(0, 113, 133)', fontSize: '16px', backgroundColor: 'white', fontWeight: '600'}}>See More</button>
+            )}
+          {expand && 
+          (<>
           {sw.display_type && <p><span className='spechead'>Display Type</span><span className='specvalue' style={{position: 'relative', left: '6.8rem'}}>{sw.display_type}</span></p>}
           {sw.screen_size && <p><span className='spechead'>Screen Size</span><span className='specvalue' style={{position: 'relative', left: '7.5rem'}}>{sw.screen_size}</span></p>}
           {sw.battery_life && <p><span className='spechead'>Battery Life</span><span className='specvalue' style={{position: 'relative', left: '7.4rem'}}>{sw.battery_life}</span></p>}
@@ -166,6 +171,8 @@ function SmartWatchInfo() {
           {sw.sensors && <p><span className='spechead'>Sensors</span><span className='specvalue' style={{position: 'relative', left: '0.5rem', display: 'flex'}}>{sw.sensors}</span></p>}
           {sw.voice_assistant && <p><span className='spechead'>Voice Assistant</span><span className='specvalue' style={{position: 'relative', left: '0.5rem', display: 'flex'}}>{sw.voice_assistant}</span></p>}
           {sw.features && <p><span className='spechead'>Features</span><span className='specvalue' style={{position: 'relative', left: '0.5rem', display: 'flex'}}>{sw.features}</span></p>}
+          <button onClick={() => setExpand(!expand)} style={{position: 'relative', left: '0.5rem', color: 'rgb(0, 113, 133)', backgroundColor: 'white', fontSize: '16px', fontWeight: '600'}}>See Less</button>
+          </>)}
           <hr style={{color:'gray'}}></hr>
           <p className='spechead'>About this item</p>
           <p className='descpara'>{sw.description_para}</p>

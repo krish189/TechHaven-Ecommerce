@@ -19,6 +19,7 @@ function LaptopAccessoriesInfo() {
   const { laptopaccessoriesname } = useParams();
   const [laptopaccessoriesdata, setLaptopAccessoriesdata] = useState([]);
   const [image, setImage] = useState('');
+  const [expand, setExpand] = useState('');
   const [imageDimensions, setImageDimensions] = useState({ width: 660, height: 679 });
     
   const imageRef = useRef(null);
@@ -131,7 +132,6 @@ function LaptopAccessoriesInfo() {
         <p><span className='mrp'>MRP:<span className='oldprice'>{formatCurrency(laptopaccessories.price)}</span></span> <Badge className='saveprice' bg="success">SAVE {formatCurrency(laptopaccessories.price-laptopaccessories.discount_price)}</Badge></p>
         <p className='sku'>SKU: {laptopaccessories.sku}</p>
         <Button className='addtocartbtn' onClick={() => handleAddToCart(laptopaccessories)}>Add to Cart</Button><br></br>
-        <Button className='buynow'>Buy Now</Button>
         <div>
         <img src={productreturn} alt='productreturn' className='productreturn'/>
         <img src={warranty} alt='warranty' className='warrantyicon'/>
@@ -149,10 +149,15 @@ function LaptopAccessoriesInfo() {
         <p><span className='spechead'>Dimensions</span><span className='specvalue' style={{position: 'relative', left: '7.4rem'}}>{laptopaccessories.dimensions}</span></p>
         <p><span className='spechead'>Weight</span><span className='specvalue' style={{position: 'relative', left: '9.4rem'}}>{laptopaccessories.weight} kg</span></p>
         <p><span className='spechead'>Category</span><span className='specvalue' style={{position: 'relative', left: '8.4rem'}}>{laptopaccessories.accessory_category}</span></p>
-        <p><span className='spechead'>Material</span><span className='specvalue' style={{position: 'relative', left: '8.6rem'}}>{laptopaccessories.material}</span></p>
-        {laptopaccessories.adjustable_height && <p><span className='spechead'>Height Adjustable</span><span className='specvalue' style={{position: 'relative', left: '4.2rem'}}>Yes</span></p>}
-        {laptopaccessories.max_adjustable_height && <p><span className='spechead'>Max Adjustable Height</span><span className='specvalue' style={{position: 'relative', left: '1.8rem'}}>{laptopaccessories.max_adjustable_height} cm</span></p>}
-        {laptopaccessories.cooling_feature && <p><span className='spechead'>Cooling Feature</span><span className='specvalue' style={{position: 'relative', left: '5.4rem'}}>Yes</span></p>}
+        <p><span className='spechead'>Material</span><span className='specvalue' style={{position: 'relative', left: '8.7rem'}}>{laptopaccessories.material}</span></p>
+        {!expand && (
+              <button onClick={() => setExpand(!expand)} style={{position: 'relative', left: '0.5rem', color: 'rgb(0, 113, 133)', fontSize: '16px', backgroundColor: 'white', fontWeight: '600'}}>See More</button>
+            )}
+        {expand && 
+        (<>
+        {laptopaccessories.adjustable_height && <p><span className='spechead'>Height Adjustable</span><span className='specvalue' style={{position: 'relative', left: '4.4rem'}}>Yes</span></p>}
+        {laptopaccessories.max_adjustable_height && <p><span className='spechead'>Max Adjustable Height</span><span className='specvalue' style={{position: 'relative', left: '1.9rem'}}>{laptopaccessories.max_adjustable_height} cm</span></p>}
+        {laptopaccessories.cooling_feature && <p><span className='spechead'>Cooling Feature</span><span className='specvalue' style={{position: 'relative', left: '5.5rem'}}>Yes</span></p>}
         {laptopaccessories.weight_capacity && <p><span className='spechead'>Weight Capacity</span><span className='specvalue' style={{position: 'relative', left: '5.1rem'}}>{laptopaccessories.weight_capacity} kg</span></p>}
         {laptopaccessories.number_of_fans && <p><span className='spechead'>Total Fans</span><span className='specvalue' style={{position: 'relative', left: '8.1rem'}}>{laptopaccessories.number_of_fans===1 ? '1 fan' : `${laptopaccessories.number_of_fans} fans`}</span></p>}
         {laptopaccessories.fan_speed && <p><span className='spechead'>Fan Speed</span><span className='specvalue' style={{position: 'relative', left: '7.9rem'}}>{laptopaccessories.fan_speed}</span></p>}
@@ -167,6 +172,8 @@ function LaptopAccessoriesInfo() {
         {laptopaccessories.output_ports && <p><span className='spechead'>Output Ports</span><span className='specvalue' style={{position: 'relative', left: '0.5rem', display: 'flex'}}>{laptopaccessories.output_ports}</span></p>}
         {laptopaccessories.compatible_devices && <p><span className='spechead'>Compatible Devices</span><span className='specvalue' style={{position: 'relative', left: '0.5rem', display: 'flex'}}>{laptopaccessories.compatible_devices}</span></p>}
         {laptopaccessories.included_items && <p><span className='spechead'>Included Items</span><span className='specvalue' style={{position: 'relative', left: '0.5rem', display: 'flex'}}>{laptopaccessories.included_items}</span></p>}
+        <button onClick={() => setExpand(!expand)} style={{position: 'relative', left: '0.5rem', color: 'rgb(0, 113, 133)', backgroundColor: 'white', fontSize: '16px', fontWeight: '600'}}>See Less</button>
+        </>)}
         <hr style={{color:'gray'}}></hr>
         <p className='spechead'>About this item</p>
         <p className='descpara'>{laptopaccessories.description_para}</p>

@@ -19,6 +19,7 @@ function HomeTheaterInfo() {
   const { ht_name } = useParams();
   const [htdata, setHtdata] = useState([]);
   const [image, setImage] = useState('');
+  const [expand, setExpand] = useState('');
   const [imageDimensions, setImageDimensions] = useState({ width: 660, height: 679 });
   
   const imageRef = useRef(null);
@@ -132,7 +133,6 @@ function HomeTheaterInfo() {
           <p><span className='mrp'>MRP:<span className='oldprice'>{formatCurrency(ht.price)}</span></span> <Badge className='saveprice' bg="success">SAVE {formatCurrency(ht.price-ht.discount_price)}</Badge></p>
           <p className='sku'>SKU: {ht.sku}</p>
           <Button className='addtocartbtn' onClick={() => handleAddToCart(ht)}>Add to Cart</Button><br></br>
-          <Button className='buynow'>Buy Now</Button>
           <div>
           <img src={productreturn} alt='productreturn' className='productreturn'/>
           <img src={warranty} alt='warranty' className='warrantyicon'/>
@@ -149,6 +149,11 @@ function HomeTheaterInfo() {
           <p><span className='spechead'>Colour</span><span className='specvalue' style={{position: 'relative', left: '9.7rem'}}>{ht.color}</span></p>
           <p><span className='spechead'>Dimensions</span><span className='specvalue' style={{position: 'relative', left: '7.3rem'}}>{ht.dimensions}</span></p>
           <p><span className='spechead'>Weight</span><span className='specvalue' style={{position: 'relative', left: '9.3rem'}}>{ht.weight} kg</span></p>
+          {!expand && (
+              <button onClick={() => setExpand(!expand)} style={{position: 'relative', left: '0.5rem', color: 'rgb(0, 113, 133)', fontSize: '16px', backgroundColor: 'white', fontWeight: '600'}}>See More</button>
+            )}
+          {expand && 
+          (<>
           {ht.audio_output_power && <p><span className='spechead'>Audio Output Power</span><span className='specvalue' style={{position: 'relative', left: '3rem'}}>{ht.audio_output_power}</span></p>}
           {ht.number_of_hdmi_ports && <p><span className='spechead'>Total HDMI Ports</span><span className='specvalue' style={{position: 'relative', left: '4.7rem'}}>{ht.number_of_hdmi_ports === 1 ? '1 port' : `${ht.number_of_hdmi_ports} ports`}</span></p>}
           {ht.surround_sound && <p><span className='spechead'>Surround Sound</span><span className='specvalue' style={{position: 'relative', left: '5.4rem'}}>Yes</span></p>}
@@ -170,6 +175,8 @@ function HomeTheaterInfo() {
           {ht.streaming_services && <p><span className='spechead'>Streaming Services</span><span className='specvalue' style={{position: 'relative', left: '0.5rem', display: 'flex'}}>{ht.streaming_services}</span></p>}
           {ht.smart_features && <p><span className='spechead'>Smart Features</span><span className='specvalue' style={{position: 'relative', left: '0.5rem', display: 'flex'}}>{ht.smart_features}</span></p>}
           {ht.included_items && <p><span className='spechead'>Included Items</span><span className='specvalue' style={{position: 'relative', left: '0.5rem', display: 'flex'}}>{ht.included_items}</span></p>}
+          <button onClick={() => setExpand(!expand)} style={{position: 'relative', left: '0.5rem', color: 'rgb(0, 113, 133)', backgroundColor: 'white', fontSize: '16px', fontWeight: '600'}}>See Less</button>
+          </>)}
           <hr style={{color:'gray'}}></hr>
           <p className='spechead'>About this item</p>
           <p className='descpara'>{ht.description_para}</p>

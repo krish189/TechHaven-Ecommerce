@@ -19,6 +19,7 @@ function MouseInfo() {
   const { mousename } = useParams();
   const [mousedata, setMousedata] = useState([]);
   const [image, setImage] = useState('');
+  const [expand, setExpand] = useState('');
   const [imageDimensions, setImageDimensions] = useState({ width: 660, height: 679 });
   
   const imageRef = useRef(null);
@@ -131,7 +132,6 @@ function MouseInfo() {
         <p><span className='mrp'>MRP:<span className='oldprice'>{formatCurrency(mouse.price)}</span></span> <Badge className='saveprice' bg="success">SAVE {formatCurrency(mouse.price-mouse.discount_price)}</Badge></p>
         <p className='sku'>SKU: {mouse.sku}</p>
         <Button className='addtocartbtn' onClick={() => handleAddToCart(mouse)}>Add to Cart</Button><br></br>
-        <Button className='buynow'>Buy Now</Button>
         <div>
         <img src={productreturn} alt='productreturn' className='productreturn'/>
         <img src={warranty} alt='warranty' className='warrantyicon'/>
@@ -150,6 +150,11 @@ function MouseInfo() {
         <p><span className='spechead'>Weight</span><span className='specvalue' style={{position: 'relative', left: '9.4rem'}}>{mouse.weight} kg</span></p>
         <p><span className='spechead'>Category</span><span className='specvalue' style={{position: 'relative', left: '8.5rem'}}>{mouse.peripherals_category}</span></p>
         <p><span className='spechead'>Mouse Type</span><span className='specvalue' style={{position: 'relative', left: '7.1rem'}}>{mouse.mouse_type}</span></p>
+        {!expand && (
+              <button onClick={() => setExpand(!expand)} style={{position: 'relative', left: '0.5rem', color: 'rgb(0, 113, 133)', fontSize: '16px', backgroundColor: 'white', fontWeight: '600'}}>See More</button>
+          )}
+        {expand && 
+        (<>
         {mouse.cable_length && <p><span className='spechead'>Cable Length</span><span className='specvalue' style={{position: 'relative', left: '6.7rem'}}>{mouse.cable_length}</span></p>}
         {mouse.connectivity_type && <p><span className='spechead'>Connectivity Type</span><span className='specvalue' style={{position: 'relative', left: '4.4rem'}}>{mouse.connectivity_type}</span></p>}
         {mouse.dpi && <p><span className='spechead'>DPI</span><span className='specvalue' style={{position: 'relative', left: '11.1rem'}}>{mouse.dpi}</span></p>}
@@ -163,6 +168,8 @@ function MouseInfo() {
         {mouse.recharge_time && <p><span className='spechead'>Recharge Time</span><span className='specvalue' style={{position: 'relative', left: '5.8rem'}}>{mouse.recharge_time}</span></p>}
         {mouse.connectivity && <p><span className='spechead'>Connectivity</span><span className='specvalue' style={{position: 'relative', left: '0.5rem', display: 'flex'}}>{mouse.connectivity}</span></p>}
         {mouse.included_items && <p><span className='spechead'>Included Items</span><span className='specvalue' style={{position: 'relative', left: '0.5rem', display: 'flex'}}>{mouse.included_items}</span></p>}
+        <button onClick={() => setExpand(!expand)} style={{position: 'relative', left: '0.5rem', color: 'rgb(0, 113, 133)', backgroundColor: 'white', fontSize: '16px', fontWeight: '600'}}>See Less</button>
+        </>)}
         <hr style={{color:'gray'}}></hr>
         <p className='spechead'>About this item</p>
         <p className='descpara'>{mouse.description_para}</p>

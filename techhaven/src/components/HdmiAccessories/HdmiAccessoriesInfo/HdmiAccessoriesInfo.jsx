@@ -131,7 +131,6 @@ function HdmiAccessoriesInfo() {
         <p><span className='mrp'>MRP:<span className='oldprice'>{formatCurrency(hdmiaccessories.price)}</span></span> <Badge className='saveprice' bg="success">SAVE {formatCurrency(hdmiaccessories.price-hdmiaccessories.discount_price)}</Badge></p>
         <p className='sku'>SKU: {hdmiaccessories.sku}</p>
         <Button className='addtocartbtn' onClick={() => handleAddToCart(hdmiaccessories)}>Add to Cart</Button><br></br>
-        <Button className='buynow'>Buy Now</Button>
         <div>
         <img src={productreturn} alt='productreturn' className='productreturn'/>
         <img src={warranty} alt='warranty' className='warrantyicon'/>
@@ -157,11 +156,11 @@ function HdmiAccessoriesInfo() {
         {hdmiaccessories.ethernet_support && <p><span className='spechead'>Ethernet Support</span><span className='specvalue' style={{position: 'relative', left: '5rem'}}>Yes</span></p>}
         {hdmiaccessories.adapter_type && <p><span className='spechead'>Adapter Type</span><span className='specvalue' style={{position: 'relative', left: '6.5rem'}}>{hdmiaccessories.adapter_type}</span></p>}
         {hdmiaccessories.connector_type_input && <p><span className='spechead'>Connector Type Input</span><span className='specvalue' style={{position: 'relative', left: '2.6rem'}}>{hdmiaccessories.connector_type_input}</span></p>}
-        {hdmiaccessories.connector_type_output && <p><span className='spechead'>Connector Type Output</span><span className='specvalue' style={{position: 'relative', left: '2rem'}}>{hdmiaccessories.connector_type_output}</span></p>}
-        {hdmiaccessories.resolution_support && <p><span className='spechead'>Resolution Support</span><span className='specvalue' style={{position: 'relative', left: '3.9rem'}}>{hdmiaccessories.resolution_support}</span></p>}
-        {hdmiaccessories.audio_support && <p><span className='spechead'>Audio Support</span><span className='specvalue' style={{position: 'relative', left: '6.4rem'}}>Yes</span></p>}
+        {hdmiaccessories.connector_type_output && <p><span className='spechead'>Connector Type Output</span><span className='specvalue' style={{position: 'relative', left: '1.9rem'}}>{hdmiaccessories.connector_type_output}</span></p>}
+        {hdmiaccessories.resolution_support && <p><span className='spechead'>Resolution Support</span><span className='specvalue' style={{position: 'relative', left: '3.8rem'}}>{hdmiaccessories.resolution_support}</span></p>}
+        {hdmiaccessories.audio_support && <p><span className='spechead'>Audio Support</span><span className='specvalue' style={{position: 'relative', left: '6.3rem'}}>Yes</span></p>}
         {hdmiaccessories.power_required && <p><span className='spechead'>Power Required</span><span className='specvalue' style={{position: 'relative', left: '6rem'}}>Yes</span></p>}
-        {hdmiaccessories.active_passive && <p><span className='spechead'>Mode</span><span className='specvalue' style={{position: 'relative', left: '10.4rem'}}>{hdmiaccessories.active_passive}</span></p>}
+        {hdmiaccessories.active_passive && <p><span className='spechead'>Mode</span><span className='specvalue' style={{position: 'relative', left: '10.3rem'}}>{hdmiaccessories.active_passive}</span></p>}
         <hr style={{color:'gray'}}></hr>
         <p className='spechead'>About this item</p>
         <p className='descpara'>{hdmiaccessories.description_para}</p>

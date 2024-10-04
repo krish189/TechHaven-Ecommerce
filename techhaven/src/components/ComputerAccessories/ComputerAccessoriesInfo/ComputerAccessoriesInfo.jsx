@@ -19,6 +19,7 @@ function ComputerAccessoriesInfo() {
   const { computeraccessoriesname } = useParams();
   const [computeraccessoriesdata, setComputerAccessoriesdata] = useState([]);
   const [image, setImage] = useState('');
+  const [expand, setExpand] = useState('');
   const [imageDimensions, setImageDimensions] = useState({ width: 660, height: 679 });
   
   const imageRef = useRef(null);
@@ -131,7 +132,6 @@ function ComputerAccessoriesInfo() {
         <p><span className='mrp'>MRP:<span className='oldprice'>{formatCurrency(computeraccessories.price)}</span></span> <Badge className='saveprice' bg="success">SAVE {formatCurrency(computeraccessories.price-computeraccessories.discount_price)}</Badge></p>
         <p className='sku'>SKU: {computeraccessories.sku}</p>
         <Button className='addtocartbtn' onClick={() => handleAddToCart(computeraccessories)}>Add to Cart</Button><br></br>
-        <Button className='buynow'>Buy Now</Button>
         <div>
         <img src={productreturn} alt='productreturn' className='productreturn'/>
         <img src={warranty} alt='warranty' className='warrantyicon'/>
@@ -146,9 +146,14 @@ function ComputerAccessoriesInfo() {
         <p><span className='spechead'>Brand</span><span className='specvalue' style={{position: 'relative', left: '10.4rem'}}>{computeraccessories.brand}</span></p>
         <p><span className='spechead'>Model Name</span><span className='specvalue'>{computeraccessories.name.replace(/\s*\(.*?\)/, '')}</span></p>
         <p><span className='spechead'>Colour</span><span className='specvalue' style={{position: 'relative', left: '9.8rem'}}>{computeraccessories.color}</span></p>
-        <p><span className='spechead'>Dimensions</span><span className='specvalue' style={{position: 'relative', left: '7.3rem'}}>{computeraccessories.dimensions}</span></p>
-        <p><span className='spechead'>Weight</span><span className='specvalue' style={{position: 'relative', left: '9.3rem'}}>{computeraccessories.weight} kg</span></p>
-        <p><span className='spechead'>Category</span><span className='specvalue' style={{position: 'relative', left: '8.3rem'}}>{computeraccessories.accessory_category}</span></p>
+        <p><span className='spechead'>Dimensions</span><span className='specvalue' style={{position: 'relative', left: '7.4rem'}}>{computeraccessories.dimensions}</span></p>
+        <p><span className='spechead'>Weight</span><span className='specvalue' style={{position: 'relative', left: '9.4rem'}}>{computeraccessories.weight} kg</span></p>
+        <p><span className='spechead'>Category</span><span className='specvalue' style={{position: 'relative', left: '8.4rem'}}>{computeraccessories.accessory_category}</span></p>
+        {!expand && (
+              <button onClick={() => setExpand(!expand)} style={{position: 'relative', left: '0.5rem', color: 'rgb(0, 113, 133)', fontSize: '16px', backgroundColor: 'white', fontWeight: '600'}}>See More</button>
+            )}
+        {expand && 
+        (<>
         {computeraccessories.storage_capacity &&  <p><span className='spechead'>Storage Capacity</span><span className='specvalue' style={{position: 'relative', left: '4.8rem'}}>{computeraccessories.storage_capacity}</span></p>}
         {computeraccessories.interface_type &&  <p><span className='spechead'>Interface Type</span><span className='specvalue' style={{position: 'relative', left: '5.9rem'}}>{computeraccessories.interface_type}</span></p>}
         {computeraccessories.form_factor &&  <p><span className='spechead'>Form Factor</span><span className='specvalue' style={{position: 'relative', left: '6.9rem'}}>{computeraccessories.form_factor}</span></p>}
@@ -173,9 +178,9 @@ function ComputerAccessoriesInfo() {
         {computeraccessories.boost_clock && <p><span className='spechead'>Boost Clock</span><span className='specvalue' style={{position: 'relative', left: '7rem'}}>{computeraccessories.boost_clock}</span></p>}
         {computeraccessories.power_consumption && <p><span className='spechead'>Power Consumption</span><span className='specvalue' style={{position: 'relative', left: '3.1rem'}}>{computeraccessories.power_consumption}</span></p>}
         {computeraccessories.cache_size && <p><span className='spechead'>Cache Size</span><span className='specvalue' style={{position: 'relative', left: '7.8rem'}}>{computeraccessories.cache_size}</span></p>}
-        {computeraccessories.usb_version && <p><span className='spechead'>USB Version</span><span className='specvalue' style={{position: 'relative', left: '7rem'}}>{computeraccessories.usb_version}</span></p>}
+        {computeraccessories.usb_version && <p><span className='spechead'>USB Version</span><span className='specvalue' style={{position: 'relative', left: '6.9rem'}}>{computeraccessories.usb_version}</span></p>}
         {computeraccessories.data_transfer_rate && <p><span className='spechead'>Data Transfer Rate</span><span className='specvalue' style={{position: 'relative', left: '3.9rem'}}>{computeraccessories.data_transfer_rate}</span></p>}
-        {computeraccessories.number_of_ports && <p><span className='spechead'>Total Ports</span><span className='specvalue' style={{position: 'relative', left: '7.5rem'}}>{computeraccessories.number_of_ports === 1 ? '1 port' : `${computeraccessories.number_of_ports} ports`}</span></p>}
+        {computeraccessories.number_of_ports && <p><span className='spechead'>Total Ports</span><span className='specvalue' style={{position: 'relative', left: '7.6rem'}}>{computeraccessories.number_of_ports === 1 ? '1 port' : `${computeraccessories.number_of_ports} ports`}</span></p>}
         {computeraccessories.socket_type &&  <p><span className='spechead'>Socket Type</span><span className='specvalue' style={{position: 'relative', left: '6.9rem'}}>{computeraccessories.socket_type}</span></p>}
         {computeraccessories.chipset &&  <p><span className='spechead'>Chipset</span><span className='specvalue' style={{position: 'relative', left: '9.1rem'}}>{computeraccessories.chipset}</span></p>}
         {computeraccessories.ram_slots && <p><span className='spechead'>RAM Slots</span><span className='specvalue' style={{position: 'relative', left: '7.9rem'}}>{computeraccessories.ram_slots === 1 ? '1 slot' : `${computeraccessories.ram_slots} slots`}</span></p>}
@@ -189,6 +194,8 @@ function ComputerAccessoriesInfo() {
         {computeraccessories.usb_ports && <p><span className='spechead'>USB Ports</span><span className='specvalue' style={{position: 'relative', left: '0.5rem', display: 'flex'}}>{computeraccessories.usb_ports}</span></p>}
         {computeraccessories.network_ports && <p><span className='spechead'>Network Ports</span><span className='specvalue' style={{position: 'relative', left: '0.5rem', display: 'flex'}}>{computeraccessories.network_ports}</span></p>}
         {computeraccessories.included_items && <p><span className='spechead'>Included Items</span><span className='specvalue' style={{position: 'relative', left: '0.5rem', display: 'flex'}}>{computeraccessories.included_items}</span></p>}
+        <button onClick={() => setExpand(!expand)} style={{position: 'relative', left: '0.5rem', color: 'rgb(0, 113, 133)', backgroundColor: 'white', fontSize: '16px', fontWeight: '600'}}>See Less</button>
+        </>)}
         <hr style={{color:'gray'}}></hr>
         <p className='spechead'>About this item</p>
         <p className='descpara'>{computeraccessories.description_para}</p>
