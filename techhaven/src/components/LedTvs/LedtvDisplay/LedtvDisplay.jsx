@@ -13,7 +13,7 @@ import StarRatings from 'react-star-ratings';
 
 function LedtvDisplay() {
   const { tv_type } = useParams(); 
-  const [selectedCategories, setSelectedCategories] = useState(tv_type ? [tv_type] : []);
+  const [selectedCategories, setSelectedCategories] = useState(tv_type ? tv_type.split(', ') : []);
   const [ledtvData, setLedtvData] = useState([]);
   const { value } = useFilter();
   const navigate = useNavigate();
