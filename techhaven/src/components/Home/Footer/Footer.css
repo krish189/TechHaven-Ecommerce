@@ -65,6 +65,10 @@
     left: 6rem;
     margin-right: 2rem;
 }
+.mediaicons:hover
+{
+    cursor: pointer;
+}
 .tailtext
 {
     font-family: 'Roboto',sans-serif;
