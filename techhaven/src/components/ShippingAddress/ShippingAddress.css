@@ -1,0 +1,123 @@
+.brand-logo
+{
+    width: 250px;
+    height: 85px;
+    position: relative;
+    left: 10rem;
+    bottom: 1.5rem;
+}
+.shipping-container
+{
+    background-color: #F4F3F0;
+    display: flex;
+    padding: 20px;
+    height: 100vh;
+}
+.shipping-info
+{
+    background-color: white;
+    position: relative;
+    left: 18%;
+    padding: 30px;
+    width: 40rem;
+}
+.shipping-info form
+{
+  position: relative;
+  bottom: 1.5rem;
+}
+.total-display
+{
+    background-color: white;
+    border-left: 1px solid lightgray;
+    position: relative;
+    left: 18%;
+    padding: 20px;
+    width: 23rem;
+}
+.shipping-head
+{
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Arial',sans-serif;
+    position: relative;
+    bottom: 1.5rem;
+}
+.return-to-cart
+{
+    text-decoration: none;
+    position: relative;
+    left: 1.5rem;
+}
+.return-to-cart:hover
+{
+    text-decoration: underline;
+}
+.total-display-head
+{
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Arial',sans-serif;   
+}
+.total-display-value
+{
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Arial',sans-serif;   
+    position: relative;
+    left: 5rem;
+}
+.total-head
+{
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Arial',sans-serif;   
+}
+.total-value
+{
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Arial',sans-serif;  
+    position: relative;
+    left: 6.3rem;
+}
+.order-summary-details
+{
+    font-size: 12px;
+}
+.deleteicon
+{
+    width: 12px;
+    height: 15px;
+    position: relative;
+    left: 0.7rem;
+    bottom: 0.1rem;
+}
+.order-summary-head
+{
+    font-weight: 700;
+}
+.order-summary-item-name
+{
+    font-weight: 700;
+}
+.order-summary-item-price
+{
+    font-weight: 500;
+    font-size: 12px;
+}
+.order-summary-display
+{
+    display: flex;
+    justify-content: space-between;
+}
+.price-and-delete-icon
+{
+    position: relative;
+    bottom: 0.3rem;
+    right: 1rem;
+}
+input:focus {
+    border: 1px solid #0041C2;
+    outline: none; 
+}

@@ -1,0 +1,136 @@
+.category
+{
+    background-color: #21232B;
+    height: 3.5rem;
+    display: flex;
+}
+.categorynav
+{
+    display: flex;
+    color: #F4F3F0;
+}
+.categoryul
+{
+    display: flex;
+}
+.categoryul li
+{
+    list-style: none;
+    font-size: 0.9rem;
+    font-family: 'Montserrat',sans-serif;
+    margin-right: 1rem;
+    margin-left: 1.9rem;
+}
+ul li:hover
+{
+    color: lightgray;
+    cursor: pointer;
+}
+.shopsupportsubmenu
+{
+    position: fixed;
+    top: 9rem;
+    right: 0.5rem;
+    width: 14rem;
+    border-radius: 5px;
+    background-color: white;
+    z-index: 999; 
+    display: none;
+}
+.shopsupportsubmenu p
+{
+    padding: 10px;
+    padding-left: 15px;
+}
+.shopsupportsubmenu p:hover
+{
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #E6F1FC;
+}
+.shopsupportsubmenu.active
+{
+    display: block;
+    border: 3px solid #448EE4;
+}
+.categoryaccessoriessubmenu
+{
+    position: fixed;
+    top: 8.5rem;
+    left: 50rem;
+    width: 14rem;
+    border-radius: 5px;
+    background-color: white;
+    z-index: 999; 
+    display: none;
+}
+.categoryaccessoriessubmenu p
+{
+    padding: 10px;
+    padding-left: 15px;
+}
+.categoryaccessoriessubmenu p:hover
+{
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #E6F1FC;
+}
+.categoryaccessoriessubmenu.active
+{
+    display: block;
+    border: 3px solid #448EE4;
+}
+.categoryperipheralssubmenu
+{
+    position: fixed;
+    top: 8.5rem;
+    left: 58.8rem;
+    width: 14rem;
+    border-radius: 5px;
+    background-color: white;
+    z-index: 999; 
+    display: none;
+}
+.categoryperipheralssubmenu p
+{
+    padding: 10px;
+    padding-left: 15px;
+}
+.categoryperipheralssubmenu p:hover
+{
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #E6F1FC;
+}
+.categoryperipheralssubmenu.active
+{
+    display: block;
+    border: 3px solid #448EE4;
+}
+.categorysmarthomesubmenu
+{
+    position: fixed;
+    top: 8.5rem;
+    left: 67.4rem;
+    width: 14rem;
+    border-radius: 5px;
+    background-color: white;
+    z-index: 999; 
+    display: none;
+}
+.categorysmarthomesubmenu p
+{
+    padding: 10px;
+    padding-left: 15px;
+}
+.categorysmarthomesubmenu p:hover
+{
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #E6F1FC;
+}
+.categorysmarthomesubmenu.active
+{
+    display: block;
+    border: 3px solid #448EE4;
+}

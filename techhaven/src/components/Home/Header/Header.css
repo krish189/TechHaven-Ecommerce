@@ -1,0 +1,669 @@
+.logoimg
+{
+    width: 200px;
+    height: 70px;
+}
+.link
+{
+    text-decoration: none;
+    color: #F4F3F0;
+}
+.header
+{
+    background-color: #21232B;
+    padding: 15px;
+    height: 6rem;
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+nav
+{
+    display: flex;
+    color: #F4F3F0;
+}
+ul
+{
+    display: flex;
+}
+ul li
+{
+    list-style: none;
+    font-size: 1.1rem;
+    font-family: 'Montserrat',sans-serif;
+    margin-right: 1rem;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+}
+ul li:hover
+{
+    color: lightgray;
+    cursor: pointer;
+}
+.searchicon
+{
+    width: 25px;
+    height: 25px;
+    position: relative;
+    left: 4rem;
+    top: 0.9rem;
+}
+.searchicon:hover
+{
+    cursor: pointer;
+}
+.downicon
+{
+    width: 15px;
+    height: 15px;
+    position: relative;
+    left: 0.3rem;
+    bottom: 0.1rem;
+}
+.search 
+{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    border-radius: 5px;
+    width: 30rem;
+    height: 44rem;
+    padding: 20px;
+    background-color: white;
+    z-index: 1; 
+    display: none;
+    overflow-x: hidden;
+    overflow-y: auto;
+} 
+.search input
+{
+    width: 448px;
+    height: 50px;
+    border-top: white;
+    border-left: white;
+    border-right: white;
+    border-bottom: 1px solid black;
+    padding: 30px;
+    font-size: large;
+    position: relative;
+    top: 2.5rem;
+}
+.search.active 
+{
+    display: block;
+}
+.closeicon
+{
+    position: relative;
+    left: 405px;
+    width: 30px;
+    height: 30px;
+}
+.laptopsubmenu
+{
+    position: fixed;
+    top: 7.2rem;
+    left: 16.9rem;
+    width: 12rem;
+    border-radius: 5px;
+    background-color: white;
+    z-index: 1; 
+    display: none;
+}
+.laptopsubmenu p
+{
+    padding: 13px;
+    padding-left: 25px;
+}
+.laptopsubmenu p:hover
+{
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #E6F1FC;
+}
+.laptopsubmenu.active
+{
+    display: block;
+    border: 3px solid #448EE4;
+}
+.audiovideosubmenu
+{
+    position: fixed;
+    top: 7.2rem;
+    left: 24.6rem;
+    width: 14rem;
+    border-radius: 5px;
+    background-color: white;
+    z-index: 1; 
+    display: none;
+}
+.audiovideosubmenu p
+{
+    padding: 10px;
+    padding-left: 15px;
+}
+.clickedcategory
+{
+    background-color: #E6F1FC;
+    border-radius: 5px;
+}
+.audiovideosubmenu p:hover
+{
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #E6F1FC;
+}
+.audiovideosubmenu.active
+{
+    display: block;
+    border: 3px solid #448EE4;
+}
+.heading-separator
+{
+    width: 12rem;
+    position: relative;
+    left: 0.8rem;
+}
+.speakercategory
+{
+    position: fixed;
+    top: 7.2rem;
+    left: 38.6rem;
+    width: 14rem;
+    border-radius: 5px;
+    background-color: white;
+    z-index: 1; 
+    display: none;
+}
+.speakercategory p,h6
+{
+    padding: 6px;
+    padding-left: 15px;
+}
+.speakercategory h6
+{
+    position: relative;
+    top: 0.7rem;
+}
+.speakercategory p:hover
+{
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #E6F1FC;
+}
+.speakercategory.active
+{
+    display: block;
+    border: 3px solid #448EE4;
+}
+.heading-separator-hpeb
+{
+    width: 12rem;
+    position: relative;
+    left: 0.8rem;
+}
+.headphonecategory
+{
+    position: fixed;
+    top: 11rem;
+    left: 38.6rem;
+    width: 14rem;
+    border-radius: 5px;
+    background-color: white;
+    z-index: 1; 
+    display: none;
+}
+.headphonecategory p,h6
+{
+    padding: 11px;
+    padding-left: 15px;
+}
+.headphonecategory h6
+{
+    position: relative;
+    top: 0.8rem;
+}
+.headphonecategory p:hover
+{
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #E6F1FC;
+}
+.headphonecategory.active
+{
+    display: block;
+    border: 3px solid #448EE4;
+}
+.tvcategory
+{
+    position: fixed;
+    top: 14.7rem;
+    left: 38.6rem;
+    width: 14rem;
+    border-radius: 5px;
+    background-color: white;
+    z-index: 1; 
+    display: none;
+}
+.tvcategory p,h6
+{
+    padding: 10px;
+    padding-left: 15px;
+}
+.tvcategory h6
+{
+    position: relative;
+    top: 0.8rem;
+}
+.tvcategory p:hover
+{
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #E6F1FC;
+}
+.tvcategory.active
+{
+    display: block;
+    border: 3px solid #448EE4;
+}
+.accessoriessubmenu
+{
+    position: fixed;
+    top: 7.2rem;
+    left: 33.8rem;
+    width: 14rem;
+    border-radius: 5px;
+    background-color: white;
+    z-index: 1; 
+    display: none;
+}
+.accessoriessubmenu p
+{
+    padding: 10px;
+    padding-left: 15px;
+}
+.accessoriessubmenu p:hover
+{
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #E6F1FC;
+}
+.accessoriessubmenu.active
+{
+    display: block;
+    border: 3px solid #448EE4;
+}
+.heading-separator-comp-acc
+{
+    width: 12rem;
+    position: relative;
+    left: 0.8rem;
+}
+.computeracccategory
+{
+    position: fixed;
+    top: 7.2rem;
+    left: 47.8rem;
+    width: 14rem;
+    border-radius: 5px;
+    background-color: white;
+    z-index: 1; 
+    display: none;
+}
+.computeracccategory p,h6
+{
+    padding: 10px;
+    padding-left: 15px;
+}
+.computeracccategory h6
+{
+    position: relative;
+    top: 0.8rem;
+}
+.computeracccategory p:hover
+{
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #E6F1FC;
+}
+.computeracccategory.active
+{
+    display: block;
+    border: 3px solid #448EE4;
+}
+.heading-separator-laptop-acc
+{
+    width: 12rem;
+    position: relative;
+    left: 0.8rem;
+}
+.laptopacccategory
+{
+    position: fixed;
+    top: 10.9rem;
+    left: 47.8rem;
+    width: 14rem;
+    border-radius: 5px;
+    background-color: white;
+    z-index: 1; 
+    display: none;
+}
+.laptopacccategory p,h6
+{
+    padding: 10px;
+    padding-left: 15px;
+}
+.laptopacccategory h6
+{
+    position: relative;
+    top: 0.8rem;
+}
+.laptopacccategory p:hover
+{
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #E6F1FC;
+}
+.laptopacccategory.active
+{
+    display: block;
+    border: 3px solid #448EE4;
+}
+.heading-separator-mobile-acc
+{
+    width: 12rem;
+    position: relative;
+    left: 0.8rem;
+}
+.mobileacccategory
+{
+    position: fixed;
+    top: 14.6rem;
+    left: 47.8rem;
+    width: 14rem;
+    border-radius: 5px;
+    background-color: white;
+    z-index: 1; 
+    display: none;
+}
+.mobileacccategory p,h6
+{
+    padding: 10px;
+    padding-left: 15px;
+}
+.mobileacccategory h6
+{
+    position: relative;
+    top: 0.8rem;
+}
+.mobileacccategory p:hover
+{
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #E6F1FC;
+}
+.mobileacccategory.active
+{
+    display: block;
+    border: 3px solid #448EE4;
+}
+.heading-separator-hdmi-acc
+{
+    width: 12rem;
+    position: relative;
+    left: 0.8rem;
+}
+.hdmiacccategory
+{
+    position: fixed;
+    top: 18.5rem;
+    left: 47.8rem;
+    width: 14rem;
+    border-radius: 5px;
+    background-color: white;
+    z-index: 1; 
+    display: none;
+}
+.hdmiacccategory p,h6
+{
+    padding: 10px;
+    padding-left: 15px;
+}
+.hdmiacccategory h6
+{
+    position: relative;
+    top: 0.8rem;
+}
+.hdmiacccategory p:hover
+{
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #E6F1FC;
+}
+.hdmiacccategory.active
+{
+    display: block;
+    border: 3px solid #448EE4;
+}
+.peripheralsubmenu
+{
+    position: fixed;
+    top: 7.2rem;
+    left: 43.6rem;
+    width: 14rem;
+    border-radius: 5px;
+    background-color: white;
+    z-index: 1; 
+    display: none;
+}
+.peripheralsubmenu p
+{
+    padding: 10px;
+    padding-left: 15px;
+}
+.peripheralsubmenu p:hover
+{
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #E6F1FC;
+}
+.peripheralsubmenu.active
+{
+    display: block;
+    border: 3px solid #448EE4;
+}
+.heading-separator-keyboard
+{
+    width: 12rem;
+    position: relative;
+    left: 0.8rem;
+}
+.keyboardcategory
+{
+    position: fixed;
+    top: 7.2rem;
+    left: 57.6rem;
+    width: 14rem;
+    border-radius: 5px;
+    background-color: white;
+    z-index: 1; 
+    display: none;
+}
+.keyboardcategory p,h6
+{
+    padding: 10px;
+    padding-left: 15px;
+}
+.keyboardcategory h6
+{
+    position: relative;
+    top: 0.7rem;
+}
+.keyboardcategory p:hover
+{
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #E6F1FC;
+}
+.keyboardcategory.active
+{
+    display: block;
+    border: 3px solid #448EE4;
+}
+.heading-separator-mouse
+{
+    width: 12rem;
+    position: relative;
+    left: 0.8rem;
+}
+.mousecategory
+{
+    position: fixed;
+    top: 11rem;
+    left: 57.6rem;
+    width: 14rem;
+    border-radius: 5px;
+    background-color: white;
+    z-index: 1; 
+    display: none;
+}
+.mousecategory p,h6
+{
+    padding: 10px;
+    padding-left: 15px;
+}
+.mousecategory h6
+{
+    position: relative;
+    top: 0.8rem;
+}
+.mousecategory p:hover
+{
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #E6F1FC;
+}
+.mousecategory.active
+{
+    display: block;
+    border: 3px solid #448EE4;
+}
+.heading-separator-monitor
+{
+    width: 12rem;
+    position: relative;
+    left: 0.8rem;
+}
+.monitorcategory
+{
+    position: fixed;
+    top: 14.7rem;
+    left: 57.6rem;
+    width: 14rem;
+    border-radius: 5px;
+    background-color: white;
+    z-index: 1; 
+    display: none;
+}
+.monitorcategory p,h6
+{
+    padding: 10px;
+    padding-left: 15px;
+}
+.monitorcategory h6
+{
+    position: relative;
+    top: 0.8rem;
+}
+.monitorcategory p:hover
+{
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #E6F1FC;
+}
+.monitorcategory.active
+{
+    display: block;
+    border: 3px solid #448EE4;
+}
+.smarthomesubmenu
+{
+    position: fixed;
+    top: 7.2rem;
+    left: 53rem;
+    width: 14rem;
+    border-radius: 5px;
+    background-color: white;
+    z-index: 1; 
+    display: none;
+}
+.smarthomesubmenu p
+{
+    padding: 10px;
+    padding-left: 15px;
+}
+.smarthomesubmenu p:hover
+{
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #E6F1FC;
+}
+.smarthomesubmenu.active
+{
+    display: block;
+    border: 3px solid #448EE4;
+}
+.supportsubmenu
+{
+    position: fixed;
+    top: 7.2rem;
+    right: 1rem;
+    width: 14rem;
+    border-radius: 5px;
+    background-color: white;
+    z-index: 999; 
+    display: none;
+}
+.supportsubmenu p
+{
+    padding: 10px;
+    padding-left: 15px;
+}
+.supportsubmenu p:hover
+{
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #E6F1FC;
+}
+.supportsubmenu.active
+{
+    display: block;
+    border: 3px solid #448EE4;
+}
+.search-results
+{
+    position: relative;
+    top: 4rem;
+}
+.product-item
+{
+    display: flex;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+.searchproductimg
+{
+    width: 98px;
+    height: 98px;
+}
+.details
+{
+    position: relative;
+    left: 1rem;
+}
+.productimg
+{
+    position: relative;
+    top: 0.5rem;
+}

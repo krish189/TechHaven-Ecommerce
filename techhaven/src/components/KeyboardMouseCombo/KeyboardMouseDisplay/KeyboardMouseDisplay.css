@@ -1,0 +1,48 @@
+.combospage
+{
+    overflow: hidden;
+} 
+.combospagetitle
+{
+    width: 100%;
+    height: 23rem;
+    background: url('../../../assets/combo_carousel.jpg') no-repeat;
+    background-size: 100% 20rem;
+}
+.combospagehead
+{
+    color: white;
+    text-align: center;
+    position: relative;
+    top: 5rem;
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 53px;
+}
+.combospagetitlecontent
+{
+    color: white;
+    text-align: center;
+    position: relative;
+    top: 6rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 27px;
+}
+.combosname
+{
+    font-size: 1.1rem;
+    font-weight: 400;   
+}
+.combosname:hover
+{
+    color: orange;
+}
+.comboscontainer
+{
+    position: relative;
+    bottom: 15rem;
+    padding: 10px;
+    width: 78%;
+    left: 10rem;
+}

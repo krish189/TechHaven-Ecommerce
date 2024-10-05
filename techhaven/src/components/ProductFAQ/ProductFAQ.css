@@ -1,0 +1,56 @@
+.faq-div
+{
+    background-color: #F4F3F0;
+    height: 160vh;
+}
+.find-your-product-card
+{
+  width: 90vw;
+  height: 155vh;
+  position: relative;
+  left: 4.5rem;
+  top: 1rem;
+  border-radius: 15px;
+  background-color: white;
+  padding: 50px;
+}
+.find-your-product-head
+{
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 44px;
+    color: rgb(39, 39, 39);
+}
+.find-your-product-txt
+{
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    color: rgb(39, 39, 39);
+}
+.flex-a
+{
+    display: flex;
+    gap: 3rem;
+}
+.flex-b
+{
+    display: flex;
+    position: relative;
+    top: 1rem;
+    gap: 2.8rem;
+}
+.flex-c
+{
+    display: flex;
+    position: relative;
+    top: 2rem;
+    gap: 2.6rem;
+}
+.flex-d
+{
+    display: flex;
+    position: relative;
+    top: 3rem;
+    gap: 2.6rem;
+}

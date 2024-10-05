@@ -1,0 +1,63 @@
+.cloud-tick-img
+{
+    width: 70px;
+    height: 70px;
+    position: relative;
+    top: 2rem;
+    left: 50%;
+}
+.order-confirmation-container
+{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+}
+.thank-you-txt
+{
+    font-size: 2rem;
+    position: relative;
+    top: 2rem;
+    left: 41%;
+}
+.confirmation-txt
+{
+    font-size: 1rem;
+    position: relative;
+    top: 1rem;
+    left: 35.5%;
+}
+.order-summary-heading
+{
+    font-size: 1rem;
+    font-weight: 600;
+}
+.order-summary-confirmation
+{
+    border: 1px solid black;
+    position: relative;
+    top: 1rem;
+    left: 28%;
+    width: 52.5%;
+    padding: 10px;
+    overflow-x: hidden;
+}
+.order-items-table {
+    width: 100%;
+    border-collapse: collapse; 
+    margin-top: 10px;
+}
+
+.order-items-table th, .order-items-table td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+.order-items-table th {
+    background-color: #f2f2f2; 
+    font-weight: bold;
+}
+
+.order-items-table td {
+    background-color: white;
+}

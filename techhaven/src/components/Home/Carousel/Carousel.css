@@ -1,0 +1,32 @@
+.carousel 
+{
+    background-color: #21232B;
+    overflow: hidden;
+}
+.carousel-item {
+    overflow: hidden;
+}
+.carousel-item img
+{
+    height: 583px;
+    border-radius: 30px;
+    padding: 20px;
+}
+.carousel-caption h1
+{
+    position: relative;
+    bottom: 13rem;
+    font-family: 'Montserrat',sans-serif;
+    text-align: center;
+    font-weight: bolder;
+}
+.carousel-caption button
+{
+    position: relative;
+    bottom: 11rem;
+    font-weight: bolder;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    display: none;
+}

@@ -1,0 +1,79 @@
+.textcontent
+{
+    background-color: #F1F1F1;
+    padding: 30px;
+    height: 40rem;
+}
+.textcontent h1
+{
+    font-family: Arial, sans-serif;
+    font-size: 152px;
+    font-weight: bold;
+    color: #D0D0D0;
+    position: relative;
+    top: 3rem;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    line-height: 152px;
+    letter-spacing: 2px;
+}
+.textcontent h3
+{
+    text-align: center;
+    position: relative;
+    top: 4rem;
+    font-weight: bolder;
+    font-family: 'Roboto',sans-serif;
+}
+.product
+{
+    height: 30rem;
+    width: 100%;
+    overflow: hidden;
+}
+.product img
+{
+    width: 100%;
+    height: 30rem;
+}
+.product h1
+{
+    position: relative;
+    bottom: 20rem;
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+    font-family: 'Roboto',sans-serif;
+}
+.support
+{
+    width: 100%;
+    height: 30rem;
+    background-color: #F1F1F1;
+}
+.cardgroup
+{
+    width: 70%;
+    position: relative;
+    left: 15rem;   
+    top: 5rem;
+}
+.card
+{
+    height: 20rem;
+    justify-content: center;
+    padding: 20px;
+    border: none;
+}
+.card:hover
+{
+  text-decoration: none;
+}
+.accordion-item
+{
+    background-color: #F4F4F4;
+}
+
+
+
+

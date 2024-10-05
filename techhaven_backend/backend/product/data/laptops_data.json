@@ -1,0 +1,36 @@
+[
+    {
+        "name": "GIGABYTE G6X Series (Intel Core i7-13650HX, 16GB RAM, 1TB SSD, RTX 4060, 16'' 165Hz IPS)",
+        "price": 169500.00,
+        "discount_price": 106713.00,
+        "sku": "G6X 9KG-43US854SH",
+        "brand": "GIGABYTE",
+        "images":[
+            "/media/GamingLaptops/Gigabyte_G6X/6da42fbd-1095-40df-944c-62acdd404e24.jpeg",
+            "/media/GamingLaptops/Gigabyte_G6X/eb3b8835-42a2-4c68-8089-38b376065195.jpeg",
+            "/media/GamingLaptops/Gigabyte_G6X/86035406-5fad-40bf-8c0f-0fa2da6d974d.jpeg",
+            "/media/GamingLaptops/Gigabyte_G6X/bc39d373-4ae1-4c88-85b8-4daf32a9d97e.jpeg",
+            "/media/GamingLaptops/Gigabyte_G6X/8bc81736-e288-472e-bf5b-54cb320a9772.jpeg",
+            "/media/GamingLaptops/Gigabyte_G6X/2d0e2a83-0e2a-4250-a3b1-134d99c92077.jpeg"
+          ],
+        "stock": 2,
+        "is_available": "True",
+        "rating": 3.9,
+        "num_reviews": 2,
+        "dimensions": "36.1 x 25.9 x 2.51~2.89 cm",
+        "weight": 2.5,
+        "warranty": "1 year",
+        "color": "Gunmetal Gray",
+        "laptop_type": "GamingLaptops",
+        "cpu": "Intel Core i7-13650HX Processor",
+        "ram": "16 GB",
+        "storage": "1 TB PCIe SSD",
+        "display": "16 inches",
+        "graphics": "NVIDIA GeForce RTX 4060 Laptop GPU + 8GB GDDR6 VRAM",
+        "operating_system": "Windows 11 Home",
+        "battery_life": "4 to 6 hours",
+        "touchscreen": "False",
+        "description_para": "Elevate your gaming and work experience with the GIGABYTE G6X Series. Featuring an Intel Core i7-13650HX processor and NVIDIA GeForce RTX 4060 GPU, it delivers powerful performance and smooth graphics. With 16GB DDR5 RAM and a 1TB PCIe SSD, you'll enjoy fast speeds and ample storage. The 16.0-inch WUXGA 165Hz display provides stunning visuals, while the robust design in Gunmetal Gray and comprehensive connectivity options keep you prepared for any challenge. Windows 11 Home ensures a modern, efficient operating environment. Brand new and performance-ready, this laptop is an excellent choice for high-demand tasks.",
+        "description_points": "Powerful Performance: Equipped with an Intel Core i7-13650HX processor and NVIDIA GeForce RTX 4060 GPU, the G6X Series delivers exceptional gaming and productivity performance with smooth, high-quality graphics. Fast and Spacious: With 16GB DDR5 RAM and a 1TB PCIe SSD, enjoy rapid data access and ample storage for all your games, applications, and files. Vivid Display: The 16.0-inch WUXGA (1920x1200) 165Hz IPS display offers stunning visuals and fluid motion, perfect for immersive gaming and multimedia experiences. Comprehensive Connectivity: Featuring the latest Wi-Fi 6E, Bluetooth 5.2, and multiple ports including USB-C and HDMI 2.1, the G6X Series ensures versatile connectivity and fast data transfer. Sleek and Durable Design: The Gunmetal Gray chassis combines style with durability, while the laptop’s dimensions and weight make it portable enough for on-the-go use."
+    }
+]

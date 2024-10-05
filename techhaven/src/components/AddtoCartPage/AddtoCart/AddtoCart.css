@@ -1,0 +1,299 @@
+.carthead_a
+{
+    font-size: 24px;
+    font-weight: 700;
+    position: relative;
+    left: 2rem;
+    top: 2rem;
+}
+.carthead_b
+{
+    font-size: 24px;
+    font-weight: 700;
+    position: relative;
+    left: 10rem;
+    top: 2rem;
+}
+.emptycart
+{
+   position: relative;
+   left: 40rem;
+   top: 3rem;
+}
+.carttxt_a
+{
+    position: relative;
+    left: 37.5rem;
+    top: 3rem;
+    font-size: 24px;
+    font-weight: 700;
+}
+.carttxt_b
+{
+    position: relative;
+    left: 37rem;
+    top: 3rem;
+    font-size: 24px;
+    font-weight: 700;
+}
+.signin
+{
+    border-radius: 24px;
+    position: relative;
+    left: 42.5rem;
+    top: 3rem;
+    width: 156px;
+    height: 3rem;
+    font-size: 1.2rem;
+}
+.cartempty
+{
+    height: 41rem;
+    overflow: hidden;
+}
+.lineaftersignin
+{
+    width: 512px;
+    position: relative;
+    left: 32.5rem;
+}
+.carttxt_t
+{
+    position: relative;
+    left: 41rem;
+    top: 1rem;
+    font-size: 20px;
+    font-weight: 700;
+}
+.shopbtn
+{
+    border-radius: 24px;
+    position: relative;
+    left: 38.5rem;
+    top: 1rem;
+    width: 300px;
+    height: 3rem;
+    font-size: 1.2rem;
+    background-color: white;
+    color: black;
+    border: 1px solid lightgrey;
+}
+.shopbtn:hover
+{
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+}
+.productimage
+{
+  width: 180px;
+  height: 180px;
+  position: relative;
+  left: 2rem;
+  top: 1.5rem;
+}
+.cartdisplay
+{
+    position: relative;
+    margin-left: 30px;
+    top: 2rem;
+    width: 70%;
+    background-color: #FFFFFF;
+}
+.cartline
+{
+    position: relative;
+    left: 2rem;
+    bottom: 1rem;
+    width: 95%;
+}
+.alt-cartline
+{
+    position: relative;
+    left: 2rem;
+    bottom: 0.5rem;
+    width: 95%;
+}
+.cartcontent
+{
+    background-color: #EAEDED;
+    padding-bottom: 50px; 
+    display: flex;
+    overflow: hidden;
+}
+.cartitems
+{
+    display: flex;
+}
+.productname
+{
+    position: relative;
+    width: 55%;
+    left: 8rem;
+    top: 1.5rem;
+    font-size: 18px;
+    font-weight: 400;
+    color: rgb(15, 17, 17);
+    font-family: 'Arial',sans-serif;
+}
+.productname:hover
+{
+    cursor: pointer;
+}
+.producteligible
+{
+    position: relative;
+    width: 70%;
+    left: 8rem;
+    bottom: 1rem;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(86, 89, 89);
+    font-family: 'Arial',sans-serif;
+}
+.gifteligible
+{
+    position: relative;
+    width: 70%;
+    left: 8rem;
+    bottom: 1.5rem;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(86, 89, 89);
+    font-family: 'Arial',sans-serif;
+}
+.productinfo
+{
+    position: relative;
+    left: 8rem;
+    bottom: 1rem;
+    font-size: 14px;
+}
+.valuehead
+{
+    font-size: 14px;
+    font-weight: 700;
+}
+.quantity
+{
+    border: 1px solid black;
+    width: 6.9rem;
+    border-radius: 5px;
+    position: relative;
+    left: 8rem;
+    bottom: 3rem;
+}
+.qty
+{
+    position: relative;
+    left: 1rem;
+}
+.increment
+{
+    position: relative;
+    left: 2rem;
+}
+.modifydata
+{
+    display: flex;
+}
+.delete
+{
+    position: relative;
+    left: 10rem;
+    bottom: 2.5rem;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(0, 113, 133);
+}
+.delete:hover
+{
+  text-decoration: underline;
+}
+.productprice
+{ 
+    font-size: 18px;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    left: 43rem;
+    bottom: 3rem;
+}
+.productprice:hover
+{
+    cursor: text;
+}
+.subtotal
+{
+    position: relative;
+    left: 70%;
+}
+.subtotalhead
+{
+    font-size: 18px;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.subtotalprice
+{
+    font-size: 18px;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.proceedtobuy
+{
+    width: 18rem;
+    height: 18rem;
+    padding: 20px;
+}
+.proceedtobuy-container
+{
+    width: 19rem;
+    position: relative;
+    top: 3rem;
+    height: 20rem;
+    margin-left: 5px;
+    margin-right: 80px;
+}
+.subtotal-head
+{
+    font-size: 18px;
+    font-weight: 400;
+    position: relative;
+    bottom: 2rem;
+}
+.subtotal-value
+{
+    font-size: 18px;
+    font-weight: 700;
+    position: relative;
+    bottom: 2rem;
+}
+.success
+{
+    width: 19px;
+    height: 19px;
+    position: relative;
+    bottom: 3rem;
+}
+.free-delivery
+{
+    font-size: 14px;
+    position: relative;
+    left: 0.3rem;
+    color: rgb(6, 125, 98);
+    font-weight: 700;
+    position: relative;
+    bottom: 3rem;
+}
+.proceedtobuy-btn
+{
+    position: relative;
+    bottom: 1rem;
+    font-weight: 700;
+    border-radius: 62.5rem;
+    height: 2.5rem;
+    font-size: 1rem;
+    width: 15rem;
+    background-color: #0071dc;
+}

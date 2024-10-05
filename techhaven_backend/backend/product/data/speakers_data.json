@@ -1,0 +1,40 @@
+[
+    {
+        "name": "VEAT00L S50L (100W 2.2ch Soundbar with Subwoofer, Bluetooth 5.0, 3D Surround, Optical/HDMI/AUX/COAX/USB, Wall Mountable)",
+        "description_para": "Experience cinematic audio from the comfort of your home with the VEAT00L S50L soundbar. This 37-inch, 100W 2.2-channel soundbar features dual subwoofers and four full-range drivers for powerful, immersive sound. With Bluetooth 5.0 for seamless wireless streaming and multiple wired connections including HDMI (ARC), COAX, optical, AUX, and USB, it offers versatile compatibility. Choose from three EQ modes—Music, News, Movie—to tailor the audio to your preference. Its sleek, slim design allows for easy wall mounting or desktop placement, making it a stylish addition to any home theater setup.",
+        "description_points": "Powerful 2.2-Channel Sound: The 37-inch VEAT00L S50L delivers immersive audio with dual subwoofers and four full-range drivers, providing deep bass and crystal-clear sound for a cinematic experience. Versatile Connectivity: Enjoy seamless audio streaming and connectivity with Bluetooth 5.0, HDMI (ARC), COAX, optical, AUX, and USB inputs, ensuring compatibility with a wide range of devices. Adjustable EQ Modes: Tailor your audio experience with three EQ modes—Music, News, and Movie—each designed to enhance specific types of content for optimal sound performance. Sleek and Stylish Design: The slim and modern design fits seamlessly into any home entertainment setup, whether mounted on the wall or placed on a desktop, adding a touch of elegance to your space. Enhanced Surround Sound: With 100W output power and advanced drivers, this soundbar provides high-quality stereo sound and clear vocals, enhancing your movie nights, gaming sessions, and music listening experiences.",
+        "price": 22647.14,
+        "discount_price": 6292.14,
+        "sku": "VEAT00L-S50L-100W",
+        "brand": "VEAT00L",
+        "images":[
+            "/media/Speakers/Soundbars/VEAT00L_S50L/156b0d4b-76bd-4e93-8d2e-e33cf6fc4408.png",
+            "/media/Speakers/Soundbars/VEAT00L_S50L/90aa2869-6d54-4d21-bac0-ddba62d15451.png",
+            "/media/Speakers/Soundbars/VEAT00L_S50L/898dd004-8995-4952-85ee-c8d6bb5463b8.png",
+            "/media/Speakers/Soundbars/VEAT00L_S50L/c0fad95b-a3d1-438b-86ce-1b4830c24e2f.png",
+            "/media/Speakers/Soundbars/VEAT00L_S50L/e9db02cd-f72d-4b4c-8429-8be950e526aa.png",
+            "/media/Speakers/Soundbars/VEAT00L_S50L/0c77c5cc-abc4-4433-b2d8-7e89f843f0e5.png",
+            "/media/Speakers/Soundbars/VEAT00L_S50L/19fb2ac7-f45f-429d-b086-93fd7516e140.png",
+            "/media/Speakers/Soundbars/VEAT00L_S50L/fe183435-040b-40bf-b4ed-34e526f37804.png"
+          ],
+        "stock": 5,
+        "is_available": "True",
+        "rating": 4.7,
+        "num_reviews": 984,
+        "dimensions": "8.89 x 93.98 x 6.35 cm",
+        "weight": 5.1,
+        "warranty": "1 year",
+        "color": "Black",
+        "speaker_type": "Soundbars",
+        "power_output": "100 W",
+        "connectivity": "Wireless Bluetooth 5.0",
+        "frequency_response": "20 Hz to 20 kHz",
+        "waterproof": "False",
+        "microphone": "False",
+        "bass_boost": "False",
+        "led_lighting": "False",
+        "multi_device_pairing": "False",
+        "audio_inputs": "HDMI(ARC), COAX, Optical, AUX, USB",
+        "driver_size": "4x 2.5-inch full-range drivers, 2x 6.5-inch subwoofers"
+    }
+]

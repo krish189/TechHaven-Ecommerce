@@ -1,0 +1,36 @@
+.subscribe
+{
+   width: 100%;
+   height: 18rem;
+   color: white;
+   overflow: hidden;
+}
+.subscribe h2
+{
+    position: relative;
+    bottom: 16rem;
+    left: 5rem;
+}
+.subscribe h1
+{
+    position: relative;
+    bottom: 16rem;
+    left: 5rem;
+}
+.subscribe button
+{
+    position: relative;
+    bottom: 15rem;
+    left: 5rem;
+    color: #009788;
+    font-weight: bolder;
+}
+.subscribe button:hover
+{
+    color: #014E40;
+}
+.subscribe img
+{
+    width: 100%;
+    height: 18rem;
+}

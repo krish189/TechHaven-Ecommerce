@@ -1,0 +1,65 @@
+{
+  "name": "techhaven",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@coreui/coreui": "^5.1.2",
+    "@coreui/coreui-pro": "^5.4.0",
+    "@coreui/react": "^5.3.0",
+    "@coreui/react-pro": "^5.5.0",
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@mui/material": "^6.0.0",
+    "@mui/styled-engine-sc": "^6.0.0",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "bootstrap": "^5.3.3",
+    "jspdf": "^2.5.2",
+    "rc-slider": "^11.1.5",
+    "react": "^18.3.1",
+    "react-bootstrap": "^2.10.4",
+    "react-confetti": "^6.1.0",
+    "react-currency-input-field": "^3.8.0",
+    "react-dom": "^18.3.1",
+    "react-google-autocomplete": "^2.7.3",
+    "react-medium-image-zoom": "^5.2.9",
+    "react-phone-input-2": "^2.15.1",
+    "react-phone-number-input": "^3.4.5",
+    "react-pointer-zoom": "^1.5.1",
+    "react-range-slider-input": "^3.0.7",
+    "react-router-dom": "^6.26.0",
+    "react-scripts": "5.0.1",
+    "react-simple-star-rating": "^5.1.7",
+    "react-star-ratings": "^2.3.0",
+    "react-to-print": "^3.0.1",
+    "react-use": "^17.5.1",
+    "star-rating-react-component": "^3.2.2",
+    "styled-components": "^6.1.12",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
