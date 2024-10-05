@@ -217,6 +217,18 @@
 {
     color: white;
 }
+.get-latest-updates ::-moz-input-placeholder
+{
+    color: white;
+}
+.get-latest-updates ::-webkit-input-placeholder
+{
+    color: white;
+}
+.get-latest-updates ::-ms-input-placeholder
+{
+    color: white;
+}
 .get-latest-updates input:focus
 {
     border: 1px solid rgb(255,255,255);
