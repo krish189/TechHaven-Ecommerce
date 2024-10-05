@@ -1,0 +1,40 @@
+.security-container
+{
+    background-color: #F4F3F0;
+    padding: 50px;
+}
+.security-head
+{
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 52.8px;
+    color: rgb(39, 39, 39);
+    text-align: center;
+}
+.small-heading
+{
+    font-family: 'Roboto',sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 28px;
+}
+.para
+{
+    font-family: 'Roboto',sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+}
+.security-ul
+{
+    display: block;
+}
+.security-ul li
+{
+    list-style: disc !important;
+}
+.security-ul li:hover
+{
+    color: black;
+    cursor: text;
+}

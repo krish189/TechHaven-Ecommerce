@@ -76,6 +76,9 @@ import CCTVFAQ from './components/FAQ/CCTVcameraFAQ/CCTVFAQ';
 import SmartwatchFAQ from './components/FAQ/SmartwatchFAQ/SmartwatchFAQ';
 import TermsAndConditions from './components/TermsAndConditions/TermsAndConditions';
 import WarrantyPolicy from './components/WarrantyPolicy/WarrantyPolicy';
+import Security from './components/Security/Security';
+import AboutUs from './components/AboutUs/AboutUs';
+import BrandStores from './components/BrandStores/BrandStores';
 
 function App() {
   
@@ -169,6 +172,9 @@ function App() {
         <Route path='/support/product-faq/smart-watch-faq' element={<SmartwatchFAQ/>}></Route>
         <Route path='/support/terms-and-conditions' element={<TermsAndConditions/>}></Route>
         <Route path='/support/warranty-policy' element={<WarrantyPolicy/>}></Route>
+        <Route path='/security' element={<Security/>}></Route>
+        <Route path='/about-us' element={<AboutUs/>}></Route>
+        <Route path='/brand-stores' element={<BrandStores/>}></Route>
       </Routes>
     </BrowserRouter>
     </OrderDetailsProvider>

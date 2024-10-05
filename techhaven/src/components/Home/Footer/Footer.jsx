@@ -38,13 +38,9 @@ function Footer() {
     <div>
         <h5>Company</h5>
         <ul>
-            <li>About Us</li>
-            <li>Brand Stores</li>
-            <li>Careers</li>
-            <li>News Centre</li>
-            <li>Corporate Gifting</li>
-            <li>Security</li>
-            <li>Blog</li>
+            <li onClick={()=>navigate('/about-us')}>About Us</li>
+            <li onClick={()=>navigate('/brand-stores')}>Brand Stores</li>
+            <li onClick={()=>navigate('/security')}>Security</li>
         </ul>
     </div>
     <div>
