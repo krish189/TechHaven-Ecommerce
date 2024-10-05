@@ -5,6 +5,7 @@ Before you begin, ensure you have the following installed:
 - [React.js](https://reactjs.org/) (for the frontend)
 - [Python](https://www.python.org/) (for the backend)
 - [Django](https://www.djangoproject.com/) (for the backend)
+- [Django Rest Framework](https://www.django-rest-framework.org/) (for building APIs)
 - [MySQL Community Server](https://dev.mysql.com/downloads/mysql/) (for the database)
 - [MySQL Workbench](https://dev.mysql.com/downloads/workbench/) (for database management; a GUI tool)
 ## Getting Started
