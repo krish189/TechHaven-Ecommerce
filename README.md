@@ -28,11 +28,11 @@ npm start
 ```bash
 cd TechHaven-Ecommerce/techhaven_backend/backend
 ```
-5. **Start the Backend**
+5. **Start the Backend:**
 ```bash
 py manage.py runserver
 ```
-6. **Open the Application**
+6. **Open the Application:**
 Once both servers are running, open your web browser and go to:
   [http://localhost:3000](http://localhost:3000)
 
