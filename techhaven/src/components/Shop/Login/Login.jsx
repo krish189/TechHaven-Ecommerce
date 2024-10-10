@@ -36,14 +36,17 @@ function Login() {
         const data = await response.json();
         localStorage.setItem('access_token', data.access); 
         localStorage.setItem('refresh_token', data.refresh);
-        login(data.user);
+        login({
+            name: data.user.name, 
+            email: data.user.email,
+        });
         setShowSuccessMessage(true);
         setErrorMessage(false);
         setTimeout(() => {
-          setShowSuccessMessage(false);
-          navigate('/shop');
+            setShowSuccessMessage(false);
+            navigate('/shop');
         }, 2000);
-      }
+    }
       else
       {
         const data = await response.json();
